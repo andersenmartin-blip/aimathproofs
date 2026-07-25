@@ -6,6 +6,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
+RUN chmod 0755 scripts/*.sh
 RUN npm run build
 
 FROM node:22-bookworm-slim AS runtime
