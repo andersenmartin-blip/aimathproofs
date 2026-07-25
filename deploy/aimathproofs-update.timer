@@ -1,0 +1,12 @@
+[Unit]
+Description=Check AI Math Proofs for updates
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=15min
+RandomizedDelaySec=60
+Persistent=true
+Unit=aimathproofs-update.service
+
+[Install]
+WantedBy=timers.target
