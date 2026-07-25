@@ -1,6 +1,5 @@
 .git
 .github
-.openai
 .sites-runtime
 .wrangler
 dist
