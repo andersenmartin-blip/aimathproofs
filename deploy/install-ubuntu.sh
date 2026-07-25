@@ -44,7 +44,7 @@ systemctl enable --now docker
 cd "$APP_DIR"
 docker compose up -d --build
 
-install -m 0755 deploy/auto-update.sh /opt/aimathproofs/deploy/auto-update.sh
+chmod 0755 "$APP_DIR/deploy/auto-update.sh"
 install -m 0644 \
   deploy/aimathproofs-update.service \
   /etc/systemd/system/aimathproofs-update.service
