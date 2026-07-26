@@ -150,13 +150,13 @@ const emergingResults: Result[] = [
     date: "July 20, 2026",
     isoDate: "2026-07-20",
     outcome: "Disproved",
-    status: "Rapid expert review",
+    status: "Independent Lean checks; repository review open",
     score: 5,
     ai: "Fable · Ulam AI",
     summary:
       "An explicit polynomial map in three variables has a constant, non-zero Jacobian determinant but is not invertible—exactly the counterexample the 1939 conjecture said could not exist.",
     importance:
-      "One of the classic open problems in algebraic geometry. Several independent analyses support the construction, but the announcement is only days old.",
+      "One of algebraic geometry’s classic open problems. Independent Lean certificates now support the counterexample, but the main repository review remains open after questions about statement changes and attribution.",
     source: "https://arxiv.org/abs/2607.20210",
   },
   {
@@ -335,7 +335,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked July 25, 2026</span>
+          <span>Last checked July 26, 2026</span>
         </div>
       </section>
 
