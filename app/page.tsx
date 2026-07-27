@@ -21,6 +21,23 @@ type Result = {
 
 const establishedResults: Result[] = [
   {
+    title: "The Jacobian Conjecture",
+    field: "Algebraic geometry",
+    date: "July 20, 2026",
+    isoDate: "2026-07-20",
+    outcome: "Disproved",
+    status: "Lean-verified; reviewed and merged",
+    score: 5,
+    ai: "Fable · Ulam AI",
+    summary:
+      "An explicit polynomial map in three variables has a constant, non-zero Jacobian determinant but is not invertible—exactly the counterexample the 1939 conjecture said could not exist.",
+    importance:
+      "One of algebraic geometry’s classic open problems. The Lean proof of the intended counterexample was reviewed, passed all repository checks and was merged into Google DeepMind’s Formal Conjectures on July 26.",
+    source:
+      "https://github.com/google-deepmind/formal-conjectures/pull/4474",
+    sourceLabel: "View merged Lean proof",
+  },
+  {
     title:
       "Oracle Complexity of Derivative-Free Convex Optimization",
     field: "Optimization & complexity",
@@ -143,21 +160,6 @@ const emergingResults: Result[] = [
     importance:
       "A technically meaningful extension of the rapidly developing Jacobian story, but it addresses a positive-characteristic refinement rather than the original conjecture.",
     source: "https://arxiv.org/abs/2607.20968",
-  },
-  {
-    title: "The Jacobian Conjecture",
-    field: "Algebraic geometry",
-    date: "July 20, 2026",
-    isoDate: "2026-07-20",
-    outcome: "Disproved",
-    status: "Independent Lean checks; repository review open",
-    score: 5,
-    ai: "Fable · Ulam AI",
-    summary:
-      "An explicit polynomial map in three variables has a constant, non-zero Jacobian determinant but is not invertible—exactly the counterexample the 1939 conjecture said could not exist.",
-    importance:
-      "One of algebraic geometry’s classic open problems. Independent Lean certificates now support the counterexample, but the main repository review remains open after questions about statement changes and attribution.",
-    source: "https://arxiv.org/abs/2607.20210",
   },
   {
     title: "19 Claimed Erdős Problem Resolutions",
@@ -335,7 +337,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked July 26, 2026</span>
+          <span>Last checked July 27, 2026</span>
         </div>
       </section>
 
