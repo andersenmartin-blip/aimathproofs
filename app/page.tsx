@@ -147,6 +147,21 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Feige’s Conjecture",
+    field: "Probability",
+    date: "July 27, 2026",
+    isoDate: "2026-07-27",
+    outcome: "Proved",
+    status: "Author-verified new preprint",
+    score: 4,
+    ai: "GPT-5.6 Sol",
+    summary:
+      "GPT-5.6 Sol assisted the discovery of a short proof that independent nonnegative mean-one random variables satisfy the sharp 1/e lower-tail bound conjectured by Feige in 2006.",
+    importance:
+      "The conjecture has broad links to probability, randomized algorithms and extremal combinatorics. The authors independently checked every argument, but the new preprint has not yet received wider independent scrutiny.",
+    source: "https://arxiv.org/abs/2607.24528",
+  },
+  {
     title: "Separable Jacobian Conjecture in Characteristic 2",
     field: "Algebraic geometry",
     date: "July 23, 2026",
@@ -337,7 +352,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked July 27, 2026</span>
+          <span>Last checked July 28, 2026</span>
         </div>
       </section>
 
