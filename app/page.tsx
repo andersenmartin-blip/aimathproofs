@@ -21,6 +21,37 @@ type Result = {
 
 const establishedResults: Result[] = [
   {
+    title: "The 2-adic Absolute Galois Group",
+    field: "Number theory",
+    date: "July 28, 2026",
+    isoDate: "2026-07-28",
+    outcome: "Proved",
+    status: "Two Lean formalizations + expert review",
+    score: 3,
+    ai: "GPT-5.5 Pro · Fable 5 · Opus 4.8",
+    summary:
+      "GPT-5.5 Pro found an explicit presentation of the absolute Galois group of the 2-adic numbers and produced the core proof; Fable 5, Opus 4.8 and GPT agents helped formalize it.",
+    importance:
+      "The result closes a roughly 40-year gap left after the odd-prime cases and supports explicit counting of 2-adic field extensions. Epoch AI rates it a solid, specialty-journal result.",
+    source: "https://roed314.github.io/gq2/formalizations/",
+    sourceLabel: "View proof and formalizations",
+  },
+  {
+    title: "Two-copy Distillability of Werner States",
+    field: "Quantum information",
+    date: "July 27, 2026",
+    isoDate: "2026-07-27",
+    outcome: "Proved",
+    status: "Three independent proofs; human-checked",
+    score: 4,
+    ai: "GPT-5.6 Sol · Fable 5 · Opus 4.8",
+    summary:
+      "AI helped derive a sharp matrix inequality proving that a Werner state is two-copy distillable exactly when it is already one-copy distillable, resolving a longstanding test case.",
+    importance:
+      "The result settles Problem 5 from a prominent list of five open quantum-information problems. Three groups independently reached the same threshold, although the unrestricted many-copy problem remains open.",
+    source: "https://arxiv.org/abs/2607.24479",
+  },
+  {
     title: "The Jacobian Conjecture",
     field: "Algebraic geometry",
     date: "July 20, 2026",
@@ -175,6 +206,22 @@ const emergingResults: Result[] = [
     importance:
       "A technically meaningful extension of the rapidly developing Jacobian story, but it addresses a positive-characteristic refinement rather than the original conjecture.",
     source: "https://arxiv.org/abs/2607.20968",
+  },
+  {
+    title: "The Dinitz–Garg–Goemans Cost Conjecture",
+    field: "Combinatorial optimization",
+    date: "July 22, 2026",
+    isoDate: "2026-07-22",
+    outcome: "Disproved",
+    status: "Public counterexample; no paper yet",
+    score: 3,
+    ai: "GPT-5.6 Pro",
+    summary:
+      "GPT-5.6 Pro produced a small network in which a fractional flow costs 58 while every admissible unsplittable flow costs at least 60, contradicting the proposed cost-preserving rounding bound.",
+    importance:
+      "The claim targets a natural question left open after a 1999 theorem and is directly checkable. The construction and transcript are public, but a formal paper or broader expert analysis is still missing.",
+    source: "https://x.com/dmitryrybin1/status/2079904005652893709",
+    sourceLabel: "View claim and transcript",
   },
   {
     title: "19 Claimed Erdős Problem Resolutions",
@@ -352,7 +399,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked July 28, 2026</span>
+          <span>Last checked July 29, 2026</span>
         </div>
       </section>
 
