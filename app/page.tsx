@@ -17,6 +17,8 @@ type Result = {
   importance: string;
   source: string;
   sourceLabel?: string;
+  secondarySource?: string;
+  secondarySourceLabel?: string;
 };
 
 const establishedResults: Result[] = [
@@ -35,6 +37,24 @@ const establishedResults: Result[] = [
       "The result closes a roughly 40-year gap left after the odd-prime cases and supports explicit counting of 2-adic field extensions. Epoch AI rates it a solid, specialty-journal result.",
     source: "https://roed314.github.io/gq2/formalizations/",
     sourceLabel: "View proof and formalizations",
+  },
+  {
+    title: "Feige’s Conjecture",
+    field: "Probability",
+    date: "July 27, 2026",
+    isoDate: "2026-07-27",
+    outcome: "Proved",
+    status: "Two independent proofs; author-checked",
+    score: 4,
+    ai: "GPT-5.6 Pro · GPT-5.6 Sol",
+    summary:
+      "Two independent teams used GPT-5.6 to find proofs that independent nonnegative mean-one random variables satisfy the sharp 1/e lower-tail bound conjectured by Feige in 2006.",
+    importance:
+      "The conjecture has broad links to probability, randomized algorithms and extremal combinatorics. The simultaneous, independently written proofs substantially strengthen confidence in the result.",
+    source: "https://arxiv.org/abs/2607.23980",
+    sourceLabel: "View first proof",
+    secondarySource: "https://arxiv.org/abs/2607.24528",
+    secondarySourceLabel: "View independent proof",
   },
   {
     title: "Two-copy Distillability of Werner States",
@@ -177,21 +197,6 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
-  {
-    title: "Feige’s Conjecture",
-    field: "Probability",
-    date: "July 27, 2026",
-    isoDate: "2026-07-27",
-    outcome: "Proved",
-    status: "Author-verified new preprint",
-    score: 4,
-    ai: "GPT-5.6 Sol",
-    summary:
-      "GPT-5.6 Sol assisted the discovery of a short proof that independent nonnegative mean-one random variables satisfy the sharp 1/e lower-tail bound conjectured by Feige in 2006.",
-    importance:
-      "The conjecture has broad links to probability, randomized algorithms and extremal combinatorics. The authors independently checked every argument, but the new preprint has not yet received wider independent scrutiny.",
-    source: "https://arxiv.org/abs/2607.24528",
-  },
   {
     title: "Separable Jacobian Conjecture in Characteristic 2",
     field: "Algebraic geometry",
@@ -345,6 +350,12 @@ function ResultCard({
             {item.sourceLabel ?? "View original source"}{" "}
             <span aria-hidden="true">↗</span>
           </a>
+          {item.secondarySource && (
+            <a href={item.secondarySource} target="_blank" rel="noreferrer">
+              {item.secondarySourceLabel ?? "View additional source"}{" "}
+              <span aria-hidden="true">↗</span>
+            </a>
+          )}
         </aside>
       </div>
     </article>
@@ -399,7 +410,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked July 29, 2026</span>
+          <span>Last checked July 30, 2026</span>
         </div>
       </section>
 
