@@ -72,6 +72,21 @@ const establishedResults: Result[] = [
     source: "https://arxiv.org/abs/2607.24479",
   },
   {
+    title: "The Sharp Thin-Shell Inequality",
+    field: "Convex geometry & probability",
+    date: "July 25, 2026",
+    isoDate: "2026-07-25",
+    outcome: "Proved",
+    status: "Verified and revised by two expert authors",
+    score: 4,
+    ai: "GPT-5.6 Pro",
+    summary:
+      "GPT-5.6 Pro found the initial argument proving the optimal variance bound Var(|X|²) ≤ 8n for isotropic log-concave random vectors, including the equality case.",
+    importance:
+      "The result determines the sharp universal constant in a central high-dimensional concentration theorem and identifies the extremal distributions and convex bodies.",
+    source: "https://arxiv.org/abs/2607.23307",
+  },
+  {
     title: "The Jacobian Conjecture",
     field: "Algebraic geometry",
     date: "July 20, 2026",
@@ -87,6 +102,21 @@ const establishedResults: Result[] = [
     source:
       "https://github.com/google-deepmind/formal-conjectures/pull/4474",
     sourceLabel: "View merged Lean proof",
+  },
+  {
+    title: "Feige’s Hypergraph Moore Bound Conjecture",
+    field: "Combinatorics",
+    date: "July 17, 2026",
+    isoDate: "2026-07-17",
+    outcome: "Proved",
+    status: "Five-author checked + expert feedback",
+    score: 4,
+    ai: "GPT-5.6 Sol · GPT-5.5 Pro · Fable 5 · Opus 4.8",
+    summary:
+      "GPT-5.6 Sol found the core polynomial-method idea behind a proof of Feige’s 2008 hypergraph Moore bound for every uniformity k ≥ 3, removing the remaining polylogarithmic losses.",
+    importance:
+      "The conjecture governs short even covers in sparse hypergraphs and has consequences across average-case complexity, coding theory and algorithms.",
+    source: "https://arxiv.org/abs/2607.14068",
   },
   {
     title:
@@ -197,6 +227,21 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "The Lukic Conjecture",
+    field: "Spectral theory & probability",
+    date: "July 29, 2026",
+    isoDate: "2026-07-29",
+    outcome: "Disproved",
+    status: "Single-author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6",
+    summary:
+      "GPT-5.6 found a two-frequency sequence that satisfies Lukic’s proposed localization conditions while its corresponding weighted entropy is minus infinity, giving a counterexample.",
+    importance:
+      "The result corrects a proposed characterization in the theory of orthogonal polynomials on the unit circle, but remains a new specialist preprint without independent verification.",
+    source: "https://arxiv.org/abs/2607.26419",
+  },
   {
     title: "Separable Jacobian Conjecture in Characteristic 2",
     field: "Algebraic geometry",
@@ -410,7 +455,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked July 30, 2026</span>
+          <span>Last checked July 31, 2026</span>
         </div>
       </section>
 
