@@ -26,6 +26,11 @@ if [[ "$deployed_commit" == "$remote_commit" ]]; then
   exit 0
 fi
 
+# Reclaim old, unused build data before compiling. The age filter preserves
+# recent layers, while the image filter is limited to this Compose project.
+docker builder prune --force --filter "until=24h"
+docker image prune --force --filter "label=com.docker.compose.project=aimathproofs"
+
 # Record the commit only after Docker has built and started it successfully.
 # If this command fails, the next timer run will retry the same deployment.
 docker compose up -d --build --remove-orphans
