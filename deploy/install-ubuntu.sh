@@ -47,7 +47,6 @@ docker compose up -d --build
 install -d -m 0755 /var/lib/aimathproofs
 git rev-parse HEAD > /var/lib/aimathproofs/deployed-commit
 
-chmod 0755 "$APP_DIR/deploy/auto-update.sh"
 install -m 0644 \
   deploy/aimathproofs-update.service \
   /etc/systemd/system/aimathproofs-update.service
