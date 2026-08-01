@@ -6,4 +6,4 @@ Requires=docker.service
 
 [Service]
 Type=oneshot
-ExecStart=/opt/aimathproofs/deploy/auto-update.sh
+ExecStart=/usr/bin/bash /opt/aimathproofs/deploy/auto-update.sh
