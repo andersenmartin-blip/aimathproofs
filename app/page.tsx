@@ -23,6 +23,22 @@ type Result = {
 
 const establishedResults: Result[] = [
   {
+    title: "The Maxwell Conjecture",
+    field: "Mathematical physics",
+    date: "July 29, 2026",
+    isoDate: "2026-07-29",
+    outcome: "Disproved",
+    status: "Three-author verified + CAS-checked",
+    score: 4,
+    ai: "GPT-5.6 Sol",
+    summary:
+      "GPT-5.6 Sol suggested a five-charge construction whose electrostatic potential has at least 24 non-degenerate critical points, exceeding Maxwell’s proposed upper bound of 16.",
+    importance:
+      "The counterexample overturns an influential bound rooted in Maxwell’s 1873 treatise and advances the study of equilibria in point-charge fields. The authors verified the mathematics and checked computations with Mathematica and Maple.",
+    source: "https://arxiv.org/abs/2607.27197",
+    sourceLabel: "View preprint",
+  },
+  {
     title: "The 2-adic Absolute Galois Group",
     field: "Number theory",
     date: "July 28, 2026",
@@ -455,7 +471,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked July 31, 2026</span>
+          <span>Last checked August 1, 2026</span>
         </div>
       </section>
 
