@@ -23,6 +23,196 @@ type Result = {
 
 const establishedResults: Result[] = [
   {
+    title: "High-dimensional Sphere Packing",
+    field: "Discrete geometry",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Proved",
+    status: "Full Lean certificate released",
+    score: 5,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra determined the exact asymptotic strength of the Cohn–Elkies linear program, improving the general high-dimensional sphere-packing exponent and settling the associated Fourier sign-uncertainty problem.",
+    importance:
+      "This is the first improvement to the general sphere-packing exponent since 1978 and establishes the precise limit of one of the field’s central proof methods.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/SpherePacking.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
+    title: "Binary and Spherical Code Bounds",
+    field: "Coding theory",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Proved",
+    status: "Full Lean certificate released",
+    score: 5,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra obtained exponential improvements to classical upper bounds for fixed-distance binary codes across all parameters, with analogous results for high-dimensional spherical codes.",
+    importance:
+      "These bounds sharpen fundamental limits on error-correcting codes and connect directly to the new sphere-packing exponent.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/MetricCodes.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
+    title: "Non-sofic Groups Exist",
+    field: "Group theory",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Proved",
+    status: "Full Lean certificate released",
+    score: 5,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra constructed an explicit infinite, finitely presented non-sofic group using property-(T) expanders and the binary Leavitt algebra.",
+    importance:
+      "The result answers the central question of whether every countable group admits finite permutation approximations, open since sofic groups were introduced.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/NonSoficGroup.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
+    title: "Connes’s Rigidity Conjecture",
+    field: "Operator algebras & group theory",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Disproved",
+    status: "Full Lean certificate released",
+    score: 5,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra constructed infinitely many pairwise nonisomorphic property-(T) groups sharing the same group von Neumann algebra, disproving Connes’s rigidity conjecture.",
+    importance:
+      "The counterexamples overturn a longstanding proposed bridge between group structure and operator algebras and also answer a related finite-to-one question.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/ConnesRigidity.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
+    title: "Permanent Circuit Lower Bounds",
+    field: "Arithmetic complexity",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Proved",
+    status: "Full Lean certificate released",
+    score: 4,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra proved that division-free circuits computing the permanent require Ω(n² log log n) gates and that arithmetic formulas require Ω(n⁴/log n) leaves.",
+    importance:
+      "Lower bounds for the permanent are a central test of progress in algebraic complexity, where strong unconditional bounds have been exceptionally difficult.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/Permanent.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
+    title: "Quantum Parallel Repetition",
+    field: "Quantum complexity theory",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Proved",
+    status: "Full Lean certificate released",
+    score: 5,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra proved exponential parallel repetition for every finite two-player entangled game, extending a foundational classical complexity principle to general quantum games.",
+    importance:
+      "The theorem controls how rapidly cheating probability falls under repetition and has broad consequences for quantum interactive proofs and nonlocal games.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/QuantumParallelRepetition.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
+    title: "Closest Vector Problem Hardness",
+    field: "Lattice complexity & cryptography",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Proved",
+    status: "Full Lean certificate released",
+    score: 5,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra gave a direct reduction from 3SAT proving n^(1/400)-factor hardness for Euclidean CVP, with related consequences for binary decoding and other lattice norms.",
+    importance:
+      "CVP is foundational in computational complexity and lattice-based cryptography; a polynomial approximation-hardness factor is a major qualitative advance.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/GapCVP.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
+    title: "Ehrhart’s Volume Conjecture",
+    field: "Convex & discrete geometry",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Proved",
+    status: "Full Lean certificate released",
+    score: 4,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra proved in every dimension the sharp volume bound (n+1)ⁿ/n! for a convex body whose centroid is its only interior lattice point.",
+    importance:
+      "The theorem resolves a long-standing lattice-geometry conjecture and determines the exact extremal volume in all dimensions.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/EhrhartVolumeInequality.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
+    title: "Multicolor Triangle Ramsey Numbers",
+    field: "Extremal combinatorics",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Proved",
+    status: "Full Lean certificate released",
+    score: 4,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra established a superexponential lower bound for multicolor triangle Ramsey numbers, proving Rₖ(3) = k^Θ(k).",
+    importance:
+      "The result resolves Erdős problem 183 and determines the correct growth scale of a classical Ramsey-theory quantity.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/MulticolorTriangleRamsey.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
+    title: "Compactness and Degeneracy Conjectures",
+    field: "Extremal graph theory",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Disproved",
+    status: "Full Lean certificate released",
+    score: 4,
+    ai: "Astra (internal OpenAI model)",
+    summary:
+      "Astra produced separate bipartite graph constructions disproving the Erdős–Simonovits compactness conjecture and an Erdős degeneracy conjecture.",
+    importance:
+      "The constructions settle Erdős problems 146 and 180 and revise the expected structure of extremal bipartite graphs.",
+    source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+    sourceLabel: "View manuscript collection",
+    secondarySource:
+      "https://github.com/openai/ten-proofs/blob/main/CompactnessAndDegeneracy.lean",
+    secondarySourceLabel: "View Lean certificate",
+  },
+  {
     title: "The Maxwell Conjecture",
     field: "Mathematical physics",
     date: "July 29, 2026",
