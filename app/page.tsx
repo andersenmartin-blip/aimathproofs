@@ -23,6 +23,22 @@ type Result = {
 
 const establishedResults: Result[] = [
   {
+    title: "Compact Hyperbolic Coxeter 6-Polytopes With 10 Facets",
+    field: "Hyperbolic geometry & combinatorics",
+    date: "August 3, 2026",
+    isoDate: "2026-08-03",
+    outcome: "Proved",
+    status: "Exact exhaustion certificates; independently checked with CoxIter",
+    score: 4,
+    ai: "AI coding assistant under author direction",
+    summary:
+      "An exhaustive classification found exactly one compact hyperbolic Coxeter 6-polytope with ten facets, completing the d+4-facet classification in every dimension. Most of the classification software was written by AI.",
+    importance:
+      "The result completes a finite but technically demanding classification program. Exact machine-checkable exhaustion certificates and an independent CoxIter check provide unusually strong verification.",
+    source: "https://arxiv.org/abs/2608.02894",
+    sourceLabel: "View preprint and certificate description",
+  },
+  {
     title: "High-dimensional Sphere Packing",
     field: "Discrete geometry",
     date: "August 1, 2026",
@@ -434,18 +450,98 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Ji–Li–Wang Chip-Firing Conjecture",
+    field: "Combinatorics & dynamical systems",
+    date: "August 4, 2026",
+    isoDate: "2026-08-04",
+    outcome: "Proved",
+    status: "New author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Sol",
+    summary:
+      "The paper proves that every parallel chip-firing game with 2|E|−|V|<|σ|<2|E| has period two, establishing the conjectured middle rung of the devil's staircase for all graphs.",
+    importance:
+      "It unifies earlier results for several major graph families, but remains a short new preprint without independent or formal verification.",
+    source: "https://arxiv.org/abs/2608.04153",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Large-Width Lattice Polytope Question",
+    field: "Discrete geometry & combinatorics",
+    date: "August 4, 2026",
+    isoDate: "2026-08-04",
+    outcome: "Proved",
+    status: "Single-author preprint; independent review pending",
+    score: 3,
+    ai: "ChatGPT 5.6 Sol",
+    summary:
+      "The paper proves that, in fixed dimension, sufficiently large lattice width forces the Ehrhart h*-polynomial to be real-rooted and hence strictly log-concave and unimodal, answering a question of Averkov, Hofscheier and Nill.",
+    importance:
+      "This rules out arbitrarily wide counterexample families and gives a clean structural theorem, though it is currently only a five-page author preprint.",
+    source: "https://arxiv.org/abs/2608.03635",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Finite Generation for klt Generalized Pairs",
+    field: "Algebraic geometry",
+    date: "August 4, 2026",
+    isoDate: "2026-08-04",
+    outcome: "Disproved",
+    status: "Human-verified AI-generated preprint; independent review pending",
+    score: 4,
+    ai: "GPT-5.6 Sol Ultra · Fable 5 · Danus",
+    summary:
+      "A projective klt generalized pair is constructed whose generalized log canonical ring is not finitely generated, giving a negative answer to the proposed finite-generation extension.",
+    importance:
+      "Finite generation is central to the minimal model program, and an explicit counterexample sharply marks the boundary of the theory. The authors report human verification, but external scrutiny is still limited.",
+    source: "https://arxiv.org/abs/2608.03258",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Perfectly Complete Many-Round Key Agreement in the QROM",
+    field: "Quantum cryptography",
+    date: "August 4, 2026",
+    isoDate: "2026-08-04",
+    outcome: "Disproved",
+    status: "Author-verified preprint; independent review pending",
+    score: 4,
+    ai: "GPT-5.6 Sol Ultra",
+    summary:
+      "A one-shot AI proof rules out black-box perfectly complete quantum key agreement from quantum-secure one-way functions in the Boolean-output random-oracle model, with an attack bound independent of the number of rounds.",
+    importance:
+      "The theorem removes both a two-round restriction and reliance on an earlier unproved compatibility conjecture, but applies to perfect completeness and has not yet received independent review.",
+    source: "https://arxiv.org/abs/2608.03824",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Staton's Havel–Hakimi Residue Conjecture",
+    field: "Graph theory & analytic number theory",
+    date: "August 3, 2026",
+    isoDate: "2026-08-03",
+    outcome: "Proved",
+    status: "Single-author preprint; independent review pending",
+    score: 3,
+    ai: "Theo-Conjecture advisor-supervised AI loop",
+    summary:
+      "The paper proves Staton's asymptotic formula for the Havel–Hakimi residue of common-divisor graphs and determines the next asymptotic term.",
+    importance:
+      "It resolves a genuine Graffiti/Erdős-era conjecture linking degree-sequence algorithms with prime-number asymptotics, but currently rests on one new preprint.",
+    source: "https://arxiv.org/abs/2608.04040",
+    sourceLabel: "View preprint",
+  },
+  {
     title: "Kourovka Notebook Problem 21.142",
     field: "Finite group theory",
     date: "July 30, 2026",
     isoDate: "2026-07-30",
     outcome: "Disproved",
-    status: "New preprint; internal certification and reported expert review",
+    status: "Internal verification only; blocking proof debts remain",
     score: 3,
     ai: "Albilich · GPT-5.6 Sol · CAS tools",
     summary:
       "Albilich produced a negative answer to whether every finite group embeds in a finite group invariably generated by elements of two fixed prime orders. Its advisor-enabled run assembled the only root-concluding proof route.",
     importance:
-      "This resolves a specialist open problem from the Kourovka Notebook and is a notable long-horizon agent result. The paper reports expert checking, but also states that its internal informal verification is not formal proof or independent peer review.",
+      "This is a notable long-horizon agent claim on a specialist open problem, but the public audit still records unresolved proof obligations and no independent or formal verification.",
     source: "https://arxiv.org/abs/2607.27705",
     sourceLabel: "View preprint",
   },
@@ -455,13 +551,13 @@ const emergingResults: Result[] = [
     date: "July 30, 2026",
     isoDate: "2026-07-30",
     outcome: "Proved",
-    status: "New preprint; GAP-backed internal certification",
+    status: "Internal proof ledger; one blocking enumeration remains",
     score: 2,
     ai: "Albilich · GPT-5.6 Sol · GAP",
     summary:
       "Albilich found the explicit witness PSL₂(7), answering whether a nonabelian simple group of Lie type can be totally 3-closed. Two separate runs reached the same witness through different proof routes.",
     importance:
-      "The explicit construction settles a narrow but genuine notebook problem and demonstrates reproducible AI-assisted group theory. Independent mathematical review and a formal certificate are still pending.",
+      "The explicit witness is promising and was reproduced by two runs, but the public proof ledger still lists one blocking pair-coset enumeration; independent and formal verification are pending.",
     source: "https://arxiv.org/abs/2607.27705",
     sourceLabel: "View preprint",
   },
@@ -693,7 +789,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked August 5, 2026</span>
+          <span>Last checked August 6, 2026</span>
         </div>
       </section>
 
