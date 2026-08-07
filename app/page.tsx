@@ -789,7 +789,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked August 6, 2026</span>
+          <span>Last checked August 7, 2026</span>
         </div>
       </section>
 
