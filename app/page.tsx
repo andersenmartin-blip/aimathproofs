@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Outcome = "Proved" | "Disproved" | "Mixed claims";
 
@@ -722,9 +722,11 @@ function Score({ value }: { value: number }) {
 function ResultCard({
   item,
   emerging = false,
+  showCategory = false,
 }: {
   item: Result;
   emerging?: boolean;
+  showCategory?: boolean;
 }) {
   const outcomeClass =
     item.outcome === "Mixed claims" ? "mixed" : item.outcome.toLowerCase();
@@ -739,6 +741,11 @@ function ResultCard({
 
       <div className="card-grid">
         <div className="card-main">
+          {showCategory && (
+            <span className={`verification-category${emerging ? " review" : ""}`}>
+              {emerging ? "New & under review" : "Established result"}
+            </span>
+          )}
           <h3>{item.title}</h3>
           <p className="summary">{item.summary}</p>
           <dl className="facts">
@@ -773,8 +780,27 @@ function ResultCard({
   );
 }
 
+type Area = "home" | "mathematics" | "physics" | "human-biology";
+
 export default function Home() {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
+  const [area, setArea] = useState<Area>("home");
+  const [showArchive, setShowArchive] = useState(false);
+
+  useEffect(() => {
+    const readHash = () => {
+      const hash = window.location.hash.replace("#", "") as Area;
+      setArea(
+        ["mathematics", "physics", "human-biology"].includes(hash)
+          ? hash
+          : "home",
+      );
+    };
+
+    readHash();
+    window.addEventListener("hashchange", readHash);
+    return () => window.removeEventListener("hashchange", readHash);
+  }, []);
 
   const visibleEstablished = useMemo(
     () =>
@@ -789,141 +815,350 @@ export default function Home() {
     [],
   );
 
+  const latestMathematics = useMemo(
+    () =>
+      [
+        ...establishedResults.map((item) => ({ item, emerging: false })),
+        ...emergingResults.map((item) => ({ item, emerging: true })),
+      ]
+        .sort((a, b) => b.item.isoDate.localeCompare(a.item.isoDate))
+        .slice(0, 10),
+    [],
+  );
+
+  const goToArea = (nextArea: Area) => {
+    setArea(nextArea);
+    setShowArchive(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="AI & Mathematics, home">
+        <a
+          className="brand"
+          href="#home"
+          aria-label="AI Research Frontiers, home"
+          onClick={() => goToArea("home")}
+        >
           <span className="brand-mark">∴</span>
-          <span>AI &amp; Mathematics</span>
+          <span>AI Research Frontiers</span>
         </a>
-        <nav className="header-nav" aria-label="Page sections">
-          <a href="#established">Established</a>
-          <a href="#emerging">Under review</a>
-          <a href="#method">Method</a>
+        <nav className="header-nav" aria-label="Research areas">
+          <a
+            className={area === "mathematics" ? "active" : ""}
+            href="#mathematics"
+            onClick={() => goToArea("mathematics")}
+          >
+            Mathematics
+          </a>
+          <a
+            className={area === "physics" ? "active" : ""}
+            href="#physics"
+            onClick={() => goToArea("physics")}
+          >
+            Physics
+          </a>
+          <a
+            className={area === "human-biology" ? "active" : ""}
+            href="#human-biology"
+            onClick={() => goToArea("human-biology")}
+          >
+            Human biology
+          </a>
         </nav>
       </header>
 
-      <section className="hero" id="top">
-        <div className="eyebrow">
-          <span className="live-dot" />
-          Updated daily
-        </div>
-        <h1>When AI moves<br />the frontier of mathematics.</h1>
-        <p className="hero-copy">
-          A clear-eyed record of open mathematical problems resolved with
-          decisive help from AI—separating established results from fast-moving
-          claims still under review.
-        </p>
-        <div className="hero-meta">
-          <span>
-            <strong>{establishedResults.length}</strong> established
-          </span>
-          <span>
-            <strong>{emergingResults.length}</strong> under review
-          </span>
-          <span>Last checked August 8, 2026</span>
-        </div>
-      </section>
-
-      <section
-        className="results-section established-section"
-        id="established"
-        aria-labelledby="established-heading"
-      >
-        <div className="section-head">
-          <div>
-            <p className="section-kicker">Established results</p>
-            <h2 id="established-heading">Verified breakthroughs</h2>
-            <p className="section-intro">
-              Results backed by formal verification, detailed human checking,
-              or substantial independent expert scrutiny.
+      {area === "home" && (
+        <>
+          <section className="hero" id="top">
+            <div className="eyebrow">
+              <span className="live-dot" />
+              Updated daily
+            </div>
+            <h1>When AI moves<br />the frontier of science.</h1>
+            <p className="hero-copy">
+              A source-based record of research advances made with decisive
+              help from AI—separating established results from fast-moving
+              claims still under review.
             </p>
-          </div>
-          <div className="filters" aria-label="Filter established results">
-            {filters.map((item) => (
-              <button
-                className={filter === item ? "active" : ""}
-                key={item}
-                onClick={() => setFilter(item)}
-                type="button"
+            <div className="hero-meta">
+              <span><strong>3</strong> research areas</span>
+              <span>Last checked August 8, 2026</span>
+            </div>
+          </section>
+
+          <section className="area-section" aria-labelledby="areas-heading">
+            <div className="section-head area-head">
+              <div>
+                <p className="section-kicker">Explore the evidence</p>
+                <h2 id="areas-heading">Three frontiers, one standard.</h2>
+                <p className="section-intro">
+                  Each area records the AI system, its role, the strongest
+                  available source and a clearly stated verification status.
+                </p>
+              </div>
+            </div>
+            <div className="area-grid">
+              <a className="area-card mathematics-card" href="#mathematics" onClick={() => goToArea("mathematics")}>
+                <span className="area-number">01</span>
+                <div>
+                  <h3>Mathematics</h3>
+                  <p>Proofs, disproofs and exact constructions.</p>
+                </div>
+                <div className="area-counts">
+                  <span><strong>{establishedResults.length}</strong> established</span>
+                  <span><strong>{emergingResults.length}</strong> under review</span>
+                </div>
+                <span className="area-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a className="area-card" href="#physics" onClick={() => goToArea("physics")}>
+                <span className="area-number">02</span>
+                <div>
+                  <h3>Physics</h3>
+                  <p>New laws, solutions and experimentally testable predictions.</p>
+                </div>
+                <span className="area-status">Monitoring begins</span>
+                <span className="area-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a className="area-card" href="#human-biology" onClick={() => goToArea("human-biology")}>
+                <span className="area-number">03</span>
+                <div>
+                  <h3>Human Biology &amp; Longevity</h3>
+                  <p>Disease, therapies, regeneration and healthy ageing.</p>
+                </div>
+                <span className="area-status">Monitoring begins</span>
+                <span className="area-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </section>
+
+          <section className="method" id="method">
+            <div>
+              <p className="section-kicker">How results are assessed</p>
+              <h2>Evidence first. Excitement second.</h2>
+            </div>
+            <div className="method-copy">
+              <p>
+                An established entry needs a strong public source and meaningful
+                verification. Promotion from “under review” depends on the
+                quality of checking—not time passed or headline size.
+              </p>
+              <div className="criteria">
+                <span><b>Direct</b> The AI contribution is material to the result</span>
+                <span><b>Verified</b> Experts, experiments or formal tools support it</span>
+                <span><b>Traceable</b> Readers can inspect the strongest public source</span>
+              </div>
+              <div className="legend">
+                <span><b>1</b> Narrow specialist result</span>
+                <span><b>3</b> Important within its field</span>
+                <span><b>5</b> Historic major advance</span>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      {area === "mathematics" && (
+        <>
+          <section className="subject-hero mathematics-hero">
+            <div>
+              <p className="section-kicker">Research area 01</p>
+              <h1>Mathematics</h1>
+              <p>
+                Open problems resolved with decisive AI help, separated by the
+                strength of verification.
+              </p>
+            </div>
+            <div className="subject-stats">
+              <span><strong>{establishedResults.length}</strong> established</span>
+              <span><strong>{emergingResults.length}</strong> under review</span>
+              <span>Last checked August 8, 2026</span>
+            </div>
+          </section>
+
+          {!showArchive ? (
+            <section className="results-section latest-section" aria-labelledby="latest-heading">
+              <div className="section-head">
+                <div>
+                  <p className="section-kicker">Latest 10 results</p>
+                  <h2 id="latest-heading">The newest developments</h2>
+                  <p className="section-intro">
+                    Established and emerging results together, ordered by date.
+                  </p>
+                </div>
+              </div>
+              <div className="result-list latest-list">
+                {latestMathematics.map(({ item, emerging }) => (
+                  <ResultCard
+                    emerging={emerging}
+                    item={item}
+                    key={`${emerging ? "review" : "established"}-${item.title}`}
+                    showCategory
+                  />
+                ))}
+              </div>
+              <div className="archive-action">
+                <button type="button" onClick={() => setShowArchive(true)}>
+                  View all {establishedResults.length + emergingResults.length} results
+                  <span aria-hidden="true">↓</span>
+                </button>
+              </div>
+            </section>
+          ) : (
+            <>
+              <section
+                className="results-section established-section"
+                id="established"
+                aria-labelledby="established-heading"
               >
-                {item}
-              </button>
-            ))}
-          </div>
-        </div>
+                <div className="section-head">
+                  <div>
+                    <p className="section-kicker">Established results</p>
+                    <h2 id="established-heading">Verified breakthroughs</h2>
+                    <p className="section-intro">
+                      Results backed by formal verification, detailed human
+                      checking, or substantial independent expert scrutiny.
+                    </p>
+                  </div>
+                  <div className="filters" aria-label="Filter established results">
+                    {filters.map((item) => (
+                      <button
+                        className={filter === item ? "active" : ""}
+                        key={item}
+                        onClick={() => setFilter(item)}
+                        type="button"
+                      >
+                        {item}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div className="result-list">
+                  {visibleEstablished.map((item) => (
+                    <ResultCard item={item} key={item.title} />
+                  ))}
+                </div>
+              </section>
 
-        <div className="result-list">
-          {visibleEstablished.map((item) => (
-            <ResultCard item={item} key={item.title} />
-          ))}
-        </div>
-      </section>
+              <section className="emerging-section" id="emerging" aria-labelledby="emerging-heading">
+                <div className="section-head emerging-head">
+                  <div>
+                    <p className="section-kicker">New &amp; under review</p>
+                    <h2 id="emerging-heading">The fast-moving frontier</h2>
+                    <p className="section-intro">
+                      Recent preprints, public claims and community trackers that
+                      have not yet cleared the established bar.
+                    </p>
+                  </div>
+                  <div className="review-key"><span aria-hidden="true">!</span>Status may change</div>
+                </div>
+                <div className="verification-note">
+                  <strong>Why the caution?</strong>
+                  <p>
+                    A formal proof certifies a precise statement. Experts must
+                    still confirm that it matches the intended problem and that
+                    the reported AI contribution is genuinely new.
+                  </p>
+                </div>
+                <div className="result-list emerging-list">
+                  {sortedEmerging.map((item) => (
+                    <ResultCard emerging item={item} key={item.title} />
+                  ))}
+                </div>
+                <div className="archive-action archive-action-review">
+                  <button type="button" onClick={() => { setShowArchive(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+                    Back to latest 10 <span aria-hidden="true">↑</span>
+                  </button>
+                </div>
+              </section>
+            </>
+          )}
+        </>
+      )}
 
-      <section
-        className="emerging-section"
-        id="emerging"
-        aria-labelledby="emerging-heading"
-      >
-        <div className="section-head emerging-head">
-          <div>
-            <p className="section-kicker">New &amp; under review</p>
-            <h2 id="emerging-heading">The fast-moving frontier</h2>
-            <p className="section-intro">
-              Recent preprints, public claims and community trackers. These may
-              be correct, but have not yet cleared the bar used above.
-            </p>
-          </div>
-          <div className="review-key">
-            <span aria-hidden="true">!</span>
-            Status may change
-          </div>
-        </div>
+      {area === "physics" && (
+        <SubjectPlaceholder
+          area="Research area 02"
+          title="Physics"
+          intro="AI-assisted advances in theoretical, computational and experimental physics—only when AI is decisive to the result."
+          standards={[
+            ["Theory", "A new theorem, solution or derivation checked by specialists"],
+            ["Prediction", "A precise, testable prediction that goes beyond model fitting"],
+            ["Experiment", "Independent experimental or observational confirmation"],
+          ]}
+        />
+      )}
 
-        <div className="verification-note">
-          <strong>Why the caution?</strong>
-          <p>
-            A formal proof certifies a precise statement. Experts must still
-            confirm that the formalised statement faithfully matches the
-            original open problem and that the claimed AI contribution is new.
-          </p>
-        </div>
-
-        <div className="result-list emerging-list">
-          {sortedEmerging.map((item) => (
-            <ResultCard emerging item={item} key={item.title} />
-          ))}
-        </div>
-      </section>
-
-      <section className="method" id="method">
-        <div>
-          <p className="section-kicker">How results are assessed</p>
-          <h2>Evidence first. Excitement second.</h2>
-        </div>
-        <div className="method-copy">
-          <p>
-            Every established entry needs a public mathematical source.
-            Promotion from “under review” depends on the quality of checking,
-            not merely on time passed or the prominence of the announcement.
-          </p>
-          <div className="criteria">
-            <span><b>Formal</b> A proof assistant accepts the intended statement</span>
-            <span><b>Human</b> Relevant experts have checked the argument</span>
-            <span><b>Independent</b> Others can reproduce or analyse the result</span>
-          </div>
-          <div className="legend">
-            <span><b>1</b> Narrow specialist result</span>
-            <span><b>3</b> Important within its field</span>
-            <span><b>5</b> Historic major problem</span>
-          </div>
-        </div>
-      </section>
+      {area === "human-biology" && (
+        <SubjectPlaceholder
+          area="Research area 03"
+          title="Human Biology & Longevity"
+          intro="Disease mechanisms, therapies, regeneration and healthy ageing—tracked with a deliberately high evidence bar."
+          standards={[
+            ["Disease", "A newly discovered human disease mechanism or target"],
+            ["Therapy", "A treatment or drug candidate with laboratory or clinical evidence"],
+            ["Longevity", "Reproducible effects on ageing biology or healthy lifespan"],
+          ]}
+          caution="Biomedical claims remain under review until the relevant experimental or clinical evidence exists. AI predictions alone are not treated as established results."
+        />
+      )}
 
       <footer>
-        <p>AI &amp; Mathematics</p>
+        <p>AI Research Frontiers</p>
         <p>Sources, claims and verification status are reviewed continuously.</p>
       </footer>
     </main>
+  );
+}
+
+function SubjectPlaceholder({
+  area,
+  title,
+  intro,
+  standards,
+  caution,
+}: {
+  area: string;
+  title: string;
+  intro: string;
+  standards: [string, string][];
+  caution?: string;
+}) {
+  return (
+    <>
+      <section className="subject-hero placeholder-hero">
+        <div>
+          <p className="section-kicker">{area}</p>
+          <h1>{title}</h1>
+          <p>{intro}</p>
+        </div>
+        <div className="subject-stats">
+          <span><strong>0</strong> established</span>
+          <span><strong>0</strong> under review</span>
+          <span>Monitoring starts with the next review</span>
+        </div>
+      </section>
+      <section className="placeholder-section">
+        <div className="placeholder-message">
+          <p className="section-kicker">Section now open</p>
+          <h2>The first entries will be added after source review.</h2>
+          <p>
+            This tracker does not list every paper that uses machine learning.
+            AI must make a material contribution to a genuinely new scientific
+            result, and the strongest available source must be public.
+          </p>
+          {caution && <p className="caution-note">{caution}</p>}
+        </div>
+        <div className="standards-list">
+          {standards.map(([label, text]) => (
+            <div key={label}>
+              <span>{label}</span>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
