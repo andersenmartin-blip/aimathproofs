@@ -2,7 +2,15 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-type Outcome = "Proved" | "Disproved" | "Mixed claims";
+type Outcome =
+  | "Proved"
+  | "Disproved"
+  | "Mixed claims"
+  | "Demonstrated"
+  | "Discovered"
+  | "Designed"
+  | "Clinical signal"
+  | "Validated";
 
 type Result = {
   title: string;
@@ -703,6 +711,161 @@ const emergingResults: Result[] = [
   },
 ];
 
+const physicsEstablishedResults: Result[] = [
+  {
+    title: "AI Avoids a Fusion-Plasma Tearing Instability",
+    field: "Plasma physics & fusion",
+    date: "February 21, 2024",
+    isoDate: "2024-02-21",
+    outcome: "Demonstrated",
+    status: "Peer-reviewed; demonstrated on the DIII-D tokamak",
+    score: 4,
+    ai: "Deep reinforcement-learning controller + learned dynamics model",
+    summary:
+      "An AI controller adjusted neutral-beam power and plasma shape in real time to keep high-pressure plasma below a predicted tearing-instability threshold. Tests on DIII-D sustained stable discharges in conditions relevant to ITER scenarios.",
+    importance:
+      "Tearing instabilities are a leading cause of tokamak disruptions. This was a real hardware demonstration, not a simulation, although the authors describe it as an early proof of concept requiring further experiments.",
+    source: "https://www.nature.com/articles/s41586-024-07024-9",
+    sourceLabel: "View Nature paper",
+  },
+  {
+    title: "GNoME Expands the Map of Stable Crystal Structures",
+    field: "Condensed matter & materials physics",
+    date: "November 29, 2023",
+    isoDate: "2023-11-29",
+    outcome: "Discovered",
+    status: "Peer-reviewed; DFT-checked; 736 structures independently realized",
+    score: 4,
+    ai: "GNoME graph neural networks + active learning",
+    summary:
+      "DeepMind's GNoME system searched crystal space at scale and produced 381,000 new structures on its final computational stability hull, within a larger set of 2.2 million candidates below the previous hull. Hundreds matched structures independently realized experimentally.",
+    importance:
+      "The work expanded the computational catalogue of stable inorganic crystals by roughly an order of magnitude. Computational stability does not mean that every candidate is synthesizable or technologically useful.",
+    source: "https://www.nature.com/articles/s41586-023-06735-9",
+    sourceLabel: "View Nature paper",
+  },
+  {
+    title: "General AI Control of Tokamak Plasma Shapes",
+    field: "Plasma physics & fusion",
+    date: "February 16, 2022",
+    isoDate: "2022-02-16",
+    outcome: "Demonstrated",
+    status: "Peer-reviewed; experimentally verified on the TCV tokamak",
+    score: 4,
+    ai: "DeepMind deep-reinforcement-learning controller",
+    summary:
+      "A single learned controller commanded all 19 magnetic coils of the TCV tokamak at 10 kHz. It maintained conventional and advanced plasma shapes, including negative triangularity, snowflake configurations and two simultaneous plasma droplets.",
+    importance:
+      "The experiment replaced many separately engineered control components with one adaptable AI policy and demonstrated successful simulation-to-hardware transfer in a demanding physical system.",
+    source: "https://www.nature.com/articles/s41586-021-04301-9",
+    sourceLabel: "View Nature paper",
+  },
+  {
+    title: "Fifty Kepler Exoplanets Validated by Machine Learning",
+    field: "Astrophysics & exoplanets",
+    date: "August 20, 2020",
+    isoDate: "2020-08-20",
+    outcome: "Validated",
+    status: "Peer-reviewed; stringent multi-model agreement and vespa cross-check",
+    score: 3,
+    ai: "Gaussian-process classifier reinforced by three ML models",
+    summary:
+      "A machine-learning framework separated genuine transits from astrophysical and instrumental false positives, newly validating 50 Kepler candidates as planets after all four classifiers exceeded a 99% threshold.",
+    importance:
+      "The result added real objects to the exoplanet census and showed that automated validation can keep pace with modern surveys. The authors still caution against relying on any single validation method.",
+    source: "https://academic.oup.com/mnras/article/504/4/5327/5894933",
+    sourceLabel: "View MNRAS paper",
+  },
+];
+
+const physicsEmergingResults: Result[] = [];
+
+const biologyEstablishedResults: Result[] = [
+  {
+    title: "OpenCRISPR-1: An AI-Designed Human Gene Editor",
+    field: "Genome editing & biotechnology",
+    date: "July 30, 2025",
+    isoDate: "2025-07-30",
+    outcome: "Designed",
+    status: "Peer-reviewed; functional editing demonstrated in human cells",
+    score: 4,
+    ai: "Protein language model trained on more than one million CRISPR operons",
+    summary:
+      "Generative models produced CRISPR–Cas proteins far from known natural sequences. OpenCRISPR-1 successfully edited human DNA, showed strong activity and specificity, and was compatible with base editing.",
+    importance:
+      "This was the first entirely AI-designed CRISPR system shown to edit human DNA. It is a validated research tool, not yet a demonstrated therapy in patients.",
+    source: "https://www.nature.com/articles/s41586-025-09298-z",
+    sourceLabel: "View Nature paper",
+  },
+  {
+    title: "Organ-Specific Aging Clocks in Human Blood",
+    field: "Human aging & biomarkers",
+    date: "December 6, 2023",
+    isoDate: "2023-12-06",
+    outcome: "Discovered",
+    status: "Peer-reviewed; reproduced across five cohorts and 5,676 adults",
+    score: 4,
+    ai: "Machine-learning plasma-proteomic clocks",
+    summary:
+      "Machine-learning models estimated the biological age of 11 organs from blood proteins. Nearly 20% of participants had strongly accelerated aging in one organ, which was associated with organ-specific disease and 20–50% higher mortality risk.",
+    importance:
+      "The work provided a non-invasive way to separate how individual human organs age and linked those signatures to heart failure, Alzheimer's progression and mortality across multiple cohorts.",
+    source: "https://www.nature.com/articles/s41586-023-06802-1",
+    sourceLabel: "View Nature paper",
+  },
+  {
+    title: "Abaucin, an AI-Discovered Antibiotic Candidate",
+    field: "Infectious disease & drug discovery",
+    date: "May 25, 2023",
+    isoDate: "2023-05-25",
+    outcome: "Discovered",
+    status: "Peer-reviewed; laboratory, mechanism and mouse-model validation",
+    score: 3,
+    ai: "Deep neural network for molecular screening",
+    summary:
+      "A neural network trained on growth-inhibition experiments identified abaucin, a structurally unusual narrow-spectrum compound against multidrug-resistant Acinetobacter baumannii. Laboratory work identified its mechanism and it suppressed infection in a mouse wound model.",
+    importance:
+      "A. baumannii is a serious hospital pathogen with extensive drug resistance. Abaucin is a credible preclinical lead, but it has not yet been shown safe or effective in humans.",
+    source: "https://www.nature.com/articles/s41589-023-01349-8",
+    sourceLabel: "View Nature Chemical Biology paper",
+  },
+];
+
+const biologyEmergingResults: Result[] = [
+  {
+    title: "Rentosertib for Idiopathic Pulmonary Fibrosis",
+    field: "Age-related lung disease & clinical trials",
+    date: "June 3, 2025",
+    isoDate: "2025-06-03",
+    outcome: "Clinical signal",
+    status: "Randomized phase 2a; 71 participants; larger trials required",
+    score: 4,
+    ai: "PandaOmics target discovery + Chemistry42 generative drug design",
+    summary:
+      "AI identified TNIK as a target and generated rentosertib. In a 12-week double-blind trial, the highest-dose group showed a mean forced-vital-capacity change of +98.4 ml versus −20.3 ml with placebo, while overall safety was broadly comparable.",
+    importance:
+      "It is an unusually advanced test of an AI-discovered target and AI-designed molecule in patients. The trial was small, short, geographically narrow and primarily designed to assess safety, so efficacy is not established.",
+    source: "https://www.nature.com/articles/s41591-025-03743-2",
+    sourceLabel: "View Nature Medicine trial",
+  },
+  {
+    title: "Deep-Learning Discovery of New Senolytics",
+    field: "Longevity & cellular senescence",
+    date: "May 4, 2023",
+    isoDate: "2023-05-04",
+    outcome: "Discovered",
+    status: "Peer-reviewed preclinical study; cells and one aged-mouse experiment",
+    score: 3,
+    ai: "Graph neural networks screening more than 800,000 molecules",
+    summary:
+      "AI screening identified three drug-like compounds that selectively killed senescent cells across multiple laboratory models. One candidate reduced senescent-cell burden and associated gene expression in the kidneys of aged mice.",
+    importance:
+      "Senescent cells are implicated in many diseases of aging. The experimental result is real, but translation to safe rejuvenation or longer healthy life in humans remains unproven.",
+    source: "https://www.nature.com/articles/s43587-023-00415-z",
+    sourceLabel: "View Nature Aging paper",
+  },
+];
+
 const filters = ["All", "Proved", "Disproved"] as const;
 
 function Score({ value }: { value: number }) {
@@ -729,7 +892,11 @@ function ResultCard({
   showCategory?: boolean;
 }) {
   const outcomeClass =
-    item.outcome === "Mixed claims" ? "mixed" : item.outcome.toLowerCase();
+    item.outcome === "Mixed claims"
+      ? "mixed"
+      : item.outcome === "Proved" || item.outcome === "Disproved"
+        ? item.outcome.toLowerCase()
+        : "scientific";
 
   return (
     <article className={`result-card${emerging ? " emerging-card" : ""}`}>
@@ -918,7 +1085,10 @@ export default function Home() {
                   <h3>Physics</h3>
                   <p>New laws, solutions and experimentally testable predictions.</p>
                 </div>
-                <span className="area-status">Monitoring begins</span>
+                <div className="area-counts">
+                  <span><strong>{physicsEstablishedResults.length}</strong> established</span>
+                  <span><strong>{physicsEmergingResults.length}</strong> under review</span>
+                </div>
                 <span className="area-arrow" aria-hidden="true">↗</span>
               </a>
               <a className="area-card" href="#human-biology" onClick={() => goToArea("human-biology")}>
@@ -927,7 +1097,10 @@ export default function Home() {
                   <h3>Human Biology &amp; Longevity</h3>
                   <p>Disease, therapies, regeneration and healthy ageing.</p>
                 </div>
-                <span className="area-status">Monitoring begins</span>
+                <div className="area-counts">
+                  <span><strong>{biologyEstablishedResults.length}</strong> established</span>
+                  <span><strong>{biologyEmergingResults.length}</strong> under review</span>
+                </div>
                 <span className="area-arrow" aria-hidden="true">↗</span>
               </a>
             </div>
@@ -1078,28 +1251,22 @@ export default function Home() {
       )}
 
       {area === "physics" && (
-        <SubjectPlaceholder
+        <SubjectResults
           area="Research area 02"
           title="Physics"
           intro="AI-assisted advances in theoretical, computational and experimental physics—only when AI is decisive to the result."
-          standards={[
-            ["Theory", "A new theorem, solution or derivation checked by specialists"],
-            ["Prediction", "A precise, testable prediction that goes beyond model fitting"],
-            ["Experiment", "Independent experimental or observational confirmation"],
-          ]}
+          established={physicsEstablishedResults}
+          emerging={physicsEmergingResults}
         />
       )}
 
       {area === "human-biology" && (
-        <SubjectPlaceholder
+        <SubjectResults
           area="Research area 03"
           title="Human Biology & Longevity"
           intro="Disease mechanisms, therapies, regeneration and healthy ageing—tracked with a deliberately high evidence bar."
-          standards={[
-            ["Disease", "A newly discovered human disease mechanism or target"],
-            ["Therapy", "A treatment or drug candidate with laboratory or clinical evidence"],
-            ["Longevity", "Reproducible effects on ageing biology or healthy lifespan"],
-          ]}
+          established={biologyEstablishedResults}
+          emerging={biologyEmergingResults}
           caution="Biomedical claims remain under review until the relevant experimental or clinical evidence exists. AI predictions alone are not treated as established results."
         />
       )}
@@ -1112,53 +1279,87 @@ export default function Home() {
   );
 }
 
-function SubjectPlaceholder({
+function SubjectResults({
   area,
   title,
   intro,
-  standards,
+  established,
+  emerging,
   caution,
 }: {
   area: string;
   title: string;
   intro: string;
-  standards: [string, string][];
+  established: Result[];
+  emerging: Result[];
   caution?: string;
 }) {
+  const sortedEstablished = [...established].sort((a, b) =>
+    b.isoDate.localeCompare(a.isoDate),
+  );
+  const sortedEmerging = [...emerging].sort((a, b) =>
+    b.isoDate.localeCompare(a.isoDate),
+  );
+
   return (
     <>
-      <section className="subject-hero placeholder-hero">
+      <section className="subject-hero">
         <div>
           <p className="section-kicker">{area}</p>
           <h1>{title}</h1>
           <p>{intro}</p>
         </div>
         <div className="subject-stats">
-          <span><strong>0</strong> established</span>
-          <span><strong>0</strong> under review</span>
-          <span>Monitoring starts with the next review</span>
+          <span><strong>{established.length}</strong> established</span>
+          <span><strong>{emerging.length}</strong> under review</span>
+          <span>Last checked August 8, 2026</span>
         </div>
       </section>
-      <section className="placeholder-section">
-        <div className="placeholder-message">
-          <p className="section-kicker">Section now open</p>
-          <h2>The first entries will be added after source review.</h2>
-          <p>
-            This tracker does not list every paper that uses machine learning.
-            AI must make a material contribution to a genuinely new scientific
-            result, and the strongest available source must be public.
-          </p>
-          {caution && <p className="caution-note">{caution}</p>}
+
+      <section className="results-section" aria-labelledby={`${area}-established-heading`}>
+        <div className="section-head">
+          <div>
+            <p className="section-kicker">Established results</p>
+            <h2 id={`${area}-established-heading`}>Verified advances</h2>
+            <p className="section-intro">
+              Results backed by peer review and direct experimental,
+              observational or computational verification of the stated claim.
+            </p>
+          </div>
         </div>
-        <div className="standards-list">
-          {standards.map(([label, text]) => (
-            <div key={label}>
-              <span>{label}</span>
-              <p>{text}</p>
-            </div>
+        <div className="result-list">
+          {sortedEstablished.map((item) => (
+            <ResultCard item={item} key={item.title} />
           ))}
         </div>
       </section>
+
+      {sortedEmerging.length > 0 && (
+        <section className="emerging-section" aria-labelledby={`${area}-emerging-heading`}>
+          <div className="section-head emerging-head">
+            <div>
+              <p className="section-kicker">New &amp; under review</p>
+              <h2 id={`${area}-emerging-heading`}>Promising, not yet settled</h2>
+              <p className="section-intro">
+                Early clinical signals and preclinical discoveries whose wider
+                scientific or medical significance still requires confirmation.
+              </p>
+            </div>
+            <div className="review-key"><span aria-hidden="true">!</span>Status may change</div>
+          </div>
+          {caution && (
+            <div className="verification-note">
+              <strong>Why the caution?</strong>
+              <p>{caution}</p>
+            </div>
+          )}
+          <div className="result-list emerging-list">
+            {sortedEmerging.map((item) => (
+              <ResultCard emerging item={item} key={item.title} />
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 }
