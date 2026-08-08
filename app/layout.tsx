@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI & Mathematics — AI-Proved Conjectures",
+  title: "AI Research Frontiers — Mathematics, Physics & Human Biology",
   description:
-    "A source-based tracker of mathematical conjectures proved or disproved with decisive help from AI.",
+    "A source-based tracker of research advances in mathematics, physics and human biology made with decisive help from AI.",
   other: {
     "codex-preview": "development",
   },
