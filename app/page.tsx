@@ -450,6 +450,38 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Absolutely Maximally Entangled States: Five New Parameter Cases",
+    field: "Quantum information & coding theory",
+    date: "August 6, 2026",
+    isoDate: "2026-08-06",
+    outcome: "Proved",
+    status: "Exact author certification; independent review pending",
+    score: 4,
+    ai: "Claude Fable 5 · ChatGPT 5.6 Sol",
+    summary:
+      "AI-assisted searches produced explicit AME(12,5), AME(18,11), AME(18,13), AME(17,11) and AME(17,13) states through new Hermitian self-dual MDS codes. AME(12,5) was an explicitly open parameter case.",
+    importance:
+      "The constructions close several gaps in the AME existence table and connect directly to quantum error-correcting codes. The authors report exact finite-field and complete minor checks, but the new preprint has not yet received independent scrutiny.",
+    source: "https://arxiv.org/abs/2608.05781",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Fair and Efficient Balanced Allocations",
+    field: "Algorithmic game theory & fair division",
+    date: "August 6, 2026",
+    isoDate: "2026-08-06",
+    outcome: "Proved",
+    status: "Author-verified preprint; independent review pending",
+    score: 4,
+    ai: "GPT-5.6 Sol · Claude Fable 5",
+    summary:
+      "For arbitrary additive valuations, the paper proves the existence of balanced allocations that are envy-free up to one good and fractionally Pareto optimal, removing restrictions from the previous 2026 result.",
+    importance:
+      "This establishes a general compatibility theorem between balance, fairness and efficiency for indivisible goods. All proofs were obtained with GPT-5.6 Sol and checked by three authors, but external review is still pending.",
+    source: "https://arxiv.org/abs/2608.06325",
+    sourceLabel: "View preprint",
+  },
+  {
     title: "Ji–Li–Wang Chip-Firing Conjecture",
     field: "Combinatorics & dynamical systems",
     date: "August 4, 2026",
@@ -789,7 +821,7 @@ export default function Home() {
           <span>
             <strong>{emergingResults.length}</strong> under review
           </span>
-          <span>Last checked August 7, 2026</span>
+          <span>Last checked August 8, 2026</span>
         </div>
       </section>
 
