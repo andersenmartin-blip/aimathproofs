@@ -713,6 +713,38 @@ const emergingResults: Result[] = [
 
 const physicsEstablishedResults: Result[] = [
   {
+    title: "Cross-Tokamak Forecasting of Fusion-Plasma Instability",
+    field: "Plasma physics & fusion",
+    date: "June 1, 2026",
+    isoDate: "2026-06-01",
+    outcome: "Demonstrated",
+    status: "Peer-reviewed; zero-shot transfer validated across two tokamaks",
+    score: 4,
+    ai: "Explainable neural network trained on DIII-D turbulence data",
+    summary:
+      "A model trained only on megahertz turbulence measurements from DIII-D forecast Type-I edge-localized-mode onsets in the KSTAR tokamak without device-specific retraining. Its salient features tracked independently calculated instability physics.",
+    importance:
+      "A future fusion reactor cannot supply a large failure dataset for training. Cross-machine forecasting is therefore a meaningful step toward AI systems that can generalize to new reactors, although this study forecast instabilities rather than controlling them.",
+    source: "https://www.nature.com/articles/s42005-026-02689-2",
+    sourceLabel: "View Communications Physics paper",
+  },
+  {
+    title: "AI Meta-Designs Families of Quantum Experiments",
+    field: "Quantum optics & condensed-matter physics",
+    date: "February 19, 2026",
+    isoDate: "2026-02-19",
+    outcome: "Discovered",
+    status: "Peer-reviewed; generated constructions verified by simulation",
+    score: 4,
+    ai: "Purpose-trained transformer generating human-readable experiment code",
+    summary:
+      "A transformer learned to write programs that generate entire families of quantum experiments. It rediscovered four known construction rules and found two previously unknown photonic constructions for spin-1/2 and Majumdar–Ghosh states.",
+    importance:
+      "The system discovered interpretable general design rules rather than one optimized apparatus. The constructions are computationally verified blueprints; they have not yet been physically built in the laboratory.",
+    source: "https://www.nature.com/articles/s42256-025-01153-0",
+    sourceLabel: "View Nature Machine Intelligence paper",
+  },
+  {
     title: "AI Avoids a Fusion-Plasma Tearing Instability",
     field: "Plasma physics & fusion",
     date: "February 21, 2024",
@@ -778,9 +810,76 @@ const physicsEstablishedResults: Result[] = [
   },
 ];
 
-const physicsEmergingResults: Result[] = [];
+const physicsEmergingResults: Result[] = [
+  {
+    title: "Exact Cosmic-String Gravitational-Wave Spectrum",
+    field: "Theoretical physics & cosmology",
+    date: "March 5, 2026",
+    isoDate: "2026-03-05",
+    outcome: "Discovered",
+    status: "Preprint; derivations and numerical checks released, independent review pending",
+    score: 4,
+    ai: "Gemini Deep Think + tree search + automated numerical feedback",
+    summary:
+      "A neuro-symbolic agent derived several analytical methods for a core integral governing gravitational radiation from cosmic-string loops, extending earlier partial asymptotic work to arbitrary loop geometries.",
+    importance:
+      "The authors present it as the solution of an open theoretical-physics problem and publish the discovery workflow in detail. It remains here until specialists independently scrutinize the intended scope and derivations.",
+    source: "https://arxiv.org/abs/2603.04735",
+    sourceLabel: "View preprint",
+  },
+];
 
 const biologyEstablishedResults: Result[] = [
+  {
+    title: "AI-Discovered Antibiotics Against Drug-Resistant Gonorrhoea",
+    field: "Infectious disease & drug discovery",
+    date: "June 17, 2026",
+    isoDate: "2026-06-17",
+    outcome: "Discovered",
+    status: "Peer-reviewed; in-vitro, mechanism, organ-chip and mouse validation",
+    score: 4,
+    ai: "Graph neural network screening roughly six million compounds",
+    summary:
+      "A deep-learning screen nominated 213 compounds for testing; 83 inhibited Neisseria gonorrhoeae. Two structurally novel leads retained activity against multidrug-resistant strains, and one revealed alanine racemase as its target.",
+    importance:
+      "Gonorrhoea is increasingly resistant to recommended antibiotics. The leads showed early effects in a human vagina-on-a-chip model and a mouse infection model, but they are still preclinical candidates rather than patient-ready drugs.",
+    source: "https://doi.org/10.1126/scitranslmed.ads4699",
+    sourceLabel: "View Science Translational Medicine paper",
+    secondarySource: "https://pubmed.ncbi.nlm.nih.gov/42308330/",
+    secondarySourceLabel: "View PubMed record",
+  },
+  {
+    title: "Brain-Penetrant Autophagy Enhancers for Alzheimer’s Disease",
+    field: "Neurodegeneration & drug discovery",
+    date: "May 31, 2026",
+    isoDate: "2026-05-31",
+    outcome: "Discovered",
+    status: "Peer-reviewed preclinical study; worm and mouse validation",
+    score: 4,
+    ai: "DeepDrugDiscovery mechanism-centred screen of more than one million molecules",
+    summary:
+      "AI identified ombuin and 2-hydroxycinnamic acid as brain-penetrant, mTOR-independent autophagy enhancers. Experiments found reduced tau and amyloid-β pathology and restored memory in animal models.",
+    importance:
+      "The work joins large-scale AI screening to biological and behavioural validation in Alzheimer’s models. Human safety, dosing and efficacy remain completely untested.",
+    source: "https://pubmed.ncbi.nlm.nih.gov/42218670/",
+    sourceLabel: "View peer-reviewed paper record",
+  },
+  {
+    title: "Ombuin Identified as a Sepsis-Treatment Candidate",
+    field: "Sepsis & immunology",
+    date: "February 24, 2026",
+    isoDate: "2026-02-24",
+    outcome: "Discovered",
+    status: "Peer-reviewed preclinical study; cellular and animal validation",
+    score: 3,
+    ai: "AI screening pipeline for macrophage-polarization inhibitors",
+    summary:
+      "An AI-led pipeline identified ombuin as an inhibitor of inflammatory M1 macrophage polarization. Follow-up experiments mapped its mechanism and tested therapeutic effects in preclinical sepsis models.",
+    importance:
+      "Sepsis remains a major cause of death and lacks targeted treatments for dysregulated inflammation. The finding is experimentally supported but far from evidence of benefit in humans.",
+    source: "https://pubmed.ncbi.nlm.nih.gov/41735615/",
+    sourceLabel: "View Acta Pharmacologica Sinica record",
+  },
   {
     title: "OpenCRISPR-1: An AI-Designed Human Gene Editor",
     field: "Genome editing & biotechnology",
@@ -832,6 +931,22 @@ const biologyEstablishedResults: Result[] = [
 ];
 
 const biologyEmergingResults: Result[] = [
+  {
+    title: "AI Prioritizes Shared Targets for Aging and 12 Age-Related Diseases",
+    field: "Human aging, multi-omics & target discovery",
+    date: "June 12, 2026",
+    isoDate: "2026-06-12",
+    outcome: "Discovered",
+    status: "Peer-reviewed computational study; experimental validation still needed",
+    score: 3,
+    ai: "AI multi-omic target discovery + Mendelian randomization and colocalization",
+    summary:
+      "An AI-guided framework identified 29 high-confidence and 16 previously unrecognized targets shared across aging and neurological, inflammatory, metabolic and fibrotic diseases. Genetic analyses supported several candidates, including IL6R and NOS2.",
+    importance:
+      "The result connects aging biology to repurposable drug targets and adds causal-genetic checks, but it generates hypotheses rather than demonstrating that modulating the new targets improves human healthspan.",
+    source: "https://pubmed.ncbi.nlm.nih.gov/42295090/",
+    sourceLabel: "View Aging and Disease paper",
+  },
   {
     title: "Rentosertib for Idiopathic Pulmonary Fibrosis",
     field: "Age-related lung disease & clinical trials",
@@ -1341,8 +1456,8 @@ function SubjectResults({
               <p className="section-kicker">New &amp; under review</p>
               <h2 id={`${area}-emerging-heading`}>Promising, not yet settled</h2>
               <p className="section-intro">
-                Early clinical signals and preclinical discoveries whose wider
-                scientific or medical significance still requires confirmation.
+                New claims and early results whose scope, verification or wider
+                significance still requires independent confirmation.
               </p>
             </div>
             <div className="review-key"><span aria-hidden="true">!</span>Status may change</div>
