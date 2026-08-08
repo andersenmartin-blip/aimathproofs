@@ -296,6 +296,11 @@ a {
   color: var(--amber);
 }
 
+.outcome.scientific {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
 .card-grid {
   display: grid;
   gap: 60px;
