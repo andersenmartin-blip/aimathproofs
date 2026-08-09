@@ -1166,7 +1166,7 @@ export default function Home() {
             </p>
             <div className="hero-meta">
               <span><strong>3</strong> research areas</span>
-              <span>Last checked August 8, 2026</span>
+              <span>Last checked August 9, 2026</span>
             </div>
           </section>
 
@@ -1261,7 +1261,7 @@ export default function Home() {
             <div className="subject-stats">
               <span><strong>{establishedResults.length}</strong> established</span>
               <span><strong>{emergingResults.length}</strong> under review</span>
-              <span>Last checked August 8, 2026</span>
+              <span>Last checked August 9, 2026</span>
             </div>
           </section>
 
@@ -1427,7 +1427,7 @@ function SubjectResults({
         <div className="subject-stats">
           <span><strong>{established.length}</strong> established</span>
           <span><strong>{emerging.length}</strong> under review</span>
-          <span>Last checked August 8, 2026</span>
+          <span>Last checked August 9, 2026</span>
         </div>
       </section>
 
