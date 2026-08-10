@@ -458,6 +458,22 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Graphical Lie Algebra Conjecture",
+    field: "Lie theory & graph methods",
+    date: "August 6, 2026",
+    isoDate: "2026-08-06",
+    outcome: "Disproved",
+    status: "Public counterexample claim; no manuscript or independent review yet",
+    score: 1,
+    ai: "GPT-5.6 Sol",
+    summary:
+      "A public report says GPT-5.6 Sol found a counterexample to a newly proposed graphical Lie algebra conjecture, roughly 36 hours after the conjecture was formulated.",
+    importance:
+      "The claim illustrates how quickly AI can test fresh specialist conjectures, but the conjecture is very new and neither its full statement nor the counterexample has yet been released in a citable manuscript.",
+    source: "https://x.com/bryancsk/status/2085225261520306679",
+    sourceLabel: "View public claim",
+  },
+  {
     title: "Absolutely Maximally Entangled States: Five New Parameter Cases",
     field: "Quantum information & coding theory",
     date: "August 6, 2026",
@@ -932,6 +948,25 @@ const biologyEstablishedResults: Result[] = [
 
 const biologyEmergingResults: Result[] = [
   {
+    title: "AI-Designed Bacteriophage Genomes",
+    field: "Antimicrobial resistance & synthetic biology",
+    date: "August 6, 2026",
+    isoDate: "2026-08-06",
+    outcome: "Designed",
+    status: "Peer-reviewed laboratory validation; no animal or human evidence",
+    score: 4,
+    ai: "Evo 1 and Evo 2 genome language models",
+    summary:
+      "The models generated complete bacteriophage genomes, 285 designs were synthesized, and 16 produced viable phages. Several outperformed the natural template, while a cocktail overcame phage resistance in three E. coli strains.",
+    importance:
+      "This is the first experimentally validated generative design of viable whole viral genomes and could eventually support therapies for antibiotic-resistant infections. It remains an early laboratory proof of concept and also raises substantial biosecurity questions.",
+    source: "https://www.science.org/doi/10.1126/science.aec2657",
+    sourceLabel: "View Science paper",
+    secondarySource:
+      "https://news.stanford.edu/stories/2026/08/evo-2-ai-tool-e-coli-killer-bacteriophages",
+    secondarySourceLabel: "View Stanford explanation",
+  },
+  {
     title: "AI Prioritizes Shared Targets for Aging and 12 Age-Related Diseases",
     field: "Human aging, multi-omics & target discovery",
     date: "June 12, 2026",
@@ -1166,7 +1201,7 @@ export default function Home() {
             </p>
             <div className="hero-meta">
               <span><strong>3</strong> research areas</span>
-              <span>Last checked August 9, 2026</span>
+              <span>Last checked August 10, 2026</span>
             </div>
           </section>
 
@@ -1261,7 +1296,7 @@ export default function Home() {
             <div className="subject-stats">
               <span><strong>{establishedResults.length}</strong> established</span>
               <span><strong>{emergingResults.length}</strong> under review</span>
-              <span>Last checked August 9, 2026</span>
+              <span>Last checked August 10, 2026</span>
             </div>
           </section>
 
@@ -1427,7 +1462,7 @@ function SubjectResults({
         <div className="subject-stats">
           <span><strong>{established.length}</strong> established</span>
           <span><strong>{emerging.length}</strong> under review</span>
-          <span>Last checked August 9, 2026</span>
+          <span>Last checked August 10, 2026</span>
         </div>
       </section>
 
