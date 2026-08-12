@@ -47,6 +47,22 @@ const establishedResults: Result[] = [
     sourceLabel: "View preprint and certificate description",
   },
   {
+    title: "Schubitopes Are Not Ehrhart Positive",
+    field: "Algebraic combinatorics & discrete geometry",
+    date: "August 1, 2026",
+    isoDate: "2026-08-01",
+    outcome: "Disproved",
+    status: "Explicit counterexample; SageMath computation released and certified by hand",
+    score: 2,
+    ai: "GPT-5.6 Sol Pro",
+    summary:
+      "GPT-5.6 Sol Pro found a two-column Schubitope whose Ehrhart polynomial has a negative quadratic coefficient, disproving the 2019 Monical–Tokcan–Yong positivity conjecture.",
+    importance:
+      "The result settles a specialised conjecture about a notable family of generalized permutahedra. The explicit example is directly checkable, and the authors released the SageMath computation and report certifying it by hand.",
+    source: "https://arxiv.org/abs/2608.00377",
+    sourceLabel: "View preprint and verification code",
+  },
+  {
     title: "High-dimensional Sphere Packing",
     field: "Discrete geometry",
     date: "August 1, 2026",
@@ -584,6 +600,38 @@ const emergingResults: Result[] = [
       "It resolves a genuine Graffiti/Erdős-era conjecture linking degree-sequence algorithms with prime-number asymptotics, but currently rests on one new preprint.",
     source: "https://arxiv.org/abs/2608.04040",
     sourceLabel: "View preprint",
+  },
+  {
+    title: "Two-Terminal Network Reliability",
+    field: "Randomized algorithms & network reliability",
+    date: "August 3, 2026",
+    isoDate: "2026-08-03",
+    outcome: "Proved",
+    status: "Three-author preprint; independent review pending",
+    score: 4,
+    ai: "GPT-5.6 Sol Ultra",
+    summary:
+      "The paper gives a fully polynomial-time randomized approximation scheme for two-terminal reliability on general directed and undirected graphs, answering a question explicitly open since at least 1994. GPT-5.6 Sol Ultra discovered the algorithm's key idea.",
+    importance:
+      "Two-terminal reliability is one of the foundational #P-complete network problems. A general FPRAS closes a long-standing approximation-complexity gap, but the 31-page proof has not yet received independent scrutiny.",
+    source: "https://arxiv.org/abs/2608.02523",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Equality Case of Ehrhart’s Volume Conjecture",
+    field: "Convex geometry & lattice polytopes",
+    date: "August 2, 2026",
+    isoDate: "2026-08-02",
+    outcome: "Proved",
+    status: "Human-verified single-author preprint; independent review pending",
+    score: 4,
+    ai: "GPT-5.6 Sol · Claude Fable 5 · Danus",
+    summary:
+      "The paper characterizes every extremal body in the sharp Ehrhart volume bound as a unimodular image of the standard extremal simplex, resolving the equality case. Generative AI produced the main result with essential human strategic input.",
+    importance:
+      "The theorem completes the extremal characterization accompanying Astra's recent inequality proof. The author reports human verification and a revision without mathematical changes, but broader scrutiny is still limited.",
+    source: "https://arxiv.org/abs/2608.01040",
+    sourceLabel: "View revised preprint",
   },
   {
     title: "Kourovka Notebook Problem 21.142",
@@ -1201,7 +1249,7 @@ export default function Home() {
             </p>
             <div className="hero-meta">
               <span><strong>3</strong> research areas</span>
-              <span>Last checked August 11, 2026</span>
+              <span>Last checked August 12, 2026</span>
             </div>
           </section>
 
@@ -1296,7 +1344,7 @@ export default function Home() {
             <div className="subject-stats">
               <span><strong>{establishedResults.length}</strong> established</span>
               <span><strong>{emergingResults.length}</strong> under review</span>
-              <span>Last checked August 11, 2026</span>
+              <span>Last checked August 12, 2026</span>
             </div>
           </section>
 
@@ -1462,7 +1510,7 @@ function SubjectResults({
         <div className="subject-stats">
           <span><strong>{established.length}</strong> established</span>
           <span><strong>{emerging.length}</strong> under review</span>
-          <span>Last checked August 11, 2026</span>
+          <span>Last checked August 12, 2026</span>
         </div>
       </section>
 
