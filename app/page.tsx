@@ -474,6 +474,22 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Anstee–Sali Conjecture",
+    field: "Extremal set theory & forbidden configurations",
+    date: "August 7, 2026",
+    isoDate: "2026-08-07",
+    outcome: "Disproved",
+    status: "Author-verified single-author preprint; independent review pending",
+    score: 4,
+    ai: "GPT-5.6 Sol",
+    summary:
+      "GPT-5.6 Sol found a six-vertex forbidden configuration for which the conjecture predicts cubic growth, while a random-alteration construction gives growth of order at least m^(10/3), disproving the proposed universal exponent formula.",
+    importance:
+      "The Anstee–Sali conjecture is a central structural prediction in forbidden-configuration theory. The manuscript provides an explicit certificate and a short probabilistic argument, but currently has only the author's verification.",
+    source: "https://arxiv.org/abs/2608.07646",
+    sourceLabel: "View preprint",
+  },
+  {
     title: "Graphical Lie Algebra Conjecture",
     field: "Lie theory & graph methods",
     date: "August 6, 2026",
@@ -599,6 +615,22 @@ const emergingResults: Result[] = [
     importance:
       "It resolves a genuine Graffiti/Erdős-era conjecture linking degree-sequence algorithms with prime-number asymptotics, but currently rests on one new preprint.",
     source: "https://arxiv.org/abs/2608.04040",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Two Product-Structure Conjectures in Extremal Graph Theory",
+    field: "Extremal graph theory",
+    date: "August 3, 2026",
+    isoDate: "2026-08-03",
+    outcome: "Disproved",
+    status: "Single-author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Sol",
+    summary:
+      "GPT-5.6 Sol found a finite forbidden family with a superlinear surplus over the Turán bound and extremal graphs without a nontrivial join decomposition, giving one counterexample to two product-structure conjectures.",
+    importance:
+      "The construction overturns two specialist conjectures about the structure and size of extremal graphs. The ten-page proof is public, but no independent verification or certificate has been released.",
+    source: "https://arxiv.org/abs/2608.02115",
     sourceLabel: "View preprint",
   },
   {
@@ -1249,7 +1281,7 @@ export default function Home() {
             </p>
             <div className="hero-meta">
               <span><strong>3</strong> research areas</span>
-              <span>Last checked August 12, 2026</span>
+              <span>Last checked August 13, 2026</span>
             </div>
           </section>
 
@@ -1344,7 +1376,7 @@ export default function Home() {
             <div className="subject-stats">
               <span><strong>{establishedResults.length}</strong> established</span>
               <span><strong>{emergingResults.length}</strong> under review</span>
-              <span>Last checked August 12, 2026</span>
+              <span>Last checked August 13, 2026</span>
             </div>
           </section>
 
@@ -1510,7 +1542,7 @@ function SubjectResults({
         <div className="subject-stats">
           <span><strong>{established.length}</strong> established</span>
           <span><strong>{emerging.length}</strong> under review</span>
-          <span>Last checked August 12, 2026</span>
+          <span>Last checked August 13, 2026</span>
         </div>
       </section>
 
