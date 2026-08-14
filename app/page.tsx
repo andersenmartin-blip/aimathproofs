@@ -474,6 +474,22 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Dense-Case Theorem for Seymour’s Second Neighborhood Conjecture",
+    field: "Extremal graph theory & directed graphs",
+    date: "August 12, 2026",
+    isoDate: "2026-08-12",
+    outcome: "Proved",
+    status: "Author-verified single-author preprint; independent review pending",
+    score: 3,
+    ai: "OpenAI GPT-5 family · Anthropic Claude",
+    summary:
+      "GPT-5 models discovered a fixed-target capacity argument and its double-counting proof, establishing Seymour’s conjecture for every oriented graph with n ≤ 2δ+2. Claude models adversarially audited an intermediate draft.",
+    importance:
+      "This is meaningful partial progress on a prominent graph-theory conjecture and improves the known minimum possible order of a counterexample. The proof is short and author-checked, but external expert scrutiny is still pending.",
+    source: "https://arxiv.org/abs/2608.11530",
+    sourceLabel: "View preprint",
+  },
+  {
     title: "Anstee–Sali Conjecture",
     field: "Extremal set theory & forbidden configurations",
     date: "August 7, 2026",
@@ -804,6 +820,22 @@ const emergingResults: Result[] = [
       "The aggregate is a strong signal of accelerating activity. It is not itself proof that all 16 original mathematical claims have been stated and verified correctly.",
     source: "https://x.com/jbrukh/status/2080457590899642505",
     sourceLabel: "View X tracker",
+  },
+  {
+    title: "Steinerberger’s Antipodal-Pairs Conjecture",
+    field: "Metric geometry & combinatorics",
+    date: "April 28, 2026",
+    isoDate: "2026-04-28",
+    outcome: "Proved",
+    status: "Two-author preprint and seminar presentation; independent review pending",
+    score: 2,
+    ai: "ChatGPT 5.4",
+    summary:
+      "In close collaboration with the authors, ChatGPT 5.4 helped complete a proof that many nearly antipodal pairs in a planar point set force the optimal-order number of nearby pairs, confirming Steinerberger’s recent conjecture.",
+    importance:
+      "The theorem gives a sharp answer to a recent specialist problem and a more general two-parameter result. It has been publicly presented, but no independent proof check or formal certificate is available.",
+    source: "https://arxiv.org/abs/2608.02605",
+    sourceLabel: "View preprint",
   },
 ];
 
@@ -1281,7 +1313,7 @@ export default function Home() {
             </p>
             <div className="hero-meta">
               <span><strong>3</strong> research areas</span>
-              <span>Last checked August 13, 2026</span>
+              <span>Last checked August 14, 2026</span>
             </div>
           </section>
 
@@ -1376,7 +1408,7 @@ export default function Home() {
             <div className="subject-stats">
               <span><strong>{establishedResults.length}</strong> established</span>
               <span><strong>{emergingResults.length}</strong> under review</span>
-              <span>Last checked August 13, 2026</span>
+              <span>Last checked August 14, 2026</span>
             </div>
           </section>
 
@@ -1542,7 +1574,7 @@ function SubjectResults({
         <div className="subject-stats">
           <span><strong>{established.length}</strong> established</span>
           <span><strong>{emerging.length}</strong> under review</span>
-          <span>Last checked August 13, 2026</span>
+          <span>Last checked August 14, 2026</span>
         </div>
       </section>
 
