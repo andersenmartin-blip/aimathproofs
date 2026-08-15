@@ -490,6 +490,54 @@ const emergingResults: Result[] = [
     sourceLabel: "View preprint",
   },
   {
+    title: "Tight Lower Bound for Stochastic Optimization With Bounded Noise",
+    field: "Optimization theory & machine learning",
+    date: "August 10, 2026",
+    isoDate: "2026-08-10",
+    outcome: "Proved",
+    status: "Single-author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Sol (Codex Ultra)",
+    summary:
+      "GPT-5.6 Sol generated a sharp minimax lower bound for smooth nonconvex stochastic optimization when every gradient-oracle error is uniformly bounded, closing an open direction identified in 2023 for the one-query-per-sample model.",
+    importance:
+      "The theorem determines the optimal query-complexity scale under a stronger and practically relevant noise assumption. The author checked and revised the proof, but the result currently rests on one new preprint.",
+    source: "https://arxiv.org/abs/2608.09004",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Row Pathwidth of Complete Binary Trees",
+    field: "Structural graph theory",
+    date: "August 10, 2026",
+    isoDate: "2026-08-10",
+    outcome: "Proved",
+    status: "Two-author preprint; independent review pending",
+    score: 2,
+    ai: "GPT-5.6 Sol Pro",
+    summary:
+      "The paper proves that the row pathwidth of a complete binary tree of height h is of order h, resolving a 2022 problem by improving the previous lower bound from order h/log h to the optimal order.",
+    importance:
+      "This closes a specialist problem in graph product-structure theory with a short AI-found proof. The authors provide a complete manuscript, but no independent check or formal certificate is yet public.",
+    source: "https://arxiv.org/abs/2608.09495",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Amenability Is Independent of the Base Field",
+    field: "Rings, algebras & functional analysis",
+    date: "August 8, 2026",
+    isoDate: "2026-08-08",
+    outcome: "Proved",
+    status: "Single-author preprint; independent review pending",
+    score: 2,
+    ai: "ChatGPT 5.6 Sol",
+    summary:
+      "The paper proves that amenability of an associative algebra or module does not depend on its ground field, answering a question raised by Yves Cornulier. A significant part of the argument came from ChatGPT 5.6 Sol.",
+    importance:
+      "The result settles a precise specialist question and clarifies an invariant used in algebra and analysis. It is currently supported only by the author's new preprint.",
+    source: "https://arxiv.org/abs/2608.08161",
+    sourceLabel: "View preprint",
+  },
+  {
     title: "Anstee–Sali Conjecture",
     field: "Extremal set theory & forbidden configurations",
     date: "August 7, 2026",
@@ -503,6 +551,38 @@ const emergingResults: Result[] = [
     importance:
       "The Anstee–Sali conjecture is a central structural prediction in forbidden-configuration theory. The manuscript provides an explicit certificate and a short probabilistic argument, but currently has only the author's verification.",
     source: "https://arxiv.org/abs/2608.07646",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Facial Distance Patterns in Planar Graphs",
+    field: "Planar graph algorithms & metric compression",
+    date: "August 7, 2026",
+    isoDate: "2026-08-07",
+    outcome: "Proved",
+    status: "Three-author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Sol",
+    summary:
+      "GPT-5.6 Sol found a proof that the number of facial distance patterns in an unweighted planar graph is O(k²), matching the known lower bound and settling a 2022 conjecture. The bound also improves several planar-graph algorithms.",
+    importance:
+      "The sharp bound closes a concrete conjecture and yields immediate consequences for metric compression, distance oracles and diameter algorithms. The proof is public and author-checked, but broader scrutiny is pending.",
+    source: "https://arxiv.org/abs/2608.07187",
+    sourceLabel: "View preprint",
+  },
+  {
+    title: "Pessimal Elections for Approximately Dominating Sets",
+    field: "Social choice & combinatorics",
+    date: "August 7, 2026",
+    isoDate: "2026-08-07",
+    outcome: "Proved",
+    status: "Three-author preprint; independent review pending",
+    score: 2,
+    ai: "GPT-5.6 Sol Ultra",
+    summary:
+      "An AI-found construction proves that committees of order 1/ε² are sometimes necessary to prevent a losing candidate from beating every selected winner by a 1/2+ε majority, matching the known upper bound up to constants.",
+    importance:
+      "The construction determines the correct asymptotic size of approximately dominating committees in elections. It is a focused theoretical result whose new preprint still awaits independent review.",
+    source: "https://arxiv.org/abs/2608.06872",
     sourceLabel: "View preprint",
   },
   {
@@ -940,6 +1020,22 @@ const physicsEstablishedResults: Result[] = [
 
 const physicsEmergingResults: Result[] = [
   {
+    title: "Critical Sherrington–Kirkpatrick Overlap Distribution",
+    field: "Statistical physics & spin glasses",
+    date: "August 9, 2026",
+    isoDate: "2026-08-09",
+    outcome: "Discovered",
+    status: "Two-author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Pro",
+    summary:
+      "The paper derives the critical two-replica overlap distribution for both spherical and Ising Sherrington–Kirkpatrick spin-glass models, including its N^(-1/3) scale and an Airy-process limit. Most arguments were generated with GPT-5.6 Pro.",
+    importance:
+      "The result answers a question of Talagrand and gives a precise critical-law description for a canonical disordered-system model. It remains a new theoretical preprint without independent validation.",
+    source: "https://arxiv.org/abs/2608.08752",
+    sourceLabel: "View preprint",
+  },
+  {
     title: "Exact Cosmic-String Gravitational-Wave Spectrum",
     field: "Theoretical physics & cosmology",
     date: "March 5, 2026",
@@ -1313,7 +1409,7 @@ export default function Home() {
             </p>
             <div className="hero-meta">
               <span><strong>3</strong> research areas</span>
-              <span>Last checked August 14, 2026</span>
+              <span>Last checked August 15, 2026</span>
             </div>
           </section>
 
@@ -1408,7 +1504,7 @@ export default function Home() {
             <div className="subject-stats">
               <span><strong>{establishedResults.length}</strong> established</span>
               <span><strong>{emergingResults.length}</strong> under review</span>
-              <span>Last checked August 14, 2026</span>
+              <span>Last checked August 15, 2026</span>
             </div>
           </section>
 
@@ -1574,7 +1670,7 @@ function SubjectResults({
         <div className="subject-stats">
           <span><strong>{established.length}</strong> established</span>
           <span><strong>{emerging.length}</strong> under review</span>
-          <span>Last checked August 14, 2026</span>
+          <span>Last checked August 15, 2026</span>
         </div>
       </section>
 
