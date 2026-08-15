@@ -244,6 +244,25 @@ a {
 .result-card {
   border-bottom: 1px solid var(--line);
   padding: 28px 0 36px;
+  scroll-margin-top: 90px;
+}
+
+.result-card.new-review-card {
+  background: linear-gradient(90deg, rgba(234, 177, 67, 0.09), transparent 58%);
+}
+
+.new-review-badge {
+  align-items: center;
+  background: var(--ink);
+  border-radius: 999px;
+  color: var(--white);
+  display: inline-flex;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0 0 12px;
+  padding: 8px 11px;
+  text-transform: uppercase;
 }
 
 .verification-category {
@@ -258,6 +277,67 @@ a {
 
 .verification-category.review {
   color: var(--amber);
+}
+
+.latest-review-panel {
+  background: var(--ink);
+  color: var(--white);
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.6fr);
+  margin: -10px 0 44px;
+  padding: 28px;
+}
+
+.latest-review-panel .section-kicker {
+  color: #cbd8b8;
+  margin-bottom: 10px;
+}
+
+.latest-review-panel h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.latest-review-panel p:not(.section-kicker) {
+  color: #c7c9c2;
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 12px 0 0;
+}
+
+.latest-review-links {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.latest-review-links a {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--white);
+  display: flex;
+  font-size: 12px;
+  gap: 14px;
+  justify-content: space-between;
+  line-height: 1.3;
+  padding: 11px 12px;
+  text-decoration: none;
+}
+
+.latest-review-links a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.latest-review-links time {
+  color: #b8bbb3;
+  flex: 0 0 auto;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .card-topline {
@@ -830,6 +910,10 @@ footer p:first-child {
     grid-template-columns: 1fr;
   }
 
+  .latest-review-panel {
+    grid-template-columns: 1fr;
+  }
+
   .area-grid {
     grid-template-columns: 1fr;
   }
@@ -920,6 +1004,16 @@ footer p:first-child {
     margin-right: -10px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .latest-review-panel {
+    gap: 22px;
+    margin-bottom: 32px;
+    padding: 22px 18px;
+  }
+
+  .latest-review-links {
+    grid-template-columns: 1fr;
   }
 
   .emerging-section {
