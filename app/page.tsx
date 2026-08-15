@@ -1338,6 +1338,42 @@ function ResultCard({
   );
 }
 
+function LatestReviewPanel({ items }: { items: Result[] }) {
+  if (items.length === 0) return null;
+
+  return (
+    <aside className="latest-review-panel" aria-label="New results in the latest review">
+      <div>
+        <p className="section-kicker">New in the latest review</p>
+        <h2>
+          {items.length} {items.length === 1 ? "result" : "results"} added
+        </h2>
+        <p>
+          Added on {latestReviewDate}; ordered below by their original
+          publication date.
+        </p>
+      </div>
+      <nav className="latest-review-links" aria-label="Jump to newly added results">
+        {items.map((item) => (
+          <a
+            href={`#${resultId(item.title)}`}
+            key={item.title}
+            onClick={(event) => {
+              event.preventDefault();
+              document
+                .getElementById(resultId(item.title))
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+          >
+            <span>{item.title}</span>
+            <time dateTime={item.isoDate}>{item.date}</time>
+          </a>
+        ))}
+      </nav>
+    </aside>
+  );
+}
+
 type Area = "home" | "mathematics" | "physics" | "human-biology";
 
 export default function Home() {
@@ -1560,35 +1596,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              {latestReviewMathematics.length > 0 && (
-                <aside className="latest-review-panel" aria-label="New results in the latest review">
-                  <div>
-                    <p className="section-kicker">New in the latest review</p>
-                    <h2>{latestReviewMathematics.length} results added</h2>
-                    <p>
-                      Added on {latestReviewDate}; ordered below by their original
-                      publication date.
-                    </p>
-                  </div>
-                  <nav className="latest-review-links" aria-label="Jump to newly added mathematics results">
-                    {latestReviewMathematics.map((item) => (
-                      <a
-                        href={`#${resultId(item.title)}`}
-                        key={item.title}
-                        onClick={(event) => {
-                          event.preventDefault();
-                          document
-                            .getElementById(resultId(item.title))
-                            ?.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }}
-                      >
-                        <span>{item.title}</span>
-                        <time dateTime={item.isoDate}>{item.date}</time>
-                      </a>
-                    ))}
-                  </nav>
-                </aside>
-              )}
+              <LatestReviewPanel items={latestReviewMathematics} />
               <div className="result-list latest-list">
                 {latestMathematics.map(({ item, emerging }) => (
                   <ResultCard
@@ -1728,6 +1736,9 @@ function SubjectResults({
   const sortedEmerging = [...emerging].sort((a, b) =>
     b.isoDate.localeCompare(a.isoDate),
   );
+  const latestReviewItems = [...established, ...emerging]
+    .filter((item) => item.addedIsoDate === latestReviewIsoDate)
+    .sort((a, b) => b.isoDate.localeCompare(a.isoDate));
 
   return (
     <>
@@ -1742,6 +1753,10 @@ function SubjectResults({
           <span><strong>{emerging.length}</strong> under review</span>
           <span>Last checked {latestReviewDate}</span>
         </div>
+      </section>
+
+      <section className="subject-latest-review">
+        <LatestReviewPanel items={latestReviewItems} />
       </section>
 
       <section className="results-section" aria-labelledby={`${area}-established-heading`}>
