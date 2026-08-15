@@ -340,6 +340,20 @@ a {
   text-transform: uppercase;
 }
 
+.subject-latest-review {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 42px 32px 0;
+}
+
+.subject-latest-review:has(.latest-review-panel) + .results-section {
+  padding-top: 58px;
+}
+
+.subject-latest-review:not(:has(.latest-review-panel)) {
+  display: none;
+}
+
 .card-topline {
   align-items: center;
   color: var(--muted);
@@ -983,6 +997,10 @@ footer p:first-child {
 
   .results-section {
     padding: 68px 20px 80px;
+  }
+
+  .subject-latest-review {
+    padding: 32px 20px 0;
   }
 
   .area-section,
