@@ -27,7 +27,12 @@ type Result = {
   sourceLabel?: string;
   secondarySource?: string;
   secondarySourceLabel?: string;
+  addedDate?: string;
+  addedIsoDate?: string;
 };
+
+const latestReviewDate = "August 15, 2026";
+const latestReviewIsoDate = "2026-08-15";
 
 const establishedResults: Result[] = [
   {
@@ -504,6 +509,8 @@ const emergingResults: Result[] = [
       "The theorem determines the optimal query-complexity scale under a stronger and practically relevant noise assumption. The author checked and revised the proof, but the result currently rests on one new preprint.",
     source: "https://arxiv.org/abs/2608.09004",
     sourceLabel: "View preprint",
+    addedDate: latestReviewDate,
+    addedIsoDate: latestReviewIsoDate,
   },
   {
     title: "Row Pathwidth of Complete Binary Trees",
@@ -520,6 +527,8 @@ const emergingResults: Result[] = [
       "This closes a specialist problem in graph product-structure theory with a short AI-found proof. The authors provide a complete manuscript, but no independent check or formal certificate is yet public.",
     source: "https://arxiv.org/abs/2608.09495",
     sourceLabel: "View preprint",
+    addedDate: latestReviewDate,
+    addedIsoDate: latestReviewIsoDate,
   },
   {
     title: "Amenability Is Independent of the Base Field",
@@ -536,6 +545,8 @@ const emergingResults: Result[] = [
       "The result settles a precise specialist question and clarifies an invariant used in algebra and analysis. It is currently supported only by the author's new preprint.",
     source: "https://arxiv.org/abs/2608.08161",
     sourceLabel: "View preprint",
+    addedDate: latestReviewDate,
+    addedIsoDate: latestReviewIsoDate,
   },
   {
     title: "Anstee–Sali Conjecture",
@@ -568,6 +579,8 @@ const emergingResults: Result[] = [
       "The sharp bound closes a concrete conjecture and yields immediate consequences for metric compression, distance oracles and diameter algorithms. The proof is public and author-checked, but broader scrutiny is pending.",
     source: "https://arxiv.org/abs/2608.07187",
     sourceLabel: "View preprint",
+    addedDate: latestReviewDate,
+    addedIsoDate: latestReviewIsoDate,
   },
   {
     title: "Pessimal Elections for Approximately Dominating Sets",
@@ -584,6 +597,8 @@ const emergingResults: Result[] = [
       "The construction determines the correct asymptotic size of approximately dominating committees in elections. It is a focused theoretical result whose new preprint still awaits independent review.",
     source: "https://arxiv.org/abs/2608.06872",
     sourceLabel: "View preprint",
+    addedDate: latestReviewDate,
+    addedIsoDate: latestReviewIsoDate,
   },
   {
     title: "Graphical Lie Algebra Conjecture",
@@ -1034,6 +1049,8 @@ const physicsEmergingResults: Result[] = [
       "The result answers a question of Talagrand and gives a precise critical-law description for a canonical disordered-system model. It remains a new theoretical preprint without independent validation.",
     source: "https://arxiv.org/abs/2608.08752",
     sourceLabel: "View preprint",
+    addedDate: latestReviewDate,
+    addedIsoDate: latestReviewIsoDate,
   },
   {
     title: "Exact Cosmic-String Gravitational-Wave Spectrum",
@@ -1240,6 +1257,13 @@ function Score({ value }: { value: number }) {
   );
 }
 
+function resultId(title: string) {
+  return `result-${title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "")}`;
+}
+
 function ResultCard({
   item,
   emerging = false,
@@ -1249,6 +1273,7 @@ function ResultCard({
   emerging?: boolean;
   showCategory?: boolean;
 }) {
+  const isNew = item.addedIsoDate === latestReviewIsoDate;
   const outcomeClass =
     item.outcome === "Mixed claims"
       ? "mixed"
@@ -1257,7 +1282,10 @@ function ResultCard({
         : "scientific";
 
   return (
-    <article className={`result-card${emerging ? " emerging-card" : ""}`}>
+    <article
+      className={`result-card${emerging ? " emerging-card" : ""}${isNew ? " new-review-card" : ""}`}
+      id={resultId(item.title)}
+    >
       <div className="card-topline">
         <span className={`outcome ${outcomeClass}`}>{item.outcome}</span>
         <span>{item.field}</span>
@@ -1266,6 +1294,11 @@ function ResultCard({
 
       <div className="card-grid">
         <div className="card-main">
+          {isNew && (
+            <span className="new-review-badge">
+              New in the {item.addedDate} review
+            </span>
+          )}
           {showCategory && (
             <span className={`verification-category${emerging ? " review" : ""}`}>
               {emerging ? "New & under review" : "Established result"}
@@ -1351,6 +1384,14 @@ export default function Home() {
     [],
   );
 
+  const latestReviewMathematics = useMemo(
+    () =>
+      emergingResults
+        .filter((item) => item.addedIsoDate === latestReviewIsoDate)
+        .sort((a, b) => b.isoDate.localeCompare(a.isoDate)),
+    [],
+  );
+
   const goToArea = (nextArea: Area) => {
     setArea(nextArea);
     setShowArchive(false);
@@ -1409,7 +1450,7 @@ export default function Home() {
             </p>
             <div className="hero-meta">
               <span><strong>3</strong> research areas</span>
-              <span>Last checked August 15, 2026</span>
+              <span>Last checked {latestReviewDate}</span>
             </div>
           </section>
 
@@ -1504,7 +1545,7 @@ export default function Home() {
             <div className="subject-stats">
               <span><strong>{establishedResults.length}</strong> established</span>
               <span><strong>{emergingResults.length}</strong> under review</span>
-              <span>Last checked August 15, 2026</span>
+              <span>Last checked {latestReviewDate}</span>
             </div>
           </section>
 
@@ -1519,6 +1560,35 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+              {latestReviewMathematics.length > 0 && (
+                <aside className="latest-review-panel" aria-label="New results in the latest review">
+                  <div>
+                    <p className="section-kicker">New in the latest review</p>
+                    <h2>{latestReviewMathematics.length} results added</h2>
+                    <p>
+                      Added on {latestReviewDate}; ordered below by their original
+                      publication date.
+                    </p>
+                  </div>
+                  <nav className="latest-review-links" aria-label="Jump to newly added mathematics results">
+                    {latestReviewMathematics.map((item) => (
+                      <a
+                        href={`#${resultId(item.title)}`}
+                        key={item.title}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          document
+                            .getElementById(resultId(item.title))
+                            ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }}
+                      >
+                        <span>{item.title}</span>
+                        <time dateTime={item.isoDate}>{item.date}</time>
+                      </a>
+                    ))}
+                  </nav>
+                </aside>
+              )}
               <div className="result-list latest-list">
                 {latestMathematics.map(({ item, emerging }) => (
                   <ResultCard
@@ -1670,7 +1740,7 @@ function SubjectResults({
         <div className="subject-stats">
           <span><strong>{established.length}</strong> established</span>
           <span><strong>{emerging.length}</strong> under review</span>
-          <span>Last checked August 15, 2026</span>
+          <span>Last checked {latestReviewDate}</span>
         </div>
       </section>
 
