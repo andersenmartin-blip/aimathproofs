@@ -31,8 +31,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "August 15, 2026";
-const latestReviewIsoDate = "2026-08-15";
+const latestReviewDate = "August 16, 2026";
+const latestReviewIsoDate = "2026-08-16";
 
 const establishedResults: Result[] = [
   {
@@ -509,8 +509,8 @@ const emergingResults: Result[] = [
       "The theorem determines the optimal query-complexity scale under a stronger and practically relevant noise assumption. The author checked and revised the proof, but the result currently rests on one new preprint.",
     source: "https://arxiv.org/abs/2608.09004",
     sourceLabel: "View preprint",
-    addedDate: latestReviewDate,
-    addedIsoDate: latestReviewIsoDate,
+    addedDate: "August 15, 2026",
+    addedIsoDate: "2026-08-15",
   },
   {
     title: "Row Pathwidth of Complete Binary Trees",
@@ -527,8 +527,8 @@ const emergingResults: Result[] = [
       "This closes a specialist problem in graph product-structure theory with a short AI-found proof. The authors provide a complete manuscript, but no independent check or formal certificate is yet public.",
     source: "https://arxiv.org/abs/2608.09495",
     sourceLabel: "View preprint",
-    addedDate: latestReviewDate,
-    addedIsoDate: latestReviewIsoDate,
+    addedDate: "August 15, 2026",
+    addedIsoDate: "2026-08-15",
   },
   {
     title: "Amenability Is Independent of the Base Field",
@@ -545,8 +545,8 @@ const emergingResults: Result[] = [
       "The result settles a precise specialist question and clarifies an invariant used in algebra and analysis. It is currently supported only by the author's new preprint.",
     source: "https://arxiv.org/abs/2608.08161",
     sourceLabel: "View preprint",
-    addedDate: latestReviewDate,
-    addedIsoDate: latestReviewIsoDate,
+    addedDate: "August 15, 2026",
+    addedIsoDate: "2026-08-15",
   },
   {
     title: "Anstee–Sali Conjecture",
@@ -579,8 +579,8 @@ const emergingResults: Result[] = [
       "The sharp bound closes a concrete conjecture and yields immediate consequences for metric compression, distance oracles and diameter algorithms. The proof is public and author-checked, but broader scrutiny is pending.",
     source: "https://arxiv.org/abs/2608.07187",
     sourceLabel: "View preprint",
-    addedDate: latestReviewDate,
-    addedIsoDate: latestReviewIsoDate,
+    addedDate: "August 15, 2026",
+    addedIsoDate: "2026-08-15",
   },
   {
     title: "Pessimal Elections for Approximately Dominating Sets",
@@ -597,8 +597,8 @@ const emergingResults: Result[] = [
       "The construction determines the correct asymptotic size of approximately dominating committees in elections. It is a focused theoretical result whose new preprint still awaits independent review.",
     source: "https://arxiv.org/abs/2608.06872",
     sourceLabel: "View preprint",
-    addedDate: latestReviewDate,
-    addedIsoDate: latestReviewIsoDate,
+    addedDate: "August 15, 2026",
+    addedIsoDate: "2026-08-15",
   },
   {
     title: "Graphical Lie Algebra Conjecture",
@@ -1049,8 +1049,8 @@ const physicsEmergingResults: Result[] = [
       "The result answers a question of Talagrand and gives a precise critical-law description for a canonical disordered-system model. It remains a new theoretical preprint without independent validation.",
     source: "https://arxiv.org/abs/2608.08752",
     sourceLabel: "View preprint",
-    addedDate: latestReviewDate,
-    addedIsoDate: latestReviewIsoDate,
+    addedDate: "August 15, 2026",
+    addedIsoDate: "2026-08-15",
   },
   {
     title: "Exact Cosmic-String Gravitational-Wave Spectrum",
