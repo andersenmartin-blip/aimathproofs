@@ -31,8 +31,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "August 16, 2026";
-const latestReviewIsoDate = "2026-08-16";
+const latestReviewDate = "August 17, 2026";
+const latestReviewIsoDate = "2026-08-17";
 
 const establishedResults: Result[] = [
   {
@@ -288,6 +288,28 @@ const establishedResults: Result[] = [
       "The result closes a roughly 40-year gap left after the odd-prime cases and supports explicit counting of 2-adic field extensions. Epoch AI rates it a solid, specialty-journal result.",
     source: "https://roed314.github.io/gq2/formalizations/",
     sourceLabel: "View proof and formalizations",
+  },
+  {
+    title: "Crouzeix’s Conjecture",
+    field: "Numerical linear algebra & operator theory",
+    date: "July 27, 2026",
+    isoDate: "2026-07-27",
+    outcome: "Proved",
+    status: "Expert-checked; independent proof and public Lean formalization",
+    score: 5,
+    ai: "GPT-5.6 Sol in ChatGPT Work",
+    summary:
+      "During an approximately 16-hour autonomous run, GPT-5.6 Sol produced the decisive theorem in Shanmu Jin’s proof that every matrix numerical range is a 2-spectral set. Jin checked and developed the argument into a manuscript.",
+    importance:
+      "The theorem resolves a central 22-year problem about functions of nonnormal matrices. Michel Crouzeix, Alex Townsend and Anne Greenbaum checked the proof, and a different independent proof appeared eight days later.",
+    source:
+      "https://www.preprints.org/manuscript/202607.1919",
+    sourceLabel: "View original preprint",
+    secondarySource:
+      "https://alextownsend.net/essays/SIAMNews_CrouzeixConjecture.pdf",
+    secondarySourceLabel: "View expert account and verification",
+    addedDate: "August 17, 2026",
+    addedIsoDate: "2026-08-17",
   },
   {
     title: "Feige’s Conjecture",
@@ -1338,7 +1360,13 @@ function ResultCard({
   );
 }
 
-function LatestReviewPanel({ items }: { items: Result[] }) {
+function LatestReviewPanel({
+  items,
+  onSelect,
+}: {
+  items: Result[];
+  onSelect?: (item: Result) => void;
+}) {
   if (items.length === 0) return null;
 
   return (
@@ -1360,9 +1388,12 @@ function LatestReviewPanel({ items }: { items: Result[] }) {
             key={item.title}
             onClick={(event) => {
               event.preventDefault();
-              document
-                .getElementById(resultId(item.title))
-                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              onSelect?.(item);
+              window.setTimeout(() => {
+                document
+                  .getElementById(resultId(item.title))
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }, 50);
             }}
           >
             <span>{item.title}</span>
@@ -1422,7 +1453,7 @@ export default function Home() {
 
   const latestReviewMathematics = useMemo(
     () =>
-      emergingResults
+      [...establishedResults, ...emergingResults]
         .filter((item) => item.addedIsoDate === latestReviewIsoDate)
         .sort((a, b) => b.isoDate.localeCompare(a.isoDate)),
     [],
@@ -1596,7 +1627,10 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <LatestReviewPanel items={latestReviewMathematics} />
+              <LatestReviewPanel
+                items={latestReviewMathematics}
+                onSelect={() => setShowArchive(true)}
+              />
               <div className="result-list latest-list">
                 {latestMathematics.map(({ item, emerging }) => (
                   <ResultCard
