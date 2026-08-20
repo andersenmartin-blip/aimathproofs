@@ -31,8 +31,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "August 17, 2026";
-const latestReviewIsoDate = "2026-08-17";
+const latestReviewDate = "August 20, 2026";
+const latestReviewIsoDate = "2026-08-20";
 
 const establishedResults: Result[] = [
   {
@@ -501,6 +501,24 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Sharp Minimax Bounds for Bivariate LiNGAM",
+    field: "Causal inference & statistical learning",
+    date: "August 16, 2026",
+    isoDate: "2026-08-16",
+    outcome: "Proved",
+    status: "Single-author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Sol (Codex Ultra)",
+    summary:
+      "GPT-5.6 Sol generated a sharp local minimax law for the samples needed to determine causal direction in bivariate LiNGAM, jointly quantifying weak effects, near-Gaussian noise and scale uncertainty.",
+    importance:
+      "The result turns qualitative identifiability into an exact sample-complexity characterization for a foundational causal model. The author checked and revised the proof, but it currently rests on one new preprint.",
+    source: "https://arxiv.org/abs/2608.15840",
+    sourceLabel: "View preprint",
+    addedDate: "August 20, 2026",
+    addedIsoDate: "2026-08-20",
+  },
+  {
     title: "Dense-Case Theorem for Seymour’s Second Neighborhood Conjecture",
     field: "Extremal graph theory & directed graphs",
     date: "August 12, 2026",
@@ -515,6 +533,24 @@ const emergingResults: Result[] = [
       "This is meaningful partial progress on a prominent graph-theory conjecture and improves the known minimum possible order of a counterexample. The proof is short and author-checked, but external expert scrutiny is still pending.",
     source: "https://arxiv.org/abs/2608.11530",
     sourceLabel: "View preprint",
+  },
+  {
+    title: "Lower Bound for Stepsize-Only Gradient Descent Acceleration",
+    field: "Convex optimization & complexity",
+    date: "August 11, 2026",
+    isoDate: "2026-08-11",
+    outcome: "Proved",
+    status: "Two-author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Sol Pro",
+    summary:
+      "GPT-5.6 Sol Pro developed an Ω(T^-1.9319) last-iterate lower bound for gradient descent with predetermined nonnegative stepsizes, showing that stepsize schedules alone cannot attain the optimal O(T^-2) accelerated rate.",
+    importance:
+      "This sharply narrows the limits of acceleration without momentum and provides rigorous evidence against a tempting route to optimal convergence. The authors guided and checked the proof, but external review is pending.",
+    source: "https://arxiv.org/abs/2608.10418",
+    sourceLabel: "View preprint",
+    addedDate: "August 20, 2026",
+    addedIsoDate: "2026-08-20",
   },
   {
     title: "Tight Lower Bound for Stochastic Optimization With Bounded Noise",
@@ -1073,6 +1109,24 @@ const physicsEmergingResults: Result[] = [
     sourceLabel: "View preprint",
     addedDate: "August 15, 2026",
     addedIsoDate: "2026-08-15",
+  },
+  {
+    title: "Optical Bilinear Interaction Discovered Autonomously",
+    field: "Experimental optics & photonic computing",
+    date: "April 29, 2026",
+    isoDate: "2026-04-29",
+    outcome: "Discovered",
+    status: "Experimentally demonstrated by the originating team; independent replication pending",
+    score: 4,
+    ai: "Qiushi Discovery Engine",
+    summary:
+      "An LLM-based agent autonomously proposed and experimentally validated optical bilinear interaction, a previously unreported physical mechanism structurally analogous to pairwise attention in Transformers.",
+    importance:
+      "This is unusually direct evidence of an AI system carrying a physical discovery from hypothesis through real experiments. The mechanism may enable fast optical pairwise computation, but the result currently rests on one team’s preprint.",
+    source: "https://arxiv.org/abs/2604.27092",
+    sourceLabel: "View preprint and experimental report",
+    addedDate: "August 20, 2026",
+    addedIsoDate: "2026-08-20",
   },
   {
     title: "Exact Cosmic-String Gravitational-Wave Spectrum",
