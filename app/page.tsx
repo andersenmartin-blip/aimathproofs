@@ -31,8 +31,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "August 20, 2026";
-const latestReviewIsoDate = "2026-08-20";
+const latestReviewDate = "August 21, 2026";
+const latestReviewIsoDate = "2026-08-21";
 
 const establishedResults: Result[] = [
   {
@@ -501,6 +501,24 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Four Author-Reviewed FAR Combinatorics Resolutions",
+    field: "Combinatorics & automated mathematical discovery",
+    date: "August 17, 2026",
+    isoDate: "2026-08-17",
+    outcome: "Mixed claims",
+    status: "Four artifacts reviewed by the author team; independent scrutiny pending",
+    score: 3,
+    ai: "Find, Attempt, and Recommend (FAR) pipeline",
+    summary:
+      "FAR searched 5,245 combinatorics papers, extracted and attempted thousands of open problems, and surfaced four author-reviewed resolutions: two counterexamples, one conjecture proof and one answer to an Erdős–Straus question.",
+    importance:
+      "The individual results are specialist advances, but the pipeline is notable for finding the problems as well as attempting them. The proofs are public in the paper, although wider expert review has not yet occurred.",
+    source: "https://arxiv.org/abs/2608.16977",
+    sourceLabel: "View paper and reviewed solutions",
+    addedDate: "August 21, 2026",
+    addedIsoDate: "2026-08-21",
+  },
+  {
     title: "Sharp Minimax Bounds for Bivariate LiNGAM",
     field: "Causal inference & statistical learning",
     date: "August 16, 2026",
@@ -517,6 +535,24 @@ const emergingResults: Result[] = [
     sourceLabel: "View preprint",
     addedDate: "August 20, 2026",
     addedIsoDate: "2026-08-20",
+  },
+  {
+    title: "Three-Block ADMM Convergence Counterexample",
+    field: "Optimization algorithms & numerical analysis",
+    date: "August 14, 2026",
+    isoDate: "2026-08-14",
+    outcome: "Disproved",
+    status: "Exact rational certificates in a two-author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Sol in Codex · Kimi K3 in Kimi Code",
+    summary:
+      "GPT-5.6 Sol constructed a rational instance where direct three-block ADMM has a bounded nonconvergent orbit of period 66; exact checks verify the orbit. Kimi K3 independently found a different period-23 certificate.",
+    importance:
+      "The counterexamples close an unresolved convergence case for a landmark optimization method and provide exact, directly checkable objects. Their broader significance still awaits specialist scrutiny.",
+    source: "https://arxiv.org/abs/2608.14396",
+    sourceLabel: "View preprint and exact certificates",
+    addedDate: "August 21, 2026",
+    addedIsoDate: "2026-08-21",
   },
   {
     title: "Dense-Case Theorem for Seymour’s Second Neighborhood Conjecture",
