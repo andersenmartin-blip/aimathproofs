@@ -31,10 +31,28 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "August 21, 2026";
-const latestReviewIsoDate = "2026-08-21";
+const latestReviewDate = "August 23, 2026";
+const latestReviewIsoDate = "2026-08-23";
 
 const establishedResults: Result[] = [
+  {
+    title: "Bijective Proof of the Berkovich–Uncu Partition Theorem",
+    field: "Partition theory & enumerative combinatorics",
+    date: "August 5, 2026",
+    isoDate: "2026-08-05",
+    outcome: "Proved",
+    status: "Four-author proof; main theorem formalized and verified in Lean",
+    score: 2,
+    ai: "AxiomProver",
+    summary:
+      "The authors answer Berkovich and Uncu's 2016 request for a combinatorial proof with an explicit bijection assembled from three classical constructions. AxiomProver autonomously formalized and verified the main theorem in Lean.",
+    importance:
+      "This resolves a specialist open question in partition theory and provides a machine-checked certificate. Its importance is narrower than the field's major structural conjectures, but the autonomous formalization is unusually strong verification.",
+    source: "https://arxiv.org/abs/2608.05142",
+    sourceLabel: "View preprint and Lean-verification statement",
+    addedDate: "August 23, 2026",
+    addedIsoDate: "2026-08-23",
+  },
   {
     title: "Compact Hyperbolic Coxeter 6-Polytopes With 10 Facets",
     field: "Hyperbolic geometry & combinatorics",
@@ -501,22 +519,76 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
-    title: "Four Author-Reviewed FAR Combinatorics Resolutions",
-    field: "Combinatorics & automated mathematical discovery",
+    title: "Davies–Jenssen–Perkins–Roberts Independent-Set Conjecture",
+    field: "Extremal graph theory & probabilistic combinatorics",
     date: "August 17, 2026",
     isoDate: "2026-08-17",
-    outcome: "Mixed claims",
-    status: "Four artifacts reviewed by the author team; independent scrutiny pending",
+    outcome: "Disproved",
+    status: "FAR artifact checked by the author team; independent scrutiny pending",
     score: 3,
     ai: "Find, Attempt, and Recommend (FAR) pipeline",
     summary:
-      "FAR searched 5,245 combinatorics papers, extracted and attempted thousands of open problems, and surfaced four author-reviewed resolutions: two counterexamples, one conjecture proof and one answer to an Erdős–Straus question.",
+      "FAR found the graph family C₅ □ K_{m,m}. Its independence-number-to-average-independent-set-size ratio tends to 24/13, below the conjectured limit 2, also refuting the related K_r-free variant.",
     importance:
-      "The individual results are specialist advances, but the pipeline is notable for finding the problems as well as attempting them. The proofs are public in the paper, although wider expert review has not yet occurred.",
+      "The explicit family overturns a natural asymptotic conjecture in an active area. The construction is public and author-checked, but broader specialist review is still recent.",
     source: "https://arxiv.org/abs/2608.16977",
-    sourceLabel: "View paper and reviewed solutions",
-    addedDate: "August 21, 2026",
-    addedIsoDate: "2026-08-21",
+    sourceLabel: "View paper and reviewed counterexample",
+    addedDate: "August 23, 2026",
+    addedIsoDate: "2026-08-23",
+  },
+  {
+    title: "Erdős–Straus Binomial-Divisibility Question",
+    field: "Number theory & combinatorics",
+    date: "August 17, 2026",
+    isoDate: "2026-08-17",
+    outcome: "Proved",
+    status: "FAR artifact checked by the author team; independent scrutiny pending",
+    score: 2,
+    ai: "Find, Attempt, and Recommend (FAR) pipeline",
+    summary:
+      "For every fixed n ≥ 2, the FAR-generated argument proves that almost every integer m admits some 1 ≤ k ≤ m−n for which C(n+k,n) divides C(m+k,k): the set of such m has natural density 1.",
+    importance:
+      "This gives a complete density-one answer to a concrete Erdős–Straus question. It is a meaningful specialist result, though narrower in scope than the major conjectures tracked here.",
+    source: "https://arxiv.org/abs/2608.16977",
+    sourceLabel: "View paper and reviewed proof",
+    addedDate: "August 23, 2026",
+    addedIsoDate: "2026-08-23",
+  },
+  {
+    title: "Binary Symmetric-Group Character Complexity",
+    field: "Algebraic & computational complexity",
+    date: "August 17, 2026",
+    isoDate: "2026-08-17",
+    outcome: "Proved",
+    status: "FAR artifact checked by the author team; independent scrutiny pending",
+    score: 3,
+    ai: "Find, Attempt, and Recommend (FAR) pipeline",
+    summary:
+      "The FAR-generated proof establishes that computing binary-encoded irreducible symmetric-group character values is GapP-complete under polynomial-time many-one reductions, even when the partition has at most two parts.",
+    importance:
+      "The result settles a conjecture of Ikenmeyer, Pak and Panova and sharpens the complexity classification under a strong restriction. It remains a new author-reviewed preprint.",
+    source: "https://arxiv.org/abs/2608.16977",
+    sourceLabel: "View paper and reviewed proof",
+    addedDate: "August 23, 2026",
+    addedIsoDate: "2026-08-23",
+  },
+  {
+    title: "Lund–Saraf–Wolf Finite-Field Line-Union Conjectures",
+    field: "Finite geometry & incidence combinatorics",
+    date: "August 17, 2026",
+    isoDate: "2026-08-17",
+    outcome: "Disproved",
+    status: "FAR artifact checked by the author team; independent scrutiny pending",
+    score: 3,
+    ai: "Find, Attempt, and Recommend (FAR) pipeline",
+    summary:
+      "FAR constructed roughly half of the tangent lines to a paraboloid in F_q³. No plane contains too many selected lines, yet their union occupies only about half the points, refuting two proposed line-union bounds.",
+    importance:
+      "The construction rejects two finite-field incidence conjectures with a simple asymptotic obstruction. It does not resolve the stronger Nikodym conjecture, which remains open.",
+    source: "https://arxiv.org/abs/2608.16977",
+    sourceLabel: "View paper and reviewed counterexample",
+    addedDate: "August 23, 2026",
+    addedIsoDate: "2026-08-23",
   },
   {
     title: "Sharp Minimax Bounds for Bivariate LiNGAM",
@@ -1128,6 +1200,42 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "First Smooth Random Fast Dynamo",
+    field: "Magnetohydrodynamics & analysis of PDEs",
+    date: "August 20, 2026",
+    isoDate: "2026-08-20",
+    outcome: "Discovered",
+    status: "Author-verified single-author preprint; independent review pending",
+    score: 4,
+    ai: "ChatGPT 5.6 Sol Ultra",
+    summary:
+      "The paper constructs the first smooth random velocity field on the three-torus rigorously shown to amplify a magnetic field at a resistivity-independent exponential rate. The AI generated the central proof idea autonomously; the author wrote and checked the manuscript.",
+    importance:
+      "Fast dynamos model how conducting flows sustain astrophysical magnetic fields, and rigorous construction is one of Arnold's problems. This resolves the smooth random example, not the broader theory of generic random flows.",
+    source: "https://arxiv.org/abs/2608.20105",
+    sourceLabel: "View preprint",
+    addedDate: "August 23, 2026",
+    addedIsoDate: "2026-08-23",
+  },
+  {
+    title: "Unclonable Encryption From BB84 States",
+    field: "Quantum information & cryptography",
+    date: "August 18, 2026",
+    isoDate: "2026-08-18",
+    outcome: "Proved",
+    status: "Three-author preprint; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Ultra",
+    summary:
+      "GPT-5.6 Ultra discovered a simultaneous Goldreich–Levin reduction for two entangled parties. It upgrades search-secure unclonable encryption to indistinguishability and proves the simplest BB84-state candidate meets that stronger standard.",
+    importance:
+      "The theorem supplies a missing security reduction for a foundational quantum-state construction. It is a substantial theoretical result, but currently rests on one new preprint rather than independent scrutiny or experiment.",
+    source: "https://arxiv.org/abs/2608.17629",
+    sourceLabel: "View preprint",
+    addedDate: "August 23, 2026",
+    addedIsoDate: "2026-08-23",
+  },
   {
     title: "Critical Sherrington–Kirkpatrick Overlap Distribution",
     field: "Statistical physics & spin glasses",
