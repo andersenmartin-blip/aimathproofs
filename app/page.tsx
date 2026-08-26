@@ -31,10 +31,50 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "August 23, 2026";
-const latestReviewIsoDate = "2026-08-23";
+const latestReviewDate = "August 26, 2026";
+const latestReviewIsoDate = "2026-08-26";
 
 const establishedResults: Result[] = [
+  {
+    title: "More Than Two Thirds of Zeta Zeros Are Simple and on the Critical Line",
+    field: "Analytic number theory & formal verification",
+    date: "August 19, 2026",
+    isoDate: "2026-08-19",
+    outcome: "Proved",
+    status: "Author-checked; complete sorry-free Lean 4 formalization released",
+    score: 5,
+    ai: "Claude (Anthropic)",
+    summary:
+      "Claude autonomously developed an unconditional proof that more than two thirds of the nontrivial zeros of the Riemann zeta function are simple and lie on the critical line, with stronger optimized constants and corresponding results for primitive Dirichlet L-functions.",
+    importance:
+      "This is a major new unconditional record for the distribution of zeta zeros. It does not prove the Riemann Hypothesis, but the full theorem package has been independently encoded as a complete Lean development without sorry placeholders or custom axioms.",
+    source: "https://arxiv.org/abs/2608.13637",
+    sourceLabel: "View preprint",
+    secondarySource: "https://github.com/anthropics/zeta-23-lean",
+    secondarySourceLabel: "View complete Lean formalization",
+    addedDate: "August 26, 2026",
+    addedIsoDate: "2026-08-26",
+  },
+  {
+    title: "Petersen Coloring Conjecture",
+    field: "Graph theory & computer-assisted proof",
+    date: "August 14, 2026",
+    isoDate: "2026-08-14",
+    outcome: "Disproved",
+    status: "Checked DRAT certificates plus an independent human-checkable proof",
+    score: 5,
+    ai: "OpenAI models in discovery and search; GPT-5.6 Sol in independent exposition",
+    summary:
+      "A 112-vertex simple connected bridgeless cubic graph has neither a Petersen coloring nor a normal 5-edge-coloring. The original computational result includes reproducible SAT encodings and checked DRAT certificates; a separate author then published a short human-checkable proof for the same graph.",
+    importance:
+      "The counterexample overturns a prominent graph-theory conjecture that would have implied both the Berge–Fulkerson and five-cycle-double-cover conjectures. It also yields an infinite family of counterexamples, although minimality is not claimed.",
+    source: "https://arxiv.org/abs/2608.10012",
+    sourceLabel: "View counterexample and certificates",
+    secondarySource: "https://arxiv.org/abs/2608.10028",
+    secondarySourceLabel: "View independent human-checkable proof",
+    addedDate: "August 26, 2026",
+    addedIsoDate: "2026-08-26",
+  },
   {
     title: "Bijective Proof of the Berkovich–Uncu Partition Theorem",
     field: "Partition theory & enumerative combinatorics",
@@ -518,6 +558,62 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Ancheta–Massey Linear Lossy-Compression Problem",
+    field: "Information theory, coding theory & probability",
+    date: "August 24, 2026",
+    isoDate: "2026-08-24",
+    outcome: "Proved",
+    status: "Single-author preprint; independent specialist review pending",
+    score: 3,
+    ai: "GPT-5.6 Sol in an interactive, author-guided process",
+    summary:
+      "The new argument determines the entropy loss when a Bernoulli product measure is conditioned on an affine subspace, extending Ancheta's symmetric-source result to every bias p < 1/2 and answering a question posed by Massey in 1978.",
+    importance:
+      "The theorem closes a long-standing specialist question connecting source coding, entropy and finite-field geometry. The proof is public and author-checked, but currently appears only in one new preprint.",
+    source: "https://arxiv.org/abs/2608.22837",
+    sourceLabel: "View preprint",
+    addedDate: "August 26, 2026",
+    addedIsoDate: "2026-08-26",
+  },
+  {
+    title: "cscK Yau–Tian–Donaldson Conjecture",
+    field: "Algebraic & differential geometry",
+    date: "August 19, 2026",
+    isoDate: "2026-08-19",
+    outcome: "Disproved",
+    status: "79-page single-author preprint; independent specialist review pending",
+    score: 5,
+    ai: "GPT-5.6 Sol, Fable 5 and Danus",
+    summary:
+      "The manuscript constructs a smooth polarized projective fivefold that is K-polystable but admits no constant-scalar-curvature Kähler metric, providing a claimed counterexample to the broad cscK form of the Yau–Tian–Donaldson conjecture.",
+    importance:
+      "The conjecture is a central proposed bridge between algebraic stability and canonical metrics. The claim concerns the broad cscK formulation and does not overturn established special cases such as the Fano Kähler–Einstein theorem; its length and novelty make outside checking essential.",
+    source: "https://arxiv.org/abs/2608.19301",
+    sourceLabel: "View preprint and AI-usage statement",
+    addedDate: "August 26, 2026",
+    addedIsoDate: "2026-08-26",
+  },
+  {
+    title: "Banach’s Isometric Conjecture — Remaining Real and Complex Cases",
+    field: "Functional analysis, convex geometry & topology",
+    date: "August 18, 2026",
+    isoDate: "2026-08-18",
+    outcome: "Proved",
+    status: "Two new author-checked preprints; independent specialist review pending",
+    score: 5,
+    ai: "GPT-5.5 Pro, GPT-5.6 Pro and GPT-5.6 Sol under author direction",
+    summary:
+      "One paper proves the remaining odd-dimensional real case of Banach's 1932 isometric subspace conjecture. A second adapts its mechanism to settle the complex-field conjecture and a quaternionic counterpart, together completing the classical real and complex problem if the arguments withstand review.",
+    importance:
+      "This would close a 94-year-old foundational problem about when every fixed-dimensional subspace of a normed space must be Euclidean. The two papers are linked rather than independent confirmations, so the result remains under review.",
+    source: "https://arxiv.org/abs/2608.13536",
+    sourceLabel: "View real-case preprint",
+    secondarySource: "https://arxiv.org/abs/2608.18257",
+    secondarySourceLabel: "View complex and quaternionic extension",
+    addedDate: "August 26, 2026",
+    addedIsoDate: "2026-08-26",
+  },
   {
     title: "Davies–Jenssen–Perkins–Roberts Independent-Set Conjecture",
     field: "Extremal graph theory & probabilistic combinatorics",
