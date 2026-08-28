@@ -31,8 +31,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "August 26, 2026";
-const latestReviewIsoDate = "2026-08-26";
+const latestReviewDate = "August 28, 2026";
+const latestReviewIsoDate = "2026-08-28";
 
 const establishedResults: Result[] = [
   {
@@ -558,6 +558,60 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Every-Genus Hyperbolic Surfaces With Systole Constant 1",
+    field: "Geometric topology & hyperbolic geometry",
+    date: "August 27, 2026",
+    isoDate: "2026-08-27",
+    outcome: "Proved",
+    status: "Author-checked single-author preprint; independent specialist review pending",
+    score: 4,
+    ai: "GPT-5.6 Sol under author direction",
+    summary:
+      "Starting from the author's constant-twist pants-decomposition approach, GPT-5.6 Sol developed the first complete proof that every sufficiently large genus g admits a closed hyperbolic surface with systole at least log g − 12 log log g.",
+    importance:
+      "This raises the best explicit every-genus asymptotic lower-bound constant from 2/9 to 1, matching what was previously known only along a subsequence of genera. The asymptotic maximum remains open, and the proof currently rests on one new preprint.",
+    source: "https://arxiv.org/abs/2608.26660",
+    sourceLabel: "View preprint and AI-use declaration",
+    addedDate: "August 28, 2026",
+    addedIsoDate: "2026-08-28",
+  },
+  {
+    title: "Not Every Heyting Algebra Is a Topos Truth-Value Lattice",
+    field: "Categorical logic & intuitionistic logic",
+    date: "August 27, 2026",
+    isoDate: "2026-08-27",
+    outcome: "Disproved",
+    status: "Two-author preprint; independent specialist review pending",
+    score: 3,
+    ai: "ChatGPT 5.6 Sol in mathematical-result development; exact contribution split not disclosed",
+    summary:
+      "The paper answers a long-standing categorical-logic question negatively by proving that the free Heyting algebra on two generators cannot occur as the lattice of subterminal objects of an elementary topos. The authors attribute the mathematical results, but not the writing, to work done with ChatGPT 5.6 Sol.",
+    importance:
+      "The result identifies concrete higher-order logical structure that is invisible at the level of an abstract Heyting algebra. Because the authors do not describe the AI-human division more precisely and no outside verification is yet available, the claim remains under review.",
+    source: "https://arxiv.org/abs/2608.26874",
+    sourceLabel: "View preprint and contribution statement",
+    addedDate: "August 28, 2026",
+    addedIsoDate: "2026-08-28",
+  },
+  {
+    title: "Fröberg’s Conjecture for Quintics and Septics in Four Variables",
+    field: "Commutative algebra & exact computation",
+    date: "August 25, 2026",
+    isoDate: "2026-08-25",
+    outcome: "Proved",
+    status: "Two-author preprint with exact verification programs and certificates; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 Sol, Claude Fable 5 and Grok 4.6 in a generative-AI research workflow",
+    summary:
+      "The authors prove Fröberg's predicted Hilbert series for every number of equal-degree generators in four variables when the degree is 5 or 7. The AI workflow formulated ideas, conjectures and proof strategies, derived and checked intermediate steps, and constructed examples and exact certificates.",
+    importance:
+      "These are two complete new fixed-degree slices of a major open commutative-algebra conjecture, not a proof of the unrestricted conjecture. Public standard-library programs reconstruct every finite rank calculation, but the surrounding reduction still awaits independent specialist scrutiny.",
+    source: "https://arxiv.org/abs/2608.24797",
+    sourceLabel: "View preprint, disclosure and ancillary certificates",
+    addedDate: "August 28, 2026",
+    addedIsoDate: "2026-08-28",
+  },
   {
     title: "Ancheta–Massey Linear Lossy-Compression Problem",
     field: "Information theory, coding theory & probability",
@@ -1296,6 +1350,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "No Global Supporting Functional for Some Two-Qubit Entanglement States",
+    field: "Quantum information & entanglement theory",
+    date: "August 27, 2026",
+    isoDate: "2026-08-27",
+    outcome: "Disproved",
+    status: "Two-author preliminary preprint with an explicit analytic counterexample; independent review pending",
+    score: 3,
+    ai: "Claude Fable 5 in counterexample search",
+    summary:
+      "After the authors reduced the problem to failure of Lipschitz lower semicontinuity, Claude Fable 5 used Wootters' two-qubit formula to rapidly find a degenerate state where entanglement of formation has no global supporting affine functional.",
+    importance:
+      "The explicit example corrects an assumption used in several papers and already fails in the simplest bipartite qubit setting. The manuscript also gives existence criteria and continuity bounds, but it is a preliminary preprint without independent checking.",
+    source: "https://arxiv.org/abs/2608.27363",
+    sourceLabel: "View preliminary preprint and counterexample",
+    addedDate: "August 28, 2026",
+    addedIsoDate: "2026-08-28",
+  },
   {
     title: "First Smooth Random Fast Dynamo",
     field: "Magnetohydrodynamics & analysis of PDEs",
