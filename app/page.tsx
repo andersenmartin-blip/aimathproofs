@@ -31,10 +31,30 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "August 30, 2026";
-const latestReviewIsoDate = "2026-08-30";
+const latestReviewDate = "August 31, 2026";
+const latestReviewIsoDate = "2026-08-31";
 
 const establishedResults: Result[] = [
+  {
+    title: "Beyond the Bethe Approximation of the Permanent",
+    field: "Algorithms, combinatorics & formal verification",
+    date: "August 28, 2026",
+    isoDate: "2026-08-28",
+    outcome: "Proved",
+    status: "Author-verified; complete Lean 4 formalization of the main theorem released",
+    score: 4,
+    ai: "ChatGPT 5.6 Sol Pro for proof development; Codex for checking and manuscript assembly",
+    summary:
+      "For every nonnegative n-by-n matrix, the paper gives a deterministic polynomial-time approximation to the permanent within c^n for an absolute constant c smaller than √2, breaking through the sharp barrier of the canonical Bethe approximation. The author supplied the high-level plan, and the proof was developed interactively with ChatGPT 5.6 Sol Pro.",
+    importance:
+      "The permanent is a central #P-hard quantity, and this is the first deterministic exponential-factor improvement beyond the previously tight Bethe guarantee. The public Lean development formalizes the fixed rational algorithm, its polynomial running time and the c < √2 approximation theorem without sorry, admit or project-specific axioms.",
+    source: "https://arxiv.org/abs/2608.28031",
+    sourceLabel: "View preprint and AI-contribution statement",
+    secondarySource: "https://github.com/nimaanari/formalization-beyond-bethe",
+    secondarySourceLabel: "View complete Lean formalization",
+    addedDate: "August 31, 2026",
+    addedIsoDate: "2026-08-31",
+  },
   {
     title: "Norm-Variation for Multiple Ergodic Averages",
     field: "Ergodic theory, harmonic analysis & formal verification",
