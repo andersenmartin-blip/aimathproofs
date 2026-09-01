@@ -31,10 +31,31 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "August 31, 2026";
-const latestReviewIsoDate = "2026-08-31";
+const latestReviewDate = "September 1, 2026";
+const latestReviewIsoDate = "2026-09-01";
 
 const establishedResults: Result[] = [
+  {
+    title: "Cubic-Root Gaussian Approximation Under Unrestricted Covariance",
+    field: "High-dimensional probability, statistics & formal verification",
+    date: "August 31, 2026",
+    isoDate: "2026-08-31",
+    outcome: "Disproved",
+    status: "Complete Lean 4 formalization of the source-facing theorem released",
+    score: 3,
+    ai: "ChatGPT 5.6 Pro for the initial proof; authors corrected and rewrote it",
+    summary:
+      "The paper proves an n^(-1/3), up to logarithmic factors, Gaussian-approximation bound for high-dimensional rectangles with arbitrary, possibly singular covariance. This falsifies the conjecture that the earlier n^(-1/4) rate is near-optimal in polynomial dimension.",
+    importance:
+      "The result improves a central high-dimensional central-limit bound without covariance structure. The public Lean development covers the fully quantified critical-value theorem, pins its dependencies and reports no sorry, admit, project axioms or native_decide in the final declarations.",
+    source: "https://arxiv.org/abs/2608.30221",
+    sourceLabel: "View preprint and AI-contribution statement",
+    secondarySource:
+      "https://github.com/WeihanZhang2001/cubic-root-gaussian-approximation-under-unrestricted-covariance",
+    secondarySourceLabel: "View complete Lean formalization and trust audit",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
   {
     title: "Beyond the Bethe Approximation of the Permanent",
     field: "Algorithms, combinatorics & formal verification",
@@ -54,6 +75,26 @@ const establishedResults: Result[] = [
     secondarySourceLabel: "View complete Lean formalization",
     addedDate: "August 31, 2026",
     addedIsoDate: "2026-08-31",
+  },
+  {
+    title: "Gaussian Completely Monotone Conjecture",
+    field: "Information theory, probability & mathematical physics",
+    date: "May 12, 2026",
+    isoDate: "2026-05-12",
+    outcome: "Disproved",
+    status: "Exact Arb certificate released; independently confirmed and strengthened analytically",
+    score: 4,
+    ai: "GPT-5.5 Pro found the explicit counterexample",
+    summary:
+      "GPT-5.5 Pro found a 17-point probability measure whose fifth entropy derivative along heat flow has the forbidden sign. This disproves the Gaussian completely monotone conjecture and, by implication, the stronger McKean Gaussian-optimality and Toscani entropy-power conjectures; the same paper proves that failure also occurs for a log-concave measure.",
+    importance:
+      "The conjecture organized a hierarchy of higher-order entropy inequalities. Exact rational input and SageMath/Arb ball arithmetic certify the decisive sign, and a later independent paper gives an analytic family of smooth, strictly log-concave counterexamples in every dimension.",
+    source: "https://arxiv.org/abs/2605.11656",
+    sourceLabel: "View original counterexample and verification code",
+    secondarySource: "https://arxiv.org/abs/2608.30275",
+    secondarySourceLabel: "View independent analytic strengthening",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
   },
   {
     title: "Norm-Variation for Multiple Ergodic Averages",
@@ -598,6 +639,186 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Conjecture 4.6 on Truncated Rings of Number-Theoretic Functions",
+    field: "Commutative algebra, homological algebra & sieve theory",
+    date: "August 30, 2026",
+    isoDate: "2026-08-30",
+    outcome: "Proved",
+    status: "Author-checked preprint with independent computations; broader review pending",
+    score: 2,
+    ai: "Claude (Anthropic)",
+    summary:
+      "Claude and the author identified the minimal-generator counts C(n,v) with Legendre's sifting function. The identity proves the precise reduced Poincare-Betti-series shape conjectured in 2000, and also yields sharp asymptotics and corrections to the earlier paper.",
+    importance:
+      "This closes a 26-year specialist conjecture and connects a homological invariant directly to classical sieve theory. The author independently recomputed every numerical claim, but the natural-language proof has not yet received substantial external scrutiny.",
+    source: "https://arxiv.org/abs/2608.29555",
+    sourceLabel: "View preprint, disclosure and supporting files",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
+  {
+    title: "Primitive-Preserving Endomorphisms of Free Metabelian Groups",
+    field: "Combinatorial group theory",
+    date: "August 29, 2026",
+    isoDate: "2026-08-29",
+    outcome: "Proved",
+    status: "Authors checked every argument; independent review pending",
+    score: 2,
+    ai: "Codex with ChatGPT 5.6 Sol",
+    summary:
+      "Kourovka Notebook Problem 14.85 asked whether an endomorphism of a finite-rank free metabelian group that preserves every primitive element must be an automorphism. The answer is yes; AI supplied the Fox-calculus and finite-field obstruction strategy.",
+    importance:
+      "The theorem resolves the single-element version left open after stronger variants were known. It is a specialist structural result and currently has only author verification.",
+    source: "https://arxiv.org/abs/2608.29219",
+    sourceLabel: "View problem statement, proof and AI workflow",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
+  {
+    title: "Equal Distributions in Free Metabelian Groups",
+    field: "Combinatorial and profinite group theory",
+    date: "August 29, 2026",
+    isoDate: "2026-08-29",
+    outcome: "Disproved",
+    status: "Explicit author-checked counterexample; independent review pending",
+    score: 2,
+    ai: "Codex with ChatGPT 5.6 Sol",
+    summary:
+      "Kourovka Notebook Problem 19.94 asked whether two free-metabelian elements have identical value distributions on every finite metabelian group exactly when an automorphism relates them. AI selected the problem and constructed two explicit rank-two elements with the same distributions but different automorphism orbits.",
+    importance:
+      "The counterexample separates finite-quotient statistics from ordinary automorphism equivalence. Its formulas are explicit, but the supporting profinite argument has not yet been independently checked.",
+    source: "https://arxiv.org/abs/2608.29219",
+    sourceLabel: "View explicit elements and proof",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
+  {
+    title: "Derived Subgroups as Frattini Subgroups",
+    field: "Finite p-groups & computational algebra",
+    date: "August 29, 2026",
+    isoDate: "2026-08-29",
+    outcome: "Disproved",
+    status: "Exact GAP witness checked by the authors; independent review pending",
+    score: 2,
+    ai: "Codex with ChatGPT 5.6 Sol",
+    summary:
+      "Kourovka Notebook Problem 16.11 asked whether every derived subgroup of a finite p-group can occur as the Frattini subgroup of another finite p-group. The answer is no: the derived subgroup of SmallGroup(256,511) is the known exceptional group 32/40, which cannot be any such Frattini subgroup.",
+    importance:
+      "The result closes a concrete realization question with a short catalogue-based obstruction. The GAP transcript is reproducible, though the literature identification and argument still await outside scrutiny.",
+    source: "https://arxiv.org/abs/2608.29219",
+    sourceLabel: "View witness, GAP transcript and proof",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
+  {
+    title: "Nilpotent Camina Groups of Unbounded Class",
+    field: "Infinite group theory & Lie methods",
+    date: "August 29, 2026",
+    isoDate: "2026-08-29",
+    outcome: "Disproved",
+    status: "Authors checked the construction; independent review pending",
+    score: 3,
+    ai: "Codex with ChatGPT 5.6 Sol",
+    summary:
+      "Kourovka Notebook Problem 17.47 asked whether nilpotent Camina groups have bounded nilpotency class once finiteness is dropped. AI constructed, via differential fields and the BCH correspondence, a Camina group of every class c at least two, so no bound exists.",
+    importance:
+      "The construction sharply contrasts the finite theorem, where class is at most three, and settles the unrestricted question in every class. It remains a new author-checked proof.",
+    source: "https://arxiv.org/abs/2608.29219",
+    sourceLabel: "View construction and proof",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
+  {
+    title: "Minimal T-Systems for Groups With Negative Immersions",
+    field: "Geometric and combinatorial group theory",
+    date: "August 29, 2026",
+    isoDate: "2026-08-29",
+    outcome: "Disproved",
+    status: "Explicit author-checked family; independent review pending",
+    score: 3,
+    ai: "Codex with ChatGPT 5.6 Sol",
+    summary:
+      "Question 2.8.14 in Louder and Wilton's problem list asked whether a one-relator complex with negative immersions has a unique minimal T-system. AI-driven searches led to three-generated, two-free one-relator groups with arbitrarily many distinct minimal generating-triple T-systems.",
+    importance:
+      "The family gives an arbitrarily large failure of uniqueness while retaining uniform negative immersions. The invariant and parametrized construction are explicit but not yet independently reviewed.",
+    source: "https://arxiv.org/abs/2608.29219",
+    sourceLabel: "View family and distinguishing invariant",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
+  {
+    title: "Word-Defined Group Laws on Free Nilpotent Groups",
+    field: "Combinatorial group theory",
+    date: "August 29, 2026",
+    isoDate: "2026-08-29",
+    outcome: "Proved",
+    status: "Authors checked the proof; independent review pending",
+    score: 2,
+    ai: "Claude Opus 5",
+    summary:
+      "A 2015 open problem asked which reduced words define a group operation on every finitely generated free nilpotent group. Claude found a proof, later shortened using Hanna Neumann's theorem: only the ordinary and opposite products, ab and ba, work.",
+    importance:
+      "The result gives a complete classification for a narrowly focused universal word-law problem. The final proof is concise and classical in style, but external checking is still pending.",
+    source: "https://arxiv.org/abs/2608.29219",
+    sourceLabel: "View classification and proof",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
+  {
+    title: "Stable Representations of Torsion-Free Nilpotent Groups",
+    field: "Representation theory & nilpotent groups",
+    date: "August 29, 2026",
+    isoDate: "2026-08-29",
+    outcome: "Proved",
+    status: "Authors checked the proof; independent review pending",
+    score: 2,
+    ai: "Codex with ChatGPT 5.6 Sol",
+    summary:
+      "Plotkin's 1977 Problem 4.3.5 asked whether a torsion-free nilpotent group of class n−1 has a faithful n-step-stable representation whose restriction to any abelian normal subgroup is two-step stable. AI developed an affirmative construction over the rationals using Malcev and PBW methods.",
+    importance:
+      "The theorem resolves a nearly 50-year-old specialist representation problem. Its age is notable, although the result currently depends on one author-checked manuscript.",
+    source: "https://arxiv.org/abs/2608.29219",
+    sourceLabel: "View construction and proof",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
+  {
+    title: "Cayley-Hamilton Analogue for Free Groups",
+    field: "Combinatorial group theory",
+    date: "August 29, 2026",
+    isoDate: "2026-08-29",
+    outcome: "Disproved",
+    status: "Explicit author-checked rank-two counterexample; independent review pending",
+    score: 2,
+    ai: "Codex with ChatGPT 5.6 Sol",
+    summary:
+      "Kourovka Notebook Problem 17.32 asked whether n+1 successive automorphism iterates that generate a rank-n free group can always be shortened to the first n. ChatGPT found a rank-two counterexample: three iterates generate F2 while the first two map into a proper order-two subgroup of S3.",
+    importance:
+      "The small explicit witness decisively shows that the abelian Cayley-Hamilton phenomenon does not transfer to free groups. It is readily inspectable but not yet independently published or formalized.",
+    source: "https://arxiv.org/abs/2608.29219",
+    sourceLabel: "View explicit counterexample",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
+  {
+    title: "Full Group C*-Algebras Need Not Be Finite",
+    field: "Operator algebras & geometric group theory",
+    date: "August 28, 2026",
+    isoDate: "2026-08-28",
+    outcome: "Disproved",
+    status: "Expert-commented author exposition; independent formal proof in progress",
+    score: 3,
+    ai: "ChatGPT 5.6 Sol",
+    summary:
+      "The open question asked whether every full group C*-algebra is finite. ChatGPT generated the key ideas showing that ascending HNN extensions of non-coHopfian property-(T) groups give counterexamples; the same framework produces explicit stably finite reduced group C*-algebras that are not MF.",
+    importance:
+      "This supplies concrete group-algebra counterexamples where earlier existence results were indirect. Several specialists commented on and strengthened the draft, but the announced Lean proof has not yet been released.",
+    source: "https://arxiv.org/abs/2608.28772",
+    sourceLabel: "View preprint, AI statement and expert acknowledgements",
+    addedDate: "September 1, 2026",
+    addedIsoDate: "2026-09-01",
+  },
   {
     title: "Cao–Păun Rational-Quotient Numerical-Dimension Question",
     field: "Complex algebraic geometry & Kähler geometry",
