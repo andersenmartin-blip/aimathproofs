@@ -31,8 +31,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 1, 2026";
-const latestReviewIsoDate = "2026-09-01";
+const latestReviewDate = "September 2, 2026";
+const latestReviewIsoDate = "2026-09-02";
 
 const establishedResults: Result[] = [
   {
@@ -639,6 +639,42 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Lipshitz–Sarkar Refinement Distinguishes a Knot From Its Mirror",
+    field: "Geometric topology, knot theory & computer-assisted proof",
+    date: "September 1, 2026",
+    isoDate: "2026-09-01",
+    outcome: "Demonstrated",
+    status: "Exact reproduction certificate released; independent review pending",
+    score: 3,
+    ai: "ChatGPT 5.6 Sol Pro for construction, census search and computations",
+    summary:
+      "The paper answers Lipshitz and Sarkar's ICM 2018 Question 2 affirmatively. The prime knot 17nh_0009090 and its mirror have identical integral Khovanov homology in every bidegree, including torsion, yet a second Steenrod square has rank one for the knot and rank zero for its mirror, so their Khovanov stable homotopy types differ.",
+    importance:
+      "This gives the first claimed example showing that the homotopy-theoretic refinement detects mirror reflection when ordinary Khovanov homology cannot. The preprint records the exact census identity, assertion-enabled commands, file fingerprints and independent mirror computation, but the new result has not yet received outside specialist scrutiny.",
+    source: "https://arxiv.org/abs/2609.00976",
+    sourceLabel: "View preprint, proof certificate and reproduction commands",
+    addedDate: "September 2, 2026",
+    addedIsoDate: "2026-09-02",
+  },
+  {
+    title: "Stable Forking Conjecture",
+    field: "Model theory & mathematical logic",
+    date: "August 31, 2026",
+    isoDate: "2026-08-31",
+    outcome: "Disproved",
+    status: "Authors proved and checked the counterexample; independent review pending",
+    score: 5,
+    ai: "ChatGPT 5.6 Sol for the decisive counterexample construction",
+    summary:
+      "The paper constructs a simple theory in which forking is not witnessed by any stable formula, disproving the stable forking conjecture posed by Hart, Kim and Pillay in 1996. The counterexample is the theory of an infinite-dimensional vector space over the division ring of fractions of the quantum graph algebra of the random graph.",
+    importance:
+      "Stable forking was one of the most prominent open problems about the boundary between stability and simplicity in model theory. The authors say GPT-5.6 Sol generated the construction after constrained prompting; they then wrote and checked all proofs themselves, but the 21-page preprint has not yet been independently scrutinized.",
+    source: "https://arxiv.org/abs/2609.00436",
+    sourceLabel: "View preprint and detailed AI-contribution statement",
+    addedDate: "September 2, 2026",
+    addedIsoDate: "2026-09-02",
+  },
   {
     title: "Conjecture 4.6 on Truncated Rings of Number-Theoretic Functions",
     field: "Commutative algebra, homological algebra & sieve theory",
