@@ -31,10 +31,30 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 2, 2026";
-const latestReviewIsoDate = "2026-09-02";
+const latestReviewDate = "September 3, 2026";
+const latestReviewIsoDate = "2026-09-03";
 
 const establishedResults: Result[] = [
+  {
+    title: "Universal 4/3 Pairwise-Independent Correlation-Gap Conjecture",
+    field: "Probability, operations research & submodular optimization",
+    date: "June 18, 2026",
+    isoDate: "2026-06-18",
+    outcome: "Disproved",
+    status: "Exact rational counterexample; independently accepted and extended in follow-up work",
+    score: 3,
+    ai: "GPT-5.5 Pro for autonomous search and the decisive counterexample",
+    summary:
+      "GPT-5.5 Pro found a five-element monotone submodular coverage function and rational marginal probabilities for which the pairwise-independent correlation gap is 640/479, strictly greater than 4/3. The authors validated the explicit primal and dual certificates, disproving the proposed universal upper bound in every dimension n at least five.",
+    importance:
+      "The conjecture concerned a basic robustness limit for stochastic submodular optimization. The exact instance is directly checkable, and the September follow-up paper treats it as established, confirms its consequence for all n at least five and resolves the remaining n=4 case.",
+    source: "https://arxiv.org/abs/2606.19663",
+    sourceLabel: "View original counterexample and exact certificate",
+    secondarySource: "https://arxiv.org/abs/2609.02659",
+    secondarySourceLabel: "View independent follow-up and extension",
+    addedDate: "September 3, 2026",
+    addedIsoDate: "2026-09-03",
+  },
   {
     title: "Cubic-Root Gaussian Approximation Under Unrestricted Covariance",
     field: "High-dimensional probability, statistics & formal verification",
@@ -122,17 +142,17 @@ const establishedResults: Result[] = [
     date: "August 19, 2026",
     isoDate: "2026-08-19",
     outcome: "Proved",
-    status: "Author-checked; complete sorry-free Lean 4 formalization released",
+    status: "Complete sorry-free Lean 4 formalization plus an independent shorter proof",
     score: 5,
     ai: "Claude (Anthropic)",
     summary:
       "Claude autonomously developed an unconditional proof that more than two thirds of the nontrivial zeros of the Riemann zeta function are simple and lie on the critical line, with stronger optimized constants and corresponding results for primitive Dirichlet L-functions.",
     importance:
-      "This is a major new unconditional record for the distribution of zeta zeros. It does not prove the Riemann Hypothesis, but the full theorem package has been independently encoded as a complete Lean development without sorry placeholders or custom axioms.",
+      "This is a major new unconditional record for the distribution of zeta zeros. It does not prove the Riemann Hypothesis, but the theorem now has both a complete Lean development and a separate, conceptually simpler proof by Youness Lamzouri using a Hilbert-space inequality and Montgomery's pair-correlation theorem.",
     source: "https://arxiv.org/abs/2608.13637",
-    sourceLabel: "View preprint",
-    secondarySource: "https://github.com/anthropics/zeta-23-lean",
-    secondarySourceLabel: "View complete Lean formalization",
+    sourceLabel: "View original AI-assisted proof",
+    secondarySource: "https://arxiv.org/abs/2609.02882",
+    secondarySourceLabel: "View independent shorter proof",
     addedDate: "August 26, 2026",
     addedIsoDate: "2026-08-26",
   },
@@ -639,6 +659,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Tight 4/3 Correlation-Gap Bound for Four Random Elements",
+    field: "Probability, operations research & computer-assisted proof",
+    date: "September 2, 2026",
+    isoDate: "2026-09-02",
+    outcome: "Proved",
+    status: "Author-checked computational certificate; independent review pending",
+    score: 3,
+    ai: "GPT-5.6 and Fable 5 for the cone-certificate and Bernstein-representation strategy",
+    summary:
+      "The paper proves that 4/3 is the exact pairwise-independent correlation-gap bound for monotone submodular functions on four elements, resolving the only dimension left open after the five-element counterexample. The proof reduces 3,008 possible optimal vertices to 183 symmetry orbits and verifies 2,745 Bernstein coefficient systems.",
+    importance:
+      "Together with the earlier AI-found counterexample and the paper's separate asymptotic construction, this completes the dimension boundary: 4/3 is tight through n=4, fails from n=5 onward, and the worst-case gap approaches e/(e-1). The decisive n=4 strategy came from a human–AI workflow, but the new preprint still awaits outside scrutiny.",
+    source: "https://arxiv.org/abs/2609.02659",
+    sourceLabel: "View proof, AI-method declaration and certificate details",
+    addedDate: "September 3, 2026",
+    addedIsoDate: "2026-09-03",
+  },
   {
     title: "Lipshitz–Sarkar Refinement Distinguishes a Knot From Its Mirror",
     field: "Geometric topology, knot theory & computer-assisted proof",
