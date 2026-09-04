@@ -31,10 +31,50 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 3, 2026";
-const latestReviewIsoDate = "2026-09-03";
+const latestReviewDate = "September 4, 2026";
+const latestReviewIsoDate = "2026-09-04";
 
 const establishedResults: Result[] = [
+  {
+    title: "Burris–Yeats Minimum-Countermodel Conjecture for Tarski Algebra",
+    field: "Mathematical logic, finite model theory & formal verification",
+    date: "August 9, 2026",
+    isoDate: "2026-08-09",
+    outcome: "Proved",
+    status: "Accepted at LPAR 2026; Lean-checked encoding with an imported LRAT certificate",
+    score: 3,
+    ai: "ChatGPT 5.5 Pro through Codex for more than 10,000 lines of Lean autoformalization",
+    summary:
+      "The smallest finite algebra satisfying Tarski's eleven high-school identities but falsifying Wilkie's identity has exactly 12 elements, confirming the conjecture of Burris and Yeats. The authors also classify all 8,957,952 labelled countermodels of size 12.",
+    importance:
+      "This closes the remaining one-element gap in a long-running finite-model problem attached to Tarski's famous question. SAT established unsatisfiability at size 11, while AI-generated Lean code proves that the exact CNF encoding is equivalent to the intended algebraic statement and imports the independently checkable certificate.",
+    source: "https://arxiv.org/abs/2608.08421",
+    sourceLabel: "View accepted paper and formal-verification account",
+    secondarySource: "https://github.com/bsubercaseaux/HighSchoolAlgebraSAT",
+    secondarySourceLabel: "View Lean formalization, encodings and certificates",
+    addedDate: "September 4, 2026",
+    addedIsoDate: "2026-09-04",
+  },
+  {
+    title: "Zaporozhets–Tarasov Conjecture on Mean Distances",
+    field: "Convex geometry, metric geometry & probability",
+    date: "August 6, 2026",
+    isoDate: "2026-08-06",
+    outcome: "Mixed claims",
+    status: "Independently reproduced in both the planar and higher-dimensional regimes",
+    score: 3,
+    ai: "GPT-5.6 Sol for simplifying the planar argument and finding the explicit higher-dimensional construction from the author's idea",
+    summary:
+      "For a convex body, the conjecture compares the mean distance of two interior points with that of two boundary points. The paper proves the inequality in dimension two but gives a six-vertex three-dimensional counterexample and extends the failure to every dimension at least three.",
+    importance:
+      "The work settles the conjecture in every dimension: true in the plane and false above it. A separate paper independently proves the planar case, while another independently constructs centrally symmetric counterexamples in all higher dimensions.",
+    source: "https://arxiv.org/abs/2608.06470",
+    sourceLabel: "View proof, counterexamples and AI-use declaration",
+    secondarySource: "https://arxiv.org/abs/2608.14833",
+    secondarySourceLabel: "View independent planar proof",
+    addedDate: "September 4, 2026",
+    addedIsoDate: "2026-09-04",
+  },
   {
     title: "Universal 4/3 Pairwise-Independent Correlation-Gap Conjecture",
     field: "Probability, operations research & submodular optimization",
@@ -659,6 +699,60 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Jantzen Conjecture for Graded Affine Hecke Algebras",
+    field: "Representation theory, Hecke algebras & intersection cohomology",
+    date: "September 3, 2026",
+    isoDate: "2026-09-03",
+    outcome: "Proved",
+    status: "Author-checked preprint; independent specialist review pending",
+    score: 4,
+    ai: "ChatGPT for proof exploration, with the author checking the resulting arguments",
+    summary:
+      "The paper proves the Jantzen conjecture for standard modules of equal-parameter graded affine Hecke algebras with real central character in the dominant deformation direction. It shows that every Jantzen layer is semisimple and identifies its multiplicities with local intersection cohomology.",
+    importance:
+      "The result supplies a full geometric description of a fundamental filtration in affine-Hecke representation theory and transfers to affine Hecke algebras at real central character. The manuscript discloses AI-led proof exploration, but it is new and not yet independently checked.",
+    source: "https://arxiv.org/abs/2609.03651",
+    sourceLabel: "View preprint and AI-assistance disclosure",
+    addedDate: "September 4, 2026",
+    addedIsoDate: "2026-09-04",
+  },
+  {
+    title: "No Ellipticity-Only Interior W¹,¹ Estimate in Dimension Three",
+    field: "Elliptic partial differential equations & regularity theory",
+    date: "August 13, 2026",
+    isoDate: "2026-08-13",
+    outcome: "Disproved",
+    status: "All arguments checked and rewritten by the authors; independent review pending",
+    score: 4,
+    ai: "ChatGPT 5.6 Sol for the key construction strategies across a series of research chats",
+    summary:
+      "The authors construct smooth uniformly elliptic three-dimensional equations with uniformly bounded solutions and common boundary data whose gradient L¹ norms diverge. This rules out any interior W¹,p estimate depending only on ellipticity for every p at least one and yields a measurable-coefficient limit outside local bounded variation.",
+    importance:
+      "The counterexample resolves a question of Nadirashvili, Tkachev and Vlăduţ and sharply separates the three-dimensional theory from stronger two-dimensional regularity. The AI supplied the key strategy, but the natural-language proof still awaits outside scrutiny.",
+    source: "https://arxiv.org/abs/2608.13380",
+    sourceLabel: "View preprint and detailed AI-contribution statement",
+    addedDate: "September 4, 2026",
+    addedIsoDate: "2026-09-04",
+  },
+  {
+    title: "Topological Invariance of Unibranch Motivic Superpolynomials",
+    field: "Algebraic geometry, quantum algebra & knot invariants",
+    date: "July 28, 2026",
+    isoDate: "2026-07-28",
+    outcome: "Proved",
+    status: "Expanded author manuscript; independent verification pending",
+    score: 3,
+    ai: "ChatGPT as a stated collaborator in proving the topological-invariance result",
+    summary:
+      "Within a broader theory connecting motivic superpolynomials of plane-curve singularities to instanton-slice superpolynomials, the revised paper proves that the unibranch motivic superpolynomials are topological invariants. The manuscript also establishes a mixed-characteristic conjecture and new instanton-sum formulas.",
+    importance:
+      "Topological invariance is the foundation needed for these algebraic constructions to define genuine singularity and knot invariants. The author explicitly credits ChatGPT in the proof, but the 106-page revision contains several adjacent conjectural claims and has not yet received independent checking.",
+    source: "https://arxiv.org/abs/2607.25666",
+    sourceLabel: "View revised manuscript and AI-attribution",
+    addedDate: "September 4, 2026",
+    addedIsoDate: "2026-09-04",
+  },
   {
     title: "Tight 4/3 Correlation-Gap Bound for Four Random Elements",
     field: "Probability, operations research & computer-assisted proof",
