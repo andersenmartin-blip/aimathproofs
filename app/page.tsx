@@ -2076,6 +2076,83 @@ const biologyEmergingResults: Result[] = [
   },
 ];
 
+const researchAreas = [
+  {
+    key: "mathematics",
+    label: "Mathematics",
+    shortLabel: "Math",
+    established: establishedResults,
+    emerging: emergingResults,
+  },
+  {
+    key: "physics",
+    label: "Physics",
+    shortLabel: "Physics",
+    established: physicsEstablishedResults,
+    emerging: physicsEmergingResults,
+  },
+  {
+    key: "biology",
+    label: "Human biology",
+    shortLabel: "Biology",
+    established: biologyEstablishedResults,
+    emerging: biologyEmergingResults,
+  },
+] as const;
+
+function monthRange(start: string, end: string) {
+  const [startYear, startMonth] = start.split("-").map(Number);
+  const [endYear, endMonth] = end.split("-").map(Number);
+  const periods: { key: string; label: string }[] = [];
+
+  for (
+    let cursor = new Date(Date.UTC(startYear, startMonth - 1, 1));
+    cursor <= new Date(Date.UTC(endYear, endMonth - 1, 1));
+    cursor = new Date(Date.UTC(cursor.getUTCFullYear(), cursor.getUTCMonth() + 1, 1))
+  ) {
+    const year = cursor.getUTCFullYear();
+    const month = String(cursor.getUTCMonth() + 1).padStart(2, "0");
+    const monthLabel = cursor.toLocaleString("en", { month: "short", timeZone: "UTC" });
+    periods.push({
+      key: `${year}-${month}`,
+      label: cursor.getUTCMonth() === 0 ? `${monthLabel} ’${String(year).slice(-2)}` : monthLabel,
+    });
+  }
+
+  return periods;
+}
+
+const trendPeriods = [
+  { key: "before-2026", label: "Before ’26" },
+  ...monthRange("2026-01", latestReviewIsoDate.slice(0, 7)),
+];
+
+function isPublishedBy(isoDate: string, period: string) {
+  if (period === "before-2026") return isoDate < "2026-01-01";
+  return isoDate.slice(0, 7) <= period;
+}
+
+const cumulativeTrend = trendPeriods.map((period) => ({
+  ...period,
+  values: researchAreas.map((area) => ({
+    key: area.key,
+    label: area.label,
+    value: [...area.established, ...area.emerging].filter((item) =>
+      isPublishedBy(item.isoDate, period.key),
+    ).length,
+  })),
+}));
+
+const totalResults = researchAreas.reduce(
+  (sum, area) => sum + area.established.length + area.emerging.length,
+  0,
+);
+const totalEstablished = researchAreas.reduce(
+  (sum, area) => sum + area.established.length,
+  0,
+);
+const totalUnderReview = totalResults - totalEstablished;
+
 const filters = ["All", "Proved", "Disproved"] as const;
 
 function Score({ value }: { value: number }) {
@@ -2215,6 +2292,197 @@ function LatestReviewPanel({
         ))}
       </nav>
     </aside>
+  );
+}
+
+function MomentumChart() {
+  const width = 820;
+  const height = 330;
+  const margin = { top: 24, right: 24, bottom: 54, left: 56 };
+  const plotWidth = width - margin.left - margin.right;
+  const plotHeight = height - margin.top - margin.bottom;
+  const maxValue = Math.max(
+    ...cumulativeTrend.flatMap((period) =>
+      period.values.map((series) => series.value),
+    ),
+  );
+  const yMax = Math.ceil(maxValue / 20) * 20;
+  const ticks = Array.from({ length: yMax / 20 + 1 }, (_, index) => index * 20);
+  const x = (index: number) =>
+    margin.left + (index / (cumulativeTrend.length - 1)) * plotWidth;
+  const y = (value: number) =>
+    margin.top + plotHeight - (value / yMax) * plotHeight;
+  const labelStep = trendPeriods.length > 16 ? 3 : trendPeriods.length > 11 ? 2 : 1;
+  const latestValues = cumulativeTrend.at(-1)?.values ?? [];
+
+  return (
+    <figure className="trend-card trend-card-primary" aria-labelledby="momentum-title">
+      <div className="trend-card-head">
+        <div>
+          <p className="chart-label">Cumulative record</p>
+          <h3 id="momentum-title">Published results over time</h3>
+        </div>
+        <div className="chart-legend" aria-label="Chart legend">
+          {researchAreas.map((area) => (
+            <span className={`legend-${area.key}`} key={area.key}>
+              <i aria-hidden="true" />
+              {area.shortLabel}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="chart-wrap">
+        <svg
+          className="momentum-chart"
+          viewBox={`0 0 ${width} ${height}`}
+          role="img"
+          aria-labelledby="momentum-svg-title momentum-svg-desc"
+        >
+          <title id="momentum-svg-title">Cumulative published results by research area</title>
+          <desc id="momentum-svg-desc">
+            The chart counts tracked results by their original publication date.
+            At the latest review, {latestValues.map((item) => `${item.label} has ${item.value}`).join(", ")} tracked results.
+          </desc>
+
+          {ticks.map((tick) => (
+            <g key={tick}>
+              <line
+                className="chart-gridline"
+                x1={margin.left}
+                x2={width - margin.right}
+                y1={y(tick)}
+                y2={y(tick)}
+              />
+              <text className="chart-axis-label" x={margin.left - 15} y={y(tick) + 4} textAnchor="end">
+                {tick}
+              </text>
+            </g>
+          ))}
+
+          {trendPeriods.map((period, index) =>
+            index === 0 ||
+            index === trendPeriods.length - 1 ||
+            index % labelStep === 0 ? (
+              <text
+                className="chart-axis-label chart-x-label"
+                key={period.key}
+                x={x(index)}
+                y={height - 18}
+                textAnchor={index === 0 ? "start" : index === trendPeriods.length - 1 ? "end" : "middle"}
+              >
+                {period.label}
+              </text>
+            ) : null,
+          )}
+
+          {researchAreas.map((area) => {
+            const points = cumulativeTrend.map((period, index) => ({
+              x: x(index),
+              y: y(period.values.find((value) => value.key === area.key)?.value ?? 0),
+              period,
+            }));
+
+            return (
+              <g className={`series-${area.key}`} key={area.key}>
+                <polyline
+                  className="chart-line"
+                  points={points.map((point) => `${point.x},${point.y}`).join(" ")}
+                />
+                {points.map((point) => {
+                  const value = point.period.values.find((entry) => entry.key === area.key)?.value ?? 0;
+                  return (
+                    <circle className="chart-point" cx={point.x} cy={point.y} key={point.period.key} r="4">
+                      <title>{`${area.label}: ${value} results by ${point.period.label}`}</title>
+                    </circle>
+                  );
+                })}
+              </g>
+            );
+          })}
+        </svg>
+      </div>
+      <figcaption>
+        Based on each entry&apos;s original publication date—not the date it was added to this tracker.
+      </figcaption>
+    </figure>
+  );
+}
+
+function EvidenceChart() {
+  return (
+    <figure className="trend-card evidence-card" aria-labelledby="evidence-title">
+      <div className="trend-card-head">
+        <div>
+          <p className="chart-label">Current evidence</p>
+          <h3 id="evidence-title">Established vs under review</h3>
+        </div>
+      </div>
+
+      <div className="evidence-bars">
+        {researchAreas.map((area) => {
+          const total = area.established.length + area.emerging.length;
+          const establishedShare = (area.established.length / total) * 100;
+          const emergingShare = 100 - establishedShare;
+
+          return (
+            <div className="evidence-row" key={area.key}>
+              <div className="evidence-row-head">
+                <strong>{area.label}</strong>
+                <span>{total} results</span>
+              </div>
+              <div
+                className="evidence-bar"
+                role="img"
+                aria-label={`${area.label}: ${area.established.length} established and ${area.emerging.length} under review`}
+              >
+                <span
+                  className="evidence-established"
+                  style={{ width: `${establishedShare}%` }}
+                />
+                <span
+                  className="evidence-review"
+                  style={{ width: `${emergingShare}%` }}
+                />
+              </div>
+              <div className="evidence-values">
+                <span><i className="established-swatch" />{area.established.length} established</span>
+                <span><i className="review-swatch" />{area.emerging.length} under review</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <figcaption>
+        Status reflects the strongest verification evidence available at the latest review.
+      </figcaption>
+    </figure>
+  );
+}
+
+function ResearchTrends() {
+  return (
+    <section className="trends-section" aria-labelledby="trends-heading">
+      <div className="trends-heading">
+        <div>
+          <p className="section-kicker">Research momentum</p>
+          <h2 id="trends-heading">The frontier, in motion.</h2>
+          <p>
+            A publication-date view of how the record is growing, paired with
+            the current strength of evidence behind each research area.
+          </p>
+        </div>
+        <div className="trend-totals" aria-label="Tracker totals">
+          <div><strong>{totalResults}</strong><span>results tracked</span></div>
+          <div><strong>{totalEstablished}</strong><span>established</span></div>
+          <div><strong>{totalUnderReview}</strong><span>under review</span></div>
+        </div>
+      </div>
+      <div className="trend-grid">
+        <MomentumChart />
+        <EvidenceChart />
+      </div>
+    </section>
   );
 }
 
@@ -2384,6 +2652,8 @@ export default function Home() {
               </a>
             </div>
           </section>
+
+          <ResearchTrends />
 
           <section className="method" id="method">
             <div>
