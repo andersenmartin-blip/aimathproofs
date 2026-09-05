@@ -31,8 +31,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 4, 2026";
-const latestReviewIsoDate = "2026-09-04";
+const latestReviewDate = "September 5, 2026";
+const latestReviewIsoDate = "2026-09-05";
 
 const establishedResults: Result[] = [
   {
@@ -699,6 +699,60 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Kahn's Ideal Conjecture for Finite Posets",
+    field: "Combinatorics, finite posets & probabilistic order theory",
+    date: "August 13, 2026",
+    isoDate: "2026-08-13",
+    outcome: "Proved",
+    status: "Author-written preprint; independent specialist review pending",
+    score: 3,
+    ai: "ChatGPT 5.6 Sol for the key idea and theorem; Codex assisted with the manuscript",
+    summary:
+      "The paper proves a weighted strengthening of Kahn's ideal inequality: for any nonempty ideal, a weighted average of the expected ranks of its maximal elements reaches the conjectured lower bound. This implies the sharp explicit estimate gap(P) ≤ 2w(P) − 1 for the largest spacing between expected ranks.",
+    importance:
+      "The result settles a conjecture that had circulated in partial form since at least 2002 and supplies a general quantitative link between a poset's width and the distribution of its random linear extensions. The author explicitly credits the AI with the key theorem, but no external verification is yet reported.",
+    source: "https://arxiv.org/abs/2608.12678",
+    sourceLabel: "View revised preprint and AI-contribution statement",
+    addedDate: "September 5, 2026",
+    addedIsoDate: "2026-09-05",
+  },
+  {
+    title: "Aires–Kahn Chain-Gap Question for Finite Posets",
+    field: "Combinatorics, finite posets & random linear extensions",
+    date: "August 13, 2026",
+    isoDate: "2026-08-13",
+    outcome: "Disproved",
+    status: "Author-written preprint; independent specialist review pending",
+    score: 2,
+    ai: "ChatGPT 5.6 Sol for the key counterexample idea; Codex assisted with the manuscript",
+    summary:
+      "Aires and Kahn asked whether every finite poset contains a chain whose expected-rank gaps are bounded by a universal constant times the poset's width. The paper constructs width-two posets in which every maximal chain has an arbitrarily large gap, answering the question negatively.",
+    importance:
+      "The construction rules out a natural local route for controlling expected ranks using width alone. It is a focused result in poset theory and currently rests on the author's checking of an AI-originated construction.",
+    source: "https://arxiv.org/abs/2608.12678",
+    sourceLabel: "View revised preprint and AI-contribution statement",
+    addedDate: "September 5, 2026",
+    addedIsoDate: "2026-09-05",
+  },
+  {
+    title: "Aires–Kahn Gap–Entropy Question for Finite Posets",
+    field: "Combinatorics, information theory & random orders",
+    date: "August 13, 2026",
+    isoDate: "2026-08-13",
+    outcome: "Disproved",
+    status: "Author-written preprint; independent specialist review pending",
+    score: 3,
+    ai: "ChatGPT 5.6 Sol for the key construction and theorem; Codex assisted with the manuscript",
+    summary:
+      "The paper constructs finite posets whose expected-rank gap grows without bound while the entropy per selected element of every induced random order remains below three bits. This gives a negative answer to the proposed implication from large gaps to large hereditary entropy.",
+    importance:
+      "The counterexample separates two plausible measures of disorder in random linear extensions and resolves a recent conjectural question with an explicit recursive family. Independent scrutiny of the AI-originated argument is still pending.",
+    source: "https://arxiv.org/abs/2608.12678",
+    sourceLabel: "View revised preprint and AI-contribution statement",
+    addedDate: "September 5, 2026",
+    addedIsoDate: "2026-09-05",
+  },
   {
     title: "Jantzen Conjecture for Graded Affine Hecke Algebras",
     field: "Representation theory, Hecke algebras & intersection cohomology",
