@@ -2612,7 +2612,7 @@ export default function Home() {
           <span className="brand-mark">∴</span>
           <span>AI Research Frontiers</span>
         </a>
-        <nav className="header-nav" aria-label="Research areas">
+        <nav className="header-nav" aria-label="Site navigation">
           <a
             className={area === "mathematics" ? "active" : ""}
             href="#mathematics"
@@ -2634,6 +2634,7 @@ export default function Home() {
           >
             Human biology
           </a>
+          <a href="/simplechess">SimpleChess</a>
         </nav>
       </header>
 

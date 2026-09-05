@@ -106,3 +106,7 @@ The timeout defaults can be overridden for a controlled canary with `SITES_INSTA
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+
+## SimpleChess
+
+An English 2D/3D PGN viewer with Stockfish analysis is included at `/simplechess`. See [SIMPLECHESS.md](SIMPLECHESS.md) for usage, licenses and deployment details.

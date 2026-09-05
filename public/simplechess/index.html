@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/simplechess/">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171c1d">
+  <title>SimpleChess · Replay your game</title>
+  <meta name="description" content="Watch your chess games on a 2D or 3D board. Open a PGN file, adjust the speed and replay every move.">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/","chess.js":"./vendor/chess.js"}}</script>
+</head>
+<body>
+<header class="masthead">
+  <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">♔</span><span>SimpleChess</span></a>
+  <a class="site-back" href="/" title="Back to AI Research Frontiers">← AI Research Frontiers</a>
+  <span class="masthead-note">YOUR GAME. MOVE BY MOVE.</span>
+  <button id="open-file-top" class="button gold small">Open PGN <span aria-hidden="true">＋</span></button>
+</header>
+<main class="workspace">
+  <section class="board-section" aria-label="Chessboard and playback">
+    <div class="board-header"><div class="player"><span class="piece-dot black"></span><span id="black-name">Black</span><span class="side-label">BLACK</span></div>
+      <div class="view-actions"><div class="board-mode" role="group" aria-label="Board display"><button id="mode-2d" type="button" aria-pressed="false">2D</button><button id="mode-3d" type="button" aria-pressed="true">3D</button></div><button class="icon-button" id="flip" title="Flip board" aria-label="Flip board">↻</button><button class="text-button" id="view">Top view</button><button class="icon-button" id="fullscreen" type="button" title="Fullscreen (F)" aria-label="Fullscreen" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div>
+    </div>
+    <div id="viewport" aria-label="3D chessboard. Drag to rotate, scroll to zoom.">
+      <div id="loading" role="status"><span class="loader"></span><p>Setting up the pieces…</p></div>
+      <div class="board-hint" id="board-hint">Drag to rotate · Scroll to zoom</div>
+    </div>
+    <div class="board-bottom">
+    <div class="position-status">
+      <div class="board-footer"><div class="player"><span class="piece-dot white"></span><span id="white-name">White</span><span class="side-label">WHITE</span></div><span class="turn-label" id="turn-label">White to move</span></div>
+      <div class="engine-line"><div><a href="./engine-info.html" target="_blank" rel="noopener" title="About the engine and its license">Stockfish 18 Lite</a><span>: </span><output id="engine-score" aria-live="polite" aria-atomic="true">Loading…</output></div><span class="engine-perspective" id="engine-detail">White perspective</span></div>
+    </div>
+    <div class="playback">
+      <div class="scrubber"><input id="progress" aria-label="Game position" type="range" min="0" max="1" value="0" step="1"><span id="progress-text">0 / 0</span></div>
+      <div class="control-row">
+        <div class="transport">
+          <button id="start" class="icon-button" title="First position (Home)" aria-label="First position"><svg viewBox="0 0 24 24"><path d="M5 5v14M19 5l-10 7 10 7Z"/></svg></button>
+          <button id="previous" class="icon-button" title="Previous move (left arrow)" aria-label="Previous move"><svg viewBox="0 0 24 24"><path d="m15 5-8 7 8 7"/></svg></button>
+          <button id="play" class="play-button" aria-label="Play" title="Play or pause (Space)" disabled><svg id="play-icon" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></svg><span id="play-label">Play</span></button>
+          <button id="next" class="icon-button" title="Next move (right arrow)" aria-label="Next move"><svg viewBox="0 0 24 24"><path d="m9 5 8 7-8 7"/></svg></button>
+          <button id="end" class="icon-button" title="Last position (End)" aria-label="Last position"><svg viewBox="0 0 24 24"><path d="M19 5v14M5 5l10 7-10 7Z"/></svg></button>
+        </div>
+        <label class="tempo" for="speed"><span>Speed</span><input id="speed" type="range" min="0.5" max="8" value="2.5" step="0.5"><output id="speed-value" for="speed">2.5 s / move</output></label>
+      </div>
+    </div>
+    </div>
+  </section>
+  <aside class="sidebar">
+    <section class="import-panel" id="drop-zone">
+      <span class="eyebrow">YOUR CHESS GAME</span>
+      <h1>Bring the moves to life.</h1>
+      <p>Open a PGN file, or drag it here.</p>
+      <button id="open-file" class="button outline">Choose PGN file <svg viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 16v5h16v-5"/></svg></button>
+      <input id="file-input" type="file" accept=".pgn,application/x-chess-pgn,text/plain" hidden>
+      <span class="privacy-note">Your file stays on your device.</span>
+      <div id="message" role="status" aria-live="polite"></div>
+      <label id="game-picker-label" hidden>Game in file<select id="game-picker"></select></label>
+    </section>
+    <section class="game-panel">
+      <div class="section-heading"><span class="eyebrow">THE GAME</span><button id="demo" class="text-button">Show example</button></div>
+      <h2 id="game-title">A little masterpiece</h2>
+      <p class="game-meta" id="game-meta">Example · Paul Morphy — the Duke & Count</p>
+      <div class="game-badges"><span id="game-event">The Opera Game, Paris · 1858</span><strong id="game-result">1–0</strong></div>
+      <div class="moves-header"><span>NO.</span><span>WHITE</span><span>BLACK</span></div>
+      <div class="moves" id="moves" aria-label="Move list"></div>
+      <div class="current-move" id="current-move" aria-live="polite">Starting position</div>
+    </section>
+    <p class="keyboard-hint"><kbd>←</kbd> <kbd>→</kbd> one move <span>·</span> <kbd>Space</kbd> pause <span>·</span> <kbd>F</kbd> fullscreen</p>
+  </aside>
+</main>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
