@@ -27,12 +27,14 @@ type Result = {
   sourceLabel?: string;
   secondarySource?: string;
   secondarySourceLabel?: string;
+  tertiarySource?: string;
+  tertiarySourceLabel?: string;
   addedDate?: string;
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 6, 2026";
-const latestReviewIsoDate = "2026-09-06";
+const latestReviewDate = "September 7, 2026";
+const latestReviewIsoDate = "2026-09-07";
 
 const establishedResults: Result[] = [
   {
@@ -329,18 +331,20 @@ const establishedResults: Result[] = [
     date: "August 1, 2026",
     isoDate: "2026-08-01",
     outcome: "Disproved",
-    status: "Full Lean certificate released",
+    status: "Full Lean certificate released; independently and concurrently reproduced",
     score: 5,
     ai: "Astra (internal OpenAI model)",
     summary:
       "Astra constructed infinitely many pairwise nonisomorphic property-(T) groups sharing the same group von Neumann algebra, disproving Connes’s rigidity conjecture.",
     importance:
-      "The counterexamples overturn a longstanding proposed bridge between group structure and operator algebras and also answer a related finite-to-one question.",
+      "The counterexamples overturn a longstanding proposed bridge between group structure and operator algebras and also answer a related finite-to-one question. An independently developed GPT-5.6-assisted construction now supplies a distinct route to the same disproof.",
     source: "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
     sourceLabel: "View manuscript collection",
     secondarySource:
       "https://github.com/openai/ten-proofs/blob/main/ConnesRigidity.lean",
     secondarySourceLabel: "View Lean certificate",
+    tertiarySource: "https://arxiv.org/abs/2608.02327",
+    tertiarySourceLabel: "View independent concurrent proof",
   },
   {
     title: "Permanent Circuit Lower Bounds",
@@ -699,6 +703,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Explicit Counterexample to Deré's Real-Form Conjecture",
+    field: "Lie algebras, representation theory & computer algebra",
+    date: "July 21, 2026",
+    isoDate: "2026-07-21",
+    outcome: "Demonstrated",
+    status: "Author-written proof and released GAP/Magma calculations; independent specialist review pending",
+    score: 3,
+    ai: "Claude Fable 5 for an autonomous proof of the decisive stabilizer theorem and the linearization idea used in the authors' proof",
+    summary:
+      "The authors construct the first explicit 10-dimensional two-step nilpotent complex Lie algebra that is isomorphic to its complex conjugate but has no real form. This turns an earlier nonconstructive disproof of Deré's conjecture into a concrete example in the smallest possible dimension.",
+    importance:
+      "The result makes the failure of a natural descent principle explicit and computable. Claude's theorem is a structural dependency of the construction, but the revised preprint and bundled computer-algebra calculations have not yet received independent specialist verification.",
+    source: "https://arxiv.org/abs/2607.19513",
+    sourceLabel: "View revised preprint, code and AI-use statement",
+    addedDate: "September 7, 2026",
+    addedIsoDate: "2026-09-07",
+  },
   {
     title: "Kahn's Ideal Conjecture for Finite Posets",
     field: "Combinatorics, finite posets & probabilistic order theory",
@@ -2295,6 +2317,12 @@ function ResultCard({
           {item.secondarySource && (
             <a href={item.secondarySource} target="_blank" rel="noreferrer">
               {item.secondarySourceLabel ?? "View additional source"}{" "}
+              <span aria-hidden="true">↗</span>
+            </a>
+          )}
+          {item.tertiarySource && (
+            <a href={item.tertiarySource} target="_blank" rel="noreferrer">
+              {item.tertiarySourceLabel ?? "View further source"}{" "}
               <span aria-hidden="true">↗</span>
             </a>
           )}
