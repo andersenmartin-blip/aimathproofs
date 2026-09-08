@@ -33,10 +33,30 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 7, 2026";
-const latestReviewIsoDate = "2026-09-07";
+const latestReviewDate = "September 8, 2026";
+const latestReviewIsoDate = "2026-09-08";
 
 const establishedResults: Result[] = [
+  {
+    title: "Carlet's Cyclic-Additive Conjecture for Kasami APN Functions — Four Congruence Classes",
+    field: "Finite fields, combinatorics, cryptography & formal verification",
+    date: "August 19, 2026",
+    isoDate: "2026-08-19",
+    outcome: "Proved",
+    status: "All new results and proofs formally verified in Lean 4; general conjecture remains open",
+    score: 3,
+    ai: "Claude Fable 5 for every new derivation, reduction and proof; Aristotle (Harmonic) for the subsequent Lean formalization",
+    summary:
+      "The authors prove Carlet's exact triple-count conjecture for Kasami almost-perfect-nonlinear functions whenever k modulo n is 1, 2, n−2 or n−1, including the first genuinely open case k=2. They also verify every admissible parameter pair through n=13, while leaving the remaining congruence classes open.",
+    importance:
+      "The theorem resolves four infinite parameter families in a cryptographic finite-field problem posed openly since 2018–2019. Its importance is substantial within the specialty, and the public Lean development independently checks the complete AI-originated proof record rather than only numerical examples.",
+    source: "https://arxiv.org/abs/2608.18584",
+    sourceLabel: "View revised paper and proof provenance",
+    secondarySource: "https://github.com/nagygp/conjecture-on-kasami",
+    secondarySourceLabel: "View complete Lean formalization",
+    addedDate: "September 8, 2026",
+    addedIsoDate: "2026-09-08",
+  },
   {
     title: "Burris–Yeats Minimum-Countermodel Conjecture for Tarski Algebra",
     field: "Mathematical logic, finite model theory & formal verification",
