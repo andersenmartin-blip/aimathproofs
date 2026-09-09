@@ -33,10 +33,54 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 8, 2026";
-const latestReviewIsoDate = "2026-09-08";
+const latestReviewDate = "September 9, 2026";
+const latestReviewIsoDate = "2026-09-09";
 
 const establishedResults: Result[] = [
+  {
+    title: "Navier–Stokes Millennium Problem — Forced Finite-Time Blowup",
+    field: "Partial differential equations, fluid dynamics & formal verification",
+    date: "September 8, 2026",
+    isoDate: "2026-09-08",
+    outcome: "Disproved",
+    status: "Complete zero-sorry Lean 4 proof of Clay alternatives C and D released; external specialist and Clay review has only begun",
+    score: 5,
+    ai: "An internal post-Astra OpenAI model across roughly 10,000 coordinated agents for discovery and proof; GPT-6 Astra for the complete Lean formalization",
+    summary:
+      "For every positive viscosity, the construction starts the three-dimensional incompressible Navier–Stokes flow from rest under a smooth compactly supported force and produces unbounded velocity in finite time while kinetic energy stays bounded. The whole-space and periodic versions establish alternatives C and D in Clay's official formulation.",
+    importance:
+      "This is a claimed resolution of one of the seven Millennium Prize Problems and a historic counterexample to global smoothness with allowed forcing. The exact target statements are machine-checked with no sorry gaps and can be rechecked through an independent proof kernel, but neither Clay recognition nor broad specialist scrutiny is complete.",
+    source: "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf",
+    sourceLabel: "Read the 166-page proof",
+    secondarySource: "https://github.com/openai/NavierStokesAndEuler",
+    secondarySourceLabel: "View Lean proofs and independent-checking instructions",
+    tertiarySource: "https://openai.com/index/navier-stokes-solution/",
+    tertiarySourceLabel: "Read the research announcement and AI workflow",
+    addedDate: "September 9, 2026",
+    addedIsoDate: "2026-09-09",
+  },
+  {
+    title: "Three-Dimensional Unforced Euler Equation — Smooth Finite-Time Blowup",
+    field: "Partial differential equations, ideal-fluid dynamics & formal verification",
+    date: "September 8, 2026",
+    isoDate: "2026-09-08",
+    outcome: "Disproved",
+    status: "Complete zero-sorry Lean 4 formalization released; external specialist review has only begun",
+    score: 5,
+    ai: "OpenAI's coordinated internal research-agent system for the construction; GPT-6 Astra for Lean formalization and verification",
+    summary:
+      "The paper constructs smooth, compactly supported, divergence-free initial data on three-dimensional Euclidean space whose unforced incompressible Euler solution develops a finite-time singularity. Its velocity C¹ norm becomes unbounded and the time integral of the vorticity L∞ norm diverges.",
+    importance:
+      "Smooth finite-time blowup for the unforced three-dimensional Euler equation was a central open regularity problem in mathematical fluid mechanics. The source-facing theorem has a complete Lean certificate with independent comparator instructions, although broad human scrutiny is still at the starting line.",
+    source: "https://cdn.openai.com/pdf/315b36cd-ec98-4023-8342-93345194ece1/euler.pdf",
+    sourceLabel: "Read the 57-page proof",
+    secondarySource: "https://github.com/openai/NavierStokesAndEuler",
+    secondarySourceLabel: "View Lean proofs and independent-checking instructions",
+    tertiarySource: "https://openai.com/index/navier-stokes-solution/",
+    tertiarySourceLabel: "Read the research announcement and AI workflow",
+    addedDate: "September 9, 2026",
+    addedIsoDate: "2026-09-09",
+  },
   {
     title: "Carlet's Cyclic-Additive Conjecture for Kasami APN Functions — Four Congruence Classes",
     field: "Finite fields, combinatorics, cryptography & formal verification",
@@ -723,6 +767,96 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Complex Structure on S² × S⁴",
+    field: "Complex geometry, topology & threefolds",
+    date: "August 28, 2026",
+    isoDate: "2026-08-28",
+    outcome: "Proved",
+    status: "New AI-discovered preprint; no independent specialist verification yet",
+    score: 5,
+    ai: "Odin Automatic AI Research Agent for discovery of the proof",
+    summary:
+      "The authors construct a compact complex threefold from a modular family of complex two-tori, modify its period lattice and use an integral Mayer–Vietoris calculation to identify the resulting smooth manifold as S² × S⁴. This gives the manifold a complex structure.",
+    importance:
+      "Whether S² × S⁴ admits a complex structure is a famous long-standing problem linking differential topology and complex geometry. A valid proof would settle it, but the short new manuscript is entirely dependent on a delicate construction and has not yet received outside scrutiny.",
+    source: "https://arxiv.org/abs/2609.05504",
+    sourceLabel: "View preprint and AI-attribution",
+    addedDate: "September 9, 2026",
+    addedIsoDate: "2026-09-09",
+  },
+  {
+    title: "Short-Time Existence and Uniqueness for the Critical Schouten Flow",
+    field: "Differential geometry & geometric partial differential equations",
+    date: "September 6, 2026",
+    isoDate: "2026-09-06",
+    outcome: "Proved",
+    status: "Authors checked, developed and independently verified the arguments; outside review pending",
+    score: 3,
+    ai: "ChatGPT 5.6 Pro for the strategy leading to the main argument",
+    summary:
+      "The paper proves short-time existence and uniqueness for the critical Ricci–Bourguignon flow, equivalently the Schouten flow, on every closed smooth manifold of dimension at least three. An added scalar-curvature variable converts the degenerate system into a coupled parabolic–hyperbolic one and the curvature constraint is then shown to propagate.",
+    importance:
+      "The theorem closes the critical parameter case left open by the previous Ricci–Bourguignon theory. It is a meaningful specialist result, with unusually strong author checking disclosed, but it is not yet peer-reviewed or externally replicated.",
+    source: "https://arxiv.org/abs/2609.06503",
+    sourceLabel: "View preprint and detailed AI-use statement",
+    addedDate: "September 9, 2026",
+    addedIsoDate: "2026-09-09",
+  },
+  {
+    title: "Yau's Asymptotic Scalar-Curvature Integral Conjecture",
+    field: "Differential geometry, Ricci curvature & geometric analysis",
+    date: "September 6, 2026",
+    isoDate: "2026-09-06",
+    outcome: "Disproved",
+    status: "New author preprint; independent specialist verification pending",
+    score: 4,
+    ai: "ChatGPT 5.6 Pro for the counterexample",
+    summary:
+      "The authors construct a complete one-ended three-manifold with strictly positive Ricci curvature for which the scalar-curvature integral over a radius-R ball, divided by R, has infinite limsup. This contradicts Yau's proposed asymptotic bound.",
+    importance:
+      "The counterexample overturns a natural global restriction on positively Ricci-curved three-manifolds and introduces a new geometric construction from toric lenses and hybrid blocks. The claim is substantial, but the paper is brand new and reports no external check.",
+    source: "https://arxiv.org/abs/2609.06533",
+    sourceLabel: "View preprint and AI-attribution",
+    addedDate: "September 9, 2026",
+    addedIsoDate: "2026-09-09",
+  },
+  {
+    title: "Growing-Degree AMP–Low-Degree Equivalence — Bernoulli Rank-One Case",
+    field: "High-dimensional statistics, probability & computational complexity",
+    date: "September 7, 2026",
+    isoDate: "2026-09-07",
+    outcome: "Proved",
+    status: "New single-author preprint; independent verification pending",
+    score: 3,
+    ai: "GPT-6 Astra for most of the paper's arguments",
+    summary:
+      "The paper proves a sharp lower bound for growing-degree polynomial estimation in the Gaussian planted-submatrix model. Together with the known polynomial approximation of fixed-iteration approximate message passing, it identifies the exact limiting low-degree error and resolves the Bernoulli rank-one case of the growing-degree AMP-equivalence question.",
+    importance:
+      "The result sharpens the connection between two leading frameworks for predicting computational limits in high-dimensional inference. It settles a concrete open case, while the AI-generated proof remains a new unreviewed manuscript.",
+    source: "https://arxiv.org/abs/2609.06988",
+    sourceLabel: "View preprint and AI-contribution statement",
+    addedDate: "September 9, 2026",
+    addedIsoDate: "2026-09-09",
+  },
+  {
+    title: "Improved Lower Bound for the Complex Grothendieck Constant",
+    field: "Functional analysis, operator theory & rigorous computation",
+    date: "September 7, 2026",
+    isoDate: "2026-09-07",
+    outcome: "Demonstrated",
+    status: "Reproducible interval-arithmetic certificate released; full proof awaits specialist review",
+    score: 3,
+    ai: "Odin Automatic AI Research Agent for discovery of the lower bound and proof",
+    summary:
+      "The authors prove that the complex Grothendieck constant exceeds 1.35584631827168, improving Davie's long-standing lower bound and closing more than one quarter of the remaining gap to Haagerup's upper bound. The numerical portion is rigorously enclosed by interval arithmetic.",
+    importance:
+      "The exact value is a central open constant in functional analysis with consequences across optimization and quantum information. This is a sizable quantitative advance rather than a final solution, and its released checker makes the computational core reproducible.",
+    source: "https://arxiv.org/abs/2609.07000",
+    sourceLabel: "View preprint, certificate and verification code",
+    addedDate: "September 9, 2026",
+    addedIsoDate: "2026-09-09",
+  },
   {
     title: "Explicit Counterexample to Deré's Real-Form Conjecture",
     field: "Lie algebras, representation theory & computer algebra",
