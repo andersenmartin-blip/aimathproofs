@@ -33,10 +33,48 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 9, 2026";
-const latestReviewIsoDate = "2026-09-09";
+const latestReviewDate = "September 10, 2026";
+const latestReviewIsoDate = "2026-09-10";
 
 const establishedResults: Result[] = [
+  {
+    title: "Pierce–Birkhoff Conjecture",
+    field: "Real algebraic geometry, lattice-ordered rings & formal verification",
+    date: "September 9, 2026",
+    isoDate: "2026-09-09",
+    outcome: "Disproved",
+    status: "Explicit hand-checkable counterexample; five examples formally verified in Lean 4",
+    score: 5,
+    ai: "Multi-agent Danus workflow chaining GPT-5.6, GPT-6, Claude Opus 5 and Claude Fable 5.1",
+    summary:
+      "The authors construct a continuous piecewise-quadratic function on a finite semialgebraic partition of R^30 that cannot be written as any finite lattice combination of polynomials, disproving the Pierce–Birkhoff conjecture. AI investigations produced the matrix-pair construction and the argument excluding representations of arbitrary degree.",
+    importance:
+      "The conjecture dates to the 1950s and was previously known only in dimensions at most two and for restricted partition classes. The published example is designed for direct human checking, while counterexamples in dimensions 5, 6, 7, 30 and 72 have independent Lean certificates.",
+    source: "https://arxiv.org/abs/2609.10420",
+    sourceLabel: "View paper and AI-discovery account",
+    secondarySource: "https://github.com/7pocheR/Pierce-Birkhoff",
+    secondarySourceLabel: "View Lean-verified counterexamples",
+    addedDate: "September 10, 2026",
+    addedIsoDate: "2026-09-10",
+  },
+  {
+    title: "Small Undecidable Groups and Unrecognizable 4-Manifolds",
+    field: "Group theory, geometric topology & formal verification",
+    date: "September 9, 2026",
+    isoDate: "2026-09-09",
+    outcome: "Proved",
+    status: "Three main algebraic theorems fully Lean-verified; author and specialist checks documented",
+    score: 4,
+    ai: "GPT-5.6 Sol Pro for the main construction and presentation reductions; Codex for the 28,000-line Lean formalization",
+    summary:
+      "The work constructs a 3-generator, 9-relator group with unsolvable word problem and smaller fixed-size Adian–Rabin families. These imply improved bounds: the seven-fold connected sum of S²×S² is topologically unrecognizable and the nine-fold sum is smoothly unrecognizable.",
+    importance:
+      "The construction improves records dating back to Borisov and sharpens quantitative undecidability bounds in four-manifold topology. Lean checks the three source theorems and all dependencies without project axioms or admitted steps; the topological corollaries use established external results.",
+    source: "https://arxiv.org/abs/2609.10461",
+    sourceLabel: "View paper, proof provenance and formalization audit",
+    addedDate: "September 10, 2026",
+    addedIsoDate: "2026-09-10",
+  },
   {
     title: "Navier–Stokes Millennium Problem — Forced Finite-Time Blowup",
     field: "Partial differential equations, fluid dynamics & formal verification",
@@ -767,6 +805,42 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Every AW*-Algebra Is Normal",
+    field: "Operator algebras, set theory & mathematical logic",
+    date: "September 9, 2026",
+    isoDate: "2026-09-09",
+    outcome: "Proved",
+    status: "Two-author preprint; detailed specialist and independent scrutiny pending",
+    score: 4,
+    ai: "Danus LLM orchestration using Claude Fable 5.1 and GPT-5.6 Sol",
+    summary:
+      "The paper proves that every AW*-algebra is normal, answering Wright's 46-year-old question. It also reduces the monotone-completeness conjecture to the factor case at the level of consistency strength through Boolean-valued transfer methods.",
+    importance:
+      "This settles a long-standing structural question in operator algebras and clarifies the remaining monotone-completeness problem. The LLM system found the proof ideas, but the result currently has neither formal verification nor published independent checking.",
+    source: "https://arxiv.org/abs/2609.10218",
+    sourceLabel: "View preprint and AI disclosure",
+    addedDate: "September 10, 2026",
+    addedIsoDate: "2026-09-10",
+  },
+  {
+    title: "Cubic-Rate First-Order Optimization over the L1 Ball",
+    field: "Convex optimization & information-based complexity",
+    date: "September 9, 2026",
+    isoDate: "2026-09-09",
+    outcome: "Proved",
+    status: "Single-author preprint; exact subproblem assumption and proof await independent review",
+    score: 3,
+    ai: "ChatGPT 6 Astra for the decisive good–bad decomposition and SR1-update construction",
+    summary:
+      "For smooth convex quadratic minimization over the L1 unit ball, the proposed first-order method reaches O(L/T³) objective error, improving the previous O(L/T²) rate and giving O((L/ε)^(1/3)) oracle complexity when its subproblems are solved exactly.",
+    importance:
+      "The result breaks the established first-order convergence barrier for this nonstandard geometry, although the current algorithm is not presented as practical. The author independently checked and rewrote the proof; external validation is still pending.",
+    source: "https://arxiv.org/abs/2609.10314",
+    sourceLabel: "View preprint and detailed AI-use statement",
+    addedDate: "September 10, 2026",
+    addedIsoDate: "2026-09-10",
+  },
   {
     title: "Complex Structure on S² × S⁴",
     field: "Complex geometry, topology & threefolds",
@@ -1928,6 +2002,26 @@ const emergingResults: Result[] = [
 ];
 
 const physicsEstablishedResults: Result[] = [
+  {
+    title: "Private Communication from Two Zero-Private-Capacity Quantum Channels",
+    field: "Quantum information theory, channel capacity & formal verification",
+    date: "September 9, 2026",
+    isoDate: "2026-09-09",
+    outcome: "Proved",
+    status: "Complete Lean 4 certificate for the two zero capacities and positive joint rate",
+    score: 4,
+    ai: "QudeLeap AI Quantum Scientist and large language models for the initial activating example and proof strategies",
+    summary:
+      "A four-level quantum channel and a half-erasure qubit channel each have zero private capacity, yet their joint use achieves more than 0.0001903 private bits per product use. A fixed joint measurement creates the information advantage needed for secure communication.",
+    importance:
+      "This resolves the long-standing question of whether private classical capacity can be superactivated from two exactly zero-capacity channels. Lean formalizes the explicit channels, both zero-capacity statements and the positive joint-rate bound without admitted steps.",
+    source: "https://arxiv.org/abs/2609.10520",
+    sourceLabel: "View paper and formal-proof correspondence",
+    secondarySource: "https://github.com/QudeLeap/lean-private-capacity",
+    secondarySourceLabel: "View complete Lean formalization",
+    addedDate: "September 10, 2026",
+    addedIsoDate: "2026-09-10",
+  },
   {
     title: "Cross-Tokamak Forecasting of Fusion-Plasma Instability",
     field: "Plasma physics & fusion",
