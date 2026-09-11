@@ -33,8 +33,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 10, 2026";
-const latestReviewIsoDate = "2026-09-10";
+const latestReviewDate = "September 11, 2026";
+const latestReviewIsoDate = "2026-09-11";
 
 const establishedResults: Result[] = [
   {
@@ -805,6 +805,80 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Isolation of Scalar Allen–Cahn Local Minimizers",
+    field: "Partial differential equations & variational analysis",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Proved",
+    status: "Author-checked preprint; independent specialist scrutiny pending",
+    score: 3,
+    ai: "GPT-6 Astra supplied the analytic Lyapunov–Schmidt reduction strategy; Nam Q. Le checked, simplified and rewrote the arguments",
+    summary:
+      "Local minimizers of the scalar double-well Allen–Cahn functional on a bounded Lipschitz domain, with homogeneous Neumann boundary conditions, are isolated in L1. This answers a question posed by Kohn and Sternberg in 1989.",
+    importance:
+      "The result settles a long-standing specialist question about the separation of stable states in a standard phase-transition model. A complete author-reworked proof is public, but no machine-checked certificate or independent verification has been located.",
+    source: "https://arxiv.org/abs/2609.11797",
+    sourceLabel: "View preprint and AI contribution statement",
+    addedDate: "September 11, 2026",
+    addedIsoDate: "2026-09-11",
+  },
+  {
+    title: "Erdős–Sós Theorem for Eulerian Digraphs",
+    field: "Extremal graph theory & directed tree embeddings",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Proved",
+    status: "Preprint; authors explicitly checked the path proof; full tree theorem awaits independent scrutiny",
+    score: 4,
+    ai: "GPT-6 Astra found the proofs after Dhruv Mubayi and Jacques Verstraëte proposed extending an undirected proof method",
+    summary:
+      "Every Eulerian digraph on n vertices with more than (t−1)n arcs contains every oriented tree with t edges. Loops and repeated arcs are excluded, but opposite arcs are allowed. The threshold is sharp for each tree.",
+    importance:
+      "This would establish an exact directed counterpart of a central extremal theorem, including previously unavailable sharp path bounds. The authors' explicit checking statement covers the short path proof, not a formal verification of the general tree argument.",
+    source: "https://arxiv.org/abs/2609.10987",
+    sourceLabel: "View preprint and checking disclosure",
+    addedDate: "September 11, 2026",
+    addedIsoDate: "2026-09-11",
+  },
+  {
+    title: "Almost Linear Universal Point Sets for Planar Graphs",
+    field: "Computational geometry, graph drawing & permutation patterns",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Proved",
+    status: "Lean-verified earlier superpattern core; planar-graph reduction and current layered proof not formalized",
+    score: 4,
+    ai: "GPT-6 Astra developed the construction and proof from Taylor Gordon's interval-based approach",
+    summary:
+      "The paper constructs a set of n^(1+o(1)) points that supports a straight-line, crossing-free drawing of every n-vertex planar graph, improving the previous quadratic upper bound. The claim concerns the number of points, not coordinate size.",
+    importance:
+      "This is a major advance in a long-standing graph-drawing problem, although a linear-size set remains open. Released Lean code verifies an earlier almost-linear superpattern construction, but not the entire intended planar-graph statement, so the result remains under review.",
+    source: "https://arxiv.org/abs/2609.10916",
+    sourceLabel: "View construction and proof",
+    secondarySource: "https://github.com/taylorgordon20/math/tree/main/213-superpatterns",
+    secondarySourceLabel: "View Lean certificate and its stated scope",
+    addedDate: "September 11, 2026",
+    addedIsoDate: "2026-09-11",
+  },
+  {
+    title: "Improved Coloring Bound for Graphs with No Long Induced Path",
+    field: "Graph coloring & chi-boundedness",
+    date: "September 8, 2026",
+    isoDate: "2026-09-08",
+    outcome: "Proved",
+    status: "Author-reworked preprint, strengthened September 10; independent checking pending",
+    score: 3,
+    ai: "Claude Fable 5.1 found a clique-reduction argument; GPT Pro supplied a large–small split and combined proof; Sang-il Oum rewrote it",
+    summary:
+      "For t ≥ 5, every graph with no induced t-vertex path has chromatic number at most 3(t−3)^(ω+4), where ω is its largest clique size. The revised proof reduces the exponential base from t−2 to t−3.",
+    importance:
+      "This advances a classical coloring-bound problem rather than solving the broader polynomial chi-boundedness conjecture, which remains open for t ≥ 6. The improvement is asymptotic in clique size, not necessarily stronger for every small graph.",
+    source: "https://arxiv.org/abs/2609.08847",
+    sourceLabel: "View revised preprint and AI disclosure",
+    addedDate: "September 11, 2026",
+    addedIsoDate: "2026-09-11",
+  },
   {
     title: "Every AW*-Algebra Is Normal",
     field: "Operator algebras, set theory & mathematical logic",
@@ -2007,18 +2081,18 @@ const physicsEstablishedResults: Result[] = [
     field: "Quantum information theory, channel capacity & formal verification",
     date: "September 9, 2026",
     isoDate: "2026-09-09",
-    outcome: "Proved",
-    status: "Complete Lean 4 certificate for the two zero capacities and positive joint rate",
+    outcome: "Demonstrated",
+    status: "Lean-verified regularized private-information bounds; operational coding equivalence remains outside Lean",
     score: 4,
     ai: "QudeLeap AI Quantum Scientist and large language models for the initial activating example and proof strategies",
     summary:
       "A four-level quantum channel and a half-erasure qubit channel each have zero private capacity, yet their joint use achieves more than 0.0001903 private bits per product use. A fixed joint measurement creates the information advantage needed for secure communication.",
     importance:
-      "This resolves the long-standing question of whether private classical capacity can be superactivated from two exactly zero-capacity channels. Lean formalizes the explicit channels, both zero-capacity statements and the positive joint-rate bound without admitted steps.",
+      "This resolves a long-standing superactivation question at the level of the regularized private-information formula. Scope clarified September 11: Lean covers the channels, complements, encoding, measurement and information bounds; operational coding, its equivalence to the formula and the PPT-decoder converse are outside the certificate. This is a theoretical result, not an experiment.",
     source: "https://arxiv.org/abs/2609.10520",
     sourceLabel: "View paper and formal-proof correspondence",
     secondarySource: "https://github.com/QudeLeap/lean-private-capacity",
-    secondarySourceLabel: "View complete Lean formalization",
+    secondarySourceLabel: "View Lean formalization and precise coverage",
     addedDate: "September 10, 2026",
     addedIsoDate: "2026-09-10",
   },
@@ -2372,15 +2446,17 @@ const biologyEmergingResults: Result[] = [
     date: "June 3, 2025",
     isoDate: "2025-06-03",
     outcome: "Clinical signal",
-    status: "Randomized phase 2a; 71 participants; larger trials required",
+    status: "Randomized phase 2a; exploratory proteomic follow-up; efficacy and geroprotection not established",
     score: 4,
     ai: "PandaOmics target discovery + Chemistry42 generative drug design",
     summary:
       "AI identified TNIK as a target and generated rentosertib. In a 12-week double-blind trial, the highest-dose group showed a mean forced-vital-capacity change of +98.4 ml versus −20.3 ml with placebo, while overall safety was broadly comparable.",
     importance:
-      "It is an unusually advanced test of an AI-discovered target and AI-designed molecule in patients. The trial was small, short, geographically narrow and primarily designed to assess safety, so efficacy is not established.",
+      "A substantial clinical test of AI-led drug discovery, but the 71-person safety-focused trial cannot establish efficacy. A September 7, 2026 follow-up reports lower predicted age across six proteomic clocks. The clocks cannot separate disease improvement from aging effects: this is not evidence of rejuvenation or longer life and does not warrant a separate established longevity result.",
     source: "https://www.nature.com/articles/s41591-025-03743-2",
     sourceLabel: "View Nature Medicine trial",
+    secondarySource: "https://www.nature.com/articles/s41587-026-03286-y",
+    secondarySourceLabel: "View exploratory proteomic-clock follow-up",
   },
   {
     title: "Deep-Learning Discovery of New Senolytics",
