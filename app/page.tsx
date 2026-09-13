@@ -33,8 +33,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 11, 2026";
-const latestReviewIsoDate = "2026-09-11";
+const latestReviewDate = "September 13, 2026";
+const latestReviewIsoDate = "2026-09-13";
 
 const establishedResults: Result[] = [
   {
@@ -805,6 +805,60 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Recursive-Line Zarankiewicz Numbers with Four Columns",
+    field: "Extremal combinatorics, sum-of-squares rank & exact computation",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Proved",
+    status: "Exact replay-checked certificates and analytic propagation in a new preprint; independent specialist review pending",
+    score: 2,
+    ai: "AI system not identified in the manuscript; used to propose grid configurations, reusable extension patterns and verification-code revisions",
+    summary:
+      "For the strengthened recursive-line parameter with four columns, the paper determines 18 of the 19 values through 20 rows and proves z_RL(m,4)=z₂(m,4)=floor((5m+6)/2) for every m≥15. The sole unresolved small case is m=14, narrowed to 37 or 38.",
+    importance:
+      "This is the first eventual exact formula for the recently strengthened four-column problem and connects extremal C₄-free graphs with irreducible sum-of-squares representations. The finite witnesses use exact integer certificates and a separate replay checker, but the source does not name the AI system and the result has not yet been independently reviewed.",
+    source: "https://arxiv.org/abs/2609.11093",
+    sourceLabel: "View preprint, certificates and AI workflow",
+    addedDate: "September 13, 2026",
+    addedIsoDate: "2026-09-13",
+  },
+  {
+    title: "Wrapping Number Conjecture for Annular Links",
+    field: "Geometric topology, knot theory & quantum invariants",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Disproved",
+    status: "Explicit counterexample with two proofs in an author-checked preprint; independent scrutiny pending",
+    score: 4,
+    ai: "GPT-6 Astra autonomously found the annular knot and essentially supplied the Kauffman-bracket and annular-Khovanov proofs",
+    summary:
+      "An explicit annular knot has wrapping number four while its Kauffman bracket has annular degree at most two, disproving the Hoste–Przytycki wrapping-number conjecture. The example does not disprove the weaker categorified version: its annular Khovanov degree is still four.",
+    importance:
+      "The conjecture proposed that a computable skein invariant always detects a geometric intersection number. GPT-6 Astra found the counterexample autonomously, and the four-page manuscript gives independent Khovanov-homological and hyperbolic-geometric routes to the crucial wrapping-number calculation, but no outside verification has yet appeared.",
+    source: "https://arxiv.org/abs/2609.11084",
+    sourceLabel: "View counterexample, proofs and AI statement",
+    addedDate: "September 13, 2026",
+    addedIsoDate: "2026-09-13",
+  },
+  {
+    title: "Torsion-Free de la Harpe–Voiculescu Conjecture for Fuchsian Groups",
+    field: "Operator algebras, free probability & geometric group theory",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Proved",
+    status: "Carefully checked and rewritten by the specialist author; no independent or formal verification yet",
+    score: 4,
+    ai: "ChatGPT Pro 6.0 produced the seven-page core proof after ChatGPT Pro 5.6 explored earlier approaches; the author directed, checked and rewrote it",
+    summary:
+      "The group von Neumann algebra of every closed orientable surface group of genus g≥2 is shown to be the free group factor on 2g−1 generators. Together with known cases, this settles the de la Harpe–Voiculescu prediction for all finitely generated torsion-free non-elementary Fuchsian groups.",
+    importance:
+      "The surface-group case had remained open since the 1995 problem. The proof's key step freely complements the commutator inside L(F₂), but it does not settle every Fuchsian group with torsion; those remaining families receive only finite-index containment results.",
+    source: "https://arxiv.org/abs/2609.11074",
+    sourceLabel: "View preprint, scope and detailed AI provenance",
+    addedDate: "September 13, 2026",
+    addedIsoDate: "2026-09-13",
+  },
   {
     title: "Isolation of Scalar Allen–Cahn Local Minimizers",
     field: "Partial differential equations & variational analysis",
@@ -2195,6 +2249,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "PINN-Discovered Candidate for a Stable Euler Singularity on R³",
+    field: "Fluid dynamics, singularity formation & computer-assisted analysis",
+    date: "September 9, 2026",
+    isoDate: "2026-09-09",
+    outcome: "Discovered",
+    status: "Certified approximate profile and central linear-damping mechanism; full nonlinear stability and blowup proof not closed",
+    score: 4,
+    ai: "Physics-informed neural network with a self-similar travelling-wave ansatz, adaptive sampling, boosting and curvature-aware optimization",
+    summary:
+      "A PINN found a high-precision axisymmetric self-similar profile at the critical blowup rate 0.5 for the three-dimensional Euler equations on unbounded space. The profile was converted to splines, and interval methods certify its small residual and the key low- and high-order linear damping structure.",
+    importance:
+      "This is a distinct computationally discovered candidate for a stable finite-time singularity on R³ and a concrete route toward a computer-assisted proof. It is evidence rather than a proof: the authors still need to certify a large finite collection of remaining linear, elliptic, interpolation and nonlinear constants with a positive closing margin.",
+    source: "https://arxiv.org/abs/2609.10867",
+    sourceLabel: "View profile, certificates and remaining proof obligations",
+    addedDate: "September 13, 2026",
+    addedIsoDate: "2026-09-13",
+  },
   {
     title: "No Global Supporting Functional for Some Two-Qubit Entanglement States",
     field: "Quantum information & entanglement theory",
