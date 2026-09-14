@@ -33,8 +33,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 13, 2026";
-const latestReviewIsoDate = "2026-09-13";
+const latestReviewDate = "September 14, 2026";
+const latestReviewIsoDate = "2026-09-14";
 
 const establishedResults: Result[] = [
   {
@@ -805,6 +805,102 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Positive Sectional Curvature on the Gromoll–Meyer Exotic 7-Sphere",
+    field: "Differential geometry, exotic spheres & computer-assisted proof",
+    date: "September 11, 2026",
+    isoDate: "2026-09-11",
+    outcome: "Proved",
+    status: "Explicit preprint with exact rational and integer checks plus a contemporaneous independent construction; specialist review pending",
+    score: 5,
+    ai: "Odin Automatic AI Research Agent constructed the metric and the proof",
+    summary:
+      "An explicit one-parameter family of smooth metrics is constructed on the Gromoll–Meyer exotic seven-sphere. For every sufficiently small positive parameter, all sectional curvatures are bounded below by a positive multiple of the sixth power of that parameter.",
+    importance:
+      "Positive sectional curvature on this celebrated exotic sphere had resisted decades of work. The paper supplies reproducible exact sign checks, and an independently developed preprint claims the same existence result by another construction; neither manuscript has yet received broad specialist scrutiny.",
+    source: "https://arxiv.org/abs/2609.12882",
+    sourceLabel: "View metric, proof and verification account",
+    secondarySource: "https://github.com/shengtaoguo/gromoll-meyer-curvature-calculations",
+    secondarySourceLabel: "Reproduce the exact calculations",
+    tertiarySource: "https://arxiv.org/abs/2609.11484",
+    tertiarySourceLabel: "View contemporaneous independent construction",
+    addedDate: "September 14, 2026",
+    addedIsoDate: "2026-09-14",
+  },
+  {
+    title: "Near-Factorial Growth Histories for Square-Lattice Trees of Every Size",
+    field: "Combinatorics, mathematical physics & operator growth",
+    date: "September 11, 2026",
+    isoDate: "2026-09-11",
+    outcome: "Proved",
+    status: "Complete proof in a revised expository note; independent review pending",
+    score: 3,
+    ai: "GPT-6 Astra Pro autonomously found the extraction lemma and drafted the strengthened proof",
+    summary:
+      "For every positive integer L, there is a rooted tree with exactly L bonds on the square lattice that can be grown in at least L!/C^L distinct orders for one universal constant C. Bouch had proved this only along an unbounded sequence of sizes; the AI-derived extraction lemma fills every gap.",
+    importance:
+      "The result closes the all-sizes form of a nontrivial combinatorial question linked to operator growth and imaginary-time singularities in quantum spin systems. The author explicitly attributes the additional theorem and proof to ChatGPT, but no outside checking has yet been located.",
+    source: "https://arxiv.org/abs/2412.16912",
+    sourceLabel: "View revised note and detailed AI provenance",
+    addedDate: "September 14, 2026",
+    addedIsoDate: "2026-09-14",
+  },
+  {
+    title: "Finiteness of Log Canonical Models on Minimal Surfaces",
+    field: "Algebraic geometry & minimal-model theory",
+    date: "September 11, 2026",
+    isoDate: "2026-09-11",
+    outcome: "Proved",
+    status: "Revised author-written preprint; independent specialist review pending",
+    score: 4,
+    ai: "ChatGPT assisted the proof of the new minimal-surface theorem and the search for counterexamples",
+    summary:
+      "For every smooth projective minimal surface, only finitely many isomorphism classes of log canonical models arise as klt boundary divisors vary. The same paper shows that minimality cannot simply be omitted by constructing non-minimal counterexamples in Kodaira dimensions −∞, 0 and 1.",
+    importance:
+      "The theorem gives a complete positive answer to the authors' finiteness question in the minimal-surface case and sharply locates a boundary of the phenomenon. The September revision adds the general minimal-surface proof, but the manuscript is not yet independently checked.",
+    source: "https://arxiv.org/abs/2609.03305",
+    sourceLabel: "View revised theorem, counterexamples and AI statement",
+    addedDate: "September 14, 2026",
+    addedIsoDate: "2026-09-14",
+  },
+  {
+    title: "Hopf Sign Conjecture — Positive-Curvature Case",
+    field: "Global Riemannian geometry & curvature",
+    date: "September 6, 2026",
+    isoDate: "2026-09-06",
+    outcome: "Disproved",
+    status: "Explicit preprint with exact symbolic checks; no independent verification of the complete geometric proof yet",
+    score: 5,
+    ai: "Odin Automatic AI Research Agent constructed the metric and the proof",
+    summary:
+      "The paper constructs a smooth metric with strictly positive sectional curvature on S³×S³. Because this closed six-manifold has Euler characteristic zero, the construction would disprove the positive-curvature half of Hopf's sign conjecture.",
+    importance:
+      "Hopf's sign conjecture is a classical global-geometry problem, and S³×S³ is a natural six-dimensional test case. Released code checks the finite curvature identities exactly, but the global passage from those identities to positivity on every tangent two-plane still requires specialist scrutiny.",
+    source: "https://arxiv.org/abs/2609.11980",
+    sourceLabel: "View metric, proof and verification scope",
+    secondarySource: "https://github.com/shengtaoguo/s3xs3-curvature-calculations",
+    secondarySourceLabel: "View exact calculation code",
+    addedDate: "September 14, 2026",
+    addedIsoDate: "2026-09-14",
+  },
+  {
+    title: "Automorphism Towers of Length κ⁺",
+    field: "Infinite group theory, set theory & model theory",
+    date: "September 6, 2026",
+    isoDate: "2026-09-06",
+    outcome: "Proved",
+    status: "Complete author-written preprint; independent review pending",
+    score: 4,
+    ai: "ChatGPT Sol 5.6 proposed the original example and supplied the S-normalizer-tower idea developed by the authors",
+    summary:
+      "For every infinite cardinal κ, the authors construct a centerless group of cardinality κ whose transfinite automorphism tower terminates exactly after κ⁺ steps. This answers a question of Simon Thomas and includes a countable group with tower length ω₁.",
+    importance:
+      "Prescribing very long automorphism towers is difficult, and the result reaches the successor-cardinal length uniformly for every infinite κ. The central construction grew directly from ChatGPT's answer, while the authors simplified it, connected it to earlier techniques and wrote the proof.",
+    source: "https://arxiv.org/abs/2609.12010",
+    sourceLabel: "View construction and detailed AI statement",
+    addedDate: "September 14, 2026",
+    addedIsoDate: "2026-09-14",
+  },
   {
     title: "Recursive-Line Zarankiewicz Numbers with Four Columns",
     field: "Extremal combinatorics, sum-of-squares rank & exact computation",
