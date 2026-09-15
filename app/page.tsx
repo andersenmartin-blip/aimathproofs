@@ -118,7 +118,7 @@ const establishedResults: Result[] = [
     addedIsoDate: "2026-09-15",
   },
   {
-    title: "Undecidability of Medvedev and Skvortsov Logics",
+    title: "Undecidability of Medvedev Logic",
     field: "Mathematical logic, computability & formal verification",
     date: "September 11, 2026",
     isoDate: "2026-09-11",
@@ -127,7 +127,7 @@ const establishedResults: Result[] = [
     score: 5,
     ai: "ChatGPT Sol 5.6 obtained the core reduction and technical proof; Claude Opus 5 translated and checked it in Lean",
     summary:
-      "Medvedev's logic of finite problems is undecidable, settling a long-standing question by reducing periodic tiling to non-theoremhood. The same approach proves Skvortsov's logic of infinite problems undecidable and separates the two logics using aperiodic tilings.",
+      "Medvedev's logic of finite problems is undecidable, settling a long-standing question by reducing periodic tiling to non-theoremhood.",
     importance:
       "Medvedev logic connects computability, superintuitionistic logic, dependence logic and topos theory, so undecidability changes the foundation of several related classification questions. The main claim was produced by an LLM and then machine-checked.",
     source: "https://arxiv.org/abs/2609.13359",
@@ -923,6 +923,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Undecidability of Skvortsov Logic and Separation from Medvedev Logic",
+    field: "Mathematical logic, computability & tiling reductions",
+    date: "September 11, 2026",
+    isoDate: "2026-09-11",
+    outcome: "Proved",
+    status: "Author-written proof in the same new preprint; the stated Lean verification is specific to the main Medvedev proof",
+    score: 4,
+    ai: "ChatGPT Sol 5.6 developed the core tiling-reduction method used across the paper",
+    summary:
+      "Skvortsov's logic of infinite problems is undecidable, and it is distinct from Medvedev's logic of finite problems; any aperiodic plane tiling separates the two. The proof reduces the ordinary tiling problem to non-theoremhood.",
+    importance:
+      "This settles the companion decidability question and proves a structural separation between two influential logics of problems. It remains under review because the paper explicitly assigns Lean verification to the Medvedev proof, not this extension.",
+    source: "https://arxiv.org/abs/2609.13359",
+    sourceLabel: "View proof and shared AI methodology",
+    addedDate: "September 15, 2026",
+    addedIsoDate: "2026-09-15",
+  },
   {
     title: "Le's Simplex Conjecture for the Planar Monge–Ampère Eigenvalue",
     field: "Analysis of PDEs, convex geometry & differential geometry",
