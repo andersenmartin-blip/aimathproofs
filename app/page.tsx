@@ -33,10 +33,128 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 14, 2026";
-const latestReviewIsoDate = "2026-09-14";
+const latestReviewDate = "September 15, 2026";
+const latestReviewIsoDate = "2026-09-15";
 
 const establishedResults: Result[] = [
+  {
+    title: "Erdős–Sós Conjecture",
+    field: "Extremal graph theory, tree embeddings & formal verification",
+    date: "September 14, 2026",
+    isoDate: "2026-09-14",
+    outcome: "Proved",
+    status: "Complete Lean 4 verification plus a separate simplified proof by two specialist mathematicians",
+    score: 5,
+    ai: "GPT-6 Astra discovered the short counting argument; human authors subsequently simplified and extended it",
+    summary:
+      "Every graph with average degree greater than k−2 contains every k-vertex tree. GPT-6 Astra found the decisive counting proof, closing the classical 1960s conjecture; Oliver Riordan and Alex Scott then published a shorter, independently written presentation of the argument.",
+    importance:
+      "This settles a central extremal-graph conjecture that resisted a complete exact proof for roughly six decades. The intended theorem has both a public Lean certificate and detailed human specialist scrutiny, so it meets the established threshold.",
+    source: "https://arxiv.org/abs/2609.15893",
+    sourceLabel: "View independent simplified proof",
+    secondarySource: "https://www.erdosproblems.com/static/548copy.pdf",
+    secondarySourceLabel: "View GPT-6 Astra's original proof",
+    tertiarySource: "https://github.com/tadamcz/erdos548",
+    tertiarySourceLabel: "View complete Lean verification",
+    addedDate: "September 15, 2026",
+    addedIsoDate: "2026-09-15",
+  },
+  {
+    title: "Addario-Berry–Havet–Linhares Sales–Reed–Thomassé Conjecture",
+    field: "Directed graph theory & oriented tree embeddings",
+    date: "September 14, 2026",
+    isoDate: "2026-09-14",
+    outcome: "Proved",
+    status: "Two independently written proofs from specialist teams, both adapting the AI-originated Erdős–Sós argument",
+    score: 3,
+    ai: "GPT-6 Astra supplied the core counting method; the two author groups independently adapted it to antidirected trees",
+    summary:
+      "Every digraph with average outdegree greater than k−2 contains every antidirected tree with k vertices. Riordan and Scott derive the theorem with minor changes to the Astra argument, while Santos, Stein and Williams independently obtained the same result a few days earlier.",
+    importance:
+      "The theorem resolves a 2013 conjecture and gives the sharp directed extension naturally implied by the new Erdős–Sós method. Independent agreement between two specialist groups supplies substantial external scrutiny.",
+    source: "https://arxiv.org/abs/2609.15893",
+    sourceLabel: "View one proof and its relation to the AI argument",
+    secondarySource: "https://arxiv.org/abs/2609.09142",
+    secondarySourceLabel: "View the independent proof",
+    addedDate: "September 15, 2026",
+    addedIsoDate: "2026-09-15",
+  },
+  {
+    title: "Tuza's Ryser-Conjecture Claim for (r, ν) = (4, 2)",
+    field: "Extremal combinatorics, hypergraphs & exact computation",
+    date: "September 13, 2026",
+    isoDate: "2026-09-13",
+    outcome: "Proved",
+    status: "Short human-readable proof; every AI-supplied structural claim independently checked by exact MILP and brute force",
+    score: 3,
+    ai: "GPT-5.6 Sol Pro found the projection lemma and five-sentence core proof through four verified reasoning rounds; Claude built the independent checking workflow",
+    summary:
+      "Every four-partite, four-uniform hypergraph with matching number two has a vertex cover of size at most six. This confirms Tuza's unpublished 1979 claim and closes the (4,2) case of Ryser's conjecture, improving the previous bound of seven.",
+    importance:
+      "The result closes a concrete Ryser case that was still recorded as open in 2021. The proof is only five pages, and the author reports exhaustive exact checks of every structural claim, including corrections to two intermediate model claims.",
+    source: "https://arxiv.org/abs/2609.14281",
+    sourceLabel: "View proof, exact-checking record and AI methodology",
+    addedDate: "September 15, 2026",
+    addedIsoDate: "2026-09-15",
+  },
+  {
+    title: "Caragiu–Vicol–Zaki Golden-Ratio Conjecture",
+    field: "Number theory, additive closure & formal verification",
+    date: "September 12, 2026",
+    isoDate: "2026-09-12",
+    outcome: "Proved",
+    status: "Full mathematical proof formally verified in Lean 4 with public source code",
+    score: 2,
+    ai: "GPT-6 Astra provided algorithmic assistance in constructing the underlying proof",
+    summary:
+      "For Conway's subprime closure generated from one, the ratio of the sizes of two consecutive stages converges to the golden ratio. The theorem proves the conjecture of Caragiu, Vicol and Zaki.",
+    importance:
+      "This resolves a focused conjecture about a recursively generated number-theoretic set. Its reach is specialized, but the complete proof is independently checkable through the released Lean development.",
+    source: "https://arxiv.org/abs/2609.14188",
+    sourceLabel: "View paper and AI statement",
+    secondarySource: "https://github.com/Renriviera/conway-subprime-golden",
+    secondarySourceLabel: "View Lean formalization",
+    addedDate: "September 15, 2026",
+    addedIsoDate: "2026-09-15",
+  },
+  {
+    title: "Undecidability of Medvedev and Skvortsov Logics",
+    field: "Mathematical logic, computability & formal verification",
+    date: "September 11, 2026",
+    isoDate: "2026-09-11",
+    outcome: "Proved",
+    status: "Authors report formal Lean verification of the main undecidability proof; full natural-language methodology released",
+    score: 5,
+    ai: "ChatGPT Sol 5.6 obtained the core reduction and technical proof; Claude Opus 5 translated and checked it in Lean",
+    summary:
+      "Medvedev's logic of finite problems is undecidable, settling a long-standing question by reducing periodic tiling to non-theoremhood. The same approach proves Skvortsov's logic of infinite problems undecidable and separates the two logics using aperiodic tilings.",
+    importance:
+      "Medvedev logic connects computability, superintuitionistic logic, dependence logic and topos theory, so undecidability changes the foundation of several related classification questions. The main claim was produced by an LLM and then machine-checked.",
+    source: "https://arxiv.org/abs/2609.13359",
+    sourceLabel: "View proof, formal-verification statement and methodology",
+    addedDate: "September 15, 2026",
+    addedIsoDate: "2026-09-15",
+  },
+  {
+    title: "Complete Classification of Four-Arm Polyomino Tilings",
+    field: "Combinatorics, tilings & formal verification",
+    date: "September 11, 2026",
+    isoDate: "2026-09-11",
+    outcome: "Proved",
+    status: "Complete all-parameter classification formally verified in Lean 4; finite certificates linked to arbitrary infinite tilings",
+    score: 3,
+    ai: "GPT-6 Astra explored cases, reconstructed and developed proofs, found constructions and counterexamples, generated certificates and produced the Lean formalization",
+    summary:
+      "The work completely classifies every square-grid tile formed from a central square and four straight arms by its ability to tile rectangles, strips, quadrants, half-planes, the plane and integer enlargements. Exactly five capability profiles occur.",
+    importance:
+      "The result closes an infinite family of tiling-classification questions and connects finite symbolic obstructions rigorously to infinite regions. The public Lean proof checks every natural arm-length tuple without trusted solver answers.",
+    source: "https://arxiv.org/abs/2609.13641",
+    sourceLabel: "View classification and AI provenance",
+    secondarySource: "https://angelraychev.com/four-arm-polyominoes/",
+    secondarySourceLabel: "View formal artifact and interactive companion",
+    addedDate: "September 15, 2026",
+    addedIsoDate: "2026-09-15",
+  },
   {
     title: "Pierce–Birkhoff Conjecture",
     field: "Real algebraic geometry, lattice-ordered rings & formal verification",
@@ -805,6 +923,42 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Le's Simplex Conjecture for the Planar Monge–Ampère Eigenvalue",
+    field: "Analysis of PDEs, convex geometry & differential geometry",
+    date: "September 14, 2026",
+    isoDate: "2026-09-14",
+    outcome: "Proved",
+    status: "Author-reworked preprint; no independent specialist or formal verification located",
+    score: 4,
+    ai: "ChatGPT 6 Astra supplied the key strategies and main results through a series of research chats; Chong Gu reworked and rewrote the paper",
+    summary:
+      "Among bounded planar convex domains of a fixed area, triangles minimize the Monge–Ampère eigenvalue. The proof establishes the two-dimensional case of Le's simplex conjecture through a monotonicity property under vertex-eliminating chord movements.",
+    importance:
+      "The result resolves the full planar instance of a geometric eigenvalue conjecture and introduces a potentially reusable deformation argument. It remains under review because only the author has checked the AI-originated strategy so far.",
+    source: "https://arxiv.org/abs/2609.15563",
+    sourceLabel: "View preprint and AI-contribution statement",
+    addedDate: "September 15, 2026",
+    addedIsoDate: "2026-09-15",
+  },
+  {
+    title: "Langlands's Second Main Lemma — Wild Dyadic Case",
+    field: "Number theory, local fields & epsilon factors",
+    date: "September 12, 2026",
+    isoDate: "2026-09-12",
+    outcome: "Proved",
+    status: "Complete author-checked local proof; independent specialist scrutiny pending",
+    score: 3,
+    ai: "OpenAI ChatGPT accelerated the long local calculations, compared them with Dwork, Langlands and Lakkis, and detected inconsistencies in intermediate drafts",
+    summary:
+      "The paper determines the unresolved sign in the wild dyadic biquadratic case and completes a local proof of Langlands's Second Main Lemma for local epsilon factors, including equal characteristic. Earlier detailed work covered odd prime degree but left degree two only up to sign.",
+    importance:
+      "The lemma is part of Langlands's construction of epsilon factors for local Weil representations, and this fills a genuine gap in the local proof record. The calculations have been checked by the author but not yet independently reproduced.",
+    source: "https://arxiv.org/abs/2609.13960",
+    sourceLabel: "View proof and detailed AI-use statement",
+    addedDate: "September 15, 2026",
+    addedIsoDate: "2026-09-15",
+  },
   {
     title: "Positive Sectional Curvature on the Gromoll–Meyer Exotic 7-Sphere",
     field: "Differential geometry, exotic spheres & computer-assisted proof",
