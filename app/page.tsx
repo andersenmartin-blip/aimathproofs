@@ -33,10 +33,50 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 15, 2026";
-const latestReviewIsoDate = "2026-09-15";
+const latestReviewDate = "September 16, 2026";
+const latestReviewIsoDate = "2026-09-16";
 
 const establishedResults: Result[] = [
+  {
+    title: "Cassels–Swinnerton-Dyer Conjecture for Cubic Surfaces",
+    field: "Arithmetic geometry, cubic surfaces & zero-cycles",
+    date: "September 14, 2026",
+    isoDate: "2026-09-14",
+    outcome: "Proved",
+    status: "Two independently developed proofs, checked and combined by specialist authors",
+    score: 5,
+    ai: "GPT-6 Astra supplied the rational-section idea for one proof; separate GPT conversations identified the tangent-direction jump behind the second",
+    summary:
+      "A cubic surface over any field has a rational point exactly when it has a point of degree coprime to three, equivalently a zero-cycle of degree one. Two independent arguments settle the missing smooth characteristic-zero degree-four case, followed by extensions to arbitrary fields and singular surfaces.",
+    importance:
+      "This closes the cubic-surface case of a major arithmetic-geometric conjecture. The two separately originated proof routes and detailed checking by two expert authors provide substantial human scrutiny.",
+    source: "https://arxiv.org/abs/2609.15930",
+    sourceLabel: "View both proofs and the detailed AI disclosure",
+    addedDate: "September 16, 2026",
+    addedIsoDate: "2026-09-16",
+  },
+  {
+    title: "Dimension-Free Discrete Euclidean Ball Maximal Estimates",
+    field: "Harmonic analysis, discrete maximal operators & asymptotic expansions",
+    date: "September 9, 2026",
+    isoDate: "2026-09-09",
+    outcome: "Proved",
+    status: "Confirmed by two concurrent independent papers; the AI-assisted author makes no priority claim",
+    score: 4,
+    ai: "ChatGPT and Codex developed the decisive small-radius expansion and the complete p ≥ 2 argument; the author checked it and extended the method to 1 < p < 2",
+    summary:
+      "The full discrete Euclidean-ball maximal operator on integer lattices is bounded on every ℓᵖ space with 1 < p ≤ ∞ by a constant independent of dimension. This resolves a question posed by Elias Stein in the mid-1990s.",
+    importance:
+      "The result settles a long-standing dimension-free harmonic-analysis problem. Two independently developed concurrent papers establish the same theorem, supplying strong external confirmation while clarifying that this manuscript does not claim priority.",
+    source: "https://arxiv.org/abs/2609.10083",
+    sourceLabel: "View revised AI-assisted proof and priority note",
+    secondarySource: "https://arxiv.org/abs/2609.08433",
+    secondarySourceLabel: "View one concurrent independent proof",
+    tertiarySource: "https://arxiv.org/abs/2609.10763",
+    tertiarySourceLabel: "View the other concurrent proof",
+    addedDate: "September 16, 2026",
+    addedIsoDate: "2026-09-16",
+  },
   {
     title: "Erdős–Sós Conjecture",
     field: "Extremal graph theory, tree embeddings & formal verification",
@@ -923,6 +963,62 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "IPM Blow-Up with Uniformly Space-Time Smooth Forcing",
+    field: "Fluid dynamics, active scalar PDEs & formal verification",
+    date: "September 15, 2026",
+    isoDate: "2026-09-15",
+    outcome: "Proved",
+    status: "Complete preprint; Lean formalization reported, but the corresponding public files are not yet visible",
+    score: 4,
+    ai: "Claude reproduced the predecessor proof and, with Codex, developed the inductive bookkeeping, constants, exposition and Lean formalization under author direction",
+    summary:
+      "For the two-dimensional incompressible porous-media equation on the torus, smooth odd initial density and a force smooth in both space and time can still produce finite-time blow-up of the density and velocity gradients.",
+    importance:
+      "The theorem strengthens a recent blow-up construction by removing the earlier loss of time regularity in the forcing. It remains under review until the announced Lean files are publicly available and independently checked.",
+    source: "https://arxiv.org/abs/2609.16470",
+    sourceLabel: "View proof and detailed AI disclosure",
+    secondarySource: "https://github.com/tristanbuckmaster/fluid_lean",
+    secondarySourceLabel: "View announced formalization repository",
+    addedDate: "September 16, 2026",
+    addedIsoDate: "2026-09-16",
+  },
+  {
+    title: "Abelian Envelope Without the Quotient Property",
+    field: "Category theory, tensor categories & representation theory",
+    date: "September 15, 2026",
+    isoDate: "2026-09-15",
+    outcome: "Disproved",
+    status: "Author-simplified and checked preprint; independent specialist review pending",
+    score: 4,
+    ai: "GPT-6 Astra found the first proof and Claude Opus helped check the finished manuscript; the authors simplified and rewrote the argument",
+    summary:
+      "The universal rigid monoidal category on one object has an abelian envelope even though it cannot have one with the quotient property. This gives a counterexample to the conjecture that every abelian envelope has that property.",
+    importance:
+      "The construction separates two notions that had been conjectured equivalent and clarifies the structure of abelian envelopes in tensor-category theory. External verification has not yet appeared.",
+    source: "https://arxiv.org/abs/2609.17467",
+    sourceLabel: "View proof and AI-contribution statement",
+    addedDate: "September 16, 2026",
+    addedIsoDate: "2026-09-16",
+  },
+  {
+    title: "Cluster Deletion Is NP-Complete on Permutation Graphs",
+    field: "Graph algorithms, computational complexity & combinatorial optimization",
+    date: "May 1, 2025",
+    isoDate: "2025-05-01",
+    outcome: "Proved",
+    status: "Revised author-written proof; the original AI draft contained serious errors",
+    score: 3,
+    ai: "ChatGPT 5.6 Sol helped Arnaud Patey find the NP-completeness reduction; the authors completely rewrote the flawed AI proof",
+    summary:
+      "Cluster Deletion is NP-complete on permutation graphs, answering a 2021 open question. The revision also gives a nine-vertex permutation graph showing that the natural Clique Partition linear program need not be exact.",
+    importance:
+      "The result draws a sharp complexity boundary just above cographs and resolves a concrete algorithmic question. It remains under review because the corrected proof has not yet received independent scrutiny.",
+    source: "https://arxiv.org/abs/2505.00922",
+    sourceLabel: "View revised proof and error disclosure",
+    addedDate: "September 16, 2026",
+    addedIsoDate: "2026-09-16",
+  },
   {
     title: "Undecidability of Skvortsov Logic and Separation from Medvedev Logic",
     field: "Mathematical logic, computability & tiling reductions",
