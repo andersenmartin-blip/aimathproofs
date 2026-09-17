@@ -33,10 +33,50 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 16, 2026";
-const latestReviewIsoDate = "2026-09-16";
+const latestReviewDate = "September 17, 2026";
+const latestReviewIsoDate = "2026-09-17";
 
 const establishedResults: Result[] = [
+  {
+    title: "Browning–Sawin Conjecture on Random Sign Hypersurfaces",
+    field: "Arithmetic geometry, random polynomials & formal verification",
+    date: "September 16, 2026",
+    isoDate: "2026-09-16",
+    outcome: "Proved",
+    status: "Main results formalized in Lean; five standard results from the literature remain explicit hypotheses",
+    score: 4,
+    ai: "AxiomProver helped search the literature, run experiments, reject failed strategies, develop the proof and formalize its main theorems",
+    summary:
+      "A random degree-d hypersurface whose coefficients are independent signs is smooth with probability tending to one as d grows. The paper proves the sharper singularity bound O_n(d^{-1/2}), exponential rarity of positive-dimensional singular loci, and—when n is at least three—an exponential bound for failure of absolute irreducibility.",
+    importance:
+      "This resolves Browning and Sawin's conjecture and strengthens it quantitatively. The public Lean development checks the paper's principal claims while clearly exposing the five imported algebraic-geometric facts on which it relies.",
+    source: "https://arxiv.org/abs/2609.18879",
+    sourceLabel: "View proof and verification scope",
+    secondarySource: "https://github.com/AxiomMath/BrowningSawin",
+    secondarySourceLabel: "View AxiomProver Lean certificate",
+    addedDate: "September 17, 2026",
+    addedIsoDate: "2026-09-17",
+  },
+  {
+    title: "Global Spectral Gap for Uniformly Randomized-Step MALA",
+    field: "Probability, Markov-chain Monte Carlo & formal verification",
+    date: "September 5, 2026",
+    isoDate: "2026-09-05",
+    outcome: "Proved",
+    status: "Principal theorem-level conclusions kernel-checked in Lean without placeholders or problem-specific axioms",
+    score: 4,
+    ai: "ChatGPT 5.6 Sol proposed the randomized-step approach, developed the principal proof strategy and generated the simulation and Lean 4 code",
+    summary:
+      "For strongly log-concave targets, uniformly randomizing the MALA step size restores a near-optimal global spectral-gap lower bound of order 1/(κ√d), up to logarithmic factors, even though no single fixed step works uniformly over the same target class.",
+    importance:
+      "The result supplies a rigorous global convergence guarantee for a fundamental sampling algorithm and separates randomized from fixed step sizes. The September 16 revision added a complete public Lean audit of the principal statements.",
+    source: "https://arxiv.org/abs/2609.05847",
+    sourceLabel: "View revised paper and verification account",
+    secondarySource: "https://github.com/qianqin11/spectral-gap-randomized-step-MALA",
+    secondarySourceLabel: "View Lean and simulation package",
+    addedDate: "September 17, 2026",
+    addedIsoDate: "2026-09-17",
+  },
   {
     title: "Cassels–Swinnerton-Dyer Conjecture for Cubic Surfaces",
     field: "Arithmetic geometry, cubic surfaces & zero-cycles",
@@ -963,6 +1003,78 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Decomposition of High-Index Gorenstein Polytopes",
+    field: "Combinatorial geometry, lattice polytopes & mirror symmetry",
+    date: "September 16, 2026",
+    isoDate: "2026-09-16",
+    outcome: "Proved",
+    status: "Author-checked preprint; independent specialist review and formal verification pending",
+    score: 4,
+    ai: "ChatGPT 5.6 Sol found the proofs of the general results by recombining known ingredients in a new way; the authors substantially rewrote and extended the final paper",
+    summary:
+      "Every d-dimensional Gorenstein polytope of index greater than (d+2)/2 is a free join of Gorenstein polytopes. The theorem strongly extends the Batyrev–Juny lattice-pyramid result and proves that the stringy E-polynomial vanishes exactly for thin polytopes and otherwise has the expected degree.",
+    importance:
+      "The work proves a broad structural theorem and resolves a Batyrev–Nill conjecture about the degree of the stringy E-polynomial. Only the extremal precursor has a separate human proof, so the stronger general conclusions remain under review.",
+    source: "https://arxiv.org/abs/2609.18873",
+    sourceLabel: "View proof and detailed AI attribution",
+    addedDate: "September 17, 2026",
+    addedIsoDate: "2026-09-17",
+  },
+  {
+    title: "Counterexample to a Proposed Relay-Channel Capacity Formula",
+    field: "Information theory, network communication & counterexamples",
+    date: "September 16, 2026",
+    isoDate: "2026-09-16",
+    outcome: "Disproved",
+    status: "Explicit preprint counterexample; independent expert checking pending",
+    score: 3,
+    ai: "ChatGPT-6 Astra assisted in finding the binary relay-channel counterexample; the author simplified the proofs",
+    summary:
+      "A binary relay channel with a noiseless source-to-destination component and binary-symmetric relay links admits an achievable rate above a recently proposed general capacity characterization, disproving that formula and exposing a flaw in its converse argument.",
+    importance:
+      "The counterexample prevents an incorrect claimed solution of the long-open general relay-channel capacity problem from becoming accepted. It does not solve that broader problem and has not yet received independent scrutiny.",
+    source: "https://arxiv.org/abs/2609.18727",
+    sourceLabel: "View counterexample and proof",
+    addedDate: "September 17, 2026",
+    addedIsoDate: "2026-09-17",
+  },
+  {
+    title: "Degree-Free Spectral Independence for Log-Concave Holant Measures",
+    field: "Randomized algorithms, spin systems & Markov-chain mixing",
+    date: "September 16, 2026",
+    isoDate: "2026-09-16",
+    outcome: "Proved",
+    status: "Complete author-checked preprint; concurrent confirmation covers the monomer–dimer corollary only",
+    score: 3,
+    ai: "GPT-5.6 Sol supplied the main proof ideas; the authors developed and take responsibility for the final mathematical argument",
+    summary:
+      "Log-concave Holant measures on simple graphs have spectral-independence bounds that do not depend on maximum degree. This yields linear-in-edges relaxation-time bounds for monomer–dimer models and b-matchings, including O(bm) for uniform b-matchings.",
+    importance:
+      "Removing degree dependence broadens rapid-mixing guarantees for important matching models. A concurrent independent paper supports the monomer–dimer consequence, but the full Holant theorem still awaits external verification.",
+    source: "https://arxiv.org/abs/2609.18835",
+    sourceLabel: "View theorem, proof and AI disclosure",
+    addedDate: "September 17, 2026",
+    addedIsoDate: "2026-09-17",
+  },
+  {
+    title: "Kahane's Block-Statistic Conjecture for 2 × n Rectangles",
+    field: "Enumerative combinatorics, posets & exact computation",
+    date: "July 22, 2026",
+    isoDate: "2026-07-22",
+    outcome: "Proved",
+    status: "Complete general-n proof with independent exhaustive checks; not formally verified or independently reviewed",
+    score: 2,
+    ai: "Grok 4.5 discovered the target; five cold Grok reasoning rounds found the closed form and the all-n induction under human direction",
+    summary:
+      "Kahane's block-statistic identity holds for every 2 × n rectangle, the first genuinely two-dimensional case. The proof derives a closed growth-state generating function and verifies its transition structure exhaustively through widths eight and nine; wider rectangles and general skew shapes remain open.",
+    importance:
+      "This is concrete progress on a recent enumerative-combinatorics conjecture rather than a complete solution. The detailed computational cross-checks strengthen the claim, but the single-author manuscript still lacks independent scrutiny.",
+    source: "https://arxiv.org/abs/2609.17561",
+    sourceLabel: "View proof, cross-checks and AI methodology",
+    addedDate: "September 17, 2026",
+    addedIsoDate: "2026-09-17",
+  },
   {
     title: "IPM Blow-Up with Uniformly Space-Time Smooth Forcing",
     field: "Fluid dynamics, active scalar PDEs & formal verification",
