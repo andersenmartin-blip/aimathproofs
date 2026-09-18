@@ -33,10 +33,70 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 17, 2026";
-const latestReviewIsoDate = "2026-09-17";
+const latestReviewDate = "September 18, 2026";
+const latestReviewIsoDate = "2026-09-18";
 
 const establishedResults: Result[] = [
+  {
+    title: "Benjamini–Häggström–Mossel and Loebl–Nešetřil–Reed Expectation Conjectures",
+    field: "Probabilistic combinatorics, graph homomorphisms & formal verification",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Proved",
+    status: "Main results fully checked in Lean 4; author-verified natural-language proof",
+    score: 4,
+    ai: "GPT-6 Astra developed the proof through interaction with the author; the resulting theorems were then formalized in Lean 4",
+    summary:
+      "Among connected bipartite graphs of a fixed order, a path maximizes the expected range of an integer-valued graph homomorphism pinned at zero. This proves the expectation form of the Benjamini–Häggström–Mossel conjecture and implies the Loebl–Nešetřil–Reed expectation conjecture for integer 1-Lipschitz functions.",
+    importance:
+      "The theorem resolves two linked conjectures with one structural induction argument. The public Lean development checks the intended main statements without placeholders or problem-specific axioms, meeting the established threshold.",
+    source: "https://arxiv.org/abs/2609.19728",
+    sourceLabel: "View proof and AI attribution",
+    secondarySource: "https://github.com/yinfengzhu7-oss/graph-indexed-random-walk-lean",
+    secondarySourceLabel: "View Lean verification",
+    addedDate: "September 18, 2026",
+    addedIsoDate: "2026-09-18",
+  },
+  {
+    title: "Huang–Jiang–Oblomkov Torus-Knot Identity Conjecture",
+    field: "Partition theory, algebraic geometry & formal verification",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Proved",
+    status: "Main finite identity and conjecture Lean-checked conditional on two explicit published inputs",
+    score: 5,
+    ai: "AxiomProver formalized the paper's main finite identity and the resulting conjecture in Lean",
+    summary:
+      "For every coprime pair 1 < a < b, the normalized count attached to the torus-knot singularity Xᵃ = Yᵇ equals both the Huang–Jiang–Oblomkov q-series and an explicit infinite product. A stronger finite identity links the same series to bounded cylindric partitions.",
+    importance:
+      "The result extends the Rogers–Ramanujan and Andrews–Gordon identities to every torus-knot singularity, including all previously unknown cases with a > 3. The certificate is strong but explicitly depends on two named theorems from the literature rather than re-formalizing them.",
+    source: "https://arxiv.org/abs/2609.20567",
+    sourceLabel: "View proof and certificate scope",
+    secondarySource: "https://github.com/AxiomMath/HJO",
+    secondarySourceLabel: "View AxiomProver Lean certificate",
+    addedDate: "September 18, 2026",
+    addedIsoDate: "2026-09-18",
+  },
+  {
+    title: "Sharper Trickle-Down Spectral-Gap Theorem",
+    field: "Probability, high-dimensional expanders & Markov-chain mixing",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Proved",
+    status: "Independently obtained in a separate paper with an extremely similar argument",
+    score: 3,
+    ai: "GPT-5.6 Sol Ultra developed the proofs in two separate author groups",
+    summary:
+      "A streamlined Bochner argument strengthens the quantitative dependence of the global down-up-walk spectral gap on dimension and spectral influence, resolving an open question of Leake and Oveis Gharan.",
+    importance:
+      "The bound improves a widely used local-to-global mixing theorem. A separate team independently reached the same strengthening, with the same model finding a closely related argument, providing strong cross-checking despite both discoveries being AI-assisted.",
+    source: "https://arxiv.org/abs/2609.19514",
+    sourceLabel: "View theorem and independent-confirmation note",
+    secondarySource: "https://arxiv.org/abs/2608.06172",
+    secondarySourceLabel: "View the independently obtained strengthening",
+    addedDate: "September 18, 2026",
+    addedIsoDate: "2026-09-18",
+  },
   {
     title: "Browning–Sawin Conjecture on Random Sign Hypersurfaces",
     field: "Arithmetic geometry, random polynomials & formal verification",
@@ -1003,6 +1063,60 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Counterexample to Talagrand's Operator Cotype Problem",
+    field: "Functional analysis, probability & operator ideals",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Disproved",
+    status: "Author-verified preprint; independent specialist review pending",
+    score: 4,
+    ai: "GPT-5.6 discovered the counterexample",
+    summary:
+      "Talagrand asked whether an operator's Rademacher cotype is universally controlled by the larger of its Gaussian cotype and its (q,1)-summing norm. An explicit construction gives a negative answer already for q = 2.",
+    importance:
+      "The result settles a long-standing operator-theory question at its first nontrivial parameter. The argument is short and author-checked, but no formal certificate or independent expert analysis is yet public.",
+    source: "https://arxiv.org/abs/2609.19731",
+    sourceLabel: "View counterexample and AI attribution",
+    addedDate: "September 18, 2026",
+    addedIsoDate: "2026-09-18",
+  },
+  {
+    title: "The Remaining HZ/4 E₂-Thom-Spectrum Case",
+    field: "Algebraic topology, Thom spectra & structured ring spectra",
+    date: "September 16, 2026",
+    isoDate: "2026-09-16",
+    outcome: "Disproved",
+    status: "Author-checked preprint with specialist feedback; independent proof or formal certificate pending",
+    score: 4,
+    ai: "GPT-5.6 Sol and GPT-6 Astra substantially developed proof strategies, calculations and references; Claude Fable 5.1 reviewed an early draft",
+    summary:
+      "The Eilenberg–Mac Lane spectrum HZ/4 is not an E₂-Thom spectrum over either the 2-complete or the 2-local sphere spectrum. This resolves the only exceptional case left open by Kitchloo's extension of the Hopkins–Mahowald theorem.",
+    importance:
+      "The result completes the classification at prime powers by showing that the exceptional (p,k) = (2,2) case truly behaves differently. The author reports careful checking and expert discussion, but broader verification is still needed.",
+    source: "https://arxiv.org/abs/2609.19446",
+    sourceLabel: "View proof and detailed AI disclosure",
+    addedDate: "September 18, 2026",
+    addedIsoDate: "2026-09-18",
+  },
+  {
+    title: "Four Special Directions in AG(2,13)",
+    field: "Finite geometry, direction problems & exact computation",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Proved",
+    status: "Single-author preprint with exact computations; independent specialist review pending",
+    score: 2,
+    ai: "GPT-5.6 Sol, Claude Fable 5, Grok 4.6, GPT-6 Astra and a Codex-controlled workflow developed ideas, derivations, constructions and checks",
+    summary:
+      "No 52-point subset of the affine plane over F₁₃ determines exactly four special directions. Combined with the known lower bound and a 65-point construction, this fixes the sharp minimum at 65.",
+    importance:
+      "The paper closes a finite-geometric extremal case with an exact obstruction and construction. Its scope is narrow, and the multi-model proof workflow has not yet been independently reviewed.",
+    source: "https://arxiv.org/abs/2609.20495",
+    sourceLabel: "View proof, computations and AI methodology",
+    addedDate: "September 18, 2026",
+    addedIsoDate: "2026-09-18",
+  },
   {
     title: "Decomposition of High-Index Gorenstein Polytopes",
     field: "Combinatorial geometry, lattice polytopes & mirror symmetry",
@@ -2725,6 +2839,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Onsager-Threshold Flexibility for Ideal Magnetohydrodynamics",
+    field: "Magnetohydrodynamics, turbulence & convex integration",
+    date: "September 16, 2026",
+    isoDate: "2026-09-16",
+    outcome: "Demonstrated",
+    status: "Author-verified 135-page analytical preprint; no formal or independent verification yet",
+    score: 5,
+    ai: "Claude Fable 5.1 and ChatGPT Astra implemented higher-order transport estimates, rigorous proof components and major bookkeeping simplifications from targeted author prompts",
+    summary:
+      "For every Hölder exponent below 1/3, the authors construct weak solutions of the ideal MHD equations that conserve neither total energy nor cross-helicity while retaining nontrivial magnetic helicity. The construction reaches the sharp Onsager threshold and also gives anisotropic regularity along magnetic field lines.",
+    importance:
+      "Reaching the 1/3 threshold is a major advance in the mathematical physics of turbulent ideal MHD. The authors explicitly call it a technical extension of their earlier 1/5 result rather than a new conceptual mechanism, and independent checking of the long proof is still needed.",
+    source: "https://arxiv.org/abs/2609.19506",
+    sourceLabel: "View analytical proof and detailed AI declaration",
+    addedDate: "September 18, 2026",
+    addedIsoDate: "2026-09-18",
+  },
   {
     title: "PINN-Discovered Candidate for a Stable Euler Singularity on R³",
     field: "Fluid dynamics, singularity formation & computer-assisted analysis",
