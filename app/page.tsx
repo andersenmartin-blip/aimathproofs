@@ -33,10 +33,112 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 18, 2026";
-const latestReviewIsoDate = "2026-09-18";
+const latestReviewDate = "September 20, 2026";
+const latestReviewIsoDate = "2026-09-20";
 
 const establishedResults: Result[] = [
+  {
+    title: "Conway’s Refinement Conjecture for Omnific Integers",
+    field: "Surreal numbers, algebra & formal verification",
+    date: "September 18, 2026",
+    isoDate: "2026-09-18",
+    outcome: "Proved",
+    status: "Headline statement kernel-checked in Lean; Palomar checks passed; independent mathematical review still limited",
+    score: 4,
+    ai: "A month-long multi-agent ChatGPT and Claude workflow selected the problem, developed and adversarially audited the mathematics, and produced the Lean proof",
+    summary:
+      "Whenever ab = cd for omnific integers, there are omnific integers e, f, g and h with a = ef, b = gh, c = eg and d = fh. The released development proves both a CombinatorialGames formulation and a largely self-contained Mathlib-only formulation.",
+    importance:
+      "The result addresses a 50-year-old Conway conjecture about the integer part of the surreal numbers. The author explicitly invites specialist scrutiny, but the intended headline statement has a public kernel-checked certificate with constrained imports and an axiom audit.",
+    source: "https://overreacted.io/how-i-vibed-a-proof-of-conways-conjecture/",
+    sourceLabel: "Read the proof announcement and verification account",
+    secondarySource: "https://github.com/gaearon/conway-refinement",
+    secondarySourceLabel: "Inspect the Lean proof",
+    tertiarySource: "https://palomar-registry.org/entry?id=PALOMAR-2026-09-03-000002&version=1",
+    tertiarySourceLabel: "View Palomar registry checks",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "Universal Completeness of Exponential Systems",
+    field: "Harmonic analysis, Fourier uniqueness & formal verification",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Proved",
+    status: "Main theorems and higher-dimensional versions formally verified in Lean",
+    score: 4,
+    ai: "GPT-5.4, GPT-5.5 and GPT-5.6 developed the constructions and extensions; Claude Fable models helped refine the arguments; Codex produced the Lean formalization",
+    summary:
+      "The authors construct density-one frequency sets that are complete on every measurable set of measure below one, prove that asymptotically integer perturbations cannot be universal, settle the integer-frequency problem for every density v, and identify the sharp Sobolev threshold for periodic weak gaps.",
+    importance:
+      "The work resolves several linked Fourier-analysis questions, including cases previously conjectured impossible below density one half. The public Lean package checks the stated results directly, including their higher-dimensional forms.",
+    source: "https://arxiv.org/abs/2609.20805",
+    sourceLabel: "View paper and detailed AI attribution",
+    secondarySource: "https://github.com/EnricFloritMath/UniversalCompleteness",
+    secondarySourceLabel: "View Lean verification",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "Quantum Hedetniemi Conjecture",
+    field: "Quantum graph theory, operator algebras & formal verification",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Disproved",
+    status: "All paper theorems, lemmas and propositions checked in Lean in the projective formulation; exact integer certificates released",
+    score: 4,
+    ai: "A generative AI system proposed the core construction and proof idea; the author verified, simplified and organized the argument",
+    summary:
+      "Explicit finite graphs G and H satisfy χ(G×H) ≤ 1538 < 1539 = min{χq(G), χq(H)}, disproving the claim that the quantum chromatic number of a categorical product always equals the smaller factor value. The failure extends to spatial, approximate, commuting-operator and C*-algebraic variants.",
+    importance:
+      "This closes the quantum version of a classical graph-product conjecture with explicit counterexamples. The released Lean development checks the graph constructions, exact certificates and the projective-formulation counterexample statements.",
+    source: "https://arxiv.org/abs/2609.20690",
+    sourceLabel: "View counterexample and verification scope",
+    secondarySource: "https://github.com/JuliusAZeiss/Lean-Verification-and-More-Quantum-Hedetniemi-conjecture",
+    secondarySourceLabel: "View Lean verification and certificates",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "Uniform Turán Density of the Tetrahedron",
+    field: "Extremal combinatorics, hypergraphs & exact certificates",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Proved",
+    status: "Exact independently auditable certificate plus a separate, independently developed non-AI-assisted proof",
+    score: 5,
+    ai: "ChatGPT 6 Pro found the decisive tensor inequality and generated programs for its sum-of-squares expansion; Aristotle separately audited the verifier",
+    summary:
+      "The uniform Turán density of the complete three-uniform hypergraph on four vertices is exactly 1/2, resolving the tetrahedron problem posed by Erdős and Sós in 1982.",
+    importance:
+      "This was the central open case in uniform Turán theory. The AI-assisted proof has an exact integer verifier, and an independent specialist team obtained the same result by a different computer-assisted route.",
+    source: "https://arxiv.org/abs/2609.11802",
+    sourceLabel: "View AI-assisted proof and exact certificate",
+    secondarySource: "https://arxiv.org/abs/2609.08336",
+    secondarySourceLabel: "View independent proof",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "Köthe’s Conjecture and Rowen’s Question",
+    field: "Ring theory, nil ideals & formal verification",
+    date: "September 7, 2026",
+    isoDate: "2026-09-07",
+    outcome: "Disproved",
+    status: "Original counterexample formally verified in Lean; general countable-field construction and Rowen application checked by specialist authors",
+    score: 5,
+    ai: "GPT-6 Astra found the initial counterexample from a Lean statement; ChatGPT assisted the authors with the generalization and technical development",
+    summary:
+      "The authors construct a ring in which the sum of two nil left ideals is not nil, disproving Köthe’s conjecture and its equivalent matrix and polynomial-ring formulations. The construction also answers a question of Rowen.",
+    importance:
+      "Köthe’s conjecture had remained open since 1930 and is one of ring theory’s best-known nil-ideal problems. The original AI-found construction has a public Lean proof, while the paper develops it over arbitrary countable fields.",
+    source: "https://arxiv.org/abs/2609.07996",
+    sourceLabel: "View proof and contribution statement",
+    secondarySource: "https://github.com/tadamcz/koethe",
+    secondarySourceLabel: "View original construction and Lean proof",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
   {
     title: "Benjamini–Häggström–Mossel and Loebl–Nešetřil–Reed Expectation Conjectures",
     field: "Probabilistic combinatorics, graph homomorphisms & formal verification",
@@ -1063,6 +1165,96 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Pach–Tardos Conjecture for Acyclic Matrix Patterns",
+    field: "Extremal combinatorics & forbidden ordered patterns",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Proved",
+    status: "Author-rewritten preprint; independent specialist review and formal verification pending",
+    score: 4,
+    ai: "ChatGPT-6 Astra found the proof with substantial guidance and input from the authors",
+    summary:
+      "For every acyclic 0/1 matrix pattern P, the extremal number satisfies Ex(n,P) ≤ n^(1+O_P(1/log log n)), proving the surviving near-linear form of the Pach–Tardos conjecture after its stronger polylogarithmic version was refuted.",
+    importance:
+      "This closes a main open problem in forbidden-submatrix theory and gives the first general near-linear bound for the entire acyclic class. The authors rewrote and checked the proof, but no independent or machine verification is yet public.",
+    source: "https://arxiv.org/abs/2609.20726",
+    sourceLabel: "View proof and AI declaration",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "The k-Server Conjecture",
+    field: "Online algorithms, competitive analysis & discrete optimization",
+    date: "September 14, 2026",
+    isoDate: "2026-09-14",
+    outcome: "Proved",
+    status: "Three-author analytical preprint; independent specialist review or formal verification pending",
+    score: 5,
+    ai: "ChatGPT 5.5 Pro and Gemini 3.1 Pro clarified a human-designed three-server potential; GPT-6 Astra derived the algebraic proof for arbitrary k and adapted it to the authors’ column representation",
+    summary:
+      "The work function algorithm is k-competitive on every metric space, matching the known lower bound and proving the k-server conjecture for all k. The proof represents work-function values as valuations of determinants and updates them by basis changes and row replacement.",
+    importance:
+      "The k-server conjecture has been a central open problem in online algorithms since 1988. The new proof is concise and author-checked, but the very recent general argument still needs independent scrutiny.",
+    source: "https://arxiv.org/abs/2609.15979",
+    sourceLabel: "View proof and detailed AI contribution",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "Classification of Flows and Connes’ Bicentralizer Conjecture",
+    field: "Operator algebras, von Neumann factors & dynamical classification",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Proved",
+    status: "115-page specialist preprint; authors reconstructed and checked the AI-originated argument; independent review pending",
+    score: 5,
+    ai: "GPT-5.6 Sol found the key positive theorem after counterexample searches failed; the authors then rebuilt the proof conceptually into a broader bicentralizer theory",
+    summary:
+      "Every outer flow with full Connes spectrum on the hyperfinite II₁ factor has the Rokhlin property and is unique up to cocycle conjugacy. The same resonance mechanism proves that every type III₁ factor has trivial bicentralizer.",
+    importance:
+      "The manuscript claims solutions to Takesaki’s long-standing flow-classification problem and Connes’ bicentralizer conjecture in full type III₁ generality. The scope is exceptional, but the long new proof has not yet received independent specialist confirmation.",
+    source: "https://arxiv.org/abs/2609.11462",
+    sourceLabel: "View the full proof and tool disclosure",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "Kalai’s Conjecture for Tight Trees",
+    field: "Extremal hypergraph theory & tight-tree embeddings",
+    date: "September 7, 2026",
+    isoDate: "2026-09-07",
+    outcome: "Proved",
+    status: "Two-specialist author-checked preprint; no independent proof or formal verification yet",
+    score: 5,
+    ai: "GPT-6 Astra extended its Erdős–Sós permutation method first to tight paths and then to the full hypergraph conjecture",
+    summary:
+      "Every T-free r-uniform hypergraph H, where T is a tight r-tree with t edges, satisfies |E(H)| ≤ (t−1)|∂H|/r. The sharp shadow bound proves Kalai’s 1984 conjecture and is attained infinitely often.",
+    importance:
+      "The theorem gives the sharp hypergraph extension of Erdős–Sós after decades of partial cases. The authors checked and rewrote the main proof while explicitly separating additional AI claims that they have not verified.",
+    source: "https://arxiv.org/abs/2609.08012",
+    sourceLabel: "View proof, scope and AI declaration",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "The Hyperfinite II₁ Factor Is Not Quasidiagonal",
+    field: "Operator algebras, C*-algebras & tensor products",
+    date: "September 8, 2026",
+    isoDate: "2026-09-08",
+    outcome: "Disproved",
+    status: "Four-page expert-authored preprint; no independent or formal verification yet",
+    score: 4,
+    ai: "ChatGPT Pro 6.0 supplied most of the proofs through interactive work with the author, completing an outline the author had conceived earlier",
+    summary:
+      "An explicit MF C*-algebra A is constructed such that A tensor the hyperfinite II₁ factor contains a proper isometry. Consequently stable finiteness is not preserved by spatial tensor product, and the hyperfinite II₁ factor is not quasidiagonal.",
+    importance:
+      "The result overturns two long-standing expectations in operator-algebra approximation theory. Its brevity and expert authorship aid checking, but public independent scrutiny is still absent.",
+    source: "https://arxiv.org/abs/2609.08892",
+    sourceLabel: "View proof and AI acknowledgment",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
   {
     title: "Counterexample to Talagrand's Operator Cotype Problem",
     field: "Functional analysis, probability & operator ideals",
@@ -3085,6 +3277,28 @@ const biologyEstablishedResults: Result[] = [
 ];
 
 const biologyEmergingResults: Result[] = [
+  {
+    title: "Virtual Biotech Drug-Target Signal and B7-H3 Lung-Cancer Strategy",
+    field: "Human drug discovery, oncology & clinical translation",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Discovered",
+    status: "Peer-reviewed retrospective evidence and hypothesis generation; direct prospective or experimental validation of the AI workflow remains pending",
+    score: 4,
+    ai: "A human-guided organization of more than 37,000 specialized AI agents annotated 55,984 clinical trials, integrated single-cell and clinical evidence, and proposed therapeutic strategies",
+    summary:
+      "The agents found that drugs aimed at cell-type-specific genes were 48% more likely to reach market and had 32% fewer adverse events, then integrated genetic, single-cell, spatial and clinicogenomic evidence to propose a B7-H3 antibody–drug conjugate strategy for lung cancer.",
+    importance:
+      "The result shows agentic AI producing a new, testable target-selection signal across human trials and a concrete oncology strategy. A pharmaceutical company later converged independently on the same B7-H3 modality, but the paper itself is retrospective and does not establish that the AI-designed strategy treats patients.",
+    source: "https://www.science.org/doi/10.1126/science.aeg6779",
+    sourceLabel: "View peer-reviewed Science paper",
+    secondarySource: "https://pubmed.ncbi.nlm.nih.gov/42752167/",
+    secondarySourceLabel: "View PubMed abstract and evidence scope",
+    tertiarySource: "https://virtualbiotech.ai/",
+    tertiarySourceLabel: "View framework, analyses and open-source project",
+    addedDate: "September 20, 2026",
+    addedIsoDate: "2026-09-20",
+  },
   {
     title: "AI-Designed Bacteriophage Genomes",
     field: "Antimicrobial resistance & synthetic biology",
