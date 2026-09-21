@@ -33,8 +33,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 20, 2026";
-const latestReviewIsoDate = "2026-09-20";
+const latestReviewDate = "September 21, 2026";
+const latestReviewIsoDate = "2026-09-21";
 
 const establishedResults: Result[] = [
   {
@@ -78,6 +78,26 @@ const establishedResults: Result[] = [
     secondarySourceLabel: "View Lean verification",
     addedDate: "September 20, 2026",
     addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "Strong Secretary Conjecture for Linear Matroids",
+    field: "Online algorithms, matroid theory & optimal stopping",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Proved",
+    status: "Independently obtained by a separate specialist team using an essentially identical approach; both preprints public",
+    score: 4,
+    ai: "ChatGPT-6 Astra produced the main proof in a recorded conversation on September 15; five specialists prepared, checked and wrote the manuscript",
+    summary:
+      "Linear matroids admit the optimal 1/e-probability-competitive secretary guarantee, both when the matroid is known in advance and when a finite-field representation arrives online. Every element of a fixed optimal basis is selected with probability at least 1/e.",
+    importance:
+      "This proves the strong secretary conjecture for the broad class of linear matroids, though the conjecture for arbitrary matroids remains open. A separate team posted the same result first after developing it independently, providing unusually strong immediate confirmation.",
+    source: "https://arxiv.org/abs/2609.20797",
+    sourceLabel: "View the AI-assisted proof and disclosure",
+    secondarySource: "https://arxiv.org/abs/2609.19118",
+    secondarySourceLabel: "View the independently developed proof",
+    addedDate: "September 21, 2026",
+    addedIsoDate: "2026-09-21",
   },
   {
     title: "Quantum Hedetniemi Conjecture",
@@ -1182,6 +1202,42 @@ const emergingResults: Result[] = [
     sourceLabel: "View proof and AI declaration",
     addedDate: "September 20, 2026",
     addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "Universal Set Families for Submodular Maximization",
+    field: "Submodular optimization, discrepancy & non-adaptive algorithms",
+    date: "September 17, 2026",
+    isoDate: "2026-09-17",
+    outcome: "Proved",
+    status: "Author-verified preprint; independent specialist review or formal verification pending",
+    score: 3,
+    ai: "ChatGPT 5.6 Sol Pro found the two main inductive constructions and the decisive lower-bound examples; the authors verified, digested and rewrote the proofs",
+    summary:
+      "Predetermined families of only logarithmically or subpolynomially many sets provably approximate every nonnegative submodular function within logarithmic factors. The paper also gives matching-style lower bounds for pairwise-independent families and sharp polynomial-family bounds for absolute XOS functions.",
+    importance:
+      "These are the first nontrivial results on a workshop-posed question about deterministic, fully non-adaptive submodular maximization. The central constant-factor question for all submodular functions remains open.",
+    source: "https://arxiv.org/abs/2609.19528",
+    sourceLabel: "View results and detailed AI-use statement",
+    addedDate: "September 21, 2026",
+    addedIsoDate: "2026-09-21",
+  },
+  {
+    title: "Constructive Determinant Maximization under Partition Matroids",
+    field: "Approximation algorithms, experimental design & matroid optimization",
+    date: "September 15, 2026",
+    isoDate: "2026-09-15",
+    outcome: "Proved",
+    status: "Author-verified preprint; independent specialist review or formal verification pending",
+    score: 3,
+    ai: "GPT-5.6 Sol discovered the 1/2-stable-distribution transformation that removed the authors’ remaining hurdle, then assisted extensions to every rank regime and general partition matroids",
+    summary:
+      "A polynomial-time algorithm now constructs a partition-matroid-feasible set whose determinant is within exp(O(d)) of optimum, with an analogous exp(O(m)) guarantee for lower-dimensional volume. Earlier methods could estimate a comparable optimal value without recovering the corresponding solution.",
+    importance:
+      "The work turns a nonconstructive value approximation into an actual solution algorithm and introduces a stable-distribution rounding method that may apply more broadly. The result is new but not yet independently checked.",
+    source: "https://arxiv.org/abs/2609.17407",
+    sourceLabel: "View algorithm and AI-use statement",
+    addedDate: "September 21, 2026",
+    addedIsoDate: "2026-09-21",
   },
   {
     title: "The k-Server Conjecture",
