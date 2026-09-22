@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 60050)
+Total output lines: 4318
+
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -33,8 +36,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 21, 2026";
-const latestReviewIsoDate = "2026-09-21";
+const latestReviewDate = "September 22, 2026";
+const latestReviewIsoDate = "2026-09-22";
 
 const establishedResults: Result[] = [
   {
@@ -1186,6 +1189,42 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Chapoton’s q-Zeta Positivity for Type-B and Type-C Root Posets",
+    field: "Algebraic combinatorics, root posets & lattice theory",
+    date: "September 21, 2026",
+    isoDate: "2026-09-21",
+    outcome: "Proved",
+    status: "Author-reviewed preprint with finite consistency checks; independent specialist review or formal verification pending",
+    score: 3,
+    ai: "GPT-5.6 Sol, Claude Fable 5 and Grok 4.6 generated the main results through a research workflow; GPT-6 Astra subsequently reviewed proofs and citations and assisted manuscript revision",
+    summary:
+      "An explicit monomial formula proves coefficientwise nonnegativity of Chapoton’s q-Zeta numerator for the standard positive-root posets of types B and C in every rank. The argument extends to all Ferrers-cell posets and gives interval formulas, recurrences and spectral consequences.",
+    importance:
+      "This settles the all-rank type-B positivity pattern highlighted by Chapoton and explains it through a broader Ferrers-cell mechanism. It is a substantial exact result, but narrower than a field-defining conjecture and has not yet received independent scrutiny.",
+    source: "https://arxiv.org/abs/2609.24541",
+    sourceLabel: "View formulas, proof and detailed AI disclosure",
+    addedDate: "September 22, 2026",
+    addedIsoDate: "2026-09-22",
+  },
+  {
+    title: "Zieve’s Hurwitz Conjecture Reduced to Three Branch Points",
+    field: "Branched coverings, Hurwitz realization & topology",
+    date: "September 20, 2026",
+    isoDate: "2026-09-20",
+    outcome: "Proved",
+    status: "Author-reviewed preprint; the reduction theorem awaits independent specialist scrutiny",
+    score: 3,
+    ai: "GPT-5.6 Sol and GPT-6 Astra assisted throughout the research, including reduction-strategy exploration, proof development and checking, notation checks and manuscript preparation",
+    summary:
+      "If every Zieve-admissible branch datum with exactly three branch points is realizable over the sphere, then every admissible datum with four or more branch points is realizable. The full conjecture is therefore reduced to its three-point core.",
+    importance:
+      "The theorem converts an infinite family of Hurwitz-realization cases into a sharply focused three-branch-point problem and clarifies the route to the prime-degree conjecture. It is meaningful progress, but it does not solve the remaining three-point case.",
+    source: "https://arxiv.org/abs/2609.23663",
+    sourceLabel: "View reduction theorem and AI disclosure",
+    addedDate: "September 22, 2026",
+    addedIsoDate: "2026-09-22",
+  },
+  {
     title: "Pach–Tardos Conjecture for Acyclic Matrix Patterns",
     field: "Extremal combinatorics & forbidden ordered patterns",
     date: "September 17, 2026",
@@ -1899,12 +1938,7 @@ const emergingResults: Result[] = [
   },
   {
     title: "Explicit Counterexample to Deré's Real-Form Conjecture",
-    field: "Lie algebras, representation theory & computer algebra",
-    date: "July 21, 2026",
-    isoDate: "2026-07-21",
-    outcome: "Demonstrated",
-    status: "Author-written proof and released GAP/Magma calculations; independent specialist review pending",
-    score: 3,
+    field: "Lie algebras, representation theory & computer algebra",…50 tokens truncated…  score: 3,
     ai: "Claude Fable 5 for an autonomous proof of the decisive stabilizer theorem and the linearization idea used in the authors' proof",
     summary:
       "The authors construct the first explicit 10-dimensional two-step nilpotent complex Lie algebra that is isomorphic to its complex conjugate but has no real form. This turns an earlier nonconstructive disproof of Deré's conjecture into a concrete example in the smallest possible dimension.",
