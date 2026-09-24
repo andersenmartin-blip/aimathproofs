@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 60050)
-Total output lines: 4318
-
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -36,8 +33,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 23, 2026";
-const latestReviewIsoDate = "2026-09-23";
+const latestReviewDate = "September 24, 2026";
+const latestReviewIsoDate = "2026-09-24";
 
 const establishedResults: Result[] = [
   {
@@ -1938,7 +1935,12 @@ const emergingResults: Result[] = [
   },
   {
     title: "Explicit Counterexample to Deré's Real-Form Conjecture",
-    field: "Lie algebras, representation theory & computer algebra",…50 tokens truncated…  score: 3,
+    field: "Lie algebras, representation theory & computer algebra",
+    date: "July 21, 2026",
+    isoDate: "2026-07-21",
+    outcome: "Demonstrated",
+    status: "Author-written proof and released GAP/Magma calculations; independent specialist review pending",
+    score: 3,
     ai: "Claude Fable 5 for an autonomous proof of the decisive stabilizer theorem and the linearization idea used in the authors' proof",
     summary:
       "The authors construct the first explicit 10-dimensional two-step nilpotent complex Lie algebra that is isomorphic to its complex conjugate but has no real form. This turns an earlier nonconstructive disproof of Deré's conjecture into a concrete example in the smallest possible dimension.",
@@ -3121,6 +3123,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "DQC1-Complete Trace Estimation for Lipschitz Functions of Log-Local Hamiltonians",
+    field: "Quantum complexity, Hamiltonians & approximation theory",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Strengthened",
+    status: "FOCS 2026-accepted manuscript, revised by the authors; no public formal certificate or independent check of the Lipschitz generalization",
+    score: 4,
+    ai: "GPT-5.6 Sol removed the paper's remaining technical approximation condition by reducing it to the assumption that the function is Lipschitz continuous",
+    summary:
+      "The revised theorem classifies normalized trace estimation for functions of log-local quantum Hamiltonians as DQC1-complete under the natural Lipschitz assumption. For sparse Hamiltonians, it also proves classical query complexity exponential in the function's approximate degree, yielding a quantum-classical separation.",
+    importance:
+      "The revision turns a conditional complexity classification into a substantially broader statement for a natural function class and identifies approximate degree as the governing parameter. The paper is accepted at FOCS 2026, but the AI-assisted strengthening was added in the latest arXiv version and has no separate public verification artifact.",
+    source: "https://arxiv.org/abs/2604.01519",
+    sourceLabel: "View revised manuscript and AI disclosure",
+    addedDate: "September 24, 2026",
+    addedIsoDate: "2026-09-24",
+  },
   {
     title: "Onsager-Threshold Flexibility for Ideal Magnetohydrodynamics",
     field: "Magnetohydrodynamics, turbulence & convex integration",
