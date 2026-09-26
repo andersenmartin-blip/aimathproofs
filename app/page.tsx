@@ -33,10 +33,30 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 25, 2026";
-const latestReviewIsoDate = "2026-09-25";
+const latestReviewDate = "September 26, 2026";
+const latestReviewIsoDate = "2026-09-26";
 
 const establishedResults: Result[] = [
+  {
+    title: "Stochastic Domination of Gaussian Maxima by the Regular Simplex",
+    field: "Probability, information theory & formal verification",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Proved",
+    status: "Main theorem and equality characterization fully kernel-checked in Lean; complete public verification report",
+    score: 4,
+    ai: "GPT-5.6 Pro proved dimensions three and four; GPT-6 Pro introduced the decisive second-variation matrix; the author completed the general proof and formalized Theorem 1.1 in Lean",
+    summary:
+      "Among centered Gaussian vectors with unit coordinate variances, the regular-simplex correlation matrix stochastically minimizes the maximum. Equality at any positive threshold uniquely characterizes the simplex configuration, proving the full Balitskiy–Karasev–Tsigler simplex conjecture.",
+    importance:
+      "The theorem resolves the full simplex conjecture and now has a public end-to-end Lean certificate for the headline result, including the equality case. That combination of a new AI-assisted proof and kernel-level verification meets the established threshold.",
+    source: "https://arxiv.org/abs/2609.28452",
+    sourceLabel: "View paper and detailed AI attribution",
+    secondarySource: "https://github.com/abhmul/full-simplex-conjecture-lean",
+    secondarySourceLabel: "Inspect the complete Lean verification",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
   {
     title: "Conway’s Refinement Conjecture for Omnific Integers",
     field: "Surreal numbers, algebra & formal verification",
@@ -1185,6 +1205,168 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Ample Vector Bundles Without Griffiths-Semipositive Metrics",
+    field: "Complex geometry, vector bundles & Hermitian metrics",
+    date: "September 22, 2026",
+    isoDate: "2026-09-22",
+    outcome: "Disproved",
+    status: "Author-reviewed preprint; independent specialist validation or a formal certificate has not yet been located",
+    score: 5,
+    ai: "Generative AI was used interactively to develop, test and refine the construction and its proof; the manuscript does not identify a specific model",
+    summary:
+      "The paper constructs an ample rank-two vector bundle on an abelian surface that admits no smooth Griffiths-semipositive Hermitian metric, giving a counterexample to the Griffiths conjecture in higher rank.",
+    importance:
+      "This overturns a long-standing conjecture connecting algebraic ampleness with differential-geometric positivity. Its scope is major, but the new counterexample still needs independent specialist scrutiny.",
+    source: "https://arxiv.org/abs/2609.26504",
+    sourceLabel: "View counterexample and AI disclosure",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
+  {
+    title: "Counterexamples to the Ramos Conjecture for Two Hyperplanes",
+    field: "Discrete geometry, equipartition & phase retrieval",
+    date: "September 22, 2026",
+    isoDate: "2026-09-22",
+    outcome: "Disproved",
+    status: "Author-reviewed preprint; independent specialist checking or a formal certificate is pending",
+    score: 4,
+    ai: "Multiple large language models, not individually named in the disclosure, were used extensively for proof ideation, literature review, drafting and revision",
+    summary:
+      "Explicit Gaussian measures disprove the two-hyperplane case of the Ramos equipartition conjecture and identify the exact threshold as 3·2^(s−1)−2 for the family studied.",
+    importance:
+      "The construction overturns a prominent geometric equipartition conjecture and determines a sharp replacement threshold. The unusually broad AI involvement is disclosed, but independent checking remains necessary.",
+    source: "https://arxiv.org/abs/2609.26723",
+    sourceLabel: "View counterexamples and AI disclosure",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
+  {
+    title: "Courtade–Kumar Most Informative Boolean Function Conjecture",
+    field: "Information theory, Boolean analysis & probability",
+    date: "September 21, 2026",
+    isoDate: "2026-09-21",
+    outcome: "Proved",
+    status: "Preprint with reported verification code; no independent proof or formal certificate located",
+    score: 5,
+    ai: "The authors formulated the approach; ChatGPT developed proofs, prepared verification code and repeatedly revised the exposition",
+    summary:
+      "For a uniformly random Boolean input observed through independent binary noise, no Boolean function retains more mutual information than a dictator function, proving the Courtade–Kumar conjecture.",
+    importance:
+      "The result resolves a well-known 2014 conjecture at the intersection of information theory and Boolean analysis. Its significance is high, while confidence still depends on forthcoming specialist scrutiny.",
+    source: "https://arxiv.org/abs/2609.24184",
+    sourceLabel: "View proof, code description and AI attribution",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
+  {
+    title: "Fractional Illumination and the Optimal Exponential Rate in Hadwiger’s Conjecture",
+    field: "Convex geometry & combinatorics",
+    date: "September 20, 2026",
+    isoDate: "2026-09-20",
+    outcome: "Proved",
+    status: "Author-reviewed preprint; the optimal exponential rate is proved, while the full Hadwiger covering conjecture remains open",
+    score: 4,
+    ai: "GPT-6 Pro found the main argument in an extended research conversation; Codex assisted subsequent proof development and manuscript work",
+    summary:
+      "The fractional illumination number is at most 2^d, with equality only for parallelotopes, and every convex body can be covered by 2^d(d log d+d log log d+O(d)) smaller homothets. This establishes the optimal exponential base two.",
+    importance:
+      "The work reaches the conjecturally optimal exponential rate in Hadwiger’s covering problem and characterizes equality in the fractional version. A polynomial factor and the full conjecture remain unresolved.",
+    source: "https://arxiv.org/abs/2609.23913",
+    sourceLabel: "View proof and AI disclosure",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
+  {
+    title: "Occupation Time of a Uniform-Permutation Random Walk",
+    field: "Probability, random walks & permutation statistics",
+    date: "September 20, 2026",
+    isoDate: "2026-09-20",
+    outcome: "Proved",
+    status: "Concise single-author preprint; independent specialist review or formal verification pending",
+    score: 3,
+    ai: "GPT-6 Astra at medium reasoning produced a complete proof in a recorded 1 minute 51 second run, finding the unexpected reduction to the Sparre Andersen theorem",
+    summary:
+      "For the random walk generated by a uniform random permutation, the number of edges lying above zero follows the discrete arcsine law, proving Conjecture 2.5 of Fang and collaborators.",
+    importance:
+      "The proof gives a strikingly short resolution of a 2021 probability conjecture with a genetics motivation. It is exact and public, but currently has only author-level checking.",
+    source: "https://arxiv.org/abs/2609.25102",
+    sourceLabel: "View proof and recorded AI attribution",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
+  {
+    title: "A Solution to Michael’s Problem for Fréchet Algebras",
+    field: "Functional analysis & topological algebras",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Proved",
+    status: "Single-author preprint; independent specialist review or formal verification pending",
+    score: 4,
+    ai: "GPT-6 Astra essentially produced the proof, after which the author checked, edited and presented the argument",
+    summary:
+      "Every character on a commutative complete Hausdorff locally m-convex algebra is bounded on bounded sets; in particular, every character on a commutative complex Fréchet–Arens–Michael algebra is continuous.",
+    importance:
+      "The theorem gives an affirmative solution to Michael’s long-standing continuity problem for Fréchet algebras. Because the proof is new and not independently certified, it remains under review.",
+    source: "https://arxiv.org/abs/2609.28584",
+    sourceLabel: "View proof and AI attribution",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
+  {
+    title: "Unimodality Counterexamples in Ehrhart Theory",
+    field: "Ehrhart theory, lattice polytopes & combinatorics",
+    date: "September 9, 2026",
+    isoDate: "2026-09-09",
+    outcome: "Disproved",
+    status: "Author-reviewed preprint; independent specialist checking or formal verification pending",
+    score: 4,
+    ai: "ChatGPT 5.6 Sol discovered the key polytope, Codex assisted the search, and the author recognized its Cayley-sum structure and derived the counterexamples",
+    summary:
+      "The constructions disprove Stanley’s unimodality conjecture, Brenti’s log-concavity conjecture for Gorenstein IDP polytopes and the Ferroni–Higashitani log-concavity conjecture, including smooth examples.",
+    importance:
+      "One AI-discovered construction resolves several open Ehrhart-theory conjectures at once and shows that smoothness does not rescue the expected coefficient behavior. Independent review is still recent.",
+    source: "https://arxiv.org/abs/2609.10513",
+    sourceLabel: "View counterexamples and AI discovery account",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
+  {
+    title: "Independence of the D-Space Problem",
+    field: "Set-theoretic topology & logic",
+    date: "September 7, 2026",
+    isoDate: "2026-09-07",
+    outcome: "Mixed claims",
+    status: "Revised preprint; no independent specialist verification or formal certificate located",
+    score: 4,
+    ai: "ChatGPT discussions of the author’s earlier notes contributed substantially to the mathematical development of the consistency and independence argument",
+    summary:
+      "It is consistent that a regular Lindelöf space of size ℵ₁ is not a D-space, and the existence of such a space is independent of ZFC. The hereditary Lindelöf case remains open.",
+    importance:
+      "The result reframes a long-standing topology question as independent of the usual axioms and supplies a consistent counterexample. The remaining hereditary case and lack of independent review warrant caution.",
+    source: "https://arxiv.org/abs/2609.08039",
+    sourceLabel: "View independence proof and AI disclosure",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
+  {
+    title: "Stability Conjecture for the Bernoulli Problem in Dimension Four",
+    field: "Free-boundary PDEs, geometric analysis & stability",
+    date: "September 4, 2026",
+    isoDate: "2026-09-04",
+    outcome: "Proved",
+    status: "Author-reviewed preprint; independent specialist review or formal verification pending",
+    score: 4,
+    ai: "OpenAI Codex with GPT-5.5 xhigh, later Claude Code with Fable 5 and GPT-5.6 Sol, materially assisted the authors’ proof-development environment",
+    summary:
+      "Every global classical stable solution of the one-phase Bernoulli free-boundary problem in R⁴ is one-dimensional, so its free boundary is one or two parallel hyperplanes.",
+    importance:
+      "The theorem settles the dimension-four stability conjecture and yields new curvature and Hessian consequences for the free boundary. It remains a new preprint without independent certification.",
+    source: "https://arxiv.org/abs/2609.05669",
+    sourceLabel: "View proof and detailed AI disclosure",
+    addedDate: "September 26, 2026",
+    addedIsoDate: "2026-09-26",
+  },
   {
     title: "Chapoton’s q-Zeta Positivity for Type-B and Type-C Root Posets",
     field: "Algebraic combinatorics, root posets & lattice theory",
