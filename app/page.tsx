@@ -33,10 +33,72 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 26, 2026";
-const latestReviewIsoDate = "2026-09-26";
+const latestReviewDate = "September 27, 2026";
+const latestReviewIsoDate = "2026-09-27";
 
 const establishedResults: Result[] = [
+  {
+    title: "Khachiyan’s Ellipsoid Conjecture",
+    field: "Convex geometry, optimization & formal verification",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Proved",
+    status: "Main theorem, optimality and supporting results fully kernel-checked in Lean 4 with Mathlib",
+    score: 4,
+    ai: "An unnamed AI language model discovered the spectral proof in a human-directed research process and also assisted the Lean 4 formalization",
+    summary:
+      "Every halfspace through the center of a convex body’s maximum-volume inscribed ellipsoid reduces the maximal ellipsoid volume to at most √e/2 of the original, and circular cones show that this dimension-free constant is sharp.",
+    importance:
+      "The result settles Khachiyan’s conjecture with the exact optimal constant, strengthening the geometric foundation of central-cut ellipsoid methods. The released Lean development verifies the headline theorem and its sharpness.",
+    source: "https://arxiv.org/abs/2609.28447",
+    sourceLabel: "View proof and AI disclosure",
+    secondarySource: "https://github.com/DrZhouKarl/KhachiyanEllipsoidConjecture",
+    secondarySourceLabel: "Inspect the Lean verification",
+    addedDate: "September 27, 2026",
+    addedIsoDate: "2026-09-27",
+  },
+  {
+    title: "Phase Retrieval from a Uniformly Discrete Point Set",
+    field: "Harmonic analysis, sampling theory & formal verification",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Proved",
+    status: "Headline existence theorem formally verified in Lean 4; public proof and code released",
+    score: 4,
+    ai: "GPT-5.5 supplied the decisive VC-dimension bound and enabled the first one-dimensional proof; GPT-5.4 and GPT-5.5 assisted the broader development, which the authors extended and formalized",
+    summary:
+      "For every Gaussian-times-polynomial window, there is a uniformly discrete set of phase-space samples whose short-time Fourier-transform magnitudes determine every L² function up to a global phase, with separation independent of the polynomial degree.",
+    importance:
+      "The theorem overcomes the known impossibility of lattice-based sampled phase retrieval and supplies an existence result in every dimension. The paper’s main result has a public Lean certificate.",
+    source: "https://arxiv.org/abs/2609.28341",
+    sourceLabel: "View paper and detailed AI attribution",
+    secondarySource: "https://github.com/josefgreilhuber/DiscretePhaseRetrieval",
+    secondarySourceLabel: "Inspect the Lean formalization",
+    addedDate: "September 27, 2026",
+    addedIsoDate: "2026-09-27",
+  },
+  {
+    title: "Komlós Conjecture and the Beck–Fiala Square-Root Bound",
+    field: "Discrepancy theory, combinatorics & probability",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Proved",
+    status: "Original proof independently reconstructed by multiple specialist teams, including a separate elementary proof",
+    score: 5,
+    ai: "The Odin Automatic AI Research Agent discovered the original directional-total-variation proof; GPT-6 later helped an independent team develop and check a distinct quadratic-energy exposition",
+    summary:
+      "Any finite collection of Euclidean unit vectors admits signs whose signed sum has dimension-free bounded infinity norm. The original proof obtains 3√(2π), settling Komlós and yielding the conjectured O(√t) Beck–Fiala discrepancy bound.",
+    importance:
+      "Komlós was one of discrepancy theory’s central long-standing conjectures, and its consequence gives the correct square-root order for Beck–Fiala. Independent specialist proofs now provide substantial confirmation beyond the AI-discovered manuscript.",
+    source: "https://arxiv.org/abs/2609.11189",
+    sourceLabel: "View the original AI-discovered proof",
+    secondarySource: "https://arxiv.org/abs/2609.20979",
+    secondarySourceLabel: "View the independent elementary proof",
+    tertiarySource: "https://arxiv.org/abs/2609.27172",
+    tertiarySourceLabel: "View a second independent exposition",
+    addedDate: "September 27, 2026",
+    addedIsoDate: "2026-09-27",
+  },
   {
     title: "Stochastic Domination of Gaussian Maxima by the Regular Simplex",
     field: "Probability, information theory & formal verification",
@@ -1205,6 +1267,96 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Quantum Laurent Positivity for Mutation-Acyclic Cluster Algebras",
+    field: "Cluster algebras, representation theory & categorification",
+    date: "September 26, 2026",
+    isoDate: "2026-09-26",
+    outcome: "Proved",
+    status: "AI-authored aiXiv manuscript with a corresponding human; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "GPT-6 Astra authored the proof and manuscript, with Qiyue Tang listed as the corresponding human",
+    summary:
+      "Quantum Laurent positivity is proved for mutation-acyclic skew-symmetrizable cluster algebras of arbitrary finite rank by connecting Hall shuffle characters with self-dual simple quiver-Hecke modules and transporting positivity between seeds.",
+    importance:
+      "The result establishes a broad previously open case of the quantum Laurent-positivity conjecture, including nonskew-symmetric settings. Its novelty and correctness still need specialist scrutiny outside the AI-authored manuscript.",
+    source: "https://aixiv.science/abs/aixiv.260925.000006",
+    sourceLabel: "View the AI-authored manuscript",
+    addedDate: "September 27, 2026",
+    addedIsoDate: "2026-09-27",
+  },
+  {
+    title: "Reiner–Shimozono and Polo Conjectures",
+    field: "Representation theory, Schubert geometry & combinatorics",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Disproved",
+    status: "Author-reviewed preprint; reported AI-produced formalization is not linked publicly and no independent validation was located",
+    score: 4,
+    ai: "GPT-6 Astra identified the lattice-point interpretation and density argument and produced a formalization of Theorem 1; GPT-5.6 Sol also assisted the work",
+    summary:
+      "An explicit infinite family of negative coefficients in products of key polynomials disproves the Reiner–Shimozono conjecture. The same examples also rule out the proposed Schubert filtrations in Polo’s conjecture.",
+    importance:
+      "One construction overturns two linked positivity and filtration conjectures in algebraic combinatorics and representation theory. A public certificate or independent specialist check is still needed.",
+    source: "https://arxiv.org/abs/2609.28169",
+    sourceLabel: "View counterexamples and AI disclosure",
+    addedDate: "September 27, 2026",
+    addedIsoDate: "2026-09-27",
+  },
+  {
+    title: "Absence of Bounded-Orbit Wandering Domains",
+    field: "Complex dynamics & transcendental entire functions",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Proved",
+    status: "Three-author specialist preprint; no independent proof, public formal certificate or reproduction report located",
+    score: 4,
+    ai: "ChatGPT 6 Astra, ChatGPT 5.6 Sol and Claude Opus 5 substantially developed the first proof draft from the authors’ extension ideas; the authors completed and checked the argument",
+    summary:
+      "Transcendental entire functions have no wandering domains whose orbits remain bounded. A more general local analytic theorem is proved by adapting Ye’s elementary route to Sullivan’s no-wandering-domain theorem.",
+    importance:
+      "The theorem answers a long-standing open question about possible Fatou components in transcendental dynamics. It is backed by specialist authors but remains new and not independently certified.",
+    source: "https://arxiv.org/abs/2609.28279",
+    sourceLabel: "View proof and detailed AI disclosure",
+    addedDate: "September 27, 2026",
+    addedIsoDate: "2026-09-27",
+  },
+  {
+    title: "A 27 × 27 × 27 Counterexample to Comon’s Conjecture",
+    field: "Tensor rank, algebraic complexity & combinatorics",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Disproved",
+    status: "Author-verified preprint; no independent specialist reconstruction or formal certificate located",
+    score: 3,
+    ai: "GPT-6 Astra was used throughout and produced the initial proof of the main result, which the author then verified and simplified",
+    summary:
+      "An explicit rational symmetric tensor of format 27 × 27 × 27 has ordinary tensor rank 55 but symmetric rank 56 over the complex numbers, yielding a much smaller counterexample over the rationals, reals and complexes and proving a special case of Shitov’s Conjecture 6.",
+    importance:
+      "Comon’s conjecture was already known to be false, but this dramatically smaller exact construction resolves a proposed special case and makes the rank separation far more concrete. Independent checking is pending.",
+    source: "https://arxiv.org/abs/2609.28292",
+    sourceLabel: "View construction and AI disclosure",
+    addedDate: "September 27, 2026",
+    addedIsoDate: "2026-09-27",
+  },
+  {
+    title: "Constant-Extra-Color Sampling for Line Graphs",
+    field: "Randomized algorithms, graph coloring & probability",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Proved",
+    status: "Single-author preprint; no independent specialist review, code certificate or formal verification located",
+    score: 3,
+    ai: "GPT-6 Astra discovered the underlying ideas and collaboratively wrote and revised the manuscript with the author",
+    summary:
+      "Single-site Glauber dynamics mixes in OΔ(n log(n/ε)) steps for uniform proper colorings of any line graph once q ≥ Δ+5, reaching the previously open regime of only constantly many extra colors.",
+    importance:
+      "The theorem replaces earlier constant-factor-above-Δ requirements with an additive-five threshold for sampling edge colorings. It is a notable algorithmic advance but awaits independent scrutiny.",
+    source: "https://arxiv.org/abs/2609.27440",
+    sourceLabel: "View proof and AI disclosure",
+    addedDate: "September 27, 2026",
+    addedIsoDate: "2026-09-27",
+  },
   {
     title: "Ample Vector Bundles Without Griffiths-Semipositive Metrics",
     field: "Complex geometry, vector bundles & Hermitian metrics",
