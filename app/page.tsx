@@ -33,10 +33,50 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 27, 2026";
-const latestReviewIsoDate = "2026-09-27";
+const latestReviewDate = "September 28, 2026";
+const latestReviewIsoDate = "2026-09-28";
 
 const establishedResults: Result[] = [
+  {
+    title: "Irrationality of at Least One of ζ₂(7) and ζ₂(9)",
+    field: "p-adic number theory, irrationality & formal verification",
+    date: "September 25, 2026",
+    isoDate: "2026-09-25",
+    outcome: "Proved",
+    status: "Headline theorem kernel-checked in Lean 4 with Mathlib; the identification with Kubota–Leopoldt values uses one cited literature lemma outside the formalization",
+    score: 4,
+    ai: "AI agents produced the mathematical argument and Lean development under human direction; the public registry does not enumerate the individual models",
+    summary:
+      "At least one of the two 2-adic zeta values ζ₂(7) and ζ₂(9) is irrational. The formal development proves the result for the corresponding Volkenborn-integral values and audits the final theorem without extra hypotheses.",
+    importance:
+      "Irrationality of individual p-adic zeta values remains extremely difficult. Reducing the alternative from three candidate values to two is concrete progress, and the released kernel-checked proof supports the exact stated disjunction.",
+    source: "https://palomar-registry.org/entry.html?id=PALOMAR-2026-09-25-000026&version=1",
+    sourceLabel: "View registry record and verification report",
+    secondarySource: "https://github.com/gmDevi/zeta2-7-9-lean",
+    secondarySourceLabel: "Inspect the Lean proof",
+    addedDate: "September 28, 2026",
+    addedIsoDate: "2026-09-28",
+  },
+  {
+    title: "A Left PCI Left V-Domain Without the Right-Hand Properties",
+    field: "Ring theory, module theory & formal verification",
+    date: "September 25, 2026",
+    isoDate: "2026-09-25",
+    outcome: "Disproved",
+    status: "Explicit construction and asymmetry theorems kernel-checked in Lean; Palomar integrity and axiom checks passed",
+    score: 4,
+    ai: "Anthropic Claude produced the mathematics, paper and Lean code under human direction",
+    summary:
+      "A countable domain is constructed that is simultaneously left PCI and a left V-domain but is not right Ore, right PCI or a right V-domain. This gives one object answering three long-standing left–right symmetry questions negatively.",
+    importance:
+      "The construction settles questions dating to the 1970s about whether these homological and module-theoretic properties are left–right symmetric. The complete public Lean certificate supports the exact counterexample claims.",
+    source: "https://palomar-registry.org/entry.html?id=PALOMAR-2026-09-25-000005&version=1",
+    sourceLabel: "View registry record and verification report",
+    secondarySource: "https://github.com/vlad902/left-pci-v-domain-not-right-pci-v-domain",
+    secondarySourceLabel: "Inspect the Lean development",
+    addedDate: "September 28, 2026",
+    addedIsoDate: "2026-09-28",
+  },
   {
     title: "Khachiyan’s Ellipsoid Conjecture",
     field: "Convex geometry, optimization & formal verification",
@@ -1267,6 +1307,62 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Four-Uniform Erdős Matching Conjecture",
+    field: "Extremal set theory, combinatorics & computer-assisted proof",
+    date: "September 26, 2026",
+    isoDate: "2026-09-26",
+    outcome: "Proved",
+    status: "Public computer-assisted manuscript with replayable finite certificates; the written reductions and induction have not been independently checked end to end",
+    score: 5,
+    ai: "GPT-5.6 Sol, GPT-6 Astra, GPT-5 Pro and GPT-6 Pro developed the proof and its computational verification in a human-directed workflow",
+    summary:
+      "The remaining finite range of the Erdős matching conjecture for 4-uniform families is resolved by combining structural reductions with 27 exact computational obligations and an independently replayable certificate suite.",
+    importance:
+      "Together with the previously proved large-parameter range, this would complete the four-uniform case of a central extremal-set-theory conjecture. The exact computations are reproducible, but specialist checking of their mathematical reduction is still needed.",
+    source: "https://github.com/aconsciousfractal/Four-Uniform-Erdos-Matching-Conjecture/blob/60ce10893953bcf3ac0642d992b18dc0ac41d5b9/paper/Four-Uniform-Erdos-Matching-Conjecture.pdf",
+    sourceLabel: "View the archived manuscript",
+    secondarySource: "https://vibemathed.com/problem/erdos-matching-conjecture-the-four-uniform-case",
+    secondarySourceLabel: "View problem record and verification links",
+    addedDate: "September 28, 2026",
+    addedIsoDate: "2026-09-28",
+  },
+  {
+    title: "Marcus–Minc Transform Inequality",
+    field: "Matrix theory, permanents & combinatorics",
+    date: "September 24, 2026",
+    isoDate: "2026-09-24",
+    outcome: "Proved",
+    status: "Author-reviewed preprint with equality classification; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "GPT-5.6 Sol, GPT-6 Astra and Claude Fable 5 carried out the proof under the author's guidance; the author reviewed the final argument",
+    summary:
+      "For every doubly stochastic matrix A, its permanent is at least the permanent of the matrix obtained by subtracting A from the all-ones matrix and dividing by n−1, and all equality cases are classified.",
+    importance:
+      "The theorem settles a permanent inequality conjectured by Marcus and Minc in 1967 and sharpens it with a complete equality analysis. The proof is new and AI-developed, so independent expert scrutiny remains important.",
+    source: "https://arxiv.org/abs/2609.29262",
+    sourceLabel: "View proof and AI disclosure",
+    addedDate: "September 28, 2026",
+    addedIsoDate: "2026-09-28",
+  },
+  {
+    title: "An Irregular Smooth Fano Fourfold in Characteristic Two",
+    field: "Algebraic geometry, Fano varieties & positive characteristic",
+    date: "September 24, 2026",
+    isoDate: "2026-09-24",
+    outcome: "Discovered",
+    status: "Author-reviewed construction in a new preprint; no independent reproduction or formal certificate located",
+    score: 4,
+    ai: "ChatGPT 6 Astra discovered the example, which the authors developed into the stated construction and proof",
+    summary:
+      "The paper constructs a smooth Fano fourfold in characteristic two with nonzero first coherent cohomology. It also has no free rational curve and is therefore not separably uniruled.",
+    importance:
+      "Irregular smooth Fano varieties are exceptional in positive characteristic, and the example sharply contrasts with characteristic-zero behavior. Its novelty is substantial, but the construction still awaits independent specialist checking.",
+    source: "https://arxiv.org/abs/2609.29924",
+    sourceLabel: "View construction and AI disclosure",
+    addedDate: "September 28, 2026",
+    addedIsoDate: "2026-09-28",
+  },
   {
     title: "Quantum Laurent Positivity for Mutation-Acyclic Cluster Algebras",
     field: "Cluster algebras, representation theory & categorification",
@@ -3338,6 +3434,26 @@ const emergingResults: Result[] = [
 ];
 
 const physicsEstablishedResults: Result[] = [
+  {
+    title: "Nine-Loop Six-Particle Amplitude in Planar N=4 Super-Yang–Mills Theory",
+    field: "Quantum field theory, scattering amplitudes & symbolic computation",
+    date: "September 25, 2026",
+    isoDate: "2026-09-25",
+    outcome: "Demonstrated",
+    status: "Exact result and data released; independently validated by Stanford/SLAC amplitude specialist Lance Dixon against the known form-factor route",
+    score: 4,
+    ai: "Claude Fable 5.1 in Anthropic's Claude Science harness developed the computation and code from scratch with minimal human intervention",
+    summary:
+      "Claude computed the nine-loop maximally helicity-violating six-particle amplitude in planar N=4 super-Yang–Mills theory, extending the previous frontier by one loop. It bootstrapped the corresponding form factor, mapped it through antipodal duality and imposed the remaining amplitude constraints.",
+    importance:
+      "Nine loops is a new exact perturbative record for this benchmark quantum field theory and required a large, intricate symbolic calculation. It is a theoretical result in a highly symmetric model rather than a prediction for a real-world experiment.",
+    source: "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+    sourceLabel: "Read announcement and Dixon's validation note",
+    secondarySource: "https://smsharma.io/cosmic-nine-loops/",
+    secondarySourceLabel: "Inspect the released result and data",
+    addedDate: "September 28, 2026",
+    addedIsoDate: "2026-09-28",
+  },
   {
     title: "Private Communication from Two Zero-Private-Capacity Quantum Channels",
     field: "Quantum information theory, channel capacity & formal verification",
