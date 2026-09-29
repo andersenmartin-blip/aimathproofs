@@ -33,10 +33,30 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 28, 2026";
-const latestReviewIsoDate = "2026-09-28";
+const latestReviewDate = "September 29, 2026";
+const latestReviewIsoDate = "2026-09-29";
 
 const establishedResults: Result[] = [
+  {
+    title: "Inhomogeneous Duffin–Schaeffer Conjecture for Rational Shifts",
+    field: "Diophantine approximation, metric number theory & independent replication",
+    date: "September 25, 2026",
+    isoDate: "2026-09-25",
+    outcome: "Disproved",
+    status: "AI-discovered counterexamples independently confirmed by a simultaneous specialist paper; broader residual-set claim has only the first proof",
+    score: 4,
+    ai: "GPT-5.6 Sol discovered the counterexample construction for the He–Liao paper; the authors checked and completed the proof",
+    summary:
+      "For every nonzero rational shift, there is a divergent approximating function whose inhomogeneous Duffin–Schaeffer limsup set nevertheless has measure zero. He and Liao further show that failure occurs for a residual set of shifts.",
+    importance:
+      "The rational-shift result disproves a natural inhomogeneous analogue of the Duffin–Schaeffer conjecture and was obtained independently at the same time by Hauke-Treuer, Maynard and Pollington. That independent agreement establishes the core counterexample; the stronger residual-set extension still rests on the AI-assisted paper.",
+    source: "https://arxiv.org/abs/2609.30870",
+    sourceLabel: "View the AI-assisted proof and attribution",
+    secondarySource: "https://arxiv.org/abs/2609.30921",
+    secondarySourceLabel: "View the independent simultaneous proof",
+    addedDate: "September 29, 2026",
+    addedIsoDate: "2026-09-29",
+  },
   {
     title: "Irrationality of at Least One of ζ₂(7) and ζ₂(9)",
     field: "p-adic number theory, irrationality & formal verification",
@@ -1307,6 +1327,98 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Kahn–Saks Conjecture on Balancing Linear Extensions",
+    field: "Posets, probabilistic combinatorics & linear extensions",
+    date: "September 25, 2026",
+    isoDate: "2026-09-25",
+    outcome: "Proved",
+    status: "Author-reviewed preprint; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "ChatGPT 6 Astra was used primarily to discover the proof in a human-directed research process",
+    summary:
+      "Posets of sufficiently large width have balance coefficient arbitrarily close to one half. The proof establishes a stronger structural dichotomy involving either an almost-uniform induced order or an almost-fixed order with one uniformly inserted element.",
+    importance:
+      "This answers the long-standing Kahn–Saks conjecture and sharpens understanding of random linear extensions. The claim is substantial but currently rests on a new preprint without a public certificate or independent proof check.",
+    source: "https://arxiv.org/abs/2609.30895",
+    sourceLabel: "View proof and AI disclosure",
+    addedDate: "September 29, 2026",
+    addedIsoDate: "2026-09-29",
+  },
+  {
+    title: "Second Brick–Brauer–Thrall Conjecture for E-Infinite Algebras",
+    field: "Representation theory, finite-dimensional algebras & τ-tilting theory",
+    date: "September 25, 2026",
+    isoDate: "2026-09-25",
+    outcome: "Proved",
+    status: "Author-reviewed preprint proving the E-infinite case; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "GPT-6 Astra supplied missing proof arguments and identified the useful stability condition and a key example during the authors' development",
+    summary:
+      "Every E-infinite finite-dimensional algebra over an algebraically closed field satisfies the second brick–Brauer–Thrall conjecture. Several related open conjectures are also settled in this regime, while E-finite cases remain open.",
+    importance:
+      "The theorem resolves a broad and structurally important half of a central representation-theoretic conjecture. Its remaining scope and current lack of independent checking keep it under review.",
+    source: "https://arxiv.org/abs/2609.31417",
+    sourceLabel: "View proof and AI disclosure",
+    addedDate: "September 29, 2026",
+    addedIsoDate: "2026-09-29",
+  },
+  {
+    title: "First General Improvement Toward the 1/3–2/3 Conjecture in 30 Years",
+    field: "Posets, random linear extensions & probabilistic combinatorics",
+    date: "September 25, 2026",
+    isoDate: "2026-09-25",
+    outcome: "Demonstrated",
+    status: "Author-reviewed analytical preprint; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "Multiple frontier language models were used extensively to prove technical lemmas and compute the explicit improvement constant under author supervision",
+    summary:
+      "The universal lower bound for the balance constant of finite posets is improved by a positive ε beyond the 1995 Brightwell–Felsner–Trotter bound. The full 1/3–2/3 conjecture remains open.",
+    importance:
+      "This is the first unconditional progress on the general balance constant in more than three decades. The numerical gain is small, but it breaks a long-standing barrier and introduces techniques that may support further advances.",
+    source: "https://arxiv.org/abs/2609.30888",
+    sourceLabel: "View proof and AI declaration",
+    addedDate: "September 29, 2026",
+    addedIsoDate: "2026-09-29",
+  },
+  {
+    title: "Non-Lattice Packing–Covering Improvement in Dimension Five",
+    field: "Discrete geometry, sphere packing & periodic point sets",
+    date: "September 24, 2026",
+    isoDate: "2026-09-24",
+    outcome: "Discovered",
+    status: "Explicit algebraic periodic construction with author-run verification programs; no independent reproduction or formal certificate located",
+    score: 4,
+    ai: "Claude autonomously wrote and ran the search and verification programs, refined the candidate and identified its exact algebraic form; ChatGPT also assisted",
+    summary:
+      "An explicit non-lattice periodic point set in five dimensions has a smaller packing–covering ratio than the best possible lattice. This answers negatively whether the optimal lattice constant remains optimal among all periodic sets in dimension five.",
+    importance:
+      "The construction separates lattice and unrestricted periodic optima in the first claimed dimension where the question was unresolved. Its exact coordinates make reproduction possible, but independent checking has not yet been located.",
+    source: "https://arxiv.org/abs/2609.30513",
+    sourceLabel: "View construction, programs and AI attribution",
+    addedDate: "September 29, 2026",
+    addedIsoDate: "2026-09-29",
+  },
+  {
+    title: "Sharp Threshold for the Multiplicative Merino–Welsh Inequality",
+    field: "Matroid theory, Tutte polynomials & extremal combinatorics",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Proved",
+    status: "Human–AI preprint with exact rational checks; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "GPT-6 Astra and Claude Opus 5 co-developed the proof with the human authors",
+    summary:
+      "The exact universal threshold is x*=2.2266815969…, the largest real root of x³=9(x−1): every loopless, coloopless finite matroid satisfies the multiplicative Tutte-polynomial inequality at x*, and known counterexamples make the constant sharp. The original graph conjecture at x=2 remains open.",
+    importance:
+      "The theorem resolves Csikvári's sharp-threshold conjecture and improves a long sequence of constants toward the original Merino–Welsh problem. Independent specialist review is still needed.",
+    source: "https://doi.org/10.5281/zenodo.22911905",
+    sourceLabel: "View preprint and exact checks",
+    secondarySource: "https://vibemathed.com/",
+    secondarySourceLabel: "View community problem record",
+    addedDate: "September 29, 2026",
+    addedIsoDate: "2026-09-29",
+  },
   {
     title: "Four-Uniform Erdős Matching Conjecture",
     field: "Extremal set theory, combinatorics & computer-assisted proof",
@@ -3573,6 +3685,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Restored Current Conservation in the CWWH Anyon-Superconductivity Calculation",
+    field: "Condensed-matter theory, anyon superconductivity & response functions",
+    date: "September 24, 2026",
+    isoDate: "2026-09-24",
+    outcome: "Demonstrated",
+    status: "Public analytical correction with exact sum-rule derivation; no independent specialist validation located",
+    score: 3,
+    ai: "Anthropic Claude derived the correction and authored the technical note, with the public copy hosted by theoretical physicist Dam Thanh Son",
+    summary:
+      "The third spectral moment in the 1989 Chen–Wilczek–Witten–Halperin anyon-superconductivity calculation is exactly the particle density by the f-sum rule. Restoring a dropped factor of 1/2! removes the reported q⁴ term and makes the random-phase approximation exactly current-conserving.",
+    importance:
+      "The note resolves a specific 37-year-old internal inconsistency in a foundational theoretical calculation. It is an exact correction rather than a new experimental discovery, and independent expert checking is still needed.",
+    source: "https://home.uchicago.edu/dtson/papers/cwwh_note.pdf",
+    sourceLabel: "Read the analytical correction",
+    addedDate: "September 29, 2026",
+    addedIsoDate: "2026-09-29",
+  },
   {
     title: "DQC1-Complete Trace Estimation for Lipschitz Functions of Log-Local Hamiltonians",
     field: "Quantum complexity, Hamiltonians & approximation theory",
