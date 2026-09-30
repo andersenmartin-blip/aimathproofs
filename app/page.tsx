@@ -33,10 +33,68 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 29, 2026";
-const latestReviewIsoDate = "2026-09-29";
+const latestReviewDate = "September 30, 2026";
+const latestReviewIsoDate = "2026-09-30";
 
 const establishedResults: Result[] = [
+  {
+    title: "Negative Answer to Erdős Problem #786",
+    field: "Number theory, extremal multiplicative combinatorics & formal verification",
+    date: "September 28, 2026",
+    isoDate: "2026-09-28",
+    outcome: "Disproved",
+    status: "Both negative answers kernel-checked in Lean 4 against the Formal Conjectures statements; the separate harmonic-sum theorem is not formalized",
+    score: 4,
+    ai: "OpenAI GPT models and Anthropic Claude substantially assisted development of the proofs and the Lean formalization",
+    summary:
+      "Admissible subsets of {1,…,N} cannot have density tending to one: an absolute positive fraction must be omitted for all sufficiently large N. This answers the remaining distinct-products part of Erdős Problem #786 negatively.",
+    importance:
+      "The result closes a problem posed in 1965 about multiplicative relations among distinct integers. The exact headline claims are publicly formalized and checked by Lean's kernel, while the paper's stronger harmonic-sum estimate remains outside that certificate.",
+    source: "https://arxiv.org/abs/2609.37471",
+    sourceLabel: "View proof, scope and AI disclosure",
+    secondarySource: "https://github.com/daizisheng/erdos-786",
+    secondarySourceLabel: "Inspect the Lean formalization",
+    addedDate: "September 30, 2026",
+    addedIsoDate: "2026-09-30",
+  },
+  {
+    title: "Three Open Questions on Gödel's Ontological-Argument Formalization",
+    field: "Modal logic, automated reasoning & dual formal verification",
+    date: "September 28, 2026",
+    isoDate: "2026-09-28",
+    outcome: "Proved",
+    status: "Every positive result independently kernel-checked in Isabelle/HOL and Lean 4; negative results have reproducible Nitpick or explicit-model certificates",
+    score: 3,
+    ai: "Anthropic Claude interactively helped develop the formal proofs, hybrid-witness detector and parts of both formalizations over a large, sustained research session",
+    summary:
+      "Three questions left open by the 2025 Monatshefte notes on Gödel's and Scott's ontological arguments are settled after correcting a degenerate conjunction axiom. The work also proves that all 294 earlier results have object-language proofs without nominals.",
+    importance:
+      "The contribution resolves a cluster of specialist questions while auditing an entire formal corpus across two proof assistants. Its philosophical scope is narrow, but the unusually redundant, rebuildable verification is strong.",
+    source: "https://arxiv.org/abs/2609.36279",
+    sourceLabel: "View results, certificates and AI disclosure",
+    addedDate: "September 30, 2026",
+    addedIsoDate: "2026-09-30",
+  },
+  {
+    title: "Crown Graphs Maximise Bipartite Representation Number",
+    field: "Graph theory, word-representable graphs & formal verification",
+    date: "September 24, 2026",
+    isoDate: "2026-09-24",
+    outcome: "Proved",
+    status: "Main theorem, exact crown values and finite obstruction certificates checked in Lean 4; independent certificate verifiers and complete data released",
+    score: 4,
+    ai: "ChatGPT 5.5, 5.6 and 6 supplied the key obstruction classification and distinguished-coordinate argument; Codex assisted certificate generation and Lean formalization",
+    summary:
+      "Every bipartite graph on N ≥ 9 vertices has representation number at most ⌈N/4⌉, and balanced crown graphs attain the bound. This settles the conjecture that crown graphs maximize representation number among bipartite graphs.",
+    importance:
+      "The theorem gives the sharp extremal value for an established graph parameter. The complete Lean proof and separately reproducible finite certificates strongly support both the infinite reduction and exceptional cases.",
+    source: "https://arxiv.org/abs/2609.35842",
+    sourceLabel: "View proof and detailed AI contribution statement",
+    secondarySource: "https://github.com/miinadietrich/crown_graphs_maximise",
+    secondarySourceLabel: "Inspect formal proofs and certificates",
+    addedDate: "September 30, 2026",
+    addedIsoDate: "2026-09-30",
+  },
   {
     title: "Inhomogeneous Duffin–Schaeffer Conjecture for Rational Shifts",
     field: "Diophantine approximation, metric number theory & independent replication",
@@ -1327,6 +1385,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Fishburn's Latent-Subset Conjecture",
+    field: "Social choice theory, revealed preference & combinatorics",
+    date: "September 28, 2026",
+    isoDate: "2026-09-28",
+    outcome: "Proved",
+    status: "Author-simplified preprint based on an AI-found proof; no formal certificate or independent specialist validation located",
+    score: 3,
+    ai: "GPT-6 Astra found the proof after the author suggested combining the conjecture with a recent weighted-star inequality; the author then simplified and rewrote it",
+    summary:
+      "Every dual intersecting family has an element whose latent subfamily is at least as large as its containing subfamily, proving Fishburn's 1987 latent-subset conjecture.",
+    importance:
+      "The result settles a long-standing structural conjecture in preference and choice theory with a concise argument. Its status remains provisional until specialists independently check the new proof.",
+    source: "https://arxiv.org/abs/2609.35920",
+    sourceLabel: "View proof and AI attribution",
+    addedDate: "September 30, 2026",
+    addedIsoDate: "2026-09-30",
+  },
   {
     title: "Kahn–Saks Conjecture on Balancing Linear Extensions",
     field: "Posets, probabilistic combinatorics & linear extensions",
