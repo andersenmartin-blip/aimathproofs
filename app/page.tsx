@@ -33,10 +33,50 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "September 30, 2026";
-const latestReviewIsoDate = "2026-09-30";
+const latestReviewDate = "October 1, 2026";
+const latestReviewIsoDate = "2026-10-01";
 
 const establishedResults: Result[] = [
+  {
+    title: "Tracelike Vectors for Modular Orbits in Bergman Space",
+    field: "Operator algebras, automorphic forms & independent replication",
+    date: "September 30, 2026",
+    isoDate: "2026-09-30",
+    outcome: "Proved",
+    status: "Core critical-parameter construction independently obtained in a simultaneous specialist paper; the broader parameter range has one author-reviewed proof",
+    score: 3,
+    ai: "ChatGPT helped turn a long-stalled near-solution into the decisive infinite semidefinite system and polar-decomposition correspondence",
+    summary:
+      "An explicit tracelike vector is constructed at Vaughan Jones's critical parameter, and the method extends across the full admissible range 1 < s ≤ s₀. At the endpoint its group orbit is an orthonormal basis of the weighted Bergman space.",
+    importance:
+      "The result answers a concrete question left by Jones and identifies the implementing vector for the associated von Neumann-algebra correspondence. Abreu's independent paper confirms the endpoint theorem by a related orthonormalization method; the full-range extension remains unique to the AI-assisted paper.",
+    source: "https://arxiv.org/abs/2609.39904",
+    sourceLabel: "View the AI-assisted proof and disclosure",
+    secondarySource: "https://arxiv.org/abs/2609.30014",
+    secondarySourceLabel: "View the independent endpoint construction",
+    addedDate: "October 1, 2026",
+    addedIsoDate: "2026-10-01",
+  },
+  {
+    title: "Complex Structures on the Six-Sphere",
+    field: "Complex geometry, topology & independent specialist verification",
+    date: "September 29, 2026",
+    isoDate: "2026-09-29",
+    outcome: "Proved",
+    status: "Self-contained specialist proof independently verifies and substantially recasts the Claude-produced construction",
+    score: 5,
+    ai: "Claude produced the original 108-page construction under Levent Alpöge's direction; Philip Engel used ChatGPT while exploring it and drafting a new proof, then independently verified the mathematics",
+    summary:
+      "A one-parameter family of compact complex threefolds is constructed and shown to be diffeomorphic to S⁶. The proof builds a torus fibration, performs logarithmic transforms, and establishes simple connectivity and integral-homology-sphere topology.",
+    importance:
+      "Whether S⁶ admits a complex structure is the classical Hopf problem, open since the 1950s and marked by earlier flawed claims. Engel's independent, self-contained specialist treatment provides the strong human verification needed to treat this AI-originated construction as established.",
+    source: "https://arxiv.org/abs/2609.38442",
+    sourceLabel: "View the independent proof and AI disclosure",
+    secondarySource: "https://alpo.ge/s6.pdf",
+    secondarySourceLabel: "View the original Claude-produced manuscript",
+    addedDate: "October 1, 2026",
+    addedIsoDate: "2026-10-01",
+  },
   {
     title: "Negative Answer to Erdős Problem #786",
     field: "Number theory, extremal multiplicative combinatorics & formal verification",
@@ -1385,6 +1425,42 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Barvinok Log-Concavity and Counting for Totally Unimodular Polytopes",
+    field: "Enumerative combinatorics, convex geometry & approximate counting",
+    date: "September 30, 2026",
+    isoDate: "2026-09-30",
+    outcome: "Proved",
+    status: "Author-verified preprint; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "ChatGPT 6 Astra supplied the proof of Barvinok's log-concavity conjecture for contingency-table counts on affine lines, which the authors generalized to totally unimodular polytopes",
+    summary:
+      "Lattice-point counts in one-dimensional slices of every totally unimodular polytope are log-concave. A stronger variable-wise form yields a deterministic approximation guarantee and implies a conjecture of Ferroni and Higashitani.",
+    importance:
+      "The theorem settles Barvinok's conjecture in a broad combinatorial setting and connects structural log-concavity with approximate counting. Its extensions are substantial, but the new proof has not yet received independent scrutiny.",
+    source: "https://arxiv.org/abs/2609.39917",
+    sourceLabel: "View proof and AI contribution statement",
+    addedDate: "October 1, 2026",
+    addedIsoDate: "2026-10-01",
+  },
+  {
+    title: "List Total Colouring Conjecture",
+    field: "Graph theory, total colouring & AI-found counterexamples",
+    date: "September 29, 2026",
+    isoDate: "2026-09-29",
+    outcome: "Disproved",
+    status: "Explicit author-checked 20-vertex counterexample; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "ChatGPT 6 Astra Ultra produced the cubic counterexample and argument with little human input; the author checked the mathematics and rewrote the exposition",
+    summary:
+      "A cubic graph on 20 vertices has total chromatic number four but list total chromatic number five. This single explicit graph disproves the late-1990s conjecture that the two parameters always coincide.",
+    importance:
+      "The conjecture was a natural list-colouring analogue of a central graph-colouring problem. The counterexample is small and its argument is public, but independent reproduction has not yet been located.",
+    source: "https://arxiv.org/abs/2609.38417",
+    sourceLabel: "View counterexample, proof and AI disclosure",
+    addedDate: "October 1, 2026",
+    addedIsoDate: "2026-10-01",
+  },
   {
     title: "Fishburn's Latent-Subset Conjecture",
     field: "Social choice theory, revealed preference & combinatorics",
