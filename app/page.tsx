@@ -33,10 +33,50 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 1, 2026";
-const latestReviewIsoDate = "2026-10-01";
+const latestReviewDate = "October 2, 2026";
+const latestReviewIsoDate = "2026-10-02";
 
 const establishedResults: Result[] = [
+  {
+    title: "Borowiecki–Broere Generalized Total Colouring Conjecture for Planar Graphs",
+    field: "Graph theory, planar colouring & formal verification",
+    date: "September 7, 2026",
+    isoDate: "2026-09-07",
+    outcome: "Proved",
+    status: "All novel arguments kernel-checked in Lean 4 without sorry, admit or native_decide, relative to six explicit standard background theorems",
+    score: 3,
+    ai: "ChatGPT 6 Astra generated the mathematical proof; ChatGPT 5.6 Sol helped translate it into Lean 4, and the author independently checked the result",
+    summary:
+      "Every finite simple planar graph has a generalized total colouring with four colours. More strongly, every proper four-colouring of the vertices extends to such a colouring.",
+    importance:
+      "The result settles the planar case of a 1995 generalized total-colouring conjecture and sharpens it with an extension theorem. The public formalization checks the new proof while stating its six classical graph-theoretic and topological dependencies explicitly.",
+    source: "https://arxiv.org/abs/2610.00091",
+    sourceLabel: "View proof, formalization scope and AI disclosure",
+    secondarySource: "https://github.com/jamesschreib/borowiecki-broere-conjecture",
+    secondarySourceLabel: "Inspect the Lean 4 formalization",
+    addedDate: "October 2, 2026",
+    addedIsoDate: "2026-10-02",
+  },
+  {
+    title: "Wormald's Conjecture on Common Transversals in Cubic Graphs",
+    field: "Graph theory, perfect matchings & formal verification",
+    date: "September 7, 2026",
+    isoDate: "2026-09-07",
+    outcome: "Disproved",
+    status: "Explicit 16-vertex counterexample and infinite family kernel-checked in Lean 4 without custom axioms; the connected case remains open",
+    score: 3,
+    ai: "ChatGPT 6 Astra found the disconnected counterexample family and proof; ChatGPT 5.6 Sol assisted the Lean 4 formalization, which the author independently checked",
+    summary:
+      "A 16-vertex cubic graph has two perfect matchings with no common transversal, and the construction extends to every order 16 + 4t. This disproves Wormald's 1987 conjecture as originally stated.",
+    importance:
+      "The result closes the unrestricted formulation through a small, formally verified obstruction. Because the construction exploits disconnected graphs, the structurally stronger connected version is still unresolved.",
+    source: "https://arxiv.org/abs/2610.00086",
+    sourceLabel: "View counterexample, Lean scope and AI disclosure",
+    secondarySource: "https://github.com/jamesschreib/wormald-conjecture",
+    secondarySourceLabel: "Inspect the Lean 4 proof",
+    addedDate: "October 2, 2026",
+    addedIsoDate: "2026-10-02",
+  },
   {
     title: "Tracelike Vectors for Modular Orbits in Bergman Space",
     field: "Operator algebras, automorphic forms & independent replication",
@@ -1425,6 +1465,60 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Global Hölder Estimates for Linearized Monge–Ampère Equations",
+    field: "Partial differential equations, Monge–Ampère theory & regularity",
+    date: "October 1, 2026",
+    isoDate: "2026-10-01",
+    outcome: "Proved",
+    status: "Five specialist authors independently checked the AI-found key estimate in detail; new analytical preprint without external review or formal certificate",
+    score: 4,
+    ai: "GPT-6 Astra supplied the missing Green-function gradient estimate after repeated author-guided attempts; the five authors then verified it and completed the paper without further AI",
+    summary:
+      "Global Hölder estimates are proved in every dimension for divergence-form linearized Monge–Ampère equations with merely bounded vector field data, removing the earlier extra Hessian-integrability hypothesis.",
+    importance:
+      "The key estimate resolves higher-dimensional questions left open by the established planar theory and broadens the regularity framework substantially. Detailed author verification is strong evidence, but independent specialist scrutiny is still absent.",
+    source: "https://arxiv.org/abs/2610.02071",
+    sourceLabel: "View theorem, proof and AI contribution statement",
+    addedDate: "October 2, 2026",
+    addedIsoDate: "2026-10-02",
+  },
+  {
+    title: "Standard Conjecture of Hodge Type for Hermitian Varieties",
+    field: "Algebraic geometry, Hermitian varieties & p-adic applications",
+    date: "October 1, 2026",
+    isoDate: "2026-10-01",
+    outcome: "Proved",
+    status: "Author-verified analytical preprint; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "Claude Opus 5 and 5.5 were used extensively to formulate assertions, develop proofs, draft text and correct arguments; the author reports verifying the final mathematics",
+    summary:
+      "An explicit elementary proof of the standard conjecture of Hodge type is given for Hermitian varieties, together with integral p-adic lattice control and an extension to finite covers.",
+    importance:
+      "The work addresses a significant case of a central conjectural package in algebraic geometry and extracts new p-adic consequences. The broad AI role and lack of independent checking keep the result provisional.",
+    source: "https://arxiv.org/abs/2610.01731",
+    sourceLabel: "View proof and detailed AI disclosure",
+    addedDate: "October 2, 2026",
+    addedIsoDate: "2026-10-02",
+  },
+  {
+    title: "Amenable Free-Group Actions on Unital Simple AF-Algebras",
+    field: "Operator algebras, amenable actions & C*-dynamics",
+    date: "October 1, 2026",
+    isoDate: "2026-10-01",
+    outcome: "Proved",
+    status: "Author-verified preprint; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "GPT-6 Astra proposed the proof and identified the key reference; the author reorganized the argument, wrote the manuscript and checked every step",
+    summary:
+      "Every countable free group admits an amenable action on any infinite-dimensional unital simple AF-algebra. This settles the free-group case of the remaining existence problem for amenable actions of nonamenable groups on classifiable simple C*-algebras.",
+    importance:
+      "The theorem closes a previously open group case in the structure theory of C*-dynamical systems. Its conceptual reach is substantial, but the new proof currently has only author verification.",
+    source: "https://arxiv.org/abs/2610.01460",
+    sourceLabel: "View proof and AI contribution statement",
+    addedDate: "October 2, 2026",
+    addedIsoDate: "2026-10-02",
+  },
   {
     title: "Barvinok Log-Concavity and Counting for Totally Unimodular Polytopes",
     field: "Enumerative combinatorics, convex geometry & approximate counting",
@@ -3837,6 +3931,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "TRACE Testable Interpretation of Progressive Megathrust Destabilization",
+    field: "Seismology, earthquake sequences & autonomous physical reasoning",
+    date: "March 22, 2026",
+    isoDate: "2026-03-22",
+    outcome: "Discovered",
+    status: "Retrospective multi-sequence analysis in a substantially revised preprint; testable physical interpretation without prospective or independent validation",
+    score: 4,
+    ai: "TRACE, a seismology-guided multi-agent system, autonomously planned and executed analysis workflows and assembled auditable evidence chains from observations to physical interpretation",
+    summary:
+      "TRACE linked coupled seismic and aseismic activation in the 2025–2026 Sanriku sequence to progressive destabilization of a segmented megathrust patch that later hosted an MJ 7.7 rupture. On the 2019 Ridgecrest sequence it independently recovered delayed cascading activation as a retrospective control.",
+    importance:
+      "The result goes beyond routine event detection by proposing a concrete physical mechanism from raw seismic observations. It is potentially important for understanding earthquake preparation, but remains retrospective and has not yet been independently confirmed or prospectively tested.",
+    source: "https://arxiv.org/abs/2603.21152",
+    sourceLabel: "View revised manuscript and evidence chain",
+    addedDate: "October 2, 2026",
+    addedIsoDate: "2026-10-02",
+  },
   {
     title: "Restored Current Conservation in the CWWH Anyon-Superconductivity Calculation",
     field: "Condensed-matter theory, anyon superconductivity & response functions",
