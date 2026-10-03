@@ -33,8 +33,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 2, 2026";
-const latestReviewIsoDate = "2026-10-02";
+const latestReviewDate = "October 3, 2026";
+const latestReviewIsoDate = "2026-10-03";
 
 const establishedResults: Result[] = [
   {
@@ -1465,6 +1465,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Kourovka Notebook Problem 19.9 on Non-Abelian Tensor Squares",
+    field: "Group theory, non-abelian tensor products & linear groups",
+    date: "September 29, 2026",
+    isoDate: "2026-09-29",
+    outcome: "Demonstrated",
+    status: "Author-checked preprint; no independent specialist validation or formal certificate located",
+    score: 2,
+    ai: "An unspecified AI system generated the decisive counterexample and some initial ideas for the braid-group argument; the author substantially simplified and checked the final proofs",
+    summary:
+      "A finitely generated linear group can have a non-linear non-abelian tensor square, while the non-abelian tensor square of the braid group Bₙ is linear for every n > 3. Together these results answer Kourovka Notebook problem 19.9.",
+    importance:
+      "The note closes a specialized two-part problem with a clean counterexample and a positive family. Both arguments reduce to standard structural facts, and the lack of external review keeps the result provisional.",
+    source: "https://arxiv.org/abs/2610.00343",
+    sourceLabel: "View proofs and AI contribution statement",
+    addedDate: "October 3, 2026",
+    addedIsoDate: "2026-10-03",
+  },
   {
     title: "Global Hölder Estimates for Linearized Monge–Ampère Equations",
     field: "Partial differential equations, Monge–Ampère theory & regularity",
