@@ -4841,9 +4841,8 @@ export default function Home() {
       <header className="site-header">
         <a
           className="brand"
-          href="#home"
+          href="/"
           aria-label="AI Research Frontiers, home"
-          onClick={() => goToArea("home")}
         >
           <span className="brand-mark">∴</span>
           <span>AI Research Frontiers</span>
