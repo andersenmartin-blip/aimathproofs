@@ -33,8 +33,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 3, 2026";
-const latestReviewIsoDate = "2026-10-03";
+const latestReviewDate = "October 4, 2026";
+const latestReviewIsoDate = "2026-10-04";
 
 const establishedResults: Result[] = [
   {
@@ -741,19 +741,19 @@ const establishedResults: Result[] = [
     date: "September 8, 2026",
     isoDate: "2026-09-08",
     outcome: "Disproved",
-    status: "Complete zero-sorry Lean 4 proof of Clay alternatives C and D released; external specialist and Clay review has only begun",
+    status: "Zero-sorry Lean 4 proof released; independent specialists have reproduced the profile-construction stage and downstream work uses the result, but the full cancellation stage and Clay review remain incomplete",
     score: 5,
     ai: "An internal post-Astra OpenAI model across roughly 10,000 coordinated agents for discovery and proof; GPT-6 Astra for the complete Lean formalization",
     summary:
       "For every positive viscosity, the construction starts the three-dimensional incompressible Navier–Stokes flow from rest under a smooth compactly supported force and produces unbounded velocity in finite time while kinetic energy stays bounded. The whole-space and periodic versions establish alternatives C and D in Clay's official formulation.",
     importance:
-      "This is a claimed resolution of one of the seven Millennium Prize Problems and a historic counterexample to global smoothness with allowed forcing. The exact target statements are machine-checked with no sorry gaps and can be rechecked through an independent proof kernel, but neither Clay recognition nor broad specialist scrutiny is complete.",
+      "This is a claimed resolution of one of the seven Millennium Prize Problems and a historic counterexample to global smoothness with allowed forcing. The target statements are machine-checked, and independent PDE work now supports and uses substantial parts of the construction, but no complete outside audit or Clay recognition exists.",
     source: "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf",
     sourceLabel: "Read the 166-page proof",
     secondarySource: "https://github.com/openai/NavierStokesAndEuler",
     secondarySourceLabel: "View Lean proofs and independent-checking instructions",
-    tertiarySource: "https://openai.com/index/navier-stokes-solution/",
-    tertiarySourceLabel: "Read the research announcement and AI workflow",
+    tertiarySource: "https://arxiv.org/abs/2609.35406",
+    tertiarySourceLabel: "Read the independent profile-construction exposition",
     addedDate: "September 9, 2026",
     addedIsoDate: "2026-09-09",
   },
@@ -1465,6 +1465,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Determinant Approximation Conjecture for Finite Quotients",
+    field: "Operator algebras, group theory & L²-invariants",
+    date: "September 14, 2026",
+    isoDate: "2026-09-14",
+    outcome: "Disproved",
+    status: "Author-verified analytical preprint with an explicit counterexample; no independent specialist validation or formal certificate located",
+    score: 3,
+    ai: "ChatGPT 6 Astra Pro identified the decisive relevance of Boschheidgen's theorem after a detailed research prompt; the author then constructed, wrote and checked the full counterexample",
+    summary:
+      "The element 1 − 2a + 2b in the integral group ring of the discrete Heisenberg group has Fuglede–Kadison determinant 2, while its finite-quotient determinants have limsup at most the cube root of 5. This disproves determinant approximation even for a class-two nilpotent group.",
+    importance:
+      "The counterexample overturns a standing approximation conjecture used across L²-invariants, topology and algebraic dynamics, and also defeats a proposed route to torsion approximation. Its explicit form is unusually concrete, but the proof currently has only author verification.",
+    source: "https://arxiv.org/abs/2609.15567",
+    sourceLabel: "View counterexample, proof and AI disclosure",
+    addedDate: "October 4, 2026",
+    addedIsoDate: "2026-10-04",
+  },
   {
     title: "Kourovka Notebook Problem 19.9 on Non-Abelian Tensor Squares",
     field: "Group theory, non-abelian tensor products & linear groups",
