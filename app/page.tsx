@@ -33,10 +33,110 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 4, 2026";
-const latestReviewIsoDate = "2026-10-04";
+const latestReviewDate = "October 5, 2026";
+const latestReviewIsoDate = "2026-10-05";
 
 const establishedResults: Result[] = [
+  {
+    "title": "Strict Gaussian Ellipsoid-Fitting Threshold",
+    "field": "Probability & random convex geometry",
+    "outcome": "Proved",
+    "score": 4,
+    "status": "Proof checked and refined by four named mathematicians; independent concurrent papers establish the same strict threshold",
+    "ai": "Muse Spark 1.1/1.2 Thinking Mode developed proof strategies and candidate arguments with Aykut Arslan; human reviewers corrected and refined the proof",
+    "summary": "For n independent Gaussian points in dimension d, an exact positive-definite ellipsoid fit exists with high probability strictly below n/d² = 1/4; above that threshold even positive-semidefinite fitting fails. The critical window remains unresolved.",
+    "importance": "Resolves the strict-threshold form of the Saunderson–Parrilo–Willsky conjecture. Independent August 2026 proofs corroborate the result; this is an independently developed AI-assisted proof, not a claim of publication priority.",
+    "source": "https://ai.meta.com/research/publications/the-strict-threshold-for-gaussian-ellipsoid-fitting/",
+    "secondarySource": "https://arxiv.org/abs/2608.10184",
+    "secondarySourceLabel": "Read an independent threshold proof",
+    "date": "October 2, 2026",
+    "isoDate": "2026-10-02",
+    "addedDate": "October 5, 2026",
+    "addedIsoDate": "2026-10-05",
+    "sourceLabel": "Read the manuscript and AI contribution statement"
+  },
+  {
+    "title": "Finite-Time Blow-Up for Radial Mass-Critical Biharmonic NLS",
+    "field": "Partial differential equations & nonlinear dispersive analysis",
+    "outcome": "Proved",
+    "score": 4,
+    "status": "Detailed specialist review by Fazel Hadadifard and Salem Selim; human-refined proof, without claimed machine formalization",
+    "ai": "Muse Spark 1.1/1.2 Thinking Mode helped Leonard Dinh develop calculations, candidate arguments and proof revisions; Dinh supplied the problem and key ideas",
+    "summary": "In dimensions N ≥ 2, every radial H² solution of the focusing mass-critical biharmonic nonlinear Schrödinger equation with negative energy blows up in finite time in both time directions, ruling out infinite-time-only growth.",
+    "importance": "Settles the radial negative-energy question left open by Boulenger and Lenzmann in 2015, using localized virial estimates and a Riccati argument. The theorem concerns this precise equation and hypothesis set, not arbitrary wave collapse.",
+    "source": "https://ai.meta.com/research/publications/finite-time-blow-up-of-radial-negative-energy-solutions-for-the-mass-critical-biharmonic-nonlinear-schrodinger-equation/",
+    "date": "October 2, 2026",
+    "isoDate": "2026-10-02",
+    "addedDate": "October 5, 2026",
+    "addedIsoDate": "2026-10-05",
+    "sourceLabel": "Read the manuscript and AI contribution statement"
+  },
+  {
+    "title": "Kida's Semiabelian–Monomial Conjecture",
+    "field": "Finite groups & computational algebra",
+    "outcome": "Disproved",
+    "score": 3,
+    "status": "Explicit order-384 counterexample checked by the authors and two additional mathematicians; GAP search and outputs supplied",
+    "ai": "Muse Spark generated the GAP search program that found SmallGroup(384,20127); Joseph Phillip Brennan and Milana Golich verified its properties and completed the argument",
+    "summary": "A group with 384 elements is semiabelian but not monomial, refuting Kida's conjecture. The paper supplies an explicit recursive abelian-factor decomposition establishing the required semiabelian property.",
+    "importance": "Separates two proposed classes of finite groups through a concrete, reproducible obstruction. Andres Barei and John Portin reviewed the work; a different independent Nilradical counterexample is acknowledged.",
+    "source": "https://ai.meta.com/research/publications/semiabelian-groups-need-not-be-monomial/",
+    "date": "October 2, 2026",
+    "isoDate": "2026-10-02",
+    "addedDate": "October 5, 2026",
+    "addedIsoDate": "2026-10-05",
+    "sourceLabel": "Read the manuscript and AI contribution statement"
+  },
+  {
+    "title": "Exact Cycle Relaxations for Completed Length-Three Alpha-Cycles",
+    "field": "Discrete optimization & multilinear polytopes",
+    "outcome": "Proved",
+    "score": 3,
+    "status": "Proof checked, corrected and refined by Aykut Arslan and specialist reviewer Kien Trung Le",
+    "ai": "Muse Spark helped reformulate the problem probabilistically, find a parity obstruction and develop the proof strategy; the mathematicians repaired gaps",
+    "summary": "For completed supports of length-three alpha-cycles, the cycle-based relaxation with switched generalized triangle inequalities equals the multilinear polytope exactly when each pair-only intersection contains one vertex. Common and private blocks may have arbitrary sizes.",
+    "importance": "Answers the Del Pia–Khajavirad characterization question for this structured family, identifying precisely when the relaxation loses information and when extra inequalities are necessary.",
+    "source": "https://ai.meta.com/research/publications/tightness-of-the-cycle-based-relaxation-for-completed-length-three-alpha-cycles/",
+    "date": "October 2, 2026",
+    "isoDate": "2026-10-02",
+    "addedDate": "October 5, 2026",
+    "addedIsoDate": "2026-10-05",
+    "sourceLabel": "Read the manuscript and AI contribution statement"
+  },
+  {
+    "title": "Idempotent-Free Evolution Algebras Need Not Be Solvable",
+    "field": "Non-associative algebra",
+    "outcome": "Disproved",
+    "score": 3,
+    "status": "Explicit three-dimensional counterexample and replacement criterion checked by the author and Nicolás Jaramillo Torres; independent counterexamples also published",
+    "ai": "Muse Spark generated the counterexample and proposed alternative characterizations and proofs; Andres Barei checked, revised and rewrote the mathematics",
+    "summary": "A complex evolution algebra of dimension three has no nonzero idempotent but is not solvable, disproving the García-Martínez–Pérez-Rodríguez conjecture. A replacement solvability criterion uses idempotent subspaces instead of individual elements.",
+    "importance": "Corrects a proposed structural characterization at the smallest possible counterexample dimension. Independent work by Hu and Wen corroborates the failure of the conjecture; this is an algebra result, not a biological finding.",
+    "source": "https://ai.meta.com/research/publications/on-solvable-evolution-algebras-and-a-conjecture-by-garcia-martinez-and-perez-rodriguez/",
+    "secondarySource": "https://arxiv.org/abs/2609.25023",
+    "secondarySourceLabel": "Read independent counterexamples",
+    "date": "October 2, 2026",
+    "isoDate": "2026-10-02",
+    "addedDate": "October 5, 2026",
+    "addedIsoDate": "2026-10-05",
+    "sourceLabel": "Read the manuscript and AI contribution statement"
+  },
+  {
+    "title": "Heterogeneous Hegselmann–Krause Freezing and Pseudostability Conjectures",
+    "field": "Dynamical systems & mathematical opinion models",
+    "outcome": "Disproved",
+    "score": 3,
+    "status": "Explicit counterexamples verified by hand by the three specialist authors; no machine-checked formalization claimed",
+    "ai": "Claude Opus 5.5 found all included counterexamples after prompting; Peter Hegarty, Damiano Ognissanti and Edvin Wedin verified them and wrote the paper",
+    "summary": "Counterexamples invalidate finite-time freezing of the proximity digraph, pseudostable convergence, and associated claims in heterogeneous bounded-confidence and bounded-influence models. The broader conjecture that every trajectory converges remains open.",
+    "importance": "Repairs foundational claims about heterogeneous opinion dynamics while carefully preserving the unresolved main convergence question. The authors excluded further AI computations they had not verified.",
+    "source": "https://arxiv.org/abs/2610.03229",
+    "date": "October 2, 2026",
+    "isoDate": "2026-10-02",
+    "addedDate": "October 5, 2026",
+    "addedIsoDate": "2026-10-05",
+    "sourceLabel": "Read the manuscript and AI contribution statement"
+  },
   {
     title: "Borowiecki–Broere Generalized Total Colouring Conjecture for Planar Graphs",
     field: "Graph theory, planar colouring & formal verification",
@@ -3968,6 +4068,22 @@ const physicsEstablishedResults: Result[] = [
 
 const physicsEmergingResults: Result[] = [
   {
+    "title": "p-Adic String Two-Point Functions and Néron Local Heights",
+    "field": "Mathematical physics & p-adic string theory",
+    "outcome": "Demonstrated",
+    "score": 3,
+    "status": "New theoretical identity in a public manuscript; author-checked arguments, with no independent replication or experimental validation located",
+    "ai": "Muse Spark helped extend the Tate-curve connection to general semistable curves, generated candidate proofs and drafted three technical sections that the five authors corrected",
+    "summary": "The boundary two-point function of a suitable p-adic string theory is identified, with the paper's sign and normalization conventions, with the Néron local height pairing on disjoint degree-zero divisors of curves with semistable reduction.",
+    "importance": "Extends a previously known special case into an exact correspondence between arithmetic geometry and a string-theory calculation. Its significance is theoretical; it is not evidence that p-adic strings describe observed physics.",
+    "source": "https://ai.meta.com/research/publications/string-two-point-function-height-function-on-a-curve/",
+    "date": "October 2, 2026",
+    "isoDate": "2026-10-02",
+    "addedDate": "October 5, 2026",
+    "addedIsoDate": "2026-10-05",
+    "sourceLabel": "Read the manuscript and AI contribution statement"
+  },
+  {
     title: "TRACE Testable Interpretation of Progressive Megathrust Destabilization",
     field: "Seismology, earthquake sequences & autonomous physical reasoning",
     date: "March 22, 2026",
@@ -4267,6 +4383,22 @@ const biologyEstablishedResults: Result[] = [
 ];
 
 const biologyEmergingResults: Result[] = [
+  {
+    "title": "X-Design Vega: Functional Antibodies for XA-1 and XA-4",
+    "field": "Human drug discovery & therapeutic antibody design",
+    "outcome": "Designed",
+    "score": 3,
+    "status": "Preclinical company experimental report: binding and functional cell assays; undisclosed program targets, no independent or clinical validation",
+    "ai": "Xaira's X-Design Vega generated new VHH sequences, including a 60,000-design library spanning candidate epitopes and conformations for the difficult XA-4 GPCR",
+    "summary": "Xaira reports an oncology-program XA-1 lead and functional XA-4 antagonists after conventional screening and immunization failed for XA-4. Its best XA-4 candidate exceeded 96% inhibition in a β-arrestin assay at an IC50 of 183 nM and bound human target-expressing cells.",
+    "importance": "AI designed experimentally active molecules for a challenging human therapeutic target, beyond predicting binding alone. Evidence is limited to developer-reported laboratory assays with partly undisclosed targets; therapeutic safety and efficacy remain unproven.",
+    "source": "https://www.xaira.com/news/de-novo-design-of-progressable-antibodies-to-therapeutic-targets",
+    "sourceLabel": "Read the experimental report and assay figures",
+    "date": "October 2, 2026",
+    "isoDate": "2026-10-02",
+    "addedDate": "October 5, 2026",
+    "addedIsoDate": "2026-10-05"
+  },
   {
     title: "Virtual Biotech Drug-Target Signal and B7-H3 Lung-Cancer Strategy",
     field: "Human drug discovery, oncology & clinical translation",
