@@ -33,10 +33,28 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 8, 2026";
-const latestReviewIsoDate = "2026-10-08";
+const latestReviewDate = "October 9, 2026";
+const latestReviewIsoDate = "2026-10-09";
 
 const establishedResults: Result[] = [
+  {
+    "title": "Truly Subquadratic 3SUM and Truly Subcubic APSP",
+    "field": "Fine-grained complexity & graph algorithms",
+    "date": "October 5, 2026",
+    "isoDate": "2026-10-05",
+    "addedDate": "October 9, 2026",
+    "addedIsoDate": "2026-10-09",
+    "outcome": "Disproved",
+    "score": 5,
+    "status": "Central deterministic theorems and all relied-on lemmas machine-checked in public Lean 4/Mathlib; the specialist authors reconstructed, simplified and extended the AI-discovered algorithm",
+    "ai": "An internal Anthropic research model autonomously discovered the core thin-matrix-product algorithm during a 16-million-output-token session with no human input. A separate Anthropic model later formalized the main results in Lean.",
+    "summary": "Gives deterministic O(n^1.9992) time for integer 3SUM and O(n^2.9995) time for directed integer-weight all-pairs shortest paths, the first polynomial improvements over their textbook bounds. This refutes the standard 3SUM and APSP hypotheses and, through reductions, several related fine-grained-complexity hypotheses.",
+    "importance": "5/5: breaks two foundational fine-grained-complexity barriers underlying many conditional lower bounds. The paper carefully separates the AI-shared core algorithm from the authors' new data-structure extension and reductions; the formalization covers the stated 3SUM, Exact Triangle, APSP and zero-weight clique bounds.",
+    "source": "https://arxiv.org/abs/2610.06783",
+    "secondarySource": "https://github.com/anthropics/formal-math/tree/main/3sum-apsp",
+    "sourceLabel": "View specialist manuscript",
+    "secondarySourceLabel": "View Lean certification"
+  },
   {
     "title": "Linear Hadwiger Conjecture",
     "field": "Graph coloring & graph minors",
@@ -1586,6 +1604,54 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    "title": "The Multiple-Unicast Conjecture",
+    "field": "Network coding & information theory",
+    "date": "October 7, 2026",
+    "isoDate": "2026-10-07",
+    "addedDate": "October 9, 2026",
+    "addedIsoDate": "2026-10-09",
+    "outcome": "Disproved",
+    "score": 5,
+    "status": "New arXiv preprint with an explicit finite construction; no independent specialist validation or machine-checked certificate located",
+    "ai": "GPT-6 found a nondeterministic counterexample by choosing new Reed–Solomon local codes within an existing high-girth framework. Mark Braverman and Zhongtian He converted it into a causal deterministic linear network code using an edge orientation and local search.",
+    "summary": "Constructs a 182-vertex undirected network with 157 unicast sessions where a linear code over F9 achieves common rate at least 1 but every fractional multicommodity flow has rate at most 147/157. Amplification yields an unbounded polylogarithmic coding advantage, refuting the 2004 conjecture that coding gives no advantage over flow.",
+    "importance": "5/5: overturns a central conjecture connecting network coding, flows and information theory, and produces an asymptotically growing separation. The finite construction is unusually concrete, but its conversion and amplification still require external checking.",
+    "source": "https://arxiv.org/abs/2610.10108",
+    "sourceLabel": "View research manuscript"
+  },
+  {
+    "title": "Toms–Winter Conjecture for Simple Nuclear C*-Algebras",
+    "field": "Operator algebras & noncommutative topology",
+    "date": "October 7, 2026",
+    "isoDate": "2026-10-07",
+    "addedDate": "October 9, 2026",
+    "addedIsoDate": "2026-10-09",
+    "outcome": "Proved",
+    "score": 5,
+    "status": "New 70-page specialist preprint by six authors; no machine formalization, peer review or independent verification located",
+    "ai": "ChatGPT Astra produced an initial version of an essential lemma for the Bauer trace-simplex case. Six operator-algebra specialists developed the complete framework, proof and applications and take responsibility for the final manuscript.",
+    "summary": "Proves Z-stability for every simple, separable, pure, nuclear C*-algebra. Combined with recent independent work of Hannes Thiel, this completes the remaining implication in the Toms–Winter conjecture linking regularity properties of simple nuclear C*-algebras.",
+    "importance": "5/5: would finish a central classification conjecture in operator algebras. The AI contribution is narrower than the full theorem but attaches to a lemma the authors explicitly call essential; the final proof still awaits independent scrutiny.",
+    "source": "https://arxiv.org/abs/2610.09390",
+    "sourceLabel": "View research manuscript"
+  },
+  {
+    "title": "Optimal Polynomial Littlewood–Offord Bound",
+    "field": "Combinatorics, probability & complexity theory",
+    "date": "October 6, 2026",
+    "isoDate": "2026-10-06",
+    "addedDate": "October 9, 2026",
+    "addedIsoDate": "2026-10-09",
+    "outcome": "Proved",
+    "score": 4,
+    "status": "New single-author preprint, revised October 7; no released formalization or independent verification located",
+    "ai": "GPT-6 Pro discovered the core argument. Alexandr Grebennikov supplied the mathematical exposition and states that the key influence estimate also resolves a separate recent conjecture.",
+    "summary": "For a degree-d multilinear polynomial containing r disjoint degree-d monomials, proves the optimal O_d(r^-1/2) upper bound on its probability of vanishing on independent random signs. This removes the previous polylogarithmic loss and resolves conjectures attributed to H. Nguyen–Vu and Kothari–Kovacs-Deak–Wang–Yang.",
+    "importance": "4/5: settles the sharp form of a polynomial Littlewood–Offord anti-concentration problem and introduces an optimal total-influence estimate for bounded-degree rational functions. The short proof is promising but remains a fresh unreviewed claim.",
+    "source": "https://arxiv.org/abs/2610.08708",
+    "sourceLabel": "View research manuscript"
+  },
+  {
     "date": "October 6, 2026",
     "isoDate": "2026-10-06",
     "addedDate": "October 8, 2026",
@@ -1843,7 +1909,7 @@ const emergingResults: Result[] = [
     "outcome": "Proved",
     "score": 5,
     "ai": "OpenAI's unreleased internal frontier model produced the proposed proof. The official release explicitly identifies CM Hodge as an exception to its standard fixed evaluation procedure; further process details are not specified.",
-    "status": "New manuscript claim; no linked Lean formalization or independent specialist validation located",
+    "status": "Retained CM-abelian-variety claim; three dependent K3/Weil-class companion manuscripts were withdrawn October 7 after a sign error; no linked Lean formalization or independent validation located",
     "title": "Rational Hodge Conjecture for CM Abelian Varieties",
     "field": "Algebraic geometry",
     "summary": "Claims that every rational Hodge class on every complex abelian variety with complex multiplication is algebraic, in all dimensions and codimensions. The manuscript was released October 6 and revised in the October 7 repository update. The retained CM result describes consequences for the Tate conjecture over finite fields and the Hodge standard conjecture for abelian varieties; withdrawn K3 companion claims are not included in this entry.",
