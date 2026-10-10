@@ -33,8 +33,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 9, 2026";
-const latestReviewIsoDate = "2026-10-09";
+const latestReviewDate = "October 10, 2026";
+const latestReviewIsoDate = "2026-10-10";
 
 const establishedResults: Result[] = [
   {
