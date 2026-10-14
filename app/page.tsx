@@ -33,8 +33,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 13, 2026";
-const latestReviewIsoDate = "2026-10-13";
+const latestReviewDate = "October 14, 2026";
+const latestReviewIsoDate = "2026-10-14";
 
 const establishedResults: Result[] = [
   {
@@ -4956,6 +4956,26 @@ const biologyEmergingResults: Result[] = [
     tertiarySourceLabel: "View framework, analyses and open-source project",
     addedDate: "September 20, 2026",
     addedIsoDate: "2026-09-20",
+  },
+  {
+    title: "Brain-Penetrant LILRB4 Inhibitor for Alzheimer’s Models",
+    field: "Alzheimer’s disease & AI-guided drug discovery",
+    date: "September 10, 2026",
+    isoDate: "2026-09-10",
+    outcome: "Preclinical candidate",
+    status: "Peer-reviewed preclinical study; human microglia and mouse-model validation; no human trial",
+    score: 4,
+    ai: "Retrieval-based AI screening of approximately 500 million compounds for inhibitors of the LILRB4–ApoE interaction",
+    summary:
+      "AI-guided screening identified chemically distinct nanomolar LILRB4 binders. Compound 4 restored amyloid-β uptake and reduced inflammatory signalling in human iPSC-derived microglia, then showed oral brain penetration, lower amyloid and inflammation, and improved Y-maze performance in 5xFAD mice.",
+    importance:
+      "The study links ultra-large AI screening to orthogonal binding assays, a defined receptor pocket, human-cell experiments and in-vivo validation. It remains an early preclinical candidate: safety, dosing and efficacy in people are unknown, so it is not an Alzheimer’s treatment.",
+    source: "https://doi.org/10.1016/j.bioorg.2026.110508",
+    sourceLabel: "View peer-reviewed Bioorganic Chemistry paper",
+    secondarySource: "https://pubmed.ncbi.nlm.nih.gov/42731186/",
+    secondarySourceLabel: "View PubMed record and evidence scope",
+    addedDate: "October 14, 2026",
+    addedIsoDate: "2026-10-14",
   },
   {
     title: "AI-Designed Bacteriophage Genomes",
