@@ -35,8 +35,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 17, 2026";
-const latestReviewIsoDate = "2026-10-17";
+const latestReviewDate = "October 18, 2026";
+const latestReviewIsoDate = "2026-10-18";
 
 const establishedResults: Result[] = [
   {
@@ -1189,6 +1189,26 @@ const establishedResults: Result[] = [
     secondarySourceLabel: "View independent human-checkable proof",
     addedDate: "August 26, 2026",
     addedIsoDate: "2026-08-26",
+  },
+  {
+    title: "Heil–Ramanathan–Topiwala (HRT) Conjecture",
+    field: "Harmonic analysis, time-frequency analysis & certified numerics",
+    date: "August 5, 2026",
+    isoDate: "2026-08-05",
+    outcome: "Disproved",
+    status: "Author-verified and rewritten; certified explicit 12-point proof, separate analytic proof and independent specialist scrutiny",
+    score: 5,
+    ai: "ChatGPT GPT-5.6 Pro developed the counterexample and its proof strategy in dialogue with the four authors. The authors directed the search, found and repaired a nontrivial error, filled substantial gaps, independently checked every AI-influenced part and rewrote the paper.",
+    summary:
+      "The paper constructs a nonzero Schwartz function whose twelve distinct time-frequency shifts are linearly dependent, disproving the roughly thirty-year-old HRT conjecture even under strong smoothness and rapid-decay assumptions. The explicit construction has a certified numerical audit, while a second theorem gives a purely analytic qualitative counterexample.",
+    importance:
+      "5/5: overturns a central long-standing conjecture in time-frequency analysis. Confidence is unusually strong: the authors performed a detailed human reconstruction, the explicit instance is certified, the analytic mechanism avoids numerical dependence, and independent specialists published a clearer extension with optimally fast counterexample decay.",
+    source: "https://arxiv.org/abs/2608.05044",
+    secondarySource: "https://arxiv.org/abs/2608.13539",
+    sourceLabel: "View counterexample, AI disclosure and certification",
+    secondarySourceLabel: "View independent specialist extension",
+    addedDate: "October 18, 2026",
+    addedIsoDate: "2026-10-18",
   },
   {
     title: "Bijective Proof of the Berkovich–Uncu Partition Theorem",
