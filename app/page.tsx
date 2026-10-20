@@ -35,8 +35,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 18, 2026";
-const latestReviewIsoDate = "2026-10-18";
+const latestReviewDate = "October 20, 2026";
+const latestReviewIsoDate = "2026-10-20";
 
 const establishedResults: Result[] = [
   {
@@ -1156,17 +1156,17 @@ const establishedResults: Result[] = [
     date: "August 19, 2026",
     isoDate: "2026-08-19",
     outcome: "Proved",
-    status: "Complete sorry-free Lean 4 formalization plus an independent shorter proof",
+    status: "Human specialist exposition after a month-long check and repair of the original argument; an independent proof is also available",
     score: 5,
     ai: "Claude (Anthropic)",
     summary:
       "Claude autonomously developed an unconditional proof that more than two thirds of the nontrivial zeros of the Riemann zeta function are simple and lie on the critical line, with stronger optimized constants and corresponding results for primitive Dirichlet L-functions.",
     importance:
-      "This is a major new unconditional record for the distribution of zeta zeros. It does not prove the Riemann Hypothesis, but the theorem now has both a complete Lean development and a separate, conceptually simpler proof by Youness Lamzouri using a Hilbert-space inequality and Montgomery's pair-correlation theorem.",
+      "This is a major new unconditional record for the distribution of zeta zeros. It does not prove the Riemann Hypothesis. Number theorist J. Arias de Reyna reports spending a month checking the argument, finding false statements in the original exposition, making the needed repair and rewriting the proof for human readers; a separate proof by Youness Lamzouri remains additional support.",
     source: "https://arxiv.org/abs/2608.13637",
     sourceLabel: "View original AI-assisted proof",
-    secondarySource: "https://arxiv.org/abs/2609.02882",
-    secondarySourceLabel: "View independent shorter proof",
+    secondarySource: "https://arxiv.org/abs/2610.24612",
+    secondarySourceLabel: "View human specialist check, repair and exposition",
     addedDate: "August 26, 2026",
     addedIsoDate: "2026-08-26",
   },
@@ -1695,6 +1695,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Dimension of Posets Excluding a Standard Example",
+    field: "Combinatorics, order theory & extremal posets",
+    date: "October 17, 2026",
+    isoDate: "2026-10-17",
+    outcome: "Improved",
+    status: "Three-specialist preprint with complete human exposition; no formal verification or independent scrutiny yet",
+    score: 4,
+    ai: "OpenAI's ChatGPT-6 Astra found both the upper- and lower-bound proofs; Jędrzej Hodor, Piotr Micek and William T. Trotter checked and wrote the manuscript",
+    summary:
+      "For every fixed d ≥ 3, the maximum dimension of an n-element poset with no induced standard example S_d is proved to be O_d(n^α) for some α < 1, replacing the previous merely sublinear bound with a polynomial saving. For S_3-free posets the paper gives O(n^(2/3) log n) above and Ω(n^(1/3)/log n) below.",
+    importance:
+      "The result gives the first qualitatively matching polynomial upper bound for a basic extremal question in poset dimension and sharply reframes the remaining exponent problem. The authors are leading specialists, but the new AI-found argument has not yet received independent or formal verification.",
+    source: "https://arxiv.org/abs/2610.24774",
+    sourceLabel: "View preprint and explicit AI attribution",
+    addedDate: "October 20, 2026",
+    addedIsoDate: "2026-10-20",
+  },
   {
     title: "Optimal Six-Dimensional Tarski Fixed-Point Lower Bound",
     field: "Query complexity, fixed points & theoretical computer science",
@@ -5237,6 +5255,24 @@ const biologyEstablishedResults: Result[] = [
 ];
 
 const biologyEmergingResults: Result[] = [
+  {
+    title: "Closed-Loop AI Discovery of Human-Protein Aptamer Binders",
+    field: "Human molecular diagnostics, aptamer discovery & coagulation biology",
+    date: "October 17, 2026",
+    isoDate: "2026-10-17",
+    outcome: "Validated in vitro",
+    status: "Preclinical laboratory validation in bead-binding assays; new preprint, no clinical testing or matched non-agent control",
+    score: 3,
+    ai: "Google AI Co-Scientist generated the first candidate library; Gemini Pro and Flash agents independently analyzed sequencing data, diagnosed assay failures and designed later rounds with computational tools",
+    summary:
+      "Across three design-test-improve cycles and about 4,400 constructs, the agent pipeline raised new-candidate hit rates to 42.1% for human α-thrombin and 33.5% for human myoglobin. Eight thrombin candidates were confirmed by single-clone titration; engineered literature-motif descendants reached apparent affinities of 24.6–133 nM, while strictly de novo scaffolds bound in the low-micromolar range.",
+    importance:
+      "This is a concrete closed-loop demonstration in which AI agents used fresh wet-lab data to discover binders, detect cross-reactivity and restore specificity. The targets are human proteins relevant to coagulation and biomarker work, but the evidence is in vitro and does not show diagnostic or therapeutic benefit in people.",
+    source: "https://arxiv.org/abs/2610.24806",
+    sourceLabel: "View preprint, assays and AI-system disclosure",
+    addedDate: "October 20, 2026",
+    addedIsoDate: "2026-10-20",
+  },
   {
     "title": "X-Design Vega: Functional Antibodies for XA-1 and XA-4",
     "field": "Human drug discovery & therapeutic antibody design",
