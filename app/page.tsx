@@ -35,10 +35,46 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 20, 2026";
-const latestReviewIsoDate = "2026-10-20";
+const latestReviewDate = "October 21, 2026";
+const latestReviewIsoDate = "2026-10-21";
 
 const establishedResults: Result[] = [
+  {
+    title: "Separation of Microstates and Non-Microstates Free Entropy",
+    field: "Operator algebras, free probability & information geometry",
+    date: "October 19, 2026",
+    isoDate: "2026-10-19",
+    outcome: "Disproved",
+    status: "AI-originated counterexample independently reconstructed and extended in a detailed specialist manuscript",
+    score: 5,
+    ai: "OpenAI's October mathematics release produced the first example with finite microstates free entropy χ strictly below non-microstates free entropy χ*. David Jekel then built and checked a closely related example and exposed the Fisher-information mechanism.",
+    summary:
+      "A long-standing expectation that the two principal versions of Voiculescu's free entropy might agree is false even for Connes-embeddable variables with finite χ. The specialist follow-up also proves an explicit separation between free Fisher information and the large-matrix limit of classical Fisher information.",
+    importance:
+      "5/5: resolves a foundational open problem in free probability and changes the expected large-deviation picture for random matrices. The independent 32-page expert treatment supplies substantial human scrutiny and a variant proof rather than merely restating the AI manuscript.",
+    source: "https://arxiv.org/abs/2610.27243",
+    sourceLabel: "View independent specialist reconstruction and extension",
+    addedDate: "October 21, 2026",
+    addedIsoDate: "2026-10-21",
+  },
+  {
+    title: "Macroscopic Geroch and Hyperbolic Conjectures in Dimension Two",
+    field: "Differential geometry, scalar curvature & systolic geometry",
+    date: "August 31, 2026",
+    isoDate: "2026-08-31",
+    outcome: "Proved",
+    status: "AI-generated proof checked and reworked by two differential-geometry specialists",
+    score: 4,
+    ai: "ChatGPT-5.6 Pro produced the results and fundamental proof strategy without significant author assistance. Otis Chodosh and Noa Vikman checked and reworked the proof and wrote the human exposition.",
+    summary:
+      "Proves the generalized Geroch conjecture and the corresponding hyperbolic volume conjecture in dimension two, giving sharp macroscopic scalar-curvature and volume-growth obstructions for tori and closed hyperbolic surfaces.",
+    importance:
+      "4/5: settles two geometric conjectures in the full two-dimensional case. The October revision makes the unusually strong provenance explicit and provides detailed checking by two relevant human experts, satisfying the archive's Established threshold.",
+    source: "https://arxiv.org/abs/2609.00186",
+    sourceLabel: "View checked human presentation of the AI proof",
+    addedDate: "October 21, 2026",
+    addedIsoDate: "2026-10-21",
+  },
   {
     title: "Two Torus-Polynomial Open Problems",
     field: "Circuit complexity, Boolean functions & formal verification",
@@ -1695,6 +1731,114 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "First-Order Strength of the Ordered Variable Word Theorem",
+    field: "Reverse mathematics, computability theory & Ramsey theory",
+    date: "October 20, 2026",
+    isoDate: "2026-10-20",
+    outcome: "Proved",
+    status: "Single-specialist preprint; the AI-found key lemma and complete proof await independent or formal verification",
+    score: 4,
+    ai: "Claude Opus 5.5 found Lemma 3.13, a key simultaneous-decision lemma used in Ludovic Patey's conservation proof.",
+    summary:
+      "Shows that the Ordered Variable Word theorem is Π¹₁-conservative over RCA₀ + BΣ⁰₂. As a consequence, the tree theorem for singletons has the same first-order strength, answering a long-standing question in reverse mathematics.",
+    importance:
+      "4/5: closes a long-standing logical-strength problem and places two natural Ramsey-type principles precisely in the reverse-mathematics hierarchy. Only one lemma is AI-originated, but it is part of the central forcing construction.",
+    source: "https://arxiv.org/abs/2610.27643",
+    sourceLabel: "View proof and explicit Claude attribution",
+    addedDate: "October 21, 2026",
+    addedIsoDate: "2026-10-21",
+  },
+  {
+    title: "Full Nef-Complexity Spectrum for klt Fano Varieties",
+    field: "Algebraic geometry, Fano varieties & birational classification",
+    date: "October 20, 2026",
+    isoDate: "2026-10-20",
+    outcome: "Classified",
+    status: "Author reports checking every final proof; new 47-page preprint has no independent or formal verification yet",
+    score: 4,
+    ai: "GPT-5.6 Sol originated most proofs and central tools, including Hilbert-basis linear programming, finite-difference vanishing, mixed-intersection arguments and the classifications; GPT-6 Sol helped revise the proofs.",
+    summary:
+      "Proves there is no nef complexity strictly between zero and one, classifies every klt Fano variety of complexity below two without assuming Q-factoriality, and determines the full spectrum across all dimensions.",
+    importance:
+      "4/5: substantially extends the Mukai-type classification program and gives both a low-complexity classification and a complete spectrum. The author is a relevant specialist and records extensive checking, but independent scrutiny remains pending.",
+    source: "https://arxiv.org/abs/2610.27676",
+    sourceLabel: "View classification and detailed AI-contribution statement",
+    addedDate: "October 21, 2026",
+    addedIsoDate: "2026-10-21",
+  },
+  {
+    title: "Frankl–Ota–Tokushige Covering-Number Conjecture",
+    field: "Extremal set theory & intersecting families",
+    date: "October 20, 2026",
+    isoDate: "2026-10-20",
+    outcome: "Disproved",
+    status: "Author-checked short preprint; no independent proof or formal certificate yet",
+    score: 4,
+    ai: "ChatGPT 6.1 Sol found the counterexample construction. Balázs Patkós supplied the exposition and a separate improved lower-bound proof.",
+    summary:
+      "Disproves the conjecture that the extremal coefficient b(t) equals t choose 2 for all t, by constructing intersecting families with b(t) at most roughly 2√2·t^(3/2)√log t. The paper also improves the asymptotic lower bound.",
+    importance:
+      "4/5: overturns a concrete conjecture in the asymptotic theory of intersecting families and changes the expected scale from quadratic to near t^(3/2). The construction is explicit but newly released.",
+    source: "https://arxiv.org/abs/2610.28029",
+    sourceLabel: "View counterexample and AI attribution",
+    addedDate: "October 21, 2026",
+    addedIsoDate: "2026-10-21",
+  },
+  {
+    title: "Exact Storage–Repair–Bandwidth Tradeoffs for Two Regenerating-Code Cases",
+    field: "Information theory, coding theory & exact certificates",
+    date: "October 20, 2026",
+    isoDate: "2026-10-20",
+    outcome: "Classified",
+    status: "Exact integer certificates and verifier are described, but the linked public companion repository was unavailable during this review",
+    score: 3,
+    ai: "GPT-6 Astra proposed the conditional shortened-code induction, ran the restricted entropy-inequality search, found the submodularity proof, and generated the initial certificates and verifier; Chao Tian checked the reasoning and code.",
+    summary:
+      "Completely characterizes the storage–repair–bandwidth regions for the (6,5,5) and (7,6,6) exact-repair regenerating-code problems and proves the layered construction optimal in both cases.",
+    importance:
+      "3/5: closes two nontrivial exact coding-theory cases with purportedly reproducible certificates and introduces a conditioning reduction that may extend further. The missing companion download prevents promotion until the artifacts can be independently run.",
+    source: "https://arxiv.org/abs/2610.28199",
+    sourceLabel: "View proof, certificate specification and AI disclosure",
+    addedDate: "October 21, 2026",
+    addedIsoDate: "2026-10-21",
+  },
+  {
+    title: "Weighted Cube Inequality in All Dimensions",
+    field: "Differential geometry, scalar curvature & minimal hypersurfaces",
+    date: "October 20, 2026",
+    isoDate: "2026-10-20",
+    outcome: "Proved",
+    status: "Specialist preprint adapting an AI-generated geometric method; independent review and formal verification pending",
+    score: 4,
+    ai: "The proof adapts the dimension-descent and singularity-control ideas from manuscript No. 336 in OpenAI's October mathematics release.",
+    summary:
+      "Proves the weighted form of Gromov's cube inequality for every dimension and every remaining admissible synthetic dimension parameter, with the optimal coefficient. Earlier work covered only part of the parameter range.",
+    importance:
+      "4/5: completes a sharp all-dimensional scalar-curvature inequality and demonstrates that an AI-originated proof architecture transfers to a broader weighted setting. The new argument is human-written but still a fresh preprint.",
+    source: "https://arxiv.org/abs/2610.28390",
+    sourceLabel: "View proof and OpenAI-method attribution",
+    addedDate: "October 21, 2026",
+    addedIsoDate: "2026-10-21",
+  },
+  {
+    title: "Single Generation for Simple C*-Algebras with CPoU",
+    field: "Operator algebras, C*-algebras & von Neumann algebras",
+    date: "October 20, 2026",
+    isoDate: "2026-10-20",
+    outcome: "Proved",
+    status: "Specialist consequence conditional on OpenAI's unverified finite-factor generation theorem",
+    score: 3,
+    ai: "OpenAI's AI-generated theorem that every separable II₁ factor is generated by two self-adjoint elements is the decisive new input; Xin Ma derives the C*-algebra result from it.",
+    summary:
+      "Shows that a separable simple unital C*-algebra with strict comparison is singly generated whenever its uniform tracial completion has complemented partitions of unity, covering major regular classes such as algebras with uniform property Γ.",
+    importance:
+      "3/5: transfers the AI-originated finite-factor breakthrough into a broad C*-algebra setting and advances a classical generation problem. The conclusion remains conditional on the underlying OpenAI theorem and therefore stays under review.",
+    source: "https://arxiv.org/abs/2610.28478",
+    sourceLabel: "View conditional theorem and OpenAI dependency",
+    addedDate: "October 21, 2026",
+    addedIsoDate: "2026-10-21",
+  },
   {
     title: "Dimension of Posets Excluding a Standard Example",
     field: "Combinatorics, order theory & extremal posets",
@@ -3825,13 +3969,13 @@ const emergingResults: Result[] = [
     date: "August 31, 2026",
     isoDate: "2026-08-31",
     outcome: "Disproved",
-    status: "Authors proved and checked the counterexample; independent review pending",
+    status: "Authors checked and expanded the counterexample proof in a 26-page revision; independent review pending",
     score: 5,
     ai: "ChatGPT 5.6 Sol for the decisive counterexample construction",
     summary:
       "The paper constructs a simple theory in which forking is not witnessed by any stable formula, disproving the stable forking conjecture posed by Hart, Kim and Pillay in 1996. The counterexample is the theory of an infinite-dimensional vector space over the division ring of fractions of the quantum graph algebra of the random graph.",
     importance:
-      "Stable forking was one of the most prominent open problems about the boundary between stability and simplicity in model theory. The authors say GPT-5.6 Sol generated the construction after constrained prompting; they then wrote and checked all proofs themselves, but the 21-page preprint has not yet been independently scrutinized.",
+      "Stable forking was one of the most prominent open problems about the boundary between stability and simplicity in model theory. The authors say GPT-5.6 Sol generated the construction after constrained prompting; they then wrote, checked and expanded the proof to 26 pages, but it has not yet been independently scrutinized.",
     source: "https://arxiv.org/abs/2609.00436",
     sourceLabel: "View preprint and detailed AI-contribution statement",
     addedDate: "September 2, 2026",
