@@ -35,10 +35,82 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 21, 2026";
-const latestReviewIsoDate = "2026-10-21";
+const latestReviewDate = "October 22, 2026";
+const latestReviewIsoDate = "2026-10-22";
 
 const establishedResults: Result[] = [
+  {
+    title: "Nagata Conjecture",
+    field: "Algebraic geometry, plane curves & interpolation",
+    date: "October 21, 2026",
+    isoDate: "2026-10-21",
+    outcome: "Proved",
+    status: "AI-originated proof reorganized, simplified and checked in a complete specialist exposition",
+    score: 5,
+    ai: "OpenAI's mathematics system generated the original proof. Algebraic geometer Jenia Tevelev then reconstructed the argument, simplified its architecture and wrote a self-contained human proof of the intended conjecture.",
+    summary:
+      "Proves Nagata's conjecture for at least ten very general points in the projective plane: every plane curve through the points with equal multiplicity has degree at least the square root of the number of points times that multiplicity.",
+    importance:
+      "5/5: resolves a central 1959 problem connecting linear systems, interpolation and birational geometry. The detailed specialist reconstruction supplies substantial human scrutiny beyond the original AI manuscript.",
+    source: "https://arxiv.org/abs/2610.30050",
+    sourceLabel: "View Tevelev's checked and simplified proof",
+    addedDate: "October 22, 2026",
+    addedIsoDate: "2026-10-22",
+  },
+  {
+    title: "Kozma–Nitzan Conjecture on Critical Percolation",
+    field: "Probability, percolation theory & harmonic analysis",
+    date: "October 21, 2026",
+    isoDate: "2026-10-21",
+    outcome: "Proved",
+    status: "AI-originated proof independently reconstructed in a complete specialist exposition",
+    score: 5,
+    ai: "OpenAI supplied the proof. Probability theorist Jean-Baptiste Gouéré independently worked through the argument and wrote a complete human exposition with the theorem, lemmas and estimates made explicit.",
+    summary:
+      "Proves the Kozma–Nitzan decay conjecture for the critical two-point function. As a consequence, critical Bernoulli bond percolation on the integer lattice has no infinite cluster in every dimension at least two, closing the dimensions left between the classical planar and high-dimensional results.",
+    importance:
+      "5/5: settles a major all-dimensional critical-percolation question. A full specialist reconstruction provides the detailed human checking required for Established status.",
+    source: "https://arxiv.org/abs/2610.30063",
+    sourceLabel: "View Gouéré's specialist exposition",
+    addedDate: "October 22, 2026",
+    addedIsoDate: "2026-10-22",
+  },
+  {
+    title: "Matrix-Multiplication Exponent at Most 9/4 over Every Field",
+    field: "Algebraic complexity, matrix multiplication & formal verification",
+    date: "October 21, 2026",
+    isoDate: "2026-10-21",
+    outcome: "Improved",
+    status: "Human specialist proof plus multiple independent Lean formalizations of the core bound",
+    score: 5,
+    ai: "OpenAI discovered the original complex-field argument. Three complexity researchers reconstructed and generalized it to every field and rectangular exponents; independent teams produced several Lean proofs of the central inequality.",
+    summary:
+      "Proves that the matrix-multiplication exponent is at most 9/4 over every field, extends the construction to rectangular matrix multiplication and identifies a sharp operational barrier for this method.",
+    importance:
+      "5/5: gives a field-uniform improvement to one of theoretical computer science's most important quantitative frontiers. The result has an unusually strong verification chain: a detailed human generalization and multiple independent machine-checked proofs.",
+    source: "https://arxiv.org/abs/2610.30054",
+    sourceLabel: "View specialist proof, generalization and verification history",
+    addedDate: "October 22, 2026",
+    addedIsoDate: "2026-10-22",
+  },
+  {
+    title: "Small Cohen–Macaulay Counterexamples in Every Dimension at Least Three",
+    field: "Commutative algebra, singularities & algebraic geometry",
+    date: "October 21, 2026",
+    isoDate: "2026-10-21",
+    outcome: "Disproved",
+    status: "AI-originated mechanism checked and generalized with complete specialist proofs",
+    score: 5,
+    ai: "An OpenAI manuscript supplied the core variance identity and the initial counterexample mechanism. Cristian Anghel checked the construction and developed complete human proofs extending it to all dimensions at least three.",
+    summary:
+      "Constructs complete local domains with isolated singularities and no small Cohen–Macaulay modules in every dimension at least three, disproving the expected existence statement throughout that range.",
+    importance:
+      "5/5: resolves a foundational existence problem in commutative algebra far beyond one isolated example. The new specialist manuscript gives complete proofs of both the base mechanism and its all-dimensional extension.",
+    source: "https://arxiv.org/abs/2610.30027",
+    sourceLabel: "View checked proof and all-dimensional generalization",
+    addedDate: "October 22, 2026",
+    addedIsoDate: "2026-10-22",
+  },
   {
     title: "Separation of Microstates and Non-Microstates Free Entropy",
     field: "Operator algebras, free probability & information geometry",
@@ -1731,6 +1803,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Improved Gauss Sphere-Problem Exponent from OpenAI's Quasi-GRH",
+    field: "Analytic number theory, lattice points & exponential sums",
+    date: "October 21, 2026",
+    isoDate: "2026-10-21",
+    outcome: "Improved",
+    status: "Conditional specialist result; depends on a newly claimed OpenAI quasi-GRH that remains under review",
+    score: 4,
+    ai: "OpenAI's quasi-generalized Riemann hypothesis supplies the decisive new zero-free input for the paper's strongest exponent; the author developed the lattice-point analysis and also proved a weaker unconditional improvement.",
+    summary:
+      "Improves the error term in the three-dimensional Gauss sphere problem. The strongest exponent, 2274811/1743872, is conditional on OpenAI's quasi-GRH; the same paper separately obtains an unconditional exponent of 55/42.",
+    importance:
+      "4/5: advances a classical lattice-point problem and shows a concrete downstream consequence of an AI-generated number-theory claim. The conditional improvement cannot be treated as established until the quasi-GRH proof itself receives stronger verification.",
+    source: "https://arxiv.org/abs/2610.29636",
+    sourceLabel: "View theorem, exponents and dependency",
+    addedDate: "October 22, 2026",
+    addedIsoDate: "2026-10-22",
+  },
   {
     title: "First-Order Strength of the Ordered Variable Word Theorem",
     field: "Reverse mathematics, computability theory & Ramsey theory",
@@ -4873,6 +4963,24 @@ const emergingResults: Result[] = [
 
 const physicsEstablishedResults: Result[] = [
   {
+    title: "Exact Non-Axisymmetric 3D MHD Equilibria without Stellarator Symmetry",
+    field: "Plasma physics, ideal magnetohydrodynamics & fusion",
+    date: "October 5, 2026",
+    isoDate: "2026-10-05",
+    outcome: "Demonstrated",
+    status: "Exact analytic solutions independently re-derived and symbolically checked by plasma specialists",
+    score: 5,
+    ai: "Gemini 4 Argon research agents proposed generalized equilibrium families that break stellarator symmetry. The human authors adversarially reviewed, independently re-derived and symbolically checked every derivation before rewriting the manuscript.",
+    summary:
+      "Constructs explicit three-dimensional ideal-MHD equilibria that are neither axisymmetric nor stellarator-symmetric, extending the AI-assisted counterexamples to Grad's conjecture and providing exact benchmarks for three-dimensional equilibrium solvers.",
+    importance:
+      "5/5: exact asymmetric equilibria address a long-standing structural question in plasma theory and are directly relevant to validating stellarator and fusion-plasma calculations. They are mathematical equilibrium solutions, not a new reactor experiment.",
+    source: "https://arxiv.org/abs/2610.07304",
+    sourceLabel: "View exact solutions and verification statement",
+    addedDate: "October 22, 2026",
+    addedIsoDate: "2026-10-22",
+  },
+  {
     title: "Nine-Loop Six-Particle Amplitude in Planar N=4 Super-Yang–Mills Theory",
     field: "Quantum field theory, scattering amplitudes & symbolic computation",
     date: "September 25, 2026",
@@ -5399,6 +5507,26 @@ const biologyEstablishedResults: Result[] = [
 ];
 
 const biologyEmergingResults: Result[] = [
+  {
+    title: "Single-Cell Digital Twins Nominate Aspirin plus Lansoprazole for Preterm-Birth Prevention",
+    field: "Maternal health, immunology & AI-guided drug repurposing",
+    date: "October 21, 2026",
+    isoDate: "2026-10-21",
+    outcome: "Discovered",
+    status: "Peer-reviewed preclinical evidence: retrospective human-data validation and an animal model; human efficacy trial has no results yet",
+    score: 4,
+    ai: "The SIMCO digital-twin system learned drug responses from roughly 250 million single immune cells and longitudinal data from 63 pregnancies, then simulated individualized effects of nine candidate regimens.",
+    summary:
+      "The model identified aspirin plus lansoprazole as a synergistic candidate predicted to delay the immune clock of labor far more than aspirin alone. The combination also delayed labor in an inflammatory pregnancy animal model, motivating a registered human trial.",
+    importance:
+      "4/5: AI connected single-cell immune mechanisms to a concrete repurposed-drug combination for a major cause of childhood mortality. This is not an established treatment: clinical safety and efficacy for preventing preterm birth remain unproven.",
+    source: "https://www.science.org/doi/10.1126/sciadv.aed2741",
+    secondarySource: "https://clinicaltrials.gov/study/NCT07337655",
+    sourceLabel: "View peer-reviewed Science Advances study",
+    secondarySourceLabel: "View registered human trial",
+    addedDate: "October 22, 2026",
+    addedIsoDate: "2026-10-22",
+  },
   {
     title: "Closed-Loop AI Discovery of Human-Protein Aptamer Binders",
     field: "Human molecular diagnostics, aptamer discovery & coagulation biology",
