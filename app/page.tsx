@@ -35,10 +35,48 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 22, 2026";
-const latestReviewIsoDate = "2026-10-22";
+const latestReviewDate = "October 23, 2026";
+const latestReviewIsoDate = "2026-10-23";
 
 const establishedResults: Result[] = [
+  {
+    title: "Barnette's Conjecture",
+    field: "Graph theory, planar graphs & Hamiltonian cycles",
+    date: "October 21, 2026",
+    isoDate: "2026-10-21",
+    outcome: "Proved",
+    status: "AI proof independently rebuilt and statement-checked, with a complete specialist exposition",
+    score: 5,
+    ai: "OpenAI generated the proof. Graph theorist Zhentao Li wrote a self-contained 14-page human exposition, while Cameron Nottingham independently rebuilt the Lean development, checked it against the intended statement and successfully compiled all 8,955 jobs using only standard axioms.",
+    summary:
+      "Proves that every 3-connected cubic bipartite planar graph has a Hamiltonian cycle, settling Barnette's long-standing conjecture.",
+    importance:
+      "5/5: resolves a prominent conjecture about Hamiltonicity in planar graphs. The independent executable reconstruction and full specialist exposition provide unusually strong verification for an AI-originated result.",
+    source: "https://arxiv.org/abs/2610.30490",
+    secondarySource: "https://github.com/cjnott1999/barnette-conjecture",
+    sourceLabel: "View the specialist exposition",
+    secondarySourceLabel: "View the independent Lean reconstruction",
+    addedDate: "October 23, 2026",
+    addedIsoDate: "2026-10-23",
+  },
+  {
+    title: "Imaginary Quadratic Fields of Class Number at Most 2000",
+    field: "Number theory, class groups & formal verification",
+    date: "October 15, 2026",
+    isoDate: "2026-10-15",
+    outcome: "Classified",
+    status: "Exact unconditional classification; decisive zero-free input formalized in Lean and checked by two kernels",
+    score: 4,
+    ai: "An OpenAI-derived zero-free argument supplied the decisive new analytic input. Iwao Kimura made the estimates explicit and formalized the discriminant bound in Lean; the authors report checks by two independent kernels and disclose additional AI assistance throughout the project.",
+    summary:
+      "Determines all 16,453,493 imaginary quadratic fields with class number at most 2000, with largest absolute discriminant 1,062,350,083. The result makes unconditional lists and counts that had previously depended on the generalized Riemann hypothesis.",
+    importance:
+      "4/5: extends an exact unconditional classification from class number 100 to 2000 and releases reproducible code and data. The machine-checked analytic bound supports Established status.",
+    source: "https://arxiv.org/abs/2610.21511",
+    sourceLabel: "View paper, verification and data links",
+    addedDate: "October 23, 2026",
+    addedIsoDate: "2026-10-23",
+  },
   {
     title: "Nagata Conjecture",
     field: "Algebraic geometry, plane curves & interpolation",
@@ -1803,6 +1841,42 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Optimal Steklov Lower Bounds on Curvilinear Polygons",
+    field: "Spectral theory, partial differential equations & corner singularities",
+    date: "October 22, 2026",
+    isoDate: "2026-10-22",
+    outcome: "Improved",
+    status: "New author-written preprint; no independent or formal verification yet",
+    score: 3,
+    ai: "ChatGPT 6 Astra suggested the regularized-trace and Dirichlet-to-Neumann corner-singularity ideas that opened the proof. The human authors then developed a conformal approach, substantially modified and simplified the arguments, and wrote the final paper.",
+    summary:
+      "Proves optimal lower bounds for the decay of harmonic extensions of Steklov eigenfunctions on curvilinear polygons and for their spectral distinguishability, showing that earlier upper estimates are sharp.",
+    importance:
+      "3/5: settles the optimality of quantitative estimates in a specialized spectral problem and clarifies how polygonal corners control boundary-to-interior behavior. Independent scrutiny is still needed.",
+    source: "https://arxiv.org/abs/2610.31387",
+    sourceLabel: "View theorem and contribution statement",
+    addedDate: "October 23, 2026",
+    addedIsoDate: "2026-10-23",
+  },
+  {
+    title: "Hilbert Shift Quotient Has Infinite Hilbert Distortion",
+    field: "Functional analysis, metric geometry & quotient spaces",
+    date: "October 22, 2026",
+    isoDate: "2026-10-22",
+    outcome: "Proved",
+    status: "New two-author preprint; the AI-found main proof has no independent or formal verification yet",
+    score: 3,
+    ai: "ChatGPT 5.5 found the proof of the main theorem, which the authors developed into the paper's argument.",
+    summary:
+      "Proves that the quotient of the unit sphere of an infinite-dimensional Hilbert space by the bilateral shift has infinite Hilbert distortion and therefore cannot embed bilipschitzly into Hilbert space, answering a question of Cahill, Iverson and Mixon.",
+    importance:
+      "3/5: resolves a concrete open embedding problem and supplies a new obstruction for nonlinear Hilbert geometry. The claim currently rests on a single new preprint.",
+    source: "https://arxiv.org/abs/2610.31468",
+    sourceLabel: "View proof and AI attribution",
+    addedDate: "October 23, 2026",
+    addedIsoDate: "2026-10-23",
+  },
   {
     title: "Improved Gauss Sphere-Problem Exponent from OpenAI's Quasi-GRH",
     field: "Analytic number theory, lattice points & exponential sums",
@@ -5119,6 +5193,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Critical Two-Dimensional KPZ Process",
+    field: "Stochastic PDEs, statistical physics & random growth",
+    date: "October 22, 2026",
+    isoDate: "2026-10-22",
+    outcome: "Demonstrated",
+    status: "New 84-page, 11-author specialist preprint; independent validation remains pending",
+    score: 5,
+    ai: "ChatGPT 5.5, 5.6 and 6 contributed substantially to the proof by combining earlier advances in novel ways during an extended community project. The specialist authors state that they checked and developed the resulting argument.",
+    summary:
+      "Constructs a nontrivial distribution-valued solution to the critical two-dimensional Kardar-Parisi-Zhang equation as a limit of directed-polymer log partition functions. The process is non-Gaussian, has logarithmic-logarithmic covariance divergence and exhibits Gaussian fluctuations under spatial averaging.",
+    importance:
+      "5/5: gives a mathematical construction at the critical point of a central universal model of random interface growth, after roughly a decade of precursor work. It remains under review because the long new argument has not yet received independent confirmation.",
+    source: "https://arxiv.org/abs/2610.31614",
+    sourceLabel: "View construction and contribution statement",
+    addedDate: "October 23, 2026",
+    addedIsoDate: "2026-10-23",
+  },
   {
     title: "High-Temperature Central Limit Theorem for the SYK Model",
     field: "Quantum statistical mechanics, disordered systems & probability",
