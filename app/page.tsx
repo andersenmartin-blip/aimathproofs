@@ -35,10 +35,48 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 25, 2026";
-const latestReviewIsoDate = "2026-10-25";
+const latestReviewDate = "October 26, 2026";
+const latestReviewIsoDate = "2026-10-26";
 
 const establishedResults: Result[] = [
+  {
+    title: "Propeller Conjecture",
+    field: "Gaussian geometry, probability & approximation algorithms",
+    date: "October 23, 2026",
+    isoDate: "2026-10-23",
+    outcome: "Proved",
+    status: "OpenAI's proof independently simplified and strengthened in a complete specialist manuscript",
+    score: 4,
+    ai: "OpenAI's mathematics system produced the original proof. Steven Heilman independently reworked it into a shorter human proof, removed the epsilon-net computer search from the three-dimensional case and established the equality classification.",
+    summary:
+      "Proves the Khot–Naor propeller conjecture: for every measurable partition of Euclidean space, the sum of the squared Gaussian centroid lengths is at most 9/(8π), with equality only for three 120-degree planar sectors, up to the natural symmetries and products.",
+    importance:
+      "4/5: settles a 2008 Gaussian-partition conjecture with consequences for approximation algorithms and Grothendieck-type inequalities. The independent specialist proof supplies substantial human scrutiny and strengthens the original AI result.",
+    source: "https://arxiv.org/abs/2610.32158",
+    sourceLabel: "View the independent specialist proof",
+    addedDate: "October 26, 2026",
+    addedIsoDate: "2026-10-26",
+  },
+  {
+    title: "Frame-Indifferent Rank-One Convexity Does Not Imply Quasiconvexity in Three Dimensions",
+    field: "Calculus of variations, nonlinear elasticity & formal verification",
+    date: "October 22, 2026",
+    isoDate: "2026-10-22",
+    outcome: "Disproved",
+    status: "Main theorems formally verified in Lean 4; authors checked the mathematical proof and its formal statements",
+    score: 4,
+    ai: "Claude Opus 5.5 assisted the construction, proofs, symbolic and numerical calculations, then wrote the entire Lean 4 formalization under the authors' guidance. The authors checked every paper argument and the formal theorem statements.",
+    summary:
+      "Constructs a smooth frame-indifferent energy density on 3×3 matrices that is rank-one convex but not quasiconvex, giving the first known counterexample compatible with the left-rotation invariance required in nonlinear elasticity.",
+    importance:
+      "4/5: resolves a structural open question at the interface of the calculus of variations and elasticity. The explicit construction and released kernel-checked formalization make the result unusually reproducible; the stronger isotropic case remains open.",
+    source: "https://arxiv.org/abs/2610.31886",
+    secondarySource: "https://github.com/sergioconti/so3-r1c-and-not-qc",
+    sourceLabel: "View paper and verification statement",
+    secondarySourceLabel: "View the Lean 4 formalization",
+    addedDate: "October 26, 2026",
+    addedIsoDate: "2026-10-26",
+  },
   {
     title: "Barnette's Conjecture",
     field: "Graph theory, planar graphs & Hamiltonian cycles",
@@ -1841,6 +1879,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Two-Fixed-Point Hamiltonian Diffeomorphism on S² × S²",
+    field: "Symplectic geometry, Hamiltonian dynamics & fixed points",
+    date: "September 27, 2026",
+    isoDate: "2026-09-27",
+    outcome: "Disproved",
+    status: "Substantially revised author preprint; no independent specialist or formal verification located",
+    score: 5,
+    ai: "ChatGPT 6 Astra proposed the decisive use of a second-kind generating function and carried out most computations after Hao Jiao supplied the limit-behavior approach.",
+    summary:
+      "Constructs a smooth Hamiltonian diffeomorphism of the equal-area symplectic product S² × S² with exactly two fixed points, which would refute Arnold's proposed degenerate fixed-point conjecture on this standard manifold.",
+    importance:
+      "5/5: if correct, this is a sharp counterexample to a major fixed-point expectation in symplectic topology. The October 23 revision adds detailed local and global arguments, but the absence of independent checking keeps it under review.",
+    source: "https://arxiv.org/abs/2609.33626",
+    sourceLabel: "View revised construction and AI attribution",
+    addedDate: "October 26, 2026",
+    addedIsoDate: "2026-10-26",
+  },
   {
     title: "Optimal Steklov Lower Bounds on Curvilinear Polygons",
     field: "Spectral theory, partial differential equations & corner singularities",
