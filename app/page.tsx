@@ -35,10 +35,28 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 26, 2026";
-const latestReviewIsoDate = "2026-10-26";
+const latestReviewDate = "October 27, 2026";
+const latestReviewIsoDate = "2026-10-27";
 
 const establishedResults: Result[] = [
+  {
+    title: "Harary–Hill Conjecture",
+    field: "Topological graph theory & crossing numbers",
+    date: "October 25, 2026",
+    isoDate: "2026-10-25",
+    outcome: "Proved",
+    status: "OpenAI proof independently reconstructed, simplified and extended in a complete specialist exposition",
+    score: 5,
+    ai: "OpenAI's mathematics system produced the original proof. Combinatorics specialist Martin Balko independently worked through it, streamlined several difficult steps and combined it with known reductions for further graph families.",
+    summary:
+      "Proves the Harary–Hill formula for the crossing number of every complete graph K_n, settling the long-standing conjecture that the standard construction has the minimum possible number of crossings.",
+    importance:
+      "5/5: resolves a central problem in topological graph theory open since the 1960s. The independent 16-page specialist reconstruction supplies substantial human scrutiny and also determines crossing numbers for several related graph families.",
+    source: "https://arxiv.org/abs/2610.34444",
+    sourceLabel: "View the independent specialist exposition",
+    addedDate: "October 27, 2026",
+    addedIsoDate: "2026-10-27",
+  },
   {
     title: "Propeller Conjecture",
     field: "Gaussian geometry, probability & approximation algorithms",
@@ -1879,6 +1897,132 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Symplectic Singularities Are HyperKähler Cones",
+    field: "Algebraic geometry, symplectic singularities & hyperKähler geometry",
+    date: "October 26, 2026",
+    isoDate: "2026-10-26",
+    outcome: "Proved",
+    status: "Author-verified 42-page preprint; no independent specialist or formal verification located",
+    score: 5,
+    ai: "ChatGPT Astra, Claude Fable and their agent services developed the technical route for removing the smoothability and globalizability hypotheses from earlier human work. Yuji Odaka then spent more than six weeks understanding, checking, expanding and editing the proof and accepts responsibility for it.",
+    summary:
+      "Claims that every symplectic singularity germ is analytically equivalent to the vertex of a conical symplectic variety and carries a hyperKähler cone structure on its smooth locus; it is consequently K-polystable.",
+    importance:
+      "5/5: would remove the remaining hypotheses from a Kaledin-inspired structural program and give a sweeping geometric description of all symplectic singularities. The author performed detailed checking, but the breadth and technical depth warrant independent review.",
+    source: "https://arxiv.org/abs/2610.35510",
+    sourceLabel: "View theorem and detailed AI-use statement",
+    addedDate: "October 27, 2026",
+    addedIsoDate: "2026-10-27",
+  },
+  {
+    title: "Arbitrary Trace Values in Reduced Group C*-Algebras",
+    field: "Operator algebras, K-theory & geometric group theory",
+    date: "October 26, 2026",
+    isoDate: "2026-10-26",
+    outcome: "Proved",
+    status: "Single-author 57-page preprint; independent scrutiny pending",
+    score: 4,
+    ai: "Guoliang Yu's construction explicitly builds on OpenAI's proof framework, using its new operator-algebraic input as the starting point for the expander and semidirect-product construction.",
+    summary:
+      "For every real r between zero and one, constructs a finitely generated group whose reduced group C*-algebra contains a projection with canonical trace r. For irrational r, its K-class lies outside the image of the reduced Baum–Connes map.",
+    importance:
+      "4/5: realizes every possible interior trace value and produces new obstructions to reduced Baum–Connes surjectivity while retaining the maximal strong Novikov property. The result is broad but still an unrefereed specialist preprint.",
+    source: "https://arxiv.org/abs/2610.35674",
+    sourceLabel: "View construction and OpenAI dependence",
+    addedDate: "October 27, 2026",
+    addedIsoDate: "2026-10-27",
+  },
+  {
+    title: "Endpoint Gradient Bound for Centered Convex Maximal Operators",
+    field: "Harmonic analysis, Sobolev regularity & convex geometry",
+    date: "October 26, 2026",
+    isoDate: "2026-10-26",
+    outcome: "Proved",
+    status: "Single-author 62-page preprint; independent checking pending",
+    score: 4,
+    ai: "Zhouyu Long extends the scalar refinement, direction-history construction and global assembly introduced in OpenAI's planar centered-disk proof to higher dimensions and general smooth convex bodies.",
+    summary:
+      "Establishes the endpoint W^{1,1} gradient estimate for centered homothetic maximal averages in every dimension at least two over any fixed convex body with C^{1,θ} boundary, including centered ball maximal operators.",
+    importance:
+      "4/5: resolves the smooth-convex-body endpoint in all higher dimensions and adds sharp transfer results for probability kernels. The arbitrary C¹ and nonsmooth convex cases remain open.",
+    source: "https://arxiv.org/abs/2610.35760",
+    sourceLabel: "View theorem and method lineage",
+    addedDate: "October 27, 2026",
+    addedIsoDate: "2026-10-27",
+  },
+  {
+    title: "Asymptotic Rank of Complete-Graph Tensors",
+    field: "Algebraic complexity, tensor rank & combinatorics",
+    date: "October 25, 2026",
+    isoDate: "2026-10-25",
+    outcome: "Proved",
+    status: "Single-author 55-page preprint; independent scrutiny pending",
+    score: 4,
+    ai: "The proof extends the polynomial-multiplication method introduced by OpenAI in its matrix-multiplication bound, separating multiple shared tensor legs and deriving the higher-order entropy inequality needed here.",
+    summary:
+      "Pins the base-two asymptotic-rank exponent of the complete-graph tensor between floor(n²/4) and n²/4: exact for even n and within one quarter for odd n. This answers a question of Christandl, Vrana and Zuiddam and proves a matching barrier for the method.",
+    importance:
+      "4/5: gives an exact infinite family and a nearly exact answer in every remaining case, while explaining why the polynomial construction cannot close the odd-n gap. It remains a new unrefereed proof.",
+    source: "https://arxiv.org/abs/2610.34273",
+    sourceLabel: "View bounds, answered question and method barrier",
+    addedDate: "October 27, 2026",
+    addedIsoDate: "2026-10-27",
+  },
+  {
+    title: "Three Nil-Ring and Jacobson-Radical Questions",
+    field: "Ring theory, nil algebras & Jacobson radicals",
+    date: "October 25, 2026",
+    isoDate: "2026-10-25",
+    outcome: "Disproved",
+    status: "Single-author eight-page preprint with explicit constructions; independent scrutiny pending",
+    score: 4,
+    ai: "Aristotle by Harmonic assisted in finding the constructions that answer the three stated questions; the author presents the resulting proofs and explicit algebraic framework.",
+    summary:
+      "Constructs counterexamples to two finite-generation questions for nil rings and Lie algebras, and—over fields algebraic over their prime subfield—to the question whether a finitely presented algebra must have nil Jacobson radical.",
+    importance:
+      "4/5: answers questions posed in 2001, 2007 and 2015 with compact counterexamples, including a ten-generator construction. The claims are concrete but have not yet received independent specialist validation.",
+    source: "https://arxiv.org/abs/2610.34463",
+    sourceLabel: "View questions, constructions and AI attribution",
+    addedDate: "October 27, 2026",
+    addedIsoDate: "2026-10-27",
+  },
+  {
+    title: "Adaptive Borsuk–Ulam Measurement Lower Bound",
+    field: "Functional analysis, topology & information-based complexity",
+    date: "October 24, 2026",
+    isoDate: "2026-10-24",
+    outcome: "Proved",
+    status: "Single-author nine-page preprint with documented AI development; independent review pending",
+    score: 3,
+    ai: "Claude Fable 5 found the main proof idea. Mario Ullrich developed it into the theorem and documents the human–AI research process in the manuscript.",
+    summary:
+      "Shows that if 2^n is at most m, any n adaptively chosen continuous measurements agree on two antipodal points of an m-dimensional sphere. At least ceil(log₂(m+1)) measurements are therefore needed for sub-radius recovery, within one of the known upper bound.",
+    importance:
+      "3/5: supplies a near-tight topological lower bound for adaptive information and extends to Bernstein widths in Banach spaces. It is a clean new theorem, though narrower than the field-wide conjectures tracked here.",
+    source: "https://arxiv.org/abs/2610.33781",
+    sourceLabel: "View theorem and documented AI contribution",
+    addedDate: "October 27, 2026",
+    addedIsoDate: "2026-10-27",
+  },
+  {
+    title: "Near-Optimal Lower Bound for ℓₚ Subspace Embeddings",
+    field: "Algorithms, functional analysis & dimensionality reduction",
+    date: "August 14, 2026",
+    isoDate: "2026-08-14",
+    outcome: "Improved",
+    status: "Revised single-author preprint; independent specialist validation pending",
+    score: 3,
+    ai: "ChatGPT 6 Pro originated the central technical idea for the hard instance; the October 25 revision simplifies that construction and explicitly discloses the AI contribution.",
+    summary:
+      "For fixed p not an even integer, proves an embedding-dimension lower bound of order d/ε² up to polylogarithmic factors. For 1≤p<2 this is optimal up to logarithms and improves the previous lower bound by a factor essentially linear in d.",
+    importance:
+      "3/5: nearly closes the dimension dependence for a core subspace-sketching problem. The result was first posted in August and enters this review after its materially clarified October revision and AI attribution.",
+    source: "https://arxiv.org/abs/2608.14201",
+    sourceLabel: "View revised proof and AI attribution",
+    addedDate: "October 27, 2026",
+    addedIsoDate: "2026-10-27",
+  },
   {
     title: "Two-Fixed-Point Hamiltonian Diffeomorphism on S² × S²",
     field: "Symplectic geometry, Hamiltonian dynamics & fixed points",
@@ -5249,6 +5393,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Boundary-Condition Independence of the S=1 J–D Chain Ground State",
+    field: "Quantum statistical mechanics, spin chains & mathematical physics",
+    date: "October 25, 2026",
+    isoDate: "2026-10-25",
+    outcome: "Demonstrated",
+    status: "Single-author 32-page analytical preprint using OpenAI numerical inputs; independent validation pending",
+    score: 4,
+    ai: "Hal Tasaki formulated the problem and basic strategy. ChatGPT Astra made substantial contributions to the inductive estimates and completion of the proof, extending analytic machinery and numerical inputs from OpenAI's Haldane-gap work.",
+    summary:
+      "Proves that specified periodic and open finite S=1 antiferromagnetic chains converge along their full sequences to the same infinite-chain ground state for sufficiently small anisotropy. The common limit is symmetric, locally unique and gapped, with observables continuous in the anisotropy.",
+    importance:
+      "4/5: establishes rigorous boundary-condition independence and supplies input for studying the Haldane phase transition. The theorem covers two specified boundary constructions, not uniqueness among every possible infinite-chain ground state.",
+    source: "https://arxiv.org/abs/2610.34330",
+    sourceLabel: "View theorem, scope and AI contribution",
+    addedDate: "October 27, 2026",
+    addedIsoDate: "2026-10-27",
+  },
   {
     title: "Critical Two-Dimensional KPZ Process",
     field: "Stochastic PDEs, statistical physics & random growth",
