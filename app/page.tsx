@@ -35,10 +35,28 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 27, 2026";
-const latestReviewIsoDate = "2026-10-27";
+const latestReviewDate = "October 28, 2026";
+const latestReviewIsoDate = "2026-10-28";
 
 const establishedResults: Result[] = [
+  {
+    title: "Smale's Mean Value Problem",
+    field: "Complex analysis, polynomial critical points & interval arithmetic",
+    date: "October 26, 2026",
+    isoDate: "2026-10-26",
+    outcome: "Disproved",
+    status: "AI counterexample independently digested by two specialists, with an explicit example verified by interval arithmetic",
+    score: 5,
+    ai: "GPT-6 Astra found the original counterexample. Tom Adamczewski and Matthew J. Colbrook independently extracted the geometric mechanism, developed a human proof and certified an explicit degree-29,984 example by interval arithmetic.",
+    summary:
+      "Disproves Smale's mean value conjecture by turning a boundary-geometric re-entry mechanism into polynomial counterexamples in every sufficiently large degree, while also describing the critical points and their limiting distribution.",
+    importance:
+      "5/5: resolves a prominent long-standing problem in complex analysis with both a conceptual human explanation and a rigorous explicit certificate. The independent reconstruction goes well beyond merely restating the AI output.",
+    source: "https://arxiv.org/abs/2610.36158",
+    sourceLabel: "View the independent specialist analysis",
+    addedDate: "October 28, 2026",
+    addedIsoDate: "2026-10-28",
+  },
   {
     title: "Harary–Hill Conjecture",
     field: "Topological graph theory & crossing numbers",
@@ -1952,6 +1970,46 @@ const emergingResults: Result[] = [
     addedIsoDate: "2026-10-27",
   },
   {
+    title: "Local Smoothing for the Euclidean Wave Equation",
+    field: "Harmonic analysis, partial differential equations & formal verification",
+    date: "October 25, 2026",
+    isoDate: "2026-10-25",
+    outcome: "Proved",
+    status: "Raw AI manuscript and accompanying Lean development released; independent specialist review remains pending",
+    score: 5,
+    ai: "An internal OpenAI mathematics model produced the natural-language proof using a new auxiliary partial differential equation. OpenAI subsequently formalized the result in Lean and released both artifacts for public examination.",
+    summary:
+      "Claims Sogge's sharp local-smoothing estimates for Euclidean waves in every spatial dimension at least two. The result also yields the Kakeya maximal and dimension conjectures, spherical restriction estimates and several related sharp harmonic-analysis bounds.",
+    importance:
+      "5/5: would settle several foundational conjectures in harmonic analysis at once, including full-dimensional Kakeya sets in every dimension. The released Lean scope is unusually strong evidence, but an independent rebuild and mathematical audit are still needed.",
+    source: "https://github.com/openai/math/blob/main/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf",
+    secondarySource: "https://github.com/openai/math/blob/main/lean/docs/079.md",
+    sourceLabel: "View the released AI manuscript",
+    secondarySourceLabel: "View formalization scope",
+    addedDate: "October 28, 2026",
+    addedIsoDate: "2026-10-28",
+  },
+  {
+    title: "The Exponential Time Hypothesis Is False",
+    field: "Computational complexity, exact counting & formal verification",
+    date: "October 25, 2026",
+    isoDate: "2026-10-25",
+    outcome: "Disproved",
+    status: "Raw AI manuscript and Lean development released; an independent expert working group has begun examination",
+    score: 5,
+    ai: "An internal OpenAI mathematics model produced the natural-language disproof and deterministic counting algorithm. OpenAI formalized the core result in Lean; a group led by Russell Impagliazzo, Ramamohan Paturi and Ryan Williams is independently examining it.",
+    summary:
+      "Claims a deterministic, polynomial-space algorithm that exactly counts satisfying assignments of every fixed-width CNF formula in subexponential time. The 3-CNF case would refute the widely used Exponential Time Hypothesis.",
+    importance:
+      "5/5: if the released artifacts withstand independent review, the result overturns a central complexity assumption underpinning hundreds of conditional lower bounds. The announced expert examination is not yet complete.",
+    source: "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+    secondarySource: "https://github.com/openai/math/blob/main/lean/docs/378.md",
+    sourceLabel: "View the released AI manuscript",
+    secondarySourceLabel: "View formalization scope",
+    addedDate: "October 28, 2026",
+    addedIsoDate: "2026-10-28",
+  },
+  {
     title: "Asymptotic Rank of Complete-Graph Tensors",
     field: "Algebraic complexity, tensor rank & combinatorics",
     date: "October 25, 2026",
@@ -2735,15 +2793,15 @@ const emergingResults: Result[] = [
     "outcome": "Proved",
     "score": 5,
     "ai": "OpenAI's unreleased internal frontier model produced the proposed proof. The official release explicitly identifies CM Hodge as an exception to its standard fixed evaluation procedure; further process details are not specified.",
-    "status": "Retained CM-abelian-variety claim; three dependent K3/Weil-class companion manuscripts were withdrawn October 7 after a sign error; no linked Lean formalization or independent validation located",
+    "status": "Retained CM-abelian-variety claim; a Lean formalization of the main statement was added October 26, but no independent rebuild or intended-statement audit is established",
     "title": "Rational Hodge Conjecture for CM Abelian Varieties",
     "field": "Algebraic geometry",
     "summary": "Claims that every rational Hodge class on every complex abelian variety with complex multiplication is algebraic, in all dimensions and codimensions. The manuscript was released October 6 and revised in the October 7 repository update. The retained CM result describes consequences for the Tate conjecture over finite fields and the Hodge standard conjecture for abelian varieties; withdrawn K3 companion claims are not included in this entry.",
     "importance": "5/5: would resolve a major broad case of a Millennium Prize problem, with deep arithmetic consequences. It is not the full Hodge conjecture for arbitrary smooth projective varieties, and the claimed implications depend on the new proof being correct.",
     "source": "https://github.com/openai/math/blob/main/preprints/The-rational-Hodge-conjecture-for-CM-abelian-varieties-October-6-2026/paper.pdf",
-    "secondarySource": "https://github.com/openai/math/blob/main/preprints/The-rational-Hodge-conjecture-for-CM-abelian-varieties-October-6-2026/build/sections/01-introduction.tex",
+    "secondarySource": "https://github.com/openai/math/blob/main/lean/docs/032.md",
     "sourceLabel": "View research manuscript",
-    "secondarySourceLabel": "View companion source"
+    "secondarySourceLabel": "View formalization scope"
   },
   {
     "date": "October 6, 2026",
@@ -5394,18 +5452,18 @@ const physicsEstablishedResults: Result[] = [
 
 const physicsEmergingResults: Result[] = [
   {
-    title: "Boundary-Condition Independence of the S=1 J–D Chain Ground State",
+    title: "Uniqueness of Translation-Invariant S=1 Heisenberg and J–D Ground States",
     field: "Quantum statistical mechanics, spin chains & mathematical physics",
     date: "October 25, 2026",
     isoDate: "2026-10-25",
     outcome: "Demonstrated",
-    status: "Single-author 32-page analytical preprint using OpenAI numerical inputs; independent validation pending",
+    status: "Substantially strengthened 46-page v2 analytical preprint using OpenAI numerical inputs; independent validation pending",
     score: 4,
-    ai: "Hal Tasaki formulated the problem and basic strategy. ChatGPT Astra made substantial contributions to the inductive estimates and completion of the proof, extending analytic machinery and numerical inputs from OpenAI's Haldane-gap work.",
+    ai: "Hal Tasaki formulated the problems and core strategies. ChatGPT Astra made substantial contributions to developing the proofs and preparing the manuscript, extending analytic machinery and numerical inputs from OpenAI's Haldane-gap work.",
     summary:
-      "Proves that specified periodic and open finite S=1 antiferromagnetic chains converge along their full sequences to the same infinite-chain ground state for sufficiently small anisotropy. The common limit is symmetric, locally unique and gapped, with observables continuous in the anisotropy.",
+      "Proves uniqueness among all translation-invariant operator-algebraic ground states of the infinite S=1 Heisenberg chain and of the J–D model for sufficiently small anisotropy, without assuming a gap or spin symmetry for a competitor. It also proves full-sequence convergence for periodic and open finite chains.",
     importance:
-      "4/5: establishes rigorous boundary-condition independence and supplies input for studying the Haldane phase transition. The theorem covers two specified boundary constructions, not uniqueness among every possible infinite-chain ground state.",
+      "4/5: the strengthened theorem gives a rigorous uniqueness result for the Haldane phase, not merely boundary-condition independence. It still does not establish uniqueness among arbitrary nontranslation-invariant infinite-chain ground states.",
     source: "https://arxiv.org/abs/2610.34330",
     sourceLabel: "View theorem, scope and AI contribution",
     addedDate: "October 27, 2026",
