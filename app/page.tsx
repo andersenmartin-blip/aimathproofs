@@ -35,10 +35,28 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 28, 2026";
-const latestReviewIsoDate = "2026-10-28";
+const latestReviewDate = "October 29, 2026";
+const latestReviewIsoDate = "2026-10-29";
 
 const establishedResults: Result[] = [
+  {
+    title: "Structure of Khovanov Local Equivalence Groups",
+    field: "Knot theory, Khovanov homology & smooth concordance",
+    date: "October 27, 2026",
+    isoDate: "2026-10-27",
+    outcome: "Classified",
+    status: "Specialist author checked the AI-developed results; no independent audit or formalization located",
+    score: 4,
+    ai: "Anthropic Claude models carried out most of the research with modest prompting from Robert Lipshitz. Lipshitz checked the results, supplied corrections where noted and wrote the final paper.",
+    summary:
+      "Determines substantial new structure in Khovanov local-equivalence groups, including independent infinite 2-torsion subgroups, infinite-rank free direct summands and at least six new integer-valued smooth-concordance homomorphisms.",
+    importance:
+      "4/5: answers explicit structural questions from earlier work and adds several new concordance invariants. A leading specialist performed detailed checking, but independent scrutiny and machine verification are still absent.",
+    source: "https://arxiv.org/abs/2610.37595",
+    sourceLabel: "View the paper and detailed AI-use statement",
+    addedDate: "October 29, 2026",
+    addedIsoDate: "2026-10-29",
+  },
   {
     title: "Smale's Mean Value Problem",
     field: "Complex analysis, polynomial critical points & interval arithmetic",
@@ -452,20 +470,22 @@ const establishedResults: Result[] = [
     "sourceLabel": "Read the manuscript and AI contribution statement"
   },
   {
-    "title": "Heterogeneous Hegselmann–Krause Freezing and Pseudostability Conjectures",
+    "title": "Non-Convergence in Heterogeneous Hegselmann–Krause Models",
     "field": "Dynamical systems & mathematical opinion models",
     "outcome": "Disproved",
     "score": 3,
-    "status": "Explicit counterexamples verified by hand by the three specialist authors; no machine-checked formalization claimed",
-    "ai": "Claude Opus 5.5 found all included counterexamples after prompting; Peter Hegarty, Damiano Ognissanti and Edvin Wedin verified them and wrote the paper",
-    "summary": "Counterexamples invalidate finite-time freezing of the proximity digraph, pseudostable convergence, and associated claims in heterogeneous bounded-confidence and bounded-influence models. The broader conjecture that every trajectory converges remains open.",
-    "importance": "Repairs foundational claims about heterogeneous opinion dynamics while carefully preserving the unresolved main convergence question. The authors excluded further AI computations they had not verified.",
-    "source": "https://arxiv.org/abs/2610.03229",
-    "date": "October 2, 2026",
-    "isoDate": "2026-10-02",
+    "status": "Explicit AI-found trajectories and counterexamples verified by the three specialist authors across two manuscripts; no machine formalization claimed",
+    "ai": "Claude Opus 5.5 found the earlier auxiliary counterexamples; an AI system also helped locate the final bounded-influence non-convergent trajectory. Peter Hegarty, Damiano Ognissanti and Edvin Wedin verified the constructions and wrote the papers.",
+    "summary": "An explicit synchronized bounded-influence trajectory does not converge, resolving the principal 2012 conjecture negatively. Together with the bounded-confidence counterexample and the earlier failures of freezing and pseudostability, both standard heterogeneous models can fail to converge.",
+    "importance": "3/5: completes a correction of the 2012 heterogeneous opinion-dynamics framework and shows that heterogeneity can prevent convergence in both principal models. The evidence is explicit and author-checked, but not independently formalized.",
+    "source": "https://arxiv.org/abs/2610.37246",
+    "secondarySource": "https://arxiv.org/abs/2610.03229",
+    "secondarySourceLabel": "View the earlier auxiliary counterexamples",
+    "date": "October 27, 2026",
+    "isoDate": "2026-10-27",
     "addedDate": "October 5, 2026",
     "addedIsoDate": "2026-10-05",
-    "sourceLabel": "Read the manuscript and AI contribution statement"
+    "sourceLabel": "Read the final non-convergence manuscript"
   },
   {
     title: "Borowiecki–Broere Generalized Total Colouring Conjecture for Planar Graphs",
@@ -1915,6 +1935,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Boundary Plateau Laws for Soap Films Containing a Line",
+    field: "Geometric measure theory, minimal surfaces & soap-film geometry",
+    date: "October 27, 2026",
+    isoDate: "2026-10-27",
+    outcome: "Classified",
+    status: "Two-author specialist preprint; independent checking and formal verification pending",
+    score: 4,
+    ai: "An unnamed large language model supplied the main idea and drafted the manuscript under the guidance of Camillo De Lellis and Federico Glaudo, who directed the argument and take responsibility for the result.",
+    summary:
+      "Classifies every two-dimensional Almgren-minimizing cone in three-dimensional space that contains a line, leaving exactly four local boundary geometries for soap films. The new argument removes earlier candidate configurations and replaces computer-assisted steps with a medial-axis proof.",
+    importance:
+      "4/5: provides a complete rigorous classification of boundary singularities for a fundamental variational model. The expert authors have developed the proof, but the result remains a new preprint without outside verification.",
+    source: "https://arxiv.org/abs/2610.37560",
+    sourceLabel: "View the classification and AI contribution statement",
+    addedDate: "October 29, 2026",
+    addedIsoDate: "2026-10-29",
+  },
   {
     title: "Symplectic Singularities Are HyperKähler Cones",
     field: "Algebraic geometry, symplectic singularities & hyperKähler geometry",
@@ -5875,6 +5913,46 @@ const biologyEstablishedResults: Result[] = [
 ];
 
 const biologyEmergingResults: Result[] = [
+  {
+    title: "Compact AI-Designed Signaling Domains Improve CAR T-Cell Function",
+    field: "Cancer immunotherapy, synthetic biology & CAR-T engineering",
+    date: "October 27, 2026",
+    isoDate: "2026-10-27",
+    outcome: "Improved",
+    status: "Preclinical laboratory study in primary human T cells and cell models; no animal, independent or clinical validation",
+    score: 4,
+    ai: "Tool-using AI agents searched the literature and proposed intracellular-domain sequences over three experimental rounds. Generate Biomedicines scientists reviewed the designs and fed laboratory measurements back into later rounds.",
+    summary:
+      "Agent-guided design produced a 45-amino-acid CAR intracellular domain, under one third the length of a clinical reference, with higher surface expression, stronger antigen-driven signaling and more durable target-cell killing in laboratory assays.",
+    importance:
+      "4/5: the work uses a genuine design–build–test loop to discover a compact signaling architecture rather than merely predicting an endpoint. It is an early engineering result, not evidence that the construct is safe or effective in patients.",
+    source: "https://generatebiomedicines.com/publications/refactored-intracellular-domains-enhance-car-expression-and-function/",
+    secondarySource: "https://www.anthropic.com/research/early-progress-drug-development",
+    sourceLabel: "View the experimental preprint",
+    secondarySourceLabel: "View the collaboration overview",
+    addedDate: "October 29, 2026",
+    addedIsoDate: "2026-10-29",
+  },
+  {
+    title: "Claude-Designed IgE Antibody Arms for Food-Allergy Drug Discovery",
+    field: "Food allergy, therapeutic antibodies & protein design",
+    date: "October 27, 2026",
+    isoDate: "2026-10-27",
+    outcome: "Designed",
+    status: "Early preclinical in-vitro hits reported by the collaborating developer; complete two-arm antibody, cell safety, animal and clinical tests remain undone",
+    score: 3,
+    ai: "Claude turned the therapeutic goal into a staged design plan and generated roughly 35,000 sequences over 22 largely autonomous runs, using structure models and Divergence Labs tools to nominate candidates for wet-lab testing.",
+    summary:
+      "Laboratory screening found 20 disruptor-arm designs that measurably displaced receptor-bound IgE and three anchor arms that bound IgE. Three disruptor hits appeared to outperform omalizumab in the reported biophysical assay, but the two functions have not yet been combined in one molecule.",
+    importance:
+      "3/5: AI materially accelerated the search for components of a more complex food-allergy antibody mechanism and produced experimentally active hits. These are subcomponents, not a drug, and all evidence comes from the partner collaboration without independent replication.",
+    source: "https://divergencelabs.com/publications/ige-preprint.pdf",
+    secondarySource: "https://www.anthropic.com/research/early-progress-drug-development",
+    sourceLabel: "View the technical report",
+    secondarySourceLabel: "View the experimental summary and limitations",
+    addedDate: "October 29, 2026",
+    addedIsoDate: "2026-10-29",
+  },
   {
     title: "Single-Cell Digital Twins Nominate Aspirin plus Lansoprazole for Preterm-Birth Prevention",
     field: "Maternal health, immunology & AI-guided drug repurposing",
