@@ -35,10 +35,28 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 29, 2026";
-const latestReviewIsoDate = "2026-10-29";
+const latestReviewDate = "October 30, 2026";
+const latestReviewIsoDate = "2026-10-30";
 
 const establishedResults: Result[] = [
+  {
+    title: "Spectral Isometry Conjecture for Unital C*-Algebras",
+    field: "Operator algebras, spectral geometry & Jordan structure",
+    date: "October 29, 2026",
+    isoDate: "2026-10-29",
+    outcome: "Proved",
+    status: "AI proof independently digested into a concise human proof by two operator-algebra specialists",
+    score: 4,
+    ai: "GPT-6 Astra found the proof. Matthew J. Colbrook and George Stepaniants independently extracted the argument, verified its steps and rewrote it as a self-contained nine-page human proof.",
+    summary:
+      "Proves that every unital surjective complex-linear spectral isometry between unital C*-algebras is a Jordan isomorphism. In the non-unital case it is a central-unitary multiple of one, settling the long-standing spectral isometry conjecture.",
+    importance:
+      "4/5: gives a broad structural classification for spectrum-preserving maps on C*-algebras. The two-author specialist reconstruction provides substantial human checking, though no formalization or further independent audit is yet available.",
+    source: "https://arxiv.org/abs/2610.40470",
+    sourceLabel: "View the specialist proof and AI-use statement",
+    addedDate: "October 30, 2026",
+    addedIsoDate: "2026-10-30",
+  },
   {
     title: "Structure of Khovanov Local Equivalence Groups",
     field: "Knot theory, Khovanov homology & smooth concordance",
@@ -1351,6 +1369,27 @@ const establishedResults: Result[] = [
     addedIsoDate: "2026-08-31",
   },
   {
+    title: "Nevanlinna's Three-Omitted-Values Problem in Half-Planes",
+    field: "Complex analysis, value distribution & formal verification",
+    date: "August 26, 2026",
+    isoDate: "2026-08-26",
+    outcome: "Disproved",
+    status: "Full main theorem formalized in Lean 4 and registered with Palomar; proof replayed by three kernels",
+    score: 4,
+    ai: "GPT-5.6 Sol Ultra autonomously generated the core construction and informal proof. OpenAI Codex translated the checked argument into Lean 4; the authors audited and revised the mathematics and manuscript.",
+    summary:
+      "Constructs a meromorphic function on the plane with exactly three exceptional values whose every other point divisor fails the Blaschke condition in both half-planes. This gives a negative answer to a century-old question in Nevanlinna theory.",
+    importance:
+      "4/5: resolves a classical value-distribution problem and strengthens the counterexample fiber by fiber. The October 29 formalization covers the complete theorem and passed Lean, NanoDa and con-ron checks at a pinned Palomar snapshot.",
+    source: "https://arxiv.org/abs/2608.26062",
+    secondarySource:
+      "https://palomar-registry.org/entry?id=PALOMAR-2026-10-29-000014&version=1",
+    sourceLabel: "View the revised paper and verification statement",
+    secondarySourceLabel: "Inspect the registered Lean proof",
+    addedDate: "October 30, 2026",
+    addedIsoDate: "2026-10-30",
+  },
+  {
     title: "Gaussian Completely Monotone Conjecture",
     field: "Information theory, probability & mathematical physics",
     date: "May 12, 2026",
@@ -1936,6 +1975,24 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Alon–Seymour–Thomas Separator Conjecture",
+    field: "Graph minors, separator theory & structural graph algorithms",
+    date: "October 29, 2026",
+    isoDate: "2026-10-29",
+    outcome: "Proved",
+    status: "Author-checked single-author preprint; independent specialist review and formal verification pending",
+    score: 4,
+    ai: "ChatGPT 6 Pro developed the proof under Xinheng Lin's direction. Lin checked every formula and invoked theorem by hand; Codex assisted the exposition, and GPT-6.1 Sol Max repeatedly stress-tested the argument and generated examples.",
+    summary:
+      "Claims that every n-vertex graph with no K_h minor has a separator of size at most min(n, 21h√n), each remaining component having at most two thirds of the vertices. This proves the linear-in-h separator bound conjectured by Alon, Seymour and Thomas.",
+    importance:
+      "4/5: would sharpen a foundational graph-minor separator theorem with consequences throughout structural and algorithmic graph theory. The author reports detailed checking, but the new proof has not yet received independent scrutiny.",
+    source: "https://arxiv.org/abs/2610.40270",
+    sourceLabel: "View the proof and detailed AI-use statement",
+    addedDate: "October 30, 2026",
+    addedIsoDate: "2026-10-30",
+  },
+  {
     title: "Boundary Plateau Laws for Soap Films Containing a Line",
     field: "Geometric measure theory, minimal surfaces & soap-film geometry",
     date: "October 27, 2026",
@@ -1970,6 +2027,24 @@ const emergingResults: Result[] = [
     sourceLabel: "View theorem and detailed AI-use statement",
     addedDate: "October 27, 2026",
     addedIsoDate: "2026-10-27",
+  },
+  {
+    title: "A Torsion-Free Nonabelian Simple Linear Group",
+    field: "Group theory, division algebras & linear groups",
+    date: "October 26, 2026",
+    isoDate: "2026-10-26",
+    outcome: "Proved",
+    status: "Explicitly AI-generated preprint with no independent human verification yet reported",
+    score: 4,
+    ai: "An unnamed AI system generated the construction and proof. The author explicitly states that the argument has not yet been independently verified by human experts.",
+    summary:
+      "Claims an explicit infinite torsion-free nonabelian simple group embedded in a finite-dimensional linear group, using norm-one elements of a degree-15 division algebra over a global field. If correct, it answers Kourovka Notebook Problem 16.78 affirmatively.",
+    importance:
+      "4/5: supplies a concrete candidate resolving a long-standing existence problem for linear groups. The lack of disclosed model details, human checking or a formal certificate keeps the claim firmly under review.",
+    source: "https://arxiv.org/abs/2610.37703",
+    sourceLabel: "View the construction and verification caveat",
+    addedDate: "October 30, 2026",
+    addedIsoDate: "2026-10-30",
   },
   {
     title: "Arbitrary Trace Values in Reduced Group C*-Algebras",
@@ -5489,6 +5564,26 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Minimal Calibration Law for Solid-State Quantum-Spin Ensembles",
+    field: "Quantum control, solid-state spin physics & autonomous experimentation",
+    date: "October 29, 2026",
+    isoDate: "2026-10-29",
+    outcome: "Demonstrated",
+    status: "Preprint with computational certificates and a precommitted laboratory test; independent replication pending",
+    score: 4,
+    ai: "GPT-6 Pro derived the exact law and enforced the study's acceptance criteria; GPT-6 Astra independently checked the response-space calculation on a supercomputer; Claude Fable 5 controlled the NV-diamond experiment, and Claude Opus 5 coordinated the agent laboratory.",
+    summary:
+      "Derives that exactly L²+1 calibration settings are necessary and sufficient to predict every phase-controlled sequence of at most L microwave pulses for an inhomogeneous quantum-spin ensemble. A six-hour NV-diamond experiment with 21,600 valid records supported the locked predictions and rejected simpler interpolation rules.",
+    importance:
+      "4/5: combines a new exact information law with a real experiment designed and revised by collaborating AI agents. The controlled single-laboratory demonstration is strong initial evidence, but the result remains a new preprint without independent replication.",
+    source: "https://arxiv.org/abs/2610.40589",
+    secondarySource: "https://github.com/E-zClap/auctopus",
+    sourceLabel: "View the theoretical and experimental report",
+    secondarySourceLabel: "Inspect the released agent-lab code",
+    addedDate: "October 30, 2026",
+    addedIsoDate: "2026-10-30",
+  },
   {
     title: "Uniqueness of Translation-Invariant S=1 Heisenberg and J–D Ground States",
     field: "Quantum statistical mechanics, spin chains & mathematical physics",
