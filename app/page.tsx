@@ -35,10 +35,52 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "October 30, 2026";
-const latestReviewIsoDate = "2026-10-30";
+const latestReviewDate = "October 31, 2026";
+const latestReviewIsoDate = "2026-10-31";
 
 const establishedResults: Result[] = [
+  {
+    title: "Kervaire and Kervaire–Laudenbach Conjectures",
+    field: "Group theory, equations over groups & formal verification",
+    date: "October 30, 2026",
+    isoDate: "2026-10-30",
+    outcome: "Proved",
+    status: "Independently confirmed by a named group theorist and recorded as solved in the official Kourovka Notebook update",
+    score: 4,
+    ai: "An internal OpenAI mathematics model produced the proof. The single-relator case was formalized in Lean, and group theorist N. V. Bogachev independently confirmed the general argument before the Kourovka Notebook editors marked Problems 17.94 and 18.87(a) solved.",
+    summary:
+      "Proves the Kervaire conjecture that every nonsingular equation over a nontrivial group has a solution over that group, together with the Kervaire–Laudenbach strengthening for systems of equations under the corresponding rank condition.",
+    importance:
+      "4/5: resolves two long-standing problems about equations over groups. Named specialist confirmation and the official problem-list update provide substantial external scrutiny, while only the single-relator part currently has a public machine-checked proof.",
+    source:
+      "https://kourovkanotebookorg.wordpress.com/wp-content/uploads/2026/10/21upd-3.pdf",
+    secondarySource:
+      "https://github.com/openai/math/blob/main/preprints/The-Kervaire-Theorem-for-Groups-September-24-2026/The-Kervaire-Theorem-for-Groups-September-24-2026.pdf",
+    sourceLabel: "View the official Kourovka Notebook confirmation",
+    secondarySourceLabel: "View OpenAI's proof and Lean-verification account",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
+  },
+  {
+    title: "Pure Semisimplicity Conjecture",
+    field: "Representation theory, module theory & formal verification",
+    date: "October 29, 2026",
+    isoDate: "2026-10-29",
+    outcome: "Disproved",
+    status: "Main counterexample theorem fully formalized in Lean 4 and independently checked by the author",
+    score: 4,
+    ai: "GPT-6 Astra developed the criterion, construction and main proof. Junpeng Ren independently verified the arguments, while GPT-6.1 Sol and Claude Opus 5.5 assisted a Lean 4 formalization that replays from imported declarations using only standard axioms.",
+    summary:
+      "Constructs a left pure-semisimple ring that is not of finite representation type, disproving the pure semisimplicity conjecture. The construction converts an infinite locally finite quiver with controlled path relations into the required module-theoretic counterexample.",
+    importance:
+      "4/5: settles a major representation-theoretic conjecture that had remained open for decades. A complete machine-checked main theorem and released source code support Established status, though broader specialist commentary is still limited.",
+    source: "https://arxiv.org/abs/2610.39883",
+    secondarySource: "https://github.com/oasisss6666/pure-semisimplicity-lean",
+    sourceLabel: "View the paper and formal-verification statement",
+    secondarySourceLabel: "View the Lean 4 development",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
+  },
   {
     title: "Spectral Isometry Conjecture for Unital C*-Algebras",
     field: "Operator algebras, spectral geometry & Jordan structure",
@@ -56,6 +98,24 @@ const establishedResults: Result[] = [
     sourceLabel: "View the specialist proof and AI-use statement",
     addedDate: "October 30, 2026",
     addedIsoDate: "2026-10-30",
+  },
+  {
+    title: "Serre's Conjecture on the Artin Character",
+    field: "Algebraic geometry, commutative algebra & Artin characters",
+    date: "October 28, 2026",
+    isoDate: "2026-10-28",
+    outcome: "Proved",
+    status: "Senior specialist developed, checked and refined the AI-assisted proof into a complete manuscript",
+    score: 4,
+    ai: "Mark Kisin used GPT-6 Astra extensively to find the proof and prepare a first draft, then invested substantial specialist effort in understanding, checking and refining every part of the final argument.",
+    summary:
+      "Proves the mixed-characteristic case of Serre's conjecture on the Artin character, completing the remaining case of the 1960 conjecture by establishing the required effectivity for local intersection multiplicities.",
+    importance:
+      "4/5: closes a long-standing conjecture at the intersection of arithmetic geometry and commutative algebra. The final paper reflects detailed checking by a leading specialist, though no independent formalization or second proof has yet appeared.",
+    source: "https://hexagonmath.org/2610.00597v1",
+    sourceLabel: "View the proof and detailed human-checking account",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
   },
   {
     title: "Structure of Khovanov Local Equivalence Groups",
@@ -1975,6 +2035,64 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Sharp Constant in the IID Berry–Esseen Theorem",
+    field: "Probability, normal approximation & computer-assisted proof",
+    date: "October 29, 2026",
+    isoDate: "2026-10-29",
+    outcome: "Proved",
+    status: "Computer-assisted preprint with public exact certificates and native checkers; independent specialist audit pending",
+    score: 4,
+    ai: "OpenAI GPT and Codex systems, together with Gemini and Antigravity, assisted proof engineering, certificate orchestration, checker development, drafting and audit automation. The authors directed and verified the mathematical reductions and certificates.",
+    summary:
+      "Claims the exact optimal universal constant (3+√10)/(6√(2π)) in the iid Berry–Esseen theorem for every sample size, using analytic reductions followed by a finite collection of exact, publicly replayable certificates.",
+    importance:
+      "4/5: would settle a classical quantitative central-limit problem with an explicit sharp constant. The certificates are reproducible, but an independent audit of the reduction from the theorem to the certified obligations is still needed.",
+    source: "https://hexagonmath.org/2610.00590v1",
+    secondarySource: "https://github.com/rodziewiczk/berry-esseen-certificates",
+    sourceLabel: "View the proof and verification architecture",
+    secondarySourceLabel: "Replay the public certificates",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
+  },
+  {
+    title: "Tight Competitive Ratio for Greedy Online Steiner Forest",
+    field: "Online algorithms, metric embeddings & formal verification",
+    date: "October 29, 2026",
+    isoDate: "2026-10-29",
+    outcome: "Disproved",
+    status: "Author-provided Lean files for the main theorem; independent scrutiny and replay still pending",
+    score: 4,
+    ai: "GPT-6 Astra developed parts of the proof and exposition, while Gemini Argon contributed additional arguments. The authors assembled the result and released Lean files for the central theorem.",
+    summary:
+      "Claims that the greedy online Steiner-forest algorithm has competitive ratio Θ(log k log log k), disproving the 1996 conjecture that its ratio is O(log k) and matching the new upper and lower bounds.",
+    importance:
+      "4/5: would determine the asymptotically exact performance of a foundational online network-design heuristic. Released formal files improve reproducibility, but outside checking of both the theorem statement and the surrounding reductions is still needed.",
+    source: "https://arxiv.org/abs/2610.40569",
+    secondarySource: "https://github.com/igholami/online-steiner-forest-lean",
+    sourceLabel: "View the paper and AI-use disclosure",
+    secondarySourceLabel: "View the Lean files",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
+  },
+  {
+    title: "Petty's Equilateral-Set Conjecture in Dimension Five",
+    field: "Convex geometry, normed spaces & equilateral sets",
+    date: "October 29, 2026",
+    isoDate: "2026-10-29",
+    outcome: "Proved",
+    status: "Author-verified AI-generated proof for the five-dimensional case; independent review pending",
+    score: 4,
+    ai: "Tencent Hunyuan's hyprover generated the proof from a direct prompt. Kaiwen Yang organized the argument, checked it and rewrote it as a mathematical manuscript, with the original prompt reproduced for transparency.",
+    summary:
+      "Claims that every five-dimensional real normed space contains six pairwise equidistant points, proving the next open dimensional case of Petty's equilateral-set conjecture.",
+    importance:
+      "4/5: advances a classical convex-geometric conjecture beyond the previously settled low-dimensional cases. It establishes only dimension five, and the new argument has not yet been independently checked or formalized.",
+    source: "https://arxiv.org/abs/2610.39967",
+    sourceLabel: "View the proof and reproduced AI prompt",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
+  },
+  {
     title: "Alon–Seymour–Thomas Separator Conjecture",
     field: "Graph minors, separator theory & structural graph algorithms",
     date: "October 29, 2026",
@@ -1991,6 +2109,80 @@ const emergingResults: Result[] = [
     sourceLabel: "View the proof and detailed AI-use statement",
     addedDate: "October 30, 2026",
     addedIsoDate: "2026-10-30",
+  },
+  {
+    title: "Murty–Simon Conjecture",
+    field: "Extremal graph theory, diameter-critical graphs & combinatorics",
+    date: "October 28, 2026",
+    isoDate: "2026-10-28",
+    outcome: "Proved",
+    status: "Two-author checked preprint; no independent specialist validation or formal certificate located",
+    score: 4,
+    ai: "GPT-5.6 Sol found most of the n²/4 extremal argument and the even-order equality case. Sanjana Das and Jacob Fox simplified the proof, supplied the odd-order equality analysis and wrote the final paper.",
+    summary:
+      "Claims that every diameter-two edge-critical graph on n vertices has at most floor(n²/4) edges, with equality only for the expected complete bipartite graphs, settling the Murty–Simon conjecture.",
+    importance:
+      "4/5: resolves a long-standing sharp extremal problem about diameter-critical graphs. The human authors substantially completed and checked the argument, but independent scrutiny remains outstanding.",
+    source: "https://arxiv.org/abs/2610.39032",
+    sourceLabel: "View the proof and division of human–AI work",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
+  },
+  {
+    title: "Laczkovich's Lipschitz Mapping Problem",
+    field: "Geometric measure theory, real analysis & approximation",
+    date: "October 28, 2026",
+    isoDate: "2026-10-28",
+    outcome: "Proved",
+    status: "Author-checked single-author preprint; independent specialist validation and formal verification pending",
+    score: 4,
+    ai: "ChatGPT produced the proof of the key theorem on October 26, including the central proposition and lemma; the author checked and rewrote those arguments and used further AI assistance on another proposition.",
+    summary:
+      "Claims that every measurable positive-measure subset of Euclidean space admits a Lipschitz map onto a cube, giving a positive answer to Laczkovich's problem and yielding consequences for Kolmogorov-type representation theorems.",
+    importance:
+      "4/5: answers a natural and long-standing mapping problem with broad links between measure, geometry and approximation. The result currently rests on one author's verification of a new AI-originated argument.",
+    source: "https://arxiv.org/abs/2610.38834",
+    sourceLabel: "View the proof and precise AI attribution",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
+  },
+  {
+    title: "Seven-Part Borsuk Bound in Four Dimensions",
+    field: "Discrete geometry, diameter coverings & exact computation",
+    date: "October 28, 2026",
+    isoDate: "2026-10-28",
+    outcome: "Improved",
+    status: "Exact computer-assisted preprint with public code; independent reproduction pending",
+    score: 4,
+    ai: "ChatGPT Astra's exploratory work led the author to the circumradius approach and helped reduce the search space. The final proof checks 23,494 parameter boxes with exact arithmetic and public verification code.",
+    summary:
+      "Claims that every diameter-one set in four-dimensional Euclidean space can be covered by seven sets of diameter below 0.9999, establishing the upper bound b(4)≤7 for the Borsuk number.",
+    importance:
+      "4/5: gives a concrete new bound in the first unresolved low-dimensional Borsuk case. The exact finite computation is reproducible, but no independent rerun or end-to-end specialist audit has yet been located.",
+    source: "https://arxiv.org/abs/2610.39078",
+    secondarySource: "https://github.com/andriyprm/4d7balls",
+    sourceLabel: "View the proof and computational reduction",
+    secondarySourceLabel: "View the exact verification code",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
+  },
+  {
+    title: "Kroó's Homogeneous Polynomial Approximation Conjectures",
+    field: "Approximation theory, homogeneous polynomials & formal verification",
+    date: "October 28, 2026",
+    isoDate: "2026-10-28",
+    outcome: "Proved",
+    status: "Author-checked preprint with AI-assisted Lean formalization; independent validation pending",
+    score: 4,
+    ai: "Matthew Colbrook guided ChatGPT 6 through proof strategies and intermediate arguments, while Codex assisted the accompanying Lean formalization. The author checked and organized the final mathematical proof.",
+    summary:
+      "Claims Kroó's 2004 and 2019 weighted conjectures on uniform approximation by sums of homogeneous polynomials of consecutive degrees, giving the predicted approximation behavior on the relevant star-shaped domains.",
+    importance:
+      "4/5: settles two open approximation-theory conjectures with a constructive proof architecture. The formal artifacts add confidence, but their exact coverage and the full paper still await outside review.",
+    source: "https://arxiv.org/abs/2610.38877",
+    sourceLabel: "View the proof, AI-use statement and formalization links",
+    addedDate: "October 31, 2026",
+    addedIsoDate: "2026-10-31",
   },
   {
     title: "Boundary Plateau Laws for Soap Films Containing a Line",
