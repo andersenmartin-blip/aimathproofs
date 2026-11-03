@@ -35,10 +35,30 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 2, 2026";
-const latestReviewIsoDate = "2026-11-02";
+const latestReviewDate = "November 3, 2026";
+const latestReviewIsoDate = "2026-11-03";
 
 const establishedResults: Result[] = [
+  {
+    title: "Kung–Traub Conjecture",
+    field: "Numerical analysis, root-finding complexity & formal verification",
+    date: "September 20, 2026",
+    isoDate: "2026-09-20",
+    outcome: "Proved",
+    status: "Full paper theorems formally verified in Lean 4 and checked against the manuscript",
+    score: 4,
+    ai: "ChatGPT 6 assisted the complete Lean formalization, while ChatGPT 5.6 and 6 also helped discuss and check parts of the mathematical argument. Matthew J. Colbrook reviewed every argument and used Lean 4 Comparator to confirm that the formal statements match the paper, with no unproved axioms added.",
+    summary:
+      "Proves the 1974 Kung–Traub conjecture: a deterministic stationary root-finding method without memory that uses at most n real scalar function or derivative evaluations per iteration cannot have universal local order above 2^(n−1). The proof allows adaptive evaluation points and derivative orders and includes sharper grouped and complex-valued variants.",
+    importance:
+      "4/5: settles a fifty-year-old optimal-complexity conjecture for iterative root finding under very general evaluation rules. The released kernel-checked formalization supports Established status.",
+    source: "https://arxiv.org/abs/2610.40660",
+    secondarySource: "https://github.com/MColbrook/Kung-Traub_conjecture",
+    sourceLabel: "View the proof and formal-verification account",
+    secondarySourceLabel: "Inspect the Lean 4 development",
+    addedDate: "November 3, 2026",
+    addedIsoDate: "2026-11-03",
+  },
   {
     title: "Kervaire and Kervaire–Laudenbach Conjectures",
     field: "Group theory, equations over groups & formal verification",
@@ -2034,6 +2054,62 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Hopficity of Braided and Labeled Thompson Groups",
+    field: "Group theory, Thompson groups & geometric rigidity",
+    date: "October 30, 2026",
+    isoDate: "2026-10-30",
+    outcome: "Proved",
+    status: "Author-reviewed preprint; independent specialist scrutiny or formal verification pending",
+    score: 4,
+    ai: "ChatGPT 6 Astra helped identify the kernel-injectivity method for labeled Thompson groups and then helped extend it to the pure-braid kernels of BV and BF. Mengfei Zhao carefully reviewed, verified and substantially revised all mathematical content.",
+    summary:
+      "Proves that the braided Thompson groups BV and BF are Hopfian, answering both parts of Zaremsky's question, and proves the Wu–Wu–Zhao–Zhou conjecture that V(G) is Hopfian exactly when G is Hopfian.",
+    importance:
+      "4/5: resolves explicit open questions about self-quotient rigidity in important Thompson-type groups and yields a new embedding theorem for Hopfian groups. The detailed author check is encouraging, but independent verification is not yet available.",
+    source: "https://arxiv.org/abs/2610.42050",
+    sourceLabel: "View the proof and detailed AI disclosure",
+    addedDate: "November 3, 2026",
+    addedIsoDate: "2026-11-03",
+  },
+  {
+    title: "Rapid Mixing of Potts Glauber Dynamics throughout Uniqueness",
+    field: "Probability, Markov-chain mixing & statistical mechanics",
+    date: "October 30, 2026",
+    isoDate: "2026-10-30",
+    outcome: "Proved",
+    status: "Four-author analytical preprint with extensive human rewriting; independent validation pending",
+    score: 4,
+    ai: "After the authors' earlier approaches failed, ChatGPT 6 Astra discovered the shattering–escape dichotomy that broke open the random-regular-graph proof. The authors developed the lattice consequences and rewrote, simplified and clarified every proof; Claude Opus 5.5 and Astra also assisted editing.",
+    summary:
+      "Proves near-linear Potts Glauber mixing throughout the sharp high-temperature uniqueness regime on random regular graphs and inverse spectral gap n^(1+o(1)) on cubes and tori below the critical point, resolving a long-open case for q≥3. It also gives logarithmic mixing for Swendsen–Wang dynamics on random regular graphs.",
+    importance:
+      "4/5: closes a central mixing-time gap at the predicted sharp thresholds and introduces a potentially reusable dichotomy principle. The manuscript has substantial specialist authorship but no independent audit or formal certificate yet.",
+    source: "https://arxiv.org/abs/2610.42059",
+    sourceLabel: "View the theorem, proof and AI disclosure",
+    addedDate: "November 3, 2026",
+    addedIsoDate: "2026-11-03",
+  },
+  {
+    title: "Entanglement-Assisted Quantum Code Families",
+    field: "Quantum error correction, program evolution & formal verification",
+    date: "October 30, 2026",
+    isoDate: "2026-10-30",
+    outcome: "Designed",
+    status: "Reproducible preprint with Lean-checked algebraic core, exact records and DRAT certificates; full independent review pending",
+    score: 4,
+    ai: "LLM-guided program evolution discovered finite code constructions without being given a family formula. The researchers recognized and generalized the pattern, proved the infinite family and added exact verification, Lean checking and certified nonexistence tests.",
+    summary:
+      "Constructs a new infinite family of entanglement-assisted quantum error-correcting codes and closes 54 gaps in archived EAQECC tables. The artifact includes 115 verified code records, ten checked DRAT nonexistence certificates, family implementations and replayable search programs.",
+    importance:
+      "4/5: converts AI-evolved finite constructions into a general proved family with unusually rich reproducibility evidence. Established status is withheld because Lean checks the algebraic core rather than every step connecting the family and all 54 table claims.",
+    source: "https://arxiv.org/abs/2610.41183",
+    secondarySource: "https://github.com/LeGenAI/llm_guided_EAQECC_search/tree/arxiv-v1",
+    sourceLabel: "View the paper and evidence summary",
+    secondarySourceLabel: "Inspect code, data and formal certificates",
+    addedDate: "November 3, 2026",
+    addedIsoDate: "2026-11-03",
+  },
   {
     title: "Sharp Constant in the IID Berry–Esseen Theorem",
     field: "Probability, normal approximation & computer-assisted proof",
@@ -5600,6 +5676,26 @@ const emergingResults: Result[] = [
 
 const physicsEstablishedResults: Result[] = [
   {
+    title: "Faster-than-Power-Law Correlation Decay in the 2D RP² and RP³ Models",
+    field: "Statistical mechanics, lattice spin models & formal verification",
+    date: "October 30, 2026",
+    isoDate: "2026-10-30",
+    outcome: "Demonstrated",
+    status: "Rigorous correlation theorem fully formalized and verified in Lean; physical phase-diagram inference remains heuristic",
+    score: 4,
+    ai: "ChatGPT 6 Astra generated the rigorous proof, which Masaki Oshikawa developed into a specialist paper and formalized in Lean. The public formalization kernel-checks the correlation bound; the separate claim that vortices are always unbound is explicitly presented only as a heuristic.",
+    summary:
+      "Proves that two-point order-parameter correlations in the two-dimensional RP² and RP³ square-lattice models decay faster than every power at any finite temperature, ruling out a power-law-correlated phase for these observables. It does not by itself prove the full phase diagram or exponential decay.",
+    importance:
+      "4/5: gives a rigorous constraint on a long-debated statistical-mechanics phase scenario and is backed by a public machine-checked proof. The result is a theorem about idealized lattice models, not an experimental discovery.",
+    source: "https://arxiv.org/abs/2610.41256",
+    secondarySource: "https://doi.org/10.5281/zenodo.23548847",
+    sourceLabel: "View the specialist paper and scope statement",
+    secondarySourceLabel: "Inspect the Lean verification archive",
+    addedDate: "November 3, 2026",
+    addedIsoDate: "2026-11-03",
+  },
+  {
     title: "Exact Non-Axisymmetric 3D MHD Equilibria without Stellarator Symmetry",
     field: "Plasma physics, ideal magnetohydrodynamics & fusion",
     date: "October 5, 2026",
@@ -5756,6 +5852,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Thermodynamic Limit for the Extensively Loaded Hopfield Model",
+    field: "Spin glasses, neural-network statistical mechanics & probability",
+    date: "October 30, 2026",
+    isoDate: "2026-10-30",
+    outcome: "Demonstrated",
+    status: "Two-author analytical preprint; no independent audit or machine verification located",
+    score: 4,
+    ai: "Claude Opus 5.5 and ChatGPT Sol 6.1 generated the proofs through extensive interaction, using the authors' problem formulation and mathematical guidance. Adriano Barra and Fabrizio Durante take responsibility for the manuscript.",
+    summary:
+      "Proves existence of the thermodynamic limit of the quenched pressure for the extensively loaded Hopfield model with binary or Gaussian patterns at every load, finite inverse temperature and uniform field, without replica-symmetry or non-condensation assumptions. It also derives concentration, almost-sure convergence and ground-state consequences.",
+    importance:
+      "4/5: removes a long-standing foundational gap in the rigorous statistical mechanics of associative neural networks. It establishes existence rather than an explicit formula, and the new proof still awaits independent scrutiny.",
+    source: "https://arxiv.org/abs/2610.41938",
+    sourceLabel: "View the proof and AI-use statement",
+    addedDate: "November 3, 2026",
+    addedIsoDate: "2026-11-03",
+  },
   {
     title: "Minimal Calibration Law for Solid-State Quantum-Spin Ensembles",
     field: "Quantum control, solid-state spin physics & autonomous experimentation",
