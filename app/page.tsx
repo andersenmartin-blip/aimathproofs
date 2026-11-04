@@ -35,10 +35,30 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 3, 2026";
-const latestReviewIsoDate = "2026-11-03";
+const latestReviewDate = "November 4, 2026";
+const latestReviewIsoDate = "2026-11-04";
 
 const establishedResults: Result[] = [
+  {
+    title: "Kaplansky Conjectures for Torsion-Free Hyperbolic Groups in Positive Characteristic",
+    field: "Group theory, group rings & formal verification",
+    date: "November 3, 2026",
+    isoDate: "2026-11-03",
+    outcome: "Disproved",
+    status: "Main theorem for every prime formalized in Lean 4; intended-statement interpretation remains the principal trust boundary",
+    score: 5,
+    ai: "The construction and proof build decisively on OpenAI's AI-generated characteristic-two counterexample and exclusion machinery. The authors and S. V. Ivanov developed the odd-characteristic signed cancellation; Nidhal Mghirbi formalized the full result for every prime in Lean 4.",
+    summary:
+      "For every prime p, constructs a finitely presented torsion-free word-hyperbolic group whose group algebra over characteristic p is not directly finite and therefore violates all four Kaplansky conjectures. The odd-characteristic groups are new, and the characteristic-two case gains hyperbolicity.",
+    importance:
+      "5/5: settles the positive-characteristic version for a central class of groups and supplies the first torsion-free hyperbolic counterexamples. The main existence theorem and its algebraic consequences are kernel-checked in Lean, supporting Established status.",
+    source: "https://arxiv.org/abs/2611.04599",
+    secondarySource: "https://github.com/Apsiape/kaplansky-conjectures-hyperbolic-groups/tree/v1.0.3/lean/KaplanskyLean",
+    sourceLabel: "View the paper and verification scope",
+    secondarySourceLabel: "Inspect the Lean 4 formalization",
+    addedDate: "November 4, 2026",
+    addedIsoDate: "2026-11-04",
+  },
   {
     title: "Kung–Traub Conjecture",
     field: "Numerical analysis, root-finding complexity & formal verification",
@@ -2054,6 +2074,44 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Classification of Elliptic-Curve Torsion over Sextic Fields",
+    field: "Number theory, elliptic curves & modular curves",
+    date: "November 2, 2026",
+    isoDate: "2026-11-02",
+    outcome: "Classified",
+    status: "Author-reviewed preprint with public statement-by-statement computation logs; independent specialist review pending",
+    score: 4,
+    ai: "GPT-6.1 Sol produced almost all mathematical content of the first proof and performed most computations. Claude Opus 5.5 independently recomputed key cases and examples and drafted the paper; Filip Najman reviewed it line by line and rewrote most of it.",
+    summary:
+      "Determines all 48 torsion groups that can occur for elliptic curves over degree-six number fields, completing the degree-six classification. It identifies four sporadic groups and proves uniqueness for the order-37 and Z/2Z × Z/24Z cases, the latter arising from a newly found curve.",
+    importance:
+      "4/5: completes the next open degree in a classical classification program after degrees one through five. Public code and logs make the many computations reproducible, but the long argument has not yet received independent specialist scrutiny or full formal verification.",
+    source: "https://arxiv.org/abs/2611.03933",
+    secondarySource: "https://github.com/F-Najman/sextic_torsion",
+    sourceLabel: "View the proof and detailed AI disclosure",
+    secondarySourceLabel: "Inspect code, logs and claim map",
+    addedDate: "November 4, 2026",
+    addedIsoDate: "2026-11-04",
+  },
+  {
+    title: "FPRAS for Counting Common Bases of Two Matroids",
+    field: "Algorithms, approximate counting & matroid theory",
+    date: "November 3, 2026",
+    isoDate: "2026-11-03",
+    outcome: "Solved",
+    status: "Revised two-author analytical preprint; independent review and reproducibility evidence pending",
+    score: 4,
+    ai: "GPT-5.6 Sol Ultra and GPT-6 Astra Ultra were heavily used to develop the paper's ideas, including the soft-intersection and convex-reweighting approach.",
+    summary:
+      "Gives the first fully polynomial randomized approximation scheme for counting and uniformly sampling common bases of two matroids from independence-oracle access. The method combines a relaxed intersection measure, a uniform Poincaré inequality and maximum-entropy reweighting.",
+    importance:
+      "4/5: resolves a broad approximate-counting problem with applications across combinatorics, statistical physics and quantum many-body theory. The result is currently supported by the authors' proof only and awaits external checking.",
+    source: "https://arxiv.org/abs/2610.06724",
+    sourceLabel: "View revised preprint and AI disclosure",
+    addedDate: "November 4, 2026",
+    addedIsoDate: "2026-11-04",
+  },
   {
     title: "Hopficity of Braided and Labeled Thompson Groups",
     field: "Group theory, Thompson groups & geometric rigidity",
@@ -6314,6 +6372,46 @@ const biologyEstablishedResults: Result[] = [
 ];
 
 const biologyEmergingResults: Result[] = [
+  {
+    title: "REC-4881 Phase 2 Signal in Familial Adenomatous Polyposis",
+    field: "Inherited cancer prevention, clinical development & phenotypic AI discovery",
+    date: "November 2, 2026",
+    isoDate: "2026-11-02",
+    outcome: "Clinical signal",
+    status: "Preliminary open-label Phase 1b/2 company-reported data; 15 efficacy-evaluable adults, no randomized control or peer-reviewed report",
+    score: 4,
+    ai: "Recursion's AI foundation models analyzed unbiased phenotypic screens and identified MEK1/2 inhibition as a way to reverse cellular effects of APC loss, motivating development of REC-4881 for FAP.",
+    summary:
+      "After 12 weeks of REC-4881, 13 of 15 adults had lower total gastrointestinal polyp burden, with a 47% median reduction; 11 of 13 evaluable participants remained below baseline after 12 weeks off treatment. Reductions were reported in both upper and lower GI disease and in larger polyps.",
+    importance:
+      "4/5: moves an AI-enabled disease-mechanism hypothesis into encouraging patient evidence for a hereditary cancer syndrome with no approved drug therapy. The small single-arm interim dataset cannot establish efficacy, durability or a favorable risk-benefit profile.",
+    source: "https://recursion.gcs-web.com/news-releases/news-release-details/new-phase-2-rec-4881-data-presented-cga-igc-show-deep-durable",
+    secondarySource: "https://clinicaltrials.gov/study/NCT05552755",
+    sourceLabel: "View the presented Phase 2 data and limitations",
+    secondarySourceLabel: "View the registered TUPELO trial",
+    addedDate: "November 4, 2026",
+    addedIsoDate: "2026-11-04",
+  },
+  {
+    title: "First Human Antitumour Responses for AI-Designed ISM6331",
+    field: "Mesothelioma, oncology & generative drug design",
+    date: "October 25, 2026",
+    isoDate: "2026-10-25",
+    outcome: "Clinical signal",
+    status: "Preliminary ongoing Phase 1 company-reported data presented at ESMO; small non-randomized dose cohorts, no peer-reviewed full report",
+    score: 4,
+    ai: "Insilico's Chemistry42 generative platform performed multiparameter molecular optimization of the oral pan-TEAD1–4 inhibitor that became ISM6331.",
+    summary:
+      "In heavily pretreated mesothelioma, four of 22 response-evaluable participants across 30–130 mg had partial responses, including two of five at 130 mg; three responses were ongoing at the August cutoff. No dose-limiting toxicities were reported among 36 enrolled participants through 130 mg.",
+    importance:
+      "4/5: provides the first reported human antitumour signal for a generatively designed TEAD inhibitor against a difficult target. The tiny dose cohorts and uncontrolled Phase 1 design make the response estimate highly uncertain and do not establish clinical benefit.",
+    source: "https://insilico.com/news/pr8951ba20602e4375b723-insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative",
+    secondarySource: "https://www.cancer.gov/research/participate/clinical-trials-search/v?id=NCI-2024-07922",
+    sourceLabel: "View the ESMO results and cohort details",
+    secondarySourceLabel: "View the active Phase 1/2 trial record",
+    addedDate: "November 4, 2026",
+    addedIsoDate: "2026-11-04",
+  },
   {
     title: "Compact AI-Designed Signaling Domains Improve CAR T-Cell Function",
     field: "Cancer immunotherapy, synthetic biology & CAR-T engineering",
