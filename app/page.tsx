@@ -35,10 +35,46 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 4, 2026";
-const latestReviewIsoDate = "2026-11-04";
+const latestReviewDate = "November 5, 2026";
+const latestReviewIsoDate = "2026-11-05";
 
 const establishedResults: Result[] = [
+  {
+    title: "Hinrichs–Vybíral Conjecture",
+    field: "Functional analysis, positive-definite functions & matrix inequalities",
+    date: "September 18, 2026",
+    isoDate: "2026-09-18",
+    outcome: "Disproved",
+    status: "Explicit finite counterexample directly verified by original co-conjecturer Jan Vybíral; no further independent audit located",
+    score: 3,
+    ai: "ChatGPT 6 found the counterexample in a single prompt. Jan Vybíral, a co-author of the original conjecture, analysed it and published the explicit construction with direct checks of every hypothesis and the exact inequality gap.",
+    summary:
+      "Gives a nonnegative positive-definite trigonometric polynomial on R^7 and eight points that violate the proposed matrix lower bound. Nonnegative Fourier coefficients certify positive definiteness, cube interpolation proves pointwise nonnegativity, and the quadratic-form gap is exactly −1/10.",
+    importance:
+      "3/5: settles a concrete functional-analysis conjecture with a small, fully explicit counterexample. Detailed checking and publication by an original co-conjecturer support Established status, although broader independent scrutiny has not yet appeared.",
+    source: "https://arxiv.org/abs/2609.21733",
+    sourceLabel: "View the explicit counterexample and verification",
+    addedDate: "November 5, 2026",
+    addedIsoDate: "2026-11-05",
+  },
+  {
+    title: "Just Finite Presentation Conjecture (Kourovka Problem 21.10)",
+    field: "Group theory, finite presentations & geometric group theory",
+    date: "May 11, 2026",
+    isoDate: "2026-05-11",
+    outcome: "Proved",
+    status: "Accepted by the Journal of Group Theory after referee review; revised proof incorporates referee extensions",
+    score: 3,
+    ai: "Google DeepMind's Gemini 3.1 Pro-based AI co-mathematician proposed the core construction and proof, detected a flaw in its first argument, confirmed Marc Lackenby's human fix, wrote up the repair and later checked and corrected the manuscript. Lackenby added the just-(FA) and just-(T) extensions; the referee supplied further extensions.",
+    summary:
+      "Proves that every finite group has a finite presentation in which deleting any relation makes the presented group infinite, resolving Kourovka Notebook Problem 21.10. The construction in fact gives stronger just-(FA) and just-small presentations for broad classes of finitely presented groups.",
+    importance:
+      "3/5: resolves a named open problem in group theory and produces a stronger general construction. Acceptance after specialist referee review, including substantive referee extensions, supports Established status.",
+    source: "https://arxiv.org/abs/2605.10402",
+    sourceLabel: "View the accepted proof and detailed AI methodology",
+    addedDate: "November 5, 2026",
+    addedIsoDate: "2026-11-05",
+  },
   {
     title: "Kaplansky Conjectures for Torsion-Free Hyperbolic Groups in Positive Characteristic",
     field: "Group theory, group rings & formal verification",
