@@ -35,10 +35,82 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 5, 2026";
-const latestReviewIsoDate = "2026-11-05";
+const latestReviewDate = "November 6, 2026";
+const latestReviewIsoDate = "2026-11-06";
 
 const establishedResults: Result[] = [
+  {
+    title: "Pach–Shahrokhi–Szegedy Quasiplanar Graph Conjecture",
+    field: "Topological graph theory & extremal combinatorics",
+    date: "November 5, 2026",
+    isoDate: "2026-11-05",
+    outcome: "Proved",
+    status: "ChatGPT-6 proof reconstructed as a simplified, self-contained proof by three graph theorists, including original co-conjecturer János Pach",
+    score: 4,
+    ai: "ChatGPT-6 produced the core proof after being directed to a theorem of Beeker and Lazarovich. János Pach, Gábor Tardos and Ji Zeng interpreted the generated argument, simplified it and replaced its topological machinery with a self-contained combinatorial exposition.",
+    summary:
+      "Proves that every k-quasiplanar topological graph on n vertices has O_k(n) edges. This removes the remaining polylogarithmic factor for every k at least 5 and completes the conjecture previously known only for k at most 4.",
+    importance:
+      "4/5: resolves a three-decade-old extremal graph-theory conjecture in full generality. Reconstruction by three specialists, including an author of the original conjecture, supports Established status, although no formal proof or separate independent audit has been located.",
+    source: "https://arxiv.org/abs/2611.07314",
+    sourceLabel: "View the self-contained proof and AI-use account",
+    addedDate: "November 6, 2026",
+    addedIsoDate: "2026-11-06",
+  },
+  {
+    title: "2s SSP Conjecture for Implicit Runge–Kutta Methods",
+    field: "Numerical analysis, time integration & stability theory",
+    date: "November 5, 2026",
+    isoDate: "2026-11-05",
+    outcome: "Proved",
+    status: "Six-author specialist reconstruction; elementary components of every proof machine-verified in Lean 4",
+    score: 3,
+    ai: "ChatGPT, Claude and Gemini exposed a dictionary between strong-stability-preserving Runge–Kutta methods and absorbing Markov chains, suggested phase-type distribution tools and assisted the algebra. The authors checked, corrected and rewrote every argument; elementary components of all proofs were then verified in Lean 4.",
+    summary:
+      "Proves the sharp upper bound C(A,b) ≤ 2s for every s-stage implicit Runge–Kutta method of order at least two, settling the Ketcheson–Macdonald–Gottlieb conjecture. The same framework gives a third-order bound and an algebraic-stability order barrier.",
+    importance:
+      "3/5: settles a fundamental optimality question for stability-preserving time integrators and adds two related structural bounds. Multi-author specialist checking and released Lean verification of the elementary proof components support Established status.",
+    source: "https://arxiv.org/abs/2611.07981",
+    sourceLabel: "View the proof, verification scope and AI methodology",
+    addedDate: "November 6, 2026",
+    addedIsoDate: "2026-11-06",
+  },
+  {
+    title: "Kinetic Kato Square Root Problem",
+    field: "Analysis of PDEs, hypoelliptic operators & functional calculus",
+    date: "November 2, 2026",
+    isoDate: "2026-11-02",
+    outcome: "Proved",
+    status: "Complete specialist-authored proof; the author reports verifying every argument, but no independent audit or formalization has been located",
+    score: 4,
+    ai: "GPT-6 Astra identified positive Rockland operators as the missing route to an intrinsic smoothing theory. Kaj Nyström used that lead to develop the Littlewood–Paley machinery, with the model also helping to develop, check and rewrite arguments; Nyström states that he verified all mathematics and references.",
+    summary:
+      "Identifies the square-root domain of a rough complex measurable Kolmogorov operator with its intrinsic Sobolev energy space, with comparable norms and no symmetry, continuity or smallness assumptions on the coefficients.",
+    importance:
+      "4/5: solves the kinetic analogue of the Kato square root problem for the natural rough-coefficient class and supplies a new intrinsic smoothing framework. Detailed checking by the expert author supports Established status, while independent scrutiny is still pending.",
+    source: "https://arxiv.org/abs/2611.03104",
+    sourceLabel: "View the proof and detailed AI declaration",
+    addedDate: "November 6, 2026",
+    addedIsoDate: "2026-11-06",
+  },
+  {
+    title: "Quadratic-Size Universal Random Permutations",
+    field: "Probabilistic combinatorics & permutation patterns",
+    date: "October 9, 2026",
+    isoDate: "2026-10-09",
+    outcome: "Proved",
+    status: "GPT-6 Pro proof verified and digested by the two authors; no independent audit or formalization has been located",
+    score: 3,
+    ai: "GPT-6 Pro found the proof strategy that removes the iterated-logarithm overhead in the best previous bound. Yu Chen and Yiting Wang verified the argument, digested it into a human proof and strengthened the revised quantitative estimate.",
+    summary:
+      "Proves that a uniformly random permutation of length 32n² contains every permutation of length n with probability at least 1 − exp(−n/25). This gives the optimal quadratic order and resolves an open problem of Noga Alon.",
+    importance:
+      "3/5: closes the asymptotic gap for random universal permutations and answers a named combinatorics problem with an explicit high-probability bound. Author verification supports Established status, though broader independent scrutiny has not yet appeared.",
+    source: "https://arxiv.org/abs/2610.13530",
+    sourceLabel: "View the proof and revised quantitative bound",
+    addedDate: "November 6, 2026",
+    addedIsoDate: "2026-11-06",
+  },
   {
     title: "Hinrichs–Vybíral Conjecture",
     field: "Functional analysis, positive-definite functions & matrix inequalities",
