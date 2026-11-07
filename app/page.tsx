@@ -35,8 +35,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 6, 2026";
-const latestReviewIsoDate = "2026-11-06";
+const latestReviewDate = "November 7, 2026";
+const latestReviewIsoDate = "2026-11-07";
 
 const establishedResults: Result[] = [
   {
@@ -2182,6 +2182,24 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Scherk Uniqueness Conjecture for Minimal Surfaces",
+    field: "Differential geometry, minimal surfaces & geometric analysis",
+    date: "November 5, 2026",
+    isoDate: "2026-11-05",
+    outcome: "Classified",
+    status: "Single-author 89-page preprint; the author accepts responsibility, but no independent specialist check or formal verification has been located",
+    score: 4,
+    ai: "An unnamed publicly available large language model was used to develop mathematical arguments throughout the proof and to draft and revise the manuscript. Yuchen Bi states that he takes full responsibility for the result.",
+    summary:
+      "Proves that every connected, properly embedded minimal surface without boundary in R³ and with density two at infinity is either a catenoid or a singly periodic Scherk surface, resolving the Scherk uniqueness conjecture stated by William Meeks in 2003.",
+    importance:
+      "4/5: gives a complete classification at the first nontrivial density above the plane and settles a named minimal-surface conjecture. The detailed manuscript is substantial, but the unnamed model and lack of outside checking require New & under review status.",
+    source: "https://arxiv.org/abs/2611.08212",
+    sourceLabel: "View the proof and AI disclosure",
+    addedDate: "November 7, 2026",
+    addedIsoDate: "2026-11-07",
+  },
   {
     title: "Classification of Elliptic-Curve Torsion over Sextic Fields",
     field: "Number theory, elliptic curves & modular curves",
@@ -6018,6 +6036,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Potts Lattice-Gauge Correlation-Length Duality",
+    field: "Mathematical physics, lattice gauge theory & probability",
+    date: "July 2, 2026",
+    isoDate: "2026-07-02",
+    outcome: "Demonstrated",
+    status: "Corrected two-author v2 preprint with referee feedback; the restored prime-q proof remains without independent verification",
+    score: 3,
+    ai: "Claude Opus 5.5 was used to check the manuscript for mathematical errors and suggested the appendix proof that restores Theorem 9 for every prime q. Paul Duncan and Benjamin Schweinhart retained a human-written main text and incorporated the AI-suggested reflection-positivity argument after correcting errors in the original proofs.",
+    summary:
+      "The revised paper proves that, for prime q, the correlation length of Potts lattice gauge theory on four-dimensional integer lattices with free boundary conditions equals that of the dual model with constant boundary conditions. It also gives a topological formula for Wilson-loop correlations and rigorous decay results away from criticality.",
+    importance:
+      "3/5: repairs and restores an exact duality theorem for a nontrivial family of lattice gauge models. The correction is transparent and mathematically substantive, but it is still a revised preprint rather than an independently reproduced physics result.",
+    source: "https://arxiv.org/abs/2607.02434",
+    sourceLabel: "View the corrected v2 paper and AI-assisted appendix",
+    addedDate: "November 7, 2026",
+    addedIsoDate: "2026-11-07",
+  },
   {
     title: "Thermodynamic Limit for the Extensively Loaded Hopfield Model",
     field: "Spin glasses, neural-network statistical mechanics & probability",
