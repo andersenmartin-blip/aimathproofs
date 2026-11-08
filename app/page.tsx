@@ -35,8 +35,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 7, 2026";
-const latestReviewIsoDate = "2026-11-07";
+const latestReviewDate = "November 8, 2026";
+const latestReviewIsoDate = "2026-11-08";
 
 const establishedResults: Result[] = [
   {
@@ -2182,6 +2182,28 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Aaronson–Ambainis Conjecture",
+    field: "Quantum complexity, analysis of Boolean functions & polynomial influence",
+    date: "November 6, 2026",
+    isoDate: "2026-11-06",
+    outcome: "Proved",
+    status: "Complete public Lean 4 development with multi-kernel replay and publisher-supplied audits; independent statement-alignment review and outside replay are still pending",
+    score: 4,
+    ai: "A PSI research harness running instances of a non-public Anthropic model found the proof, strengthened it twice, drafted the manuscript and produced the Lean formalization. David Turturean reviewed the paper and accepts responsibility for correctness.",
+    summary:
+      "Proves that a bounded degree-d polynomial on the Boolean cube with variance at least ε has a coordinate of influence at least (ε/d)^7. This settles the Aaronson–Ambainis conjecture and rules out exponential quantum query speedups on random inputs unless the problem has rare structure.",
+    importance:
+      "4/5: resolves a central 2008 conjecture connecting Boolean-function analysis to the limits of quantum speedups. The released proof has no placeholders or added axioms and was replayed by multiple kernels, but the exact match to the original conjecture and the quantum-complexity consequence have not yet been independently certified.",
+    source: "https://github.com/physical-superintelligence/aaronson-ambainis",
+    secondarySource: "https://psi.inc/research/aaronson-ambainis/",
+    tertiarySource: "https://stateofproof.org/paper-watch/paper-2026-11-06-a-proof-of-the-aaronson-ambainis-conjecture",
+    sourceLabel: "Inspect the Lean proof, checks and disclosure",
+    secondarySourceLabel: "Read PSI's primary announcement",
+    tertiarySourceLabel: "Read the independent evidence intake",
+    addedDate: "November 8, 2026",
+    addedIsoDate: "2026-11-08",
+  },
   {
     title: "Scherk Uniqueness Conjecture for Minimal Surfaces",
     field: "Differential geometry, minimal surfaces & geometric analysis",
