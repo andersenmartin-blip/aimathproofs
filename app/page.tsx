@@ -35,10 +35,30 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 8, 2026";
-const latestReviewIsoDate = "2026-11-08";
+const latestReviewDate = "November 9, 2026";
+const latestReviewIsoDate = "2026-11-09";
 
 const establishedResults: Result[] = [
+  {
+    title: "Gasull’s Global-Periodicity Classification",
+    field: "Dynamical systems, rational recurrences & formal verification",
+    date: "November 7, 2026",
+    isoDate: "2026-11-07",
+    outcome: "Classified",
+    status: "Exact two-way classification formalized in Lean and independently replayed through Palomar with Comparator, nanoda and con-ron",
+    score: 3,
+    ai: "Claude Opus 5.5 and Claude Fable 5.1 found the proof and wrote the Lean development after John F. Rudge supplied the problem and relevant papers and steered experiments from individual orders to the general case.",
+    summary:
+      "Classifies globally periodic affine-ratio recurrences of every positive order: all arise from five known families by positive rescaling and unfolding. This settles Problem 11 in Armengol Gasull’s survey, previously known only in selected orders.",
+    importance:
+      "3/5: closes a general classification problem in nonlinear recurrence dynamics. The pinned statement covers both directions, and independent multi-kernel replay supports Established status even though the contributor reports limited understanding of the proof details.",
+    source: "https://hexagonmath.org/2611.00183v1",
+    secondarySource: "https://aiproofwatch.com/updates/globally-periodic-rational-difference-equations-of-arbitrary-order-2c87f005",
+    sourceLabel: "View the proof, Lean source and AI disclosure",
+    secondarySourceLabel: "Review statement alignment and formal checks",
+    addedDate: "November 9, 2026",
+    addedIsoDate: "2026-11-09",
+  },
   {
     title: "Pach–Shahrokhi–Szegedy Quasiplanar Graph Conjecture",
     field: "Topological graph theory & extremal combinatorics",
@@ -2182,6 +2202,98 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Lusztig Positivity for Canonical-Basis Multiplication",
+    field: "Quantum algebra, canonical bases & representation theory",
+    date: "November 7, 2026",
+    isoDate: "2026-11-07",
+    outcome: "Proved",
+    status: "Single-contributor preprint; Codex review reported, but specialist scrutiny and the planned Rethlas-OSV audit are pending",
+    score: 4,
+    ai: "GPT-6 Pro developed the proof during a recorded research session lasting about 5 hours 46 minutes. Codex reviewed the argument and revised the exposition; Qiyue Tang contributed and released the manuscript.",
+    summary:
+      "Proves the multiplication part of Lusztig’s positivity conjecture for canonical bases of modified quantum groups with symmetric Cartan data, establishing nonnegative Laurent-polynomial structure constants in the claimed generality.",
+    importance:
+      "4/5: addresses a central structural positivity question in quantum groups and categorification. The manuscript is explicit about provenance, but it has not yet received independent expert or formal verification.",
+    source: "https://hexagonmath.org/2611.00190v1",
+    sourceLabel: "View the preprint and provenance statement",
+    addedDate: "November 9, 2026",
+    addedIsoDate: "2026-11-09",
+  },
+  {
+    title: "Foregger’s Minimum-Permanent Conjecture",
+    field: "Matrix theory, permanents & combinatorics",
+    date: "November 7, 2026",
+    isoDate: "2026-11-07",
+    outcome: "Proved",
+    status: "Author-reviewed 16-page preprint; no independent specialist check or formal verification located",
+    score: 3,
+    ai: "OpenAI GPT models in Sol and Astra modes and Anthropic Claude Fable models developed the proof under Yair Lavi’s guidance. Lavi reviewed the arguments and accepts responsibility for the final text.",
+    summary:
+      "Proves that every nearly decomposable doubly stochastic n-by-n matrix has permanent at least 2^(1−n), with equality exactly for row-and-column permutations of one-half times a cycle matrix plus the identity.",
+    importance:
+      "3/5: settles a permanent-minimization conjecture dating to Foregger’s 1980 work and characterizes all equality cases. The author reports understanding all parts, but outside verification is still absent.",
+    source: "https://hexagonmath.org/2611.00169v1",
+    sourceLabel: "View the proof and AI-use declaration",
+    addedDate: "November 9, 2026",
+    addedIsoDate: "2026-11-09",
+  },
+  {
+    title: "Height-Bounded Mutation for Four-Vertex Quivers",
+    field: "Cluster algebras, quiver mutation & representation theory",
+    date: "November 7, 2026",
+    isoDate: "2026-11-07",
+    outcome: "Proved",
+    status: "Single-contributor preprint; Codex review reported, but specialist scrutiny and the planned Rethlas-OSV audit are pending",
+    score: 3,
+    ai: "GPT-6 Pro developed the proof in a recorded research session spanning about 7 hours 27 minutes. Codex reviewed the proofs and edited the manuscript; Qiyue Tang released the result.",
+    summary:
+      "Proves Conjecture 5.5 of Armstrong-Williams, Hirst, Jackson and Lee: every mutation-acyclic quiver on four vertices reaches an acyclic quiver without ever exceeding its initial maximum arrow multiplicity.",
+    importance:
+      "3/5: replaces a larger invariant-dependent search bound by the initial height alone and reduces the associated finite decision search from order h^24 to h^6. The proof remains externally unverified.",
+    source: "https://hexagonmath.org/2611.00181v1",
+    sourceLabel: "View the proof and recorded AI provenance",
+    addedDate: "November 9, 2026",
+    addedIsoDate: "2026-11-09",
+  },
+  {
+    title: "Lu–Wenzel Conjecture for Real and Complex Matrices",
+    field: "Matrix analysis, commutator inequalities & functional analysis",
+    date: "November 7, 2026",
+    isoDate: "2026-11-07",
+    outcome: "Proved",
+    status: "Single-contributor preprint with partial human understanding; planned external model audit not yet available",
+    score: 3,
+    ai: "GPT-6 Pro developed the mathematical results over two research sessions totaling about 10 hours. Codex reviewed the arguments and polished the manuscript; Qiyue Tang published the claim.",
+    summary:
+      "Claims the full Lu–Wenzel family of commutator inequalities for real and complex matrices, extending the classical Böttcher–Wenzel bound to the simultaneous spectral inequalities formulated by Lu and Wenzel.",
+    importance:
+      "3/5: would close a named family of matrix-commutator inequalities connected to normal scalar curvature. The result is currently supported only by its preprint and internal AI-assisted review.",
+    source: "https://hexagonmath.org/2611.00179v1",
+    sourceLabel: "View the preprint and provenance statement",
+    addedDate: "November 9, 2026",
+    addedIsoDate: "2026-11-09",
+  },
+  {
+    title: "L’vov–Kaplansky Conjecture for Standard Polynomials",
+    field: "Noncommutative algebra, matrix polynomial images & identities",
+    date: "November 7, 2026",
+    isoDate: "2026-11-07",
+    outcome: "Classified",
+    status: "Author-reviewed preprint with public source, finite certificates and verification programs; independent specialist review pending",
+    score: 3,
+    ai: "GPT-6 Pro substantially developed both the odd- and even-degree arguments, performed exact computations, searched the literature and prepared the manuscript. Y. T. Miah directed the investigation and reviewed and approved the result.",
+    summary:
+      "Determines the image of every standard polynomial s_d on every full matrix algebra over an algebraically closed characteristic-zero field: odd degrees give zero or the full algebra, while even degrees give zero or the trace-zero subspace.",
+    importance:
+      "3/5: settles the standard-polynomial family within the broader L’vov–Kaplansky conjecture and unifies all degrees and matrix sizes. Public certificates improve auditability, but the full conjecture remains open and this claim awaits outside checking.",
+    source: "https://hexagonmath.org/2611.00184v1",
+    secondarySource: "https://github.com/oddcurios235/lvov-kaplansky-standard-polynomials",
+    sourceLabel: "View the proof and detailed AI disclosure",
+    secondarySourceLabel: "Inspect source, verification programs and certificates",
+    addedDate: "November 9, 2026",
+    addedIsoDate: "2026-11-09",
+  },
   {
     title: "Aaronson–Ambainis Conjecture",
     field: "Quantum complexity, analysis of Boolean functions & polynomial influence",
@@ -6058,6 +6170,46 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Hawking–Page Transition at Weak Coupling",
+    field: "Theoretical physics, gauge/gravity duality & finite-temperature field theory",
+    date: "November 7, 2026",
+    isoDate: "2026-11-07",
+    outcome: "Demonstrated",
+    status: "Primarily AI-generated Hexagon preprint checked against known special cases by one physicist; unrefereed and not independently reproduced by humans",
+    score: 4,
+    ai: "An internal Claude research model, prompted by a physicist, performed the three-loop calculation. The physicist checked known limits, while a separate Claude calculation using a different method reportedly obtained the same result.",
+    summary:
+      "Computes the previously unknown three-loop quartic coefficient b = −1.48×10^−3 λ² in weakly coupled N=4 super-Yang–Mills theory. Its negative sign implies that the Hawking–Page deconfinement transition remains first order and occurs slightly below the Hagedorn temperature.",
+    importance:
+      "4/5: resolves a two-decade-old perturbative calculation bearing directly on the weak-coupling phase structure of a canonical gauge/gravity system. It is a theoretical result in a highly symmetric model and still needs independent specialist reproduction.",
+    source: "https://hexagonmath.org/2611.00175v1",
+    secondarySource: "https://postcutoff.com/e/2026-11-07-anthropic-claude-hawking-page-modular-bootstrap-hexagon/",
+    sourceLabel: "View the primary calculation and provenance",
+    secondarySourceLabel: "Review the evidence and verification scope",
+    addedDate: "November 9, 2026",
+    addedIsoDate: "2026-11-09",
+  },
+  {
+    title: "Exact Large-c Slope of the Spinless Modular Bootstrap",
+    field: "Conformal field theory, modular bootstrap & mathematical physics",
+    date: "November 7, 2026",
+    isoDate: "2026-11-07",
+    outcome: "Demonstrated",
+    status: "Primarily AI-generated 131-page preprint; main results checked by one physicist and independently reproduced by public Claude Opus 5.5, but no external specialist review located",
+    score: 4,
+    ai: "An internal Claude research model autonomously found the main result. Public Claude Opus 5.5 later reproduced it independently, then Claude wrote the paper with brief physicist guidance; the physicist reports checking every main result.",
+    summary:
+      "Determines the optimal large-central-charge slope of the spinless modular-bootstrap gap bound for compact unitary two-dimensional conformal field theories with only Virasoro currents: Λ_V ≈ 9.1266, narrowing the previous interval 8.503–12.",
+    importance:
+      "4/5: replaces a broad numerical interval by an exact optimization result and supplies an explicit functional yielding Δ₁ < c/Λ_V + 0.483 c^(1/3) + O(1). The calculation remains an unrefereed theoretical claim.",
+    source: "https://hexagonmath.org/2611.00174v1",
+    secondarySource: "https://postcutoff.com/e/2026-11-07-anthropic-claude-hawking-page-modular-bootstrap-hexagon/",
+    sourceLabel: "View the primary paper and AI disclosure",
+    secondarySourceLabel: "Review the evidence and verification scope",
+    addedDate: "November 9, 2026",
+    addedIsoDate: "2026-11-09",
+  },
   {
     title: "Potts Lattice-Gauge Correlation-Length Duality",
     field: "Mathematical physics, lattice gauge theory & probability",
