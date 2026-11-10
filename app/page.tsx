@@ -35,8 +35,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 9, 2026";
-const latestReviewIsoDate = "2026-11-09";
+const latestReviewDate = "November 10, 2026";
+const latestReviewIsoDate = "2026-11-10";
 
 const establishedResults: Result[] = [
   {
@@ -2293,6 +2293,46 @@ const emergingResults: Result[] = [
     secondarySourceLabel: "Inspect source, verification programs and certificates",
     addedDate: "November 9, 2026",
     addedIsoDate: "2026-11-09",
+  },
+  {
+    title: "Nill’s Reflexive-Polytope Vertex Conjecture",
+    field: "Discrete geometry, lattice polytopes & toric geometry",
+    date: "November 6, 2026",
+    isoDate: "2026-11-06",
+    outcome: "Disproved",
+    status: "Two-author unrefereed preprint with explicit software-checkable counterexamples; independent specialist verification pending",
+    score: 3,
+    ai: "GPT-6.1 Sol found the low-dimensional examples, supporting lemmas and general construction after Johannes Hofscheier supplied ideas and prompts originally aimed at proving the conjecture. Hofscheier and Benjamin Nill checked the output and wrote the paper.",
+    summary:
+      "Disproves Nill’s 2004 conjecture that every d-dimensional reflexive polytope has at most 6^(d/2) vertices. The paper gives explicit counterexamples in every dimension d at least 8 and shows that the number of vertices can grow doubly exponentially, the largest possible order.",
+    importance:
+      "3/5: overturns a natural extremal bound proposed by one of the paper’s authors and replaces it with the sharp qualitative growth rate. The dimension-8 and -9 examples are explicit and readily testable, but the manuscript has not yet been refereed or independently audited.",
+    source: "https://arxiv.org/abs/2611.08819",
+    secondarySource: "https://postcutoff.com/e/2026-11-09-nill-reflexive-polytopes-conjecture-disproved-gpt-6-1-sol/",
+    sourceLabel: "View the preprint and AI declaration",
+    secondarySourceLabel: "Read the independent evidence summary",
+    addedDate: "November 10, 2026",
+    addedIsoDate: "2026-11-10",
+  },
+  {
+    title: "Böhm–Lafuente Splitting Conjecture",
+    field: "Differential geometry, Einstein manifolds & Lie-group actions",
+    date: "November 6, 2026",
+    isoDate: "2026-11-06",
+    outcome: "Proved",
+    status: "Single-author 48-page preprint with detailed AI disclosure; no independent specialist review or formal verification located",
+    score: 4,
+    ai: "ChatGPT 5.6 Sol combined the author’s intermediate identities with Ramiro Lafuente’s maximum-principle strategy to produce the key non-positive-Ricci theorem. ChatGPT 6.1 Astra found a generalized Iwasawa decomposition and iteratively extended it with Marcos Martinez Wagner.",
+    summary:
+      "Proves that every connected negative-Einstein manifold with cocompact connected symmetries splits isometrically as H × K, with H homogeneous and K compact. This confirms the Böhm–Lafuente conjecture and yields a new proof of the 1975 Alekseevskii conjecture.",
+    importance:
+      "4/5: establishes a general structure theorem for Einstein manifolds and gives a new route to a landmark classification result. The credited AI contributions are central steps, but the claim currently rests on one unrefereed manuscript.",
+    source: "https://arxiv.org/abs/2611.09257",
+    secondarySource: "https://postcutoff.com/e/2026-11-09-ai-assisted-results-november-9-listing/",
+    sourceLabel: "View the proof and detailed AI disclosure",
+    secondarySourceLabel: "Review the discovery sweep",
+    addedDate: "November 10, 2026",
+    addedIsoDate: "2026-11-10",
   },
   {
     title: "Aaronson–Ambainis Conjecture",
