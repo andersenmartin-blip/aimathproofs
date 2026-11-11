@@ -35,10 +35,31 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 10, 2026";
-const latestReviewIsoDate = "2026-11-10";
+const latestReviewDate = "November 11, 2026";
+const latestReviewIsoDate = "2026-11-11";
 
 const establishedResults: Result[] = [
+  {
+    title: "Meyer’s Dimension Question for Crystalline Measures",
+    field: "Functional analysis, Fourier quasicrystals & formal verification",
+    date: "November 11, 2026",
+    isoDate: "2026-11-11",
+    outcome: "Solved",
+    status: "Core existence theorem formally checked in Lean 4 and registered in Palomar; stronger symmetry and layer-growth refinements remain outside the formalized scope",
+    score: 3,
+    ai: "OpenAI Codex Sol 5.6 and Astra 6, Claude models and verification tooling produced and cross-checked the construction with little human understanding; Jamie Martin contributed the manuscript and registered formal developments.",
+    summary:
+      "Constructs a locally finite set on the real line whose space of crystalline measures has countably infinite Hamel dimension, answering Meyer’s question about possible dimensions. The paper further gives symmetric examples and prescribed growth of finite-order layers.",
+    importance:
+      "3/5: realizes the previously missing countably infinite case in the dimension trichotomy for crystalline-measure spaces. Established status applies to the machine-checked core existence statement, not every stronger refinement in the paper.",
+    source: "https://hexagonmath.org/2611.00280v1",
+    secondarySource:
+      "https://palomar-registry.org/entry?id=PALOMAR-2026-10-08-000002&version=1",
+    sourceLabel: "View the paper, provenance and formalization scope",
+    secondarySourceLabel: "Inspect the registered Lean development",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
   {
     title: "Gasull’s Global-Periodicity Classification",
     field: "Dynamical systems, rational recurrences & formal verification",
@@ -2202,6 +2223,175 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Talagrand’s Ultimate Matching Conjecture",
+    field: "Probability, optimal transport & random matching",
+    date: "November 11, 2026",
+    isoDate: "2026-11-11",
+    outcome: "Proved",
+    status: "Three-author AI-generated preprint with partial human understanding; no independent specialist audit or formal verification located",
+    score: 4,
+    ai: "GPT-6 developed the initial solution through extensive interaction with the authors and sharpened the endpoint argument. Further LLM interactions generated and proof-checked much of the manuscript; Michael Goldman, Francesco Grotto and Dario Trevisan contributed their ideas and report overall understanding.",
+    summary:
+      "Proves Talagrand’s Ultimate Matching Conjecture for every pair of finite critical exponents, giving one matching with both anisotropic exponential-Orlicz bounds at the optimal square-root log-N-over-N scale. It also shows that the two hard endpoint cases fail.",
+    importance:
+      "4/5: resolves the finite-exponent form of a major random-matching conjecture and sharply classifies its endpoints. The specialist authors’ involvement is substantial, but external checking is still absent.",
+    source: "https://hexagonmath.org/2611.00294v1",
+    sourceLabel: "View the proof and detailed AI provenance",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
+  {
+    title: "Broué’s Abelian Defect Group Conjecture for 2-Blocks",
+    field: "Representation theory, finite groups & derived equivalence",
+    date: "November 11, 2026",
+    isoDate: "2026-11-11",
+    outcome: "Proved",
+    status: "Single-contributor, primarily AI-generated preprint with no human understanding; planned independent model audit not yet available",
+    score: 4,
+    ai: "GPT-6 Pro conducted thirteen research rounds totaling about 90.8 hours to develop the claimed proof, then reviewed the mathematics and polished the manuscript. Qiyue Tang released the work and is seeking human checkers.",
+    summary:
+      "Claims that every 2-block of a finite group with an abelian defect group is splendidly Rickard equivalent to its Brauer correspondent, settling the characteristic-two case of Broué’s conjecture in its strong form.",
+    importance:
+      "4/5: would resolve a broad and central case of a decades-old representation-theory conjecture. The submission reports no human understanding, formalization or independent specialist review, so the claim remains highly provisional.",
+    source: "https://hexagonmath.org/2611.00288v1",
+    sourceLabel: "View the manuscript and provenance statement",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
+  {
+    title: "Watkins’s Conjecture for Curves with Rational Two-Torsion",
+    field: "Number theory, elliptic curves & modular degrees",
+    date: "November 11, 2026",
+    isoDate: "2026-11-11",
+    outcome: "Proved",
+    status: "Single-contributor, primarily AI-generated preprint with no human understanding; planned Rethlas-OSV audit pending",
+    score: 3,
+    ai: "GPT-6 Pro developed the proof during an eight-hour research round and later reviewed the arguments and polished the manuscript. Qiyue Tang released the work while explicitly seeking a finished human account and independent checking.",
+    summary:
+      "Claims that the modular degree of every elliptic curve over the rationals with nonzero rational 2-torsion is divisible by two to the Mordell–Weil rank, proving Watkins’s conjecture for this large torsion class.",
+    importance:
+      "3/5: substantially enlarges the unconditional territory of a difficult conjecture connecting modular degree and rank. It remains a partial result for Watkins’s full conjecture and currently has no human-checked proof.",
+    source: "https://hexagonmath.org/2611.00285v1",
+    sourceLabel: "View the proof claim and AI-use declaration",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
+  {
+    title: "Smale’s Mean Value Constant",
+    field: "Complex analysis, polynomial critical points & formal verification",
+    date: "November 11, 2026",
+    isoDate: "2026-11-11",
+    outcome: "Classified",
+    status: "AI-dominated preprint reporting a Lean 4 formalization of the main result; public artifact and independent statement-alignment review not located",
+    score: 4,
+    ai: "Claude and ChatGPT models did the work overwhelmingly under Dave Goel’s continuous critical steering. Goel accepts responsibility for the paper and reports that its main theorem has been formalized in Lean 4.",
+    summary:
+      "Determines Smale’s optimal universal mean-value constant: the supremum over polynomial degrees equals 4 and the degree-d constants converge to 4, although every individual constant remains strictly below 4.",
+    importance:
+      "4/5: gives the exact answer to Smale’s 1981 constant problem and shows his classical upper bound is asymptotically sharp. Established status is withheld until the claimed formalization can be inspected and matched to the intended theorem.",
+    source: "https://hexagonmath.org/2611.00283v1",
+    sourceLabel: "View the proof, AI disclosure and formalization claim",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
+  {
+    title: "Subtraction-Free Conjecture for Bounded Ratios of Minors",
+    field: "Total positivity, matrix inequalities & combinatorics",
+    date: "November 11, 2026",
+    isoDate: "2026-11-11",
+    outcome: "Disproved",
+    status: "Single-contributor AI-generated counterexample with computational checking; planned independent audit pending",
+    score: 3,
+    ai: "GPT-6 Pro spent about five documented hours developing the counterexample, its mathematical analysis and computational verification, then performed further proof review and manuscript revision. Qiyue Tang released the claim for independent checking.",
+    summary:
+      "Gives products of minors of a 3,207-by-3,207 matrix whose ratio is uniformly bounded on the totally positive locus although the expected subtraction-free coefficient condition fails, disproving the Boocher–Froehle conjecture.",
+    importance:
+      "3/5: overturns a structural conjecture about bounded ratios of minors with an explicit construction. The unusually large example is computationally motivated and has not yet been independently reproduced.",
+    source: "https://hexagonmath.org/2611.00266v1",
+    sourceLabel: "View the counterexample and provenance statement",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
+  {
+    title: "Rational Points on the Non-Split Cartan Curve of Level 121",
+    field: "Number theory, modular curves & Galois representations",
+    date: "November 10, 2026",
+    isoDate: "2026-11-10",
+    outcome: "Classified",
+    status: "Two independent AI-generated preprints with rerunnable computations; neither proof has been fully understood, refereed or formalized",
+    score: 4,
+    ai: "Claude Opus 5.5, GPT-6.1 Sol and GPT-6 Astra produced almost all mathematics and computations in the Arango-Piñeros–Najman–Zureick-Brown proof. A separate Claude Opus 5.5 research agent built by Manvir Jaswal found a quadratic-Chabauty proof by a different method.",
+    summary:
+      "Two independent approaches claim that the genus-511 curve X_ns+(121) has exactly seven rational points, all CM. Combined with earlier work, this completes the classification of possible 11-adic Galois images for non-CM elliptic curves over the rationals.",
+    importance:
+      "4/5: closes the remaining level-121 obstruction in a major classification program. Independent convergence by distinct methods is valuable evidence, but both arguments remain predominantly machine-produced and externally unchecked.",
+    source: "https://hexagonmath.org/2611.00231v1",
+    secondarySource: "https://hexagonmath.org/2611.00255v1",
+    tertiarySource:
+      "https://postcutoff.com/e/2026-11-09-non-split-cartan-121-two-ai-proofs/",
+    sourceLabel: "View the descent and Selmer-Chabauty proof",
+    secondarySourceLabel: "View the independent quadratic-Chabauty proof",
+    tertiarySourceLabel: "Review the two-proof evidence summary",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
+  {
+    title: "Benjamini–Schramm Site-Percolation Conjecture",
+    field: "Probability, percolation & nonamenable graphs",
+    date: "November 10, 2026",
+    isoDate: "2026-11-10",
+    outcome: "Proved",
+    status: "AI-generated 60-page preprint using three unrefereed inputs; model-only component audits and no formal verification",
+    score: 4,
+    ai: "Claude Opus 5.5 agents discovered the proof, wrote the paper and ran blind component audits. Yan Ru Pei selected the site-percolation problem, steered the strategy, reviewed key lemmas and made the scope and attribution decisions.",
+    summary:
+      "Claims p_c < p_u for site percolation on every connected, locally finite, nonamenable quasi-transitive graph, in the stronger operator form p_c < p_(2→2) ≤ p_u, thereby proving the 1996 Benjamini–Schramm conjecture.",
+    importance:
+      "4/5: would settle a foundational percolation conjecture in its full quasi-transitive site form. The proof depends on three unrefereed results and has only model-based audits, so substantial specialist checking is essential.",
+    source: "https://hexagonmath.org/2611.00251v1",
+    sourceLabel: "View the proof, dependency list and AI provenance",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
+  {
+    title: "Elliptic-Curve Torsion over Degree-Ten Number Fields",
+    field: "Number theory, elliptic curves & modular curves",
+    date: "November 10, 2026",
+    isoDate: "2026-11-10",
+    outcome: "Classified",
+    status: "Primarily AI-generated 124-page preprint with public code and recomputed examples; contributor describes it as raw data and has not fully checked it",
+    score: 4,
+    ai: "GPT-6.1 Sol produced almost all mathematics in the first proof and most computations. Claude Opus 5.5 reviewed it, independently recomputed key cases and all examples, simplified arguments, wrote the manuscript and organized the code; Filip Najman guided the project.",
+    summary:
+      "Claims the complete list of 69 torsion groups of elliptic curves over degree-ten number fields. It newly realizes four groups and classifies all curves producing those four finite cases.",
+    importance:
+      "4/5: completes another degree in the classical torsion-classification program and adds four previously unknown realizations. The released code aids checking, but the contributor explicitly warns that the long proof is not yet human-verified.",
+    source: "https://hexagonmath.org/2611.00234v1",
+    secondarySource: "https://github.com/F-Najman/deg10_torsion",
+    sourceLabel: "View the proof and detailed AI disclosure",
+    secondarySourceLabel: "Inspect code and released computation data",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
+  {
+    title: "Cereceda’s Conjecture for Bipartite 2-Degenerate Graphs",
+    field: "Graph recolouring, reconfiguration & formal verification",
+    date: "November 10, 2026",
+    isoDate: "2026-11-10",
+    outcome: "Proved",
+    status: "AI-dominated preprint reporting Lean proofs of both bounds; public formal artifact and independent statement-alignment review not located",
+    score: 3,
+    ai: "Claude and ChatGPT models did the work overwhelmingly under Dave Goel’s supervision. Goel accepts responsibility and reports that both the quadratic upper bound and matching lower-order construction were proved in Lean.",
+    summary:
+      "Proves that every bipartite 2-degenerate graph has 4-colouring reconfiguration diameter at most 2n(n+1), with quadratic order necessary even at girth six. This establishes Cereceda’s conjecture for this previously unresolved class.",
+    importance:
+      "3/5: resolves the sharp k=4 case for a substantial graph class and improves the general cubic bound. Established status awaits an inspectable formal artifact or independent specialist confirmation.",
+    source: "https://hexagonmath.org/2611.00260v1",
+    sourceLabel: "View the proof, AI disclosure and Lean claim",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
+  },
   {
     title: "Lusztig Positivity for Canonical-Basis Multiplication",
     field: "Quantum algebra, canonical bases & representation theory",
