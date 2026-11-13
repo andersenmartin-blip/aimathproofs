@@ -35,10 +35,28 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 12, 2026";
-const latestReviewIsoDate = "2026-11-12";
+const latestReviewDate = "November 13, 2026";
+const latestReviewIsoDate = "2026-11-13";
 
 const establishedResults: Result[] = [
+  {
+    title: "Petty’s Polar Projection Conjecture",
+    field: "Convex geometry, projection bodies & rigidity",
+    date: "November 12, 2026",
+    isoDate: "2026-11-12",
+    outcome: "Proved",
+    status: "Complete derivation independently re-derived and checked by the specialist author; no formalization or external referee report located",
+    score: 4,
+    ai: "GPT-6 Astra supplied the final key ideas and derivation after Sihan Chen connected the problem to another fixed-point classification. Chen then re-derived and verified the entire argument and reported finding no issues.",
+    summary:
+      "Proves that, in every dimension at least three, a convex body whose polar projection body is a positive dilate of itself must be an origin-centred ellipsoid. The same classification holds for the square of the operator and also yields the translative constant-volume conjecture of Horváth and Lángi.",
+    importance:
+      "4/5: settles Petty’s long-standing fixed-point conjecture and a second convex-geometric conjecture with a short rigidity argument. Established status rests on full specialist re-derivation by the author, not on formal or independent external verification.",
+    source: "https://hexagonmath.org/2611.00401v1",
+    sourceLabel: "View the proof and verification statement",
+    addedDate: "November 13, 2026",
+    addedIsoDate: "2026-11-13",
+  },
   {
     title: "Cranston–Li–Su–Wang–Xu Flow-Reconfiguration Conjecture",
     field: "Graph theory, nowhere-zero flows & formal verification",
@@ -2286,6 +2304,42 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Domino Insertion and Kazhdan–Lusztig Cells in Type B",
+    field: "Representation theory, Coxeter groups & algebraic combinatorics",
+    date: "November 12, 2026",
+    isoDate: "2026-11-12",
+    outcome: "Proved",
+    status: "Primarily AI-generated 14-page preprint with no reported human understanding; planned Rethlas-OSV audit not yet released",
+    score: 3,
+    ai: "GPT-6 Pro developed the claimed proof in two research sessions totaling about 64 minutes and then reviewed and polished the manuscript. Qiyue Tang supplied the problem context and released the output for others to check and finish.",
+    summary:
+      "Claims proofs of Conjectures A, A+ and B of Bonnafé, Geck, Iancu and Lam, identifying Kazhdan–Lusztig left, right and two-sided cells in unequal-parameter type B through domino insertion data.",
+    importance:
+      "3/5: would close a coherent family of representation-theoretic conjectures dating to 2006. The contributor explicitly reports no human understanding, formal certificate or completed independent audit, so the result remains under review.",
+    source: "https://hexagonmath.org/2611.00405v1",
+    sourceLabel: "View the claimed proof and AI provenance",
+    addedDate: "November 13, 2026",
+    addedIsoDate: "2026-11-13",
+  },
+  {
+    title: "Euler’s 1747 Restricted-Prime-Factor Sum Conjecture",
+    field: "Additive number theory, modular forms & exact computation",
+    date: "November 12, 2026",
+    isoDate: "2026-11-12",
+    outcome: "Proved",
+    status: "Primarily AI-generated eight-page preprint with exact arithmetic checks and partial human checking; no independent audit or public formal certificate located",
+    score: 3,
+    ai: "OpenAI Codex generated the mathematical argument, performed the exact arithmetic checks and drafted the manuscript under the contributors’ direction; the authors report checking and understanding some parts.",
+    summary:
+      "Claims that every positive integer congruent to two modulo four is a sum of two positive integers whose prime factors are all congruent to one modulo four, with one allowed as a summand. The proof combines a quaternionic Hecke bound with an exact finite check of 4,194,304 cases.",
+    importance:
+      "3/5: resolves a concrete conjecture recorded by Euler in 1747 using a modern analytic argument plus finite verification. The exact computation is described but has not yet received independent or kernel-checked validation.",
+    source: "https://hexagonmath.org/2611.00370v1",
+    sourceLabel: "View the proof, computation and provenance",
+    addedDate: "November 13, 2026",
+    addedIsoDate: "2026-11-13",
+  },
   {
     title: "Humphreys Support Conjecture",
     field: "Representation theory, algebraic groups & support varieties",
@@ -6361,6 +6415,28 @@ const emergingResults: Result[] = [
 
 const physicsEstablishedResults: Result[] = [
   {
+    title: "Existence of Four-Dimensional Pure Quantum Yang–Mills Theory",
+    field: "Constructive quantum field theory, gauge theory & formal verification",
+    date: "November 10, 2026",
+    isoDate: "2026-11-10",
+    outcome: "Demonstrated",
+    status: "Lean construction checked against a standard physics statement by an independent five-member specialist committee; the construction does not establish a positive mass gap",
+    score: 5,
+    ai: "An OpenAI LLM research system produced the continuum Yang–Mills construction and its Lean development. A committee led by David Gross, with Michael Douglas, Arthur Jaffe, Igor Klebanov and Nikita Nekrasov, supervised release and assessed statement alignment and verification.",
+    summary:
+      "Constructs four-dimensional pure Yang–Mills quantum field theory for compact gauge groups with nonabelian simple Lie algebra, including Wilson-lattice origin, Wightman reconstruction, locality, positive energy and operator-product expansion control. The committee states that the released formal result proves existence according to standard mathematical-physics problem statements; the mass-gap half of the Clay problem remains outside scope.",
+    importance:
+      "5/5: supplies a machine-checked construction for one of the central existence questions behind the Standard Model. It is a major verified theoretical advance, while explicitly not claiming the still-open positive mass gap required for the full Clay Millennium problem.",
+    source: "https://www.kitp.ucsb.edu/sites/default/files/3rd-Statement-About-Quantum-YangMills-Theory_Nov-9.pdf",
+    secondarySource: "https://github.com/yang-mills-group/OpenAI-YM-20261028",
+    tertiarySource: "https://github.com/yang-mills-group/YM/blob/main/docs/assessment-1.pdf",
+    sourceLabel: "Read the specialist committee statement",
+    secondarySourceLabel: "Inspect the submitted Lean construction",
+    tertiarySourceLabel: "Read the committee’s detailed assessment",
+    addedDate: "November 13, 2026",
+    addedIsoDate: "2026-11-13",
+  },
+  {
     title: "Faster-than-Power-Law Correlation Decay in the 2D RP² and RP³ Models",
     field: "Statistical mechanics, lattice spin models & formal verification",
     date: "October 30, 2026",
@@ -6537,6 +6613,44 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Exact Entanglement Criterion for the Diósi–Penrose Model",
+    field: "Quantum gravity phenomenology, open quantum systems & entanglement",
+    date: "November 12, 2026",
+    isoDate: "2026-11-12",
+    outcome: "Demonstrated",
+    status: "AI-generated theoretical analysis re-derived in multiple isolated model passes and checked by the author; no independent specialist review or experiment located",
+    score: 3,
+    ai: "Claude systems produced the calculations and manuscript under Marc Sperzel’s direction. Two isolated computations independently obtained the central criterion, two further passes re-derived the theorem and numbers, and Sperzel read and checked the full paper.",
+    summary:
+      "Derives a necessary-and-sufficient canonical-correlation criterion for when the Tilloy–Diósi version of the Diósi–Penrose semiclassical-gravity model entangles two finite-branch rigid bodies. It shows that many-branch states have no universal critical distance, but model-imposed dephasing keeps the effect small at large separation.",
+    importance:
+      "3/5: sharpens what a proposed gravity-entanglement experiment can and cannot exclude, replacing a two-branch distance rule with an exact general criterion. It remains a model-specific theoretical claim without external validation.",
+    source: "https://hexagonmath.org/2611.00327v1",
+    sourceLabel: "View the criterion and independent-pass disclosure",
+    addedDate: "November 13, 2026",
+    addedIsoDate: "2026-11-13",
+  },
+  {
+    title: "Osterwalder–Schrader Construction of Scalar QED₃ in the Coulomb Phase",
+    field: "Constructive quantum field theory, scalar electrodynamics & probability",
+    date: "November 12, 2026",
+    isoDate: "2026-11-12",
+    outcome: "Demonstrated",
+    status: "Primarily agent-generated 291-page construction with only partial human understanding; project checks are public, but independent specialist validation is pending",
+    score: 4,
+    ai: "An orchestrated AI-agent project generated the proofs and manuscript while Mark Goldstein and Alfredo Guevara directed the effort and began digesting the results. The authors describe the paper as verified project output but do not claim complete human understanding.",
+    summary:
+      "Claims the Osterwalder–Schrader axioms for the fixed-photon-mass Coulomb-phase state of three-dimensional scalar QED, including full Euclidean invariance, reflection positivity and clustering. A joint curvature/Wick-square field is also constructed on a restricted source domain, with explicitly stated coupling and amplitude limitations.",
+    importance:
+      "4/5: would complete a rigorous continuum quantum-field-theory construction left open by King’s earlier work and supply the reconstruction data for a physical phase. The scale and limited human digestion keep it under review despite released project checks.",
+    source: "https://hexagonmath.org/2611.00369v1",
+    secondarySource: "https://github.com/marikgoldstein/scalar-qed-existence",
+    sourceLabel: "View the claim, scope and AI provenance",
+    secondarySourceLabel: "Inspect the verification project",
+    addedDate: "November 13, 2026",
+    addedIsoDate: "2026-11-13",
+  },
   {
     title: "Sharp Ionization Bounds for Helium and Lithium",
     field: "Mathematical physics, spectral theory & atomic structure",
