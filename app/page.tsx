@@ -35,8 +35,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 13, 2026";
-const latestReviewIsoDate = "2026-11-13";
+const latestReviewDate = "November 14, 2026";
+const latestReviewIsoDate = "2026-11-14";
 
 const establishedResults: Result[] = [
   {
@@ -119,6 +119,48 @@ const establishedResults: Result[] = [
     sourceLabel: "View the proof, verification scope and AI provenance",
     addedDate: "November 12, 2026",
     addedIsoDate: "2026-11-12",
+  },
+  {
+    title: "Wolfe’s Minimum-Norm-Point Iteration Problem",
+    field: "Optimization, algorithmic complexity & formal verification",
+    date: "November 9, 2026",
+    isoDate: "2026-11-09",
+    outcome: "Disproved",
+    status: "Both authors verified and explained the reduction; the main reduction, first four corollaries and supporting statements are formalized in Lean 4",
+    score: 3,
+    ai: "The central link between Wolfe’s minimum-norm-point method and the simplex method emerged in Yann Disser and Nils Mosis’s discussions with Claude Opus 5.5. The authors developed and rewrote the proofs with model assistance.",
+    summary:
+      "Disproves the conjectured polynomial iteration bound for Wolfe’s original linopt insertion rule by reducing bounded nondegenerate linear programs to minimum-norm-point instances and transferring an exponential Dantzig-rule lower bound. The same framework transfers many other simplex lower bounds.",
+    importance:
+      "3/5: resolves an open worst-case-complexity question left by the 2018 STOC analysis, and also yields the first exponential example for the Lawson–Hanson algorithm. Human explanation plus scoped Lean checking supports Established status.",
+    source: "https://arxiv.org/abs/2611.12680",
+    secondarySource:
+      "https://aiproofwatch.com/updates/wolfe-s-minimum-norm-point-method-generalizes-the-simplex-method-f758fe76",
+    sourceLabel: "View the proof, AI disclosure and Lean archive",
+    secondarySourceLabel: "Review the formal-checking scope",
+    addedDate: "November 14, 2026",
+    addedIsoDate: "2026-11-14",
+  },
+  {
+    title: "Smale’s Mean Value Constant",
+    field: "Complex analysis, polynomial critical points & formal verification",
+    date: "November 11, 2026",
+    isoDate: "2026-11-11",
+    outcome: "Classified",
+    status: "Main sharp-constant and degree-limit statements accepted by Lean 4 Comparator; the formal proof uses the standard axioms and a documented alternate route",
+    score: 4,
+    ai: "Claude and ChatGPT models did the work overwhelmingly under Dave Goel’s continuous critical steering. Goel accepts responsibility for the paper and checked the formalization.",
+    summary:
+      "Determines Smale’s optimal universal mean-value constant: the supremum over polynomial degrees equals 4 and the degree-d constants converge to 4, although every individual constant remains strictly below 4.",
+    importance:
+      "4/5: gives the exact answer to Smale’s 1981 constant problem and shows his classical upper bound is asymptotically sharp. Public statement-aligned Lean checking now supports promotion to Established.",
+    source: "https://hexagonmath.org/2611.00283v1",
+    secondarySource:
+      "https://aiproofwatch.com/updates/smale-s-mean-value-constant-1981-equals-4-990c7d9c",
+    sourceLabel: "View the proof and AI disclosure",
+    secondarySourceLabel: "Review the formal-checking scope",
+    addedDate: "November 11, 2026",
+    addedIsoDate: "2026-11-11",
   },
   {
     title: "Meyer’s Dimension Question for Crystalline Measures",
@@ -2305,6 +2347,114 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Lusztig’s P1–P15 Conjectures for Extended Affine Weyl Groups",
+    field: "Representation theory, Hecke algebras & affine Weyl groups",
+    date: "November 13, 2026",
+    isoDate: "2026-11-13",
+    outcome: "Proved",
+    status: "Primarily AI-generated preprint with no reported human understanding; planned Rethlas-OSV audit is pending",
+    score: 4,
+    ai: "GPT-6 Pro developed the claimed proof over fourteen research rounds totaling more than 110 hours, then reviewed the arguments and polished the manuscript. Qiyue Tang supplied the problem context and released the output for checking.",
+    summary:
+      "Claims all fifteen of Lusztig’s structural conjectures P1–P15 for extended affine Weyl groups with arbitrary positive integer-valued weight functions, extending the known equal-parameter and selected unequal-parameter cases.",
+    importance:
+      "4/5: would supply the full unequal-parameter foundation for cells and asymptotic Hecke algebras in this broad affine setting. No specialist verification, formalization or completed independent audit has yet been reported.",
+    source: "https://hexagonmath.org/2611.00411v1",
+    sourceLabel: "View the claimed proof and AI provenance",
+    addedDate: "November 14, 2026",
+    addedIsoDate: "2026-11-14",
+  },
+  {
+    title: "Hausel–Rodriguez-Villegas Character-Variety Conjecture",
+    field: "Algebraic geometry, character varieties & mixed Hodge theory",
+    date: "November 13, 2026",
+    isoDate: "2026-11-13",
+    outcome: "Proved",
+    status: "Primarily AI-generated preprint with no reported human understanding; planned Rethlas-OSV audit is pending",
+    score: 4,
+    ai: "GPT-6 Pro developed the claimed proof in two research sessions totaling about 22 hours and then reviewed and polished the manuscript. Qiyue Tang released the model output for independent checking.",
+    summary:
+      "Claims the Hausel–Rodriguez-Villegas formula for mixed Hodge polynomials of primitive-twisted GL(n) character varieties, identifying the geometric invariants with the conjectured symmetric-function expression.",
+    importance:
+      "4/5: would resolve a central conjectural formula connecting character-variety geometry, representation theory and arithmetic. The long new argument has not yet been understood by the contributor or checked by outside specialists.",
+    source: "https://hexagonmath.org/2611.00427v1",
+    sourceLabel: "View the claimed proof and provenance statement",
+    addedDate: "November 14, 2026",
+    addedIsoDate: "2026-11-14",
+  },
+  {
+    title: "Brauer’s k(B) Conjecture for 2-Blocks",
+    field: "Finite groups, block theory & character theory",
+    date: "November 13, 2026",
+    isoDate: "2026-11-13",
+    outcome: "Proved",
+    status: "Primarily AI-generated preprint with no reported human understanding; planned Rethlas-OSV audit is pending",
+    score: 4,
+    ai: "GPT-6 Pro developed the claimed proof during an approximately 29-hour research run and then performed mathematical review and manuscript polishing. Qiyue Tang released it for external scrutiny.",
+    summary:
+      "Claims that the number of ordinary irreducible characters in every 2-block of a finite group is at most the order of its defect group, proving the prime-two case of Brauer’s k(B) conjecture.",
+    importance:
+      "4/5: would settle a major uniform character-count conjecture at the most delicate prime. The claim currently lacks human specialist checking, a formal certificate or a completed independent audit.",
+    source: "https://hexagonmath.org/2611.00426v1",
+    sourceLabel: "View the claimed proof and AI provenance",
+    addedDate: "November 14, 2026",
+    addedIsoDate: "2026-11-14",
+  },
+  {
+    title: "Connectedness of Kazhdan–Lusztig Left Cells in Finite Type",
+    field: "Representation theory, Coxeter groups & Kazhdan–Lusztig theory",
+    date: "November 13, 2026",
+    isoDate: "2026-11-13",
+    outcome: "Proved",
+    status: "Primarily AI-generated preprint with no reported human understanding; planned Rethlas-OSV audit is pending",
+    score: 3,
+    ai: "GPT-6 Pro developed the claimed proof across twelve research sessions totaling about 88 hours and later reviewed and edited the manuscript. Qiyue Tang supplied the problem and published the output for checking.",
+    summary:
+      "Claims that every equal-parameter Kazhdan–Lusztig left cell of a finite Weyl group is connected under simple left multiplication, settling the finite-type connectedness conjecture.",
+    importance:
+      "3/5: closes a natural structural question about cells across all finite Weyl groups. The contributor reports no human understanding, and no formal or independent verification has been released.",
+    source: "https://hexagonmath.org/2611.00406v1",
+    sourceLabel: "View the claimed proof and AI provenance",
+    addedDate: "November 14, 2026",
+    addedIsoDate: "2026-11-14",
+  },
+  {
+    title: "Shapiro–Shapiro Conjecture for Ordered Positive Flags",
+    field: "Real algebraic geometry, flag varieties & Schubert calculus",
+    date: "November 13, 2026",
+    isoDate: "2026-11-13",
+    outcome: "Proved",
+    status: "Primarily AI-generated preprint with no reported human understanding; planned Rethlas-OSV audit is pending",
+    score: 3,
+    ai: "GPT-6 Pro carried out the research, proof development, manuscript drafting and review in a documented run totaling about 10.9 hours. Qiyue Tang released the result for outside checking.",
+    summary:
+      "Claims the Shapiro–Shapiro conjecture in the ordered positive-flags setting, showing that the relevant transverse Schubert intersections are real under the stated positivity and ordering hypotheses.",
+    importance:
+      "3/5: would establish a broad reality theorem at the intersection of positivity and enumerative geometry. The proof is new, model-generated and not yet independently audited or formally verified.",
+    source: "https://hexagonmath.org/2611.00409v1",
+    sourceLabel: "View the claimed proof and provenance statement",
+    addedDate: "November 14, 2026",
+    addedIsoDate: "2026-11-14",
+  },
+  {
+    title: "Scheme-Theoretic Humphreys Conjectures",
+    field: "Representation theory, algebraic groups & support schemes",
+    date: "November 13, 2026",
+    isoDate: "2026-11-13",
+    outcome: "Proved",
+    status: "Primarily AI-generated preprint with no reported human understanding; planned Rethlas-OSV audit is pending",
+    score: 3,
+    ai: "GPT-6 Pro produced the claimed scheme-theoretic argument in an initial research session of about 2.1 hours and then reviewed and polished the manuscript. Qiyue Tang released it for external checking.",
+    summary:
+      "Claims both the relative and traditional scheme-theoretic Humphreys conjectures for connected reductive groups in characteristic greater than the Coxeter number, including reducedness of the predicted self-extension support schemes.",
+    importance:
+      "3/5: strengthens the set-theoretic support statement to its scheme structure in the natural large-characteristic range. The brief new proof has no human specialist validation or formal certificate.",
+    source: "https://hexagonmath.org/2611.00408v1",
+    sourceLabel: "View the claimed proof and AI provenance",
+    addedDate: "November 14, 2026",
+    addedIsoDate: "2026-11-14",
+  },
+  {
     title: "Domino Insertion and Kazhdan–Lusztig Cells in Type B",
     field: "Representation theory, Coxeter groups & algebraic combinatorics",
     date: "November 12, 2026",
@@ -2465,24 +2615,6 @@ const emergingResults: Result[] = [
       "3/5: substantially enlarges the unconditional territory of a difficult conjecture connecting modular degree and rank. It remains a partial result for Watkins’s full conjecture and currently has no human-checked proof.",
     source: "https://hexagonmath.org/2611.00285v1",
     sourceLabel: "View the proof claim and AI-use declaration",
-    addedDate: "November 11, 2026",
-    addedIsoDate: "2026-11-11",
-  },
-  {
-    title: "Smale’s Mean Value Constant",
-    field: "Complex analysis, polynomial critical points & formal verification",
-    date: "November 11, 2026",
-    isoDate: "2026-11-11",
-    outcome: "Classified",
-    status: "AI-dominated preprint reporting a Lean 4 formalization of the main result; public artifact and independent statement-alignment review not located",
-    score: 4,
-    ai: "Claude and ChatGPT models did the work overwhelmingly under Dave Goel’s continuous critical steering. Goel accepts responsibility for the paper and reports that its main theorem has been formalized in Lean 4.",
-    summary:
-      "Determines Smale’s optimal universal mean-value constant: the supremum over polynomial degrees equals 4 and the degree-d constants converge to 4, although every individual constant remains strictly below 4.",
-    importance:
-      "4/5: gives the exact answer to Smale’s 1981 constant problem and shows his classical upper bound is asymptotically sharp. Established status is withheld until the claimed formalization can be inspected and matched to the intended theorem.",
-    source: "https://hexagonmath.org/2611.00283v1",
-    sourceLabel: "View the proof, AI disclosure and formalization claim",
     addedDate: "November 11, 2026",
     addedIsoDate: "2026-11-11",
   },
@@ -6613,6 +6745,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Global Twistor Sources for Analytic Einstein Spacetimes",
+    field: "General relativity, twistor theory & analytic geometry",
+    date: "November 13, 2026",
+    isoDate: "2026-11-13",
+    outcome: "Demonstrated",
+    status: "AI-centered 72-page theoretical construction with selected symbolic checks and partial human understanding; no independent specialist review located",
+    score: 4,
+    ai: "GPT-6 Pro, GPT-6.1 Sol and Claude Opus 5.5 were used in sustained interaction to develop the global construction, test identities and revise the manuscript. SageMath and SymPy checked selected symbolic identities and examples under Marc Sperzel’s direction.",
+    summary:
+      "Claims a global source formalism for real-analytic Einstein spacetimes that extends the local projective-twistor correspondence, giving a global route through the gravitational googly problem under the paper’s analytic and geometric hypotheses.",
+    importance:
+      "4/5: would globalize a central twistor-theoretic reconstruction problem for a broad analytic class of curved spacetimes and yields precise testable identities. The result remains a model-assisted mathematical-physics claim without external validation.",
+    source: "https://hexagonmath.org/2611.00425v1",
+    sourceLabel: "View the construction, checks and AI disclosure",
+    addedDate: "November 14, 2026",
+    addedIsoDate: "2026-11-14",
+  },
   {
     title: "Exact Entanglement Criterion for the Diósi–Penrose Model",
     field: "Quantum gravity phenomenology, open quantum systems & entanglement",
