@@ -35,8 +35,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 14, 2026";
-const latestReviewIsoDate = "2026-11-14";
+const latestReviewDate = "November 15, 2026";
+const latestReviewIsoDate = "2026-11-15";
 
 const establishedResults: Result[] = [
   {
@@ -2588,15 +2588,15 @@ const emergingResults: Result[] = [
     date: "November 11, 2026",
     isoDate: "2026-11-11",
     outcome: "Proved",
-    status: "Single-contributor, primarily AI-generated preprint with no human understanding; planned independent model audit not yet available",
+    status: "Revised AI-generated preprint with no human understanding; a four-worker GPT-6 Astra Rethlas-OSV audit reported no mathematical issues, but no human specialist or formal check is available",
     score: 4,
     ai: "GPT-6 Pro conducted thirteen research rounds totaling about 90.8 hours to develop the claimed proof, then reviewed the mathematics and polished the manuscript. Qiyue Tang released the work and is seeking human checkers.",
     summary:
       "Claims that every 2-block of a finite group with an abelian defect group is splendidly Rickard equivalent to its Brauer correspondent, settling the characteristic-two case of Broué’s conjecture in its strong form.",
     importance:
-      "4/5: would resolve a broad and central case of a decades-old representation-theory conjecture. The submission reports no human understanding, formalization or independent specialist review, so the claim remains highly provisional.",
-    source: "https://hexagonmath.org/2611.00288v1",
-    sourceLabel: "View the manuscript and provenance statement",
+      "4/5: would resolve a broad and central case of a decades-old representation-theory conjecture. The model-only audit is useful additional evidence but does not meet the threshold for Established without human specialist scrutiny or formal verification.",
+    source: "https://hexagonmath.org/2611.00288v2",
+    sourceLabel: "View the revised manuscript and audit disclosure",
     addedDate: "November 11, 2026",
     addedIsoDate: "2026-11-11",
   },
