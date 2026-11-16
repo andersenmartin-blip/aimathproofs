@@ -35,10 +35,52 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 15, 2026";
-const latestReviewIsoDate = "2026-11-15";
+const latestReviewDate = "November 16, 2026";
+const latestReviewIsoDate = "2026-11-16";
 
 const establishedResults: Result[] = [
+  {
+    title: "Explicit Restricted Isometries at the Two-Thirds Exponent",
+    field: "Compressed sensing, harmonic analysis & formal verification",
+    date: "November 10, 2026",
+    isoDate: "2026-11-10",
+    outcome: "Improved",
+    status: "Both authors checked the proof and computations; the main theorem and its dependencies are formalized in Lean 4",
+    score: 4,
+    ai: "GPT-6 Astra produced the proof of the main theorem in one attempt. Christian Kümmerle and Dustin Mixon developed the exposition, extracted the hybrid-norm estimate and investigated the construction's limitations with further model assistance.",
+    summary:
+      "Gives explicit deterministic matrices with the restricted isometry property for sparsity k = m^(2/3-o(1)), breaking the square-root bottleneck by a polynomial margin and reaching the long-sought two-thirds exponent.",
+    importance:
+      "4/5: makes a major explicit-construction advance on a problem highlighted by Tao, with consequences for deterministic sparse recovery. Established status rests on author checking plus a public Lean development of the mathematical theorem; runtime claims lie outside that certificate.",
+    source: "https://arxiv.org/abs/2611.14475",
+    secondarySource: "https://github.com/dmixon/rip",
+    sourceLabel: "View the paper and verification statement",
+    secondarySourceLabel: "Inspect the Lean formalization and code",
+    addedDate: "November 16, 2026",
+    addedIsoDate: "2026-11-16",
+  },
+  {
+    title: "Power Saving for Planar Unit Distances",
+    field: "Discrete geometry, incidence theory & formal verification",
+    date: "September 23, 2026",
+    isoDate: "2026-09-23",
+    outcome: "Improved",
+    status: "The fixed-exponent improvement is formalized in Lean 4; a specialist audit found one correctable overstatement in the paper that it says does not change the applications",
+    score: 5,
+    ai: "An OpenAI frontier research model generated the proof and manuscript; OpenAI's formalization pipeline encoded the universal unit-distance bound in Lean 4.",
+    summary:
+      "Proves that absolute constants C and beta < 4/3 bound the number of unit-distance pairs in every n-point planar set by C n^beta, giving the first fixed power improvement over the classical 4/3 exponent.",
+    importance:
+      "5/5: advances one of Erdős's central planar-distance problems by a polynomial factor. The intended theorem is machine-checked; the released paper should still be read with the documented, repairable genericity correction.",
+    source: "https://github.com/openai/math/tree/main/preprints/A-power-saving-for-planar-unit-distances-September-23-2026",
+    secondarySource: "https://github.com/openai/math/blob/main/lean/docs/167.md",
+    tertiarySource: "https://osverify.github.io/cases/planar-unit-distances.html",
+    sourceLabel: "Read the proof manuscript",
+    secondarySourceLabel: "Inspect the Lean scope and theorem link",
+    tertiarySourceLabel: "Read the specialist correction report",
+    addedDate: "November 16, 2026",
+    addedIsoDate: "2026-11-16",
+  },
   {
     title: "Petty’s Polar Projection Conjecture",
     field: "Convex geometry, projection bodies & rigidity",
@@ -2346,6 +2388,44 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "HLRV Formula for Generic Semisimple Character Varieties",
+    field: "Algebraic geometry, character varieties & mixed Hodge theory",
+    date: "November 15, 2026",
+    isoDate: "2026-11-15",
+    outcome: "Proved",
+    status: "Primarily AI-generated preprint with no reported human understanding; planned Rethlas-OSV audit is pending",
+    score: 4,
+    ai: "GPT-6 Pro developed the claimed proof in a roughly six-hour research session, building on earlier work on the primitive-twisted case, and then reviewed and polished the manuscript. Qiyue Tang released the output for checking.",
+    summary:
+      "Claims the Hausel–Letellier–Rodriguez-Villegas formula for mixed Hodge polynomials of generic semisimple GL(n) character varieties, extending the earlier primitive-twisted result to the full generic semisimple setting.",
+    importance:
+      "4/5: would establish a broad geometric and arithmetic formula for character varieties. The extension is new, but no specialist verification, formalization or completed independent audit has yet been reported.",
+    source: "https://hexagonmath.org/2611.00441v1",
+    sourceLabel: "View the claimed proof and AI provenance",
+    addedDate: "November 16, 2026",
+    addedIsoDate: "2026-11-16",
+  },
+  {
+    title: "L³ Bound for the Trilinear Hilbert Transform",
+    field: "Harmonic analysis, singular integrals & formal verification",
+    date: "October 5, 2026",
+    isoDate: "2026-10-05",
+    outcome: "Proved",
+    status: "AI-generated preprint with a very large Lean development; formal coverage reaches the Schwartz-class estimate, while the full L³ extension and specialist review remain pending",
+    score: 4,
+    ai: "An OpenAI frontier research model generated the proof and manuscript. Joris Roos stated the operator and theorem by hand in Lean, and AI agents produced the approximately 194,000-line formal development from a GPT-6 Astra blueprint.",
+    summary:
+      "Claims that the fixed-slope trilinear Hilbert transform with slopes 1, 2 and 3 maps L³ × L³ × L³ to L¹, resolving this long-open boundedness case for a singular multilinear operator.",
+    importance:
+      "4/5: would settle a substantial fixed-slope case of a central multilinear-harmonic-analysis problem. It remains under review because the released formal statement does not yet certify every functional-analytic step of the full claim.",
+    source: "https://github.com/openai/math/tree/main/preprints/An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026",
+    secondarySource: "https://aiproofwatch.com/updates/openai-reports-an-l3-bound-for-the-trilinear-hilbert-transform-64e264aa",
+    sourceLabel: "Read the proof manuscript",
+    secondarySourceLabel: "Review the verification scope and follow-up",
+    addedDate: "November 16, 2026",
+    addedIsoDate: "2026-11-16",
+  },
   {
     title: "Lusztig’s P1–P15 Conjectures for Extended Affine Weyl Groups",
     field: "Representation theory, Hecke algebras & affine Weyl groups",
@@ -6745,6 +6825,26 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Gauge-Invariant Measure for Lattice Chiral Fermions",
+    field: "Lattice gauge theory, chiral fermions & the Standard Model",
+    date: "October 6, 2026",
+    isoDate: "2026-10-06",
+    outcome: "Demonstrated",
+    status: "Candidate nonperturbative lattice construction; examined during development by three lattice-field-theory specialists, but independent validation and reflection positivity remain open",
+    score: 5,
+    ai: "Nathaniel Craig supplied the refinement strategy. GPT-6 Astra proposed how to transfer gauge fields to finer lattices, established convergence and led development of the detailed proof through several rounds with Craig and outside experts.",
+    summary:
+      "Constructs a smooth, local and gauge-invariant overlap-fermion measure for a class of four-dimensional nonabelian chiral gauge theories that includes the Standard Model, supplying a candidate finite-lattice definition under an admissibility bound on gauge fields.",
+    importance:
+      "5/5: addresses a foundational obstruction to defining the chiral Standard Model nonperturbatively on a lattice. It is an answer in principle, not yet a simulation-ready or continuum definition, and its remaining physical properties need specialist scrutiny.",
+    source: "https://arxiv.org/abs/2610.09093",
+    secondarySource: "https://openai.com/index/step-toward-defining-the-standard-model/",
+    sourceLabel: "Read the theoretical construction",
+    secondarySourceLabel: "Read Craig's provenance and limitations account",
+    addedDate: "November 16, 2026",
+    addedIsoDate: "2026-11-16",
+  },
   {
     title: "Global Twistor Sources for Analytic Einstein Spacetimes",
     field: "General relativity, twistor theory & analytic geometry",
