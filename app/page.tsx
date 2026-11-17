@@ -35,8 +35,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 16, 2026";
-const latestReviewIsoDate = "2026-11-16";
+const latestReviewDate = "November 17, 2026";
+const latestReviewIsoDate = "2026-11-17";
 
 const establishedResults: Result[] = [
   {
@@ -6627,6 +6627,28 @@ const emergingResults: Result[] = [
 
 const physicsEstablishedResults: Result[] = [
   {
+    title: "Gauge-Invariant Measure for Lattice Chiral Fermions",
+    field: "Lattice gauge theory, chiral fermions & the Standard Model",
+    date: "October 6, 2026",
+    isoDate: "2026-10-06",
+    outcome: "Demonstrated",
+    status: "Main finite-lattice theorem formalized in Lean 4 with successful compilation, standard-axiom checking and separate kernel replay; reflection positivity and the continuum limit remain open",
+    score: 5,
+    ai: "Nathaniel Craig supplied the refinement strategy. GPT-6 Astra proposed how to transfer gauge fields to finer lattices, established convergence and led development of the detailed proof and formal checks through several rounds with Craig and outside experts.",
+    summary:
+      "Constructs a smooth, exponentially local and gauge-invariant overlap-fermion measure for a class of four-dimensional nonabelian chiral gauge theories that includes the Standard Model, supplying a candidate finite-lattice definition under an admissibility bound on gauge fields.",
+    importance:
+      "5/5: addresses a foundational obstruction to defining the chiral Standard Model nonperturbatively on a lattice. Established status applies to the formally certified finite-lattice construction; it is not yet a simulation-ready or continuum definition, and reflection positivity remains unresolved.",
+    source: "https://arxiv.org/abs/2610.09093",
+    secondarySource: "https://doi.org/10.5281/zenodo.23196062",
+    tertiarySource: "https://openai.com/index/step-toward-defining-the-standard-model/",
+    sourceLabel: "Read the theoretical construction",
+    secondarySourceLabel: "Inspect the Lean package and verification report",
+    tertiarySourceLabel: "Read Craig's provenance and limitations account",
+    addedDate: "November 16, 2026",
+    addedIsoDate: "2026-11-16",
+  },
+  {
     title: "Existence of Four-Dimensional Pure Quantum Yang–Mills Theory",
     field: "Constructive quantum field theory, gauge theory & formal verification",
     date: "November 10, 2026",
@@ -6825,26 +6847,6 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
-  {
-    title: "Gauge-Invariant Measure for Lattice Chiral Fermions",
-    field: "Lattice gauge theory, chiral fermions & the Standard Model",
-    date: "October 6, 2026",
-    isoDate: "2026-10-06",
-    outcome: "Demonstrated",
-    status: "Candidate nonperturbative lattice construction; examined during development by three lattice-field-theory specialists, but independent validation and reflection positivity remain open",
-    score: 5,
-    ai: "Nathaniel Craig supplied the refinement strategy. GPT-6 Astra proposed how to transfer gauge fields to finer lattices, established convergence and led development of the detailed proof through several rounds with Craig and outside experts.",
-    summary:
-      "Constructs a smooth, local and gauge-invariant overlap-fermion measure for a class of four-dimensional nonabelian chiral gauge theories that includes the Standard Model, supplying a candidate finite-lattice definition under an admissibility bound on gauge fields.",
-    importance:
-      "5/5: addresses a foundational obstruction to defining the chiral Standard Model nonperturbatively on a lattice. It is an answer in principle, not yet a simulation-ready or continuum definition, and its remaining physical properties need specialist scrutiny.",
-    source: "https://arxiv.org/abs/2610.09093",
-    secondarySource: "https://openai.com/index/step-toward-defining-the-standard-model/",
-    sourceLabel: "Read the theoretical construction",
-    secondarySourceLabel: "Read Craig's provenance and limitations account",
-    addedDate: "November 16, 2026",
-    addedIsoDate: "2026-11-16",
-  },
   {
     title: "Global Twistor Sources for Analytic Einstein Spacetimes",
     field: "General relativity, twistor theory & analytic geometry",
