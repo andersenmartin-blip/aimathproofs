@@ -35,10 +35,31 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 17, 2026";
-const latestReviewIsoDate = "2026-11-17";
+const latestReviewDate = "November 18, 2026";
+const latestReviewIsoDate = "2026-11-18";
 
 const establishedResults: Result[] = [
+  {
+    title: "Compact Non-Kähler Gradient Shrinking Ricci Soliton",
+    field: "Differential geometry, Ricci flow & computer-assisted proof",
+    date: "November 16, 2026",
+    isoDate: "2026-11-16",
+    outcome: "Demonstrated",
+    status: "The authors checked the mathematical argument and replayed the complete exact-arithmetic verification certificate; unrefereed preprint",
+    score: 4,
+    ai: "ChatGPT Sol 6.1 initially generated the construction, proof arguments and verification code. The specialist authors then checked the arguments, reviewed the code and replayed every computational check in the exact certificate.",
+    summary:
+      "Constructs a compact simply connected eight-manifold carrying a non-Einstein gradient shrinking Ricci soliton that is nowhere locally Kähler and locally irreducible, answering Question 9.1 of Tian and Cao.",
+    importance:
+      "4/5: supplies the first compact example with this combination of geometric properties and resolves a stated open question in Ricci-flow geometry. Established status rests on detailed specialist checking and a reproducible exact-arithmetic certificate, not peer review.",
+    source: "https://arxiv.org/abs/2611.20552",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-16-compact-non-kahler-gradient-shrinking-ricci-soliton-chatgpt-sol-6-1/",
+    sourceLabel: "Read the paper and certificate instructions",
+    secondarySourceLabel: "Review the AI provenance and verification report",
+    addedDate: "November 18, 2026",
+    addedIsoDate: "2026-11-18",
+  },
   {
     title: "Explicit Restricted Isometries at the Two-Thirds Exponent",
     field: "Compressed sensing, harmonic analysis & formal verification",
@@ -2388,6 +2409,67 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Osserman Conjecture in the Remaining Dimension-16 Case",
+    field: "Riemannian geometry, curvature operators & Clifford structures",
+    date: "November 17, 2026",
+    isoDate: "2026-11-17",
+    outcome: "Proved",
+    status: "AI-generated proof claim with contributor supervision; no formal certificate, specialist referee report or independent verification located",
+    score: 4,
+    ai: "Claude and ChatGPT systems produced most of the proof under Dave Goel's continuous supervision and redirection. Goel reports some human understanding, edited the manuscript and accepts responsibility for the argument.",
+    summary:
+      "Claims the last unresolved dimension-16 case of Nikolayevsky's algebraic Conjecture A and thereby completes the pointwise and conformal Osserman conjectures, classifying the corresponding curvature tensors through Clifford structures.",
+    importance:
+      "4/5: would complete a long-running curvature-classification program whose exceptional dimension resisted the existing argument. It remains under review because the very substantial AI-led proof has not yet received independent specialist or machine checking.",
+    source: "https://hexagonmath.org/2611.00544v1",
+    secondarySource: "https://hexagonmath.org/2611.00546v1",
+    sourceLabel: "Read the main proof and provenance statement",
+    secondarySourceLabel: "Read the expanded companion manuscript",
+    addedDate: "November 18, 2026",
+    addedIsoDate: "2026-11-18",
+  },
+  {
+    title: "Matsaev's Conjecture for Every p Not Equal to 2",
+    field: "Functional analysis, operator theory & polynomial inequalities",
+    date: "November 17, 2026",
+    isoDate: "2026-11-17",
+    outcome: "Disproved",
+    status: "AI-generated counterexample claim with contributor supervision; no formal certificate or independent specialist verification located",
+    score: 4,
+    ai: "Claude and ChatGPT systems did the work overwhelmingly under Dave Goel's supervision and critical steering. Goel reports some human understanding, checked and edited the manuscript and accepts responsibility for it.",
+    summary:
+      "Claims that Matsaev's 1971 operator-norm conjecture fails for every exponent p other than 2, using an explicit real two-by-two matrix and a real quadratic polynomial and extending the previously known p = 4 and p = 4/3 counterexamples.",
+    importance:
+      "4/5: if correct, gives a complete negative resolution of a 55-year-old conjecture across its entire non-Hilbert range with a remarkably small counterexample. Independent scrutiny is still needed before promotion.",
+    source: "https://hexagonmath.org/2611.00547v1",
+    secondarySource: "https://hexagonmath.org/2611.00548v1",
+    sourceLabel: "Read the counterexample and AI provenance",
+    secondarySourceLabel: "Read the expanded companion manuscript",
+    addedDate: "November 18, 2026",
+    addedIsoDate: "2026-11-18",
+  },
+  {
+    title: "Reinhardt's Conjecture on the Worst Lattice Packing",
+    field: "Discrete geometry, convex bodies & lattice packing",
+    date: "November 16, 2026",
+    isoDate: "2026-11-16",
+    outcome: "Proved",
+    status: "Large AI-assisted proof claim with a finite-check archive; no formalization, referee report or independent specialist verification located",
+    score: 4,
+    ai: "Fei Xue supplied a finite reduction and worked with ChatGPT on the local cost analysis; ChatGPT 6.1 Sol proved the six remaining combinatorial types and helped organize the more than 470-page manuscript.",
+    summary:
+      "Claims that the smoothed regular octagon uniquely minimizes lattice packing density among centrally symmetric planar convex bodies, up to affine equivalence, settling Reinhardt's 1934 conjecture.",
+    importance:
+      "4/5: would resolve a classical extremal problem in planar packing and identify the unique worst lattice-packing shape. The scale and AI-heavy final case analysis make independent checking essential despite the released finite-check materials.",
+    source: "https://arxiv.org/abs/2611.21470",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-16-reinhardt-conjecture-proof-claim-fei-xue-chatgpt/",
+    sourceLabel: "Read the proof manuscript and finite-check materials",
+    secondarySourceLabel: "Review the claim, AI role and verification status",
+    addedDate: "November 18, 2026",
+    addedIsoDate: "2026-11-18",
+  },
   {
     title: "HLRV Formula for Generic Semisimple Character Varieties",
     field: "Algebraic geometry, character varieties & mixed Hodge theory",
