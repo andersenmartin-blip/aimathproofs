@@ -35,10 +35,28 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 18, 2026";
-const latestReviewIsoDate = "2026-11-18";
+const latestReviewDate = "November 19, 2026";
+const latestReviewIsoDate = "2026-11-19";
 
 const establishedResults: Result[] = [
+  {
+    title: "Diffie–Hellman with Short Advice Is as Hard as Discrete Logarithm",
+    field: "Number theory, cryptography & computational complexity",
+    date: "November 17, 2026",
+    isoDate: "2026-11-17",
+    outcome: "Proved",
+    status: "The author critically examined the AI-generated proof, verified every step for correctness and rigor, and revised it where needed; unrefereed preprint",
+    score: 4,
+    ai: "Claude Fable 5.2 and Claude Opus 5.5 explored multiple proof strategies with Yuwen Zhou and generated the initial proof draft. Zhou then checked each step, revised the argument and accepts full responsibility for the result.",
+    summary:
+      "Removes the 30-year smoothness proviso from Maurer's reduction: for every prime-order group, discrete logarithms can be computed in polynomial time from a Diffie–Hellman oracle with O(log p) advice bits depending only on the prime. The proof supplies the missing smooth numbers in short intervals using the new zero-free half-plane for zeta.",
+    importance:
+      "4/5: gives an unconditional non-uniform equivalence between two foundational cryptographic problems and also removes assumptions from several related reductions. Established status rests on the author's documented line-by-line expert verification, not peer review or formalization.",
+    source: "https://arxiv.org/abs/2611.22290",
+    sourceLabel: "Read the proof and detailed AI-use statement",
+    addedDate: "November 19, 2026",
+    addedIsoDate: "2026-11-19",
+  },
   {
     title: "Compact Non-Kähler Gradient Shrinking Ricci Soliton",
     field: "Differential geometry, Ricci flow & computer-assisted proof",
@@ -2409,6 +2427,48 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Bourgain's Unbounded Sobolev-Growth Problem for Cubic NLS",
+    field: "Nonlinear dispersive PDEs, Hamiltonian dynamics & mathematical physics",
+    date: "November 18, 2026",
+    isoDate: "2026-11-18",
+    outcome: "Proved",
+    status: "Mixed human-and-AI preprint with only partial declared human understanding; no formalization, referee report or independent specialist verification located",
+    score: 4,
+    ai: "Xi Chen used ChatGPT 6.2 Astra during the research to explore mathematical ideas, discuss possible proof strategies, and help draft and edit the manuscript. The disclosure does not attribute individual lemmas to the model.",
+    summary:
+      "Claims a global solution of the defocusing cubic nonlinear Schrödinger equation on the square torus whose H^(6/5) norm becomes unbounded, resolving Bourgain's question about whether a single periodic solution can exhibit unlimited higher-Sobolev growth.",
+    importance:
+      "4/5: would settle a well-known problem in weak turbulence and nonlinear dispersive dynamics, strengthening earlier constructions that achieved only arbitrarily large finite growth. The proof remains under review because the deposit is unrefereed and only partly human-checked.",
+    source: "https://hexagonmath.org/2611.00577v1",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-18-bourgain-sobolev-growth-cubic-nls-torus-xi-chen-gpt-6-2-astra/",
+    sourceLabel: "Read the proof and AI disclosure",
+    secondarySourceLabel: "Review the claim and verification status",
+    addedDate: "November 19, 2026",
+    addedIsoDate: "2026-11-19",
+  },
+  {
+    title: "Nonconvergence of the Theories of Tracial Matrix Algebras",
+    field: "Operator algebras, continuous model theory & ultraproducts",
+    date: "November 17, 2026",
+    isoDate: "2026-11-17",
+    outcome: "Disproved",
+    status: "Human-directed LLM-developed proof in an unrefereed preprint; no formalization or independent specialist report located",
+    score: 3,
+    ai: "Large language models suggested the central strategy of recovering the diagonal from commutants and spectral gap, helped develop the subsequent arguments, and assisted with the manuscript. Vadim Alekseev and Andreas Thom directed the work.",
+    summary:
+      "Shows that the complete continuous first-order theories of the matrix algebras M_n(C) and metric unitary groups U(n) do not converge with dimension. The construction yields continuum many pairwise non-elementarily-equivalent matrix ultraproducts and answers questions of Farah–Hart–Sherman and Popa.",
+    importance:
+      "3/5: resolves two structural questions in operator-algebra model theory and sharply separates matrix ultraproducts. The authors' expertise is substantial, but the source does not document a statement-by-statement check or independent review, so the result remains under review.",
+    source: "https://arxiv.org/abs/2611.22822",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-18-tracial-matrix-algebras-theories-do-not-converge-alekseev-thom-llm/",
+    sourceLabel: "Read the paper and AI-assistance statement",
+    secondarySourceLabel: "Review the questions answered and evidence status",
+    addedDate: "November 19, 2026",
+    addedIsoDate: "2026-11-19",
+  },
   {
     title: "Osserman Conjecture in the Remaining Dimension-16 Case",
     field: "Riemannian geometry, curvature operators & Clifford structures",
@@ -6929,6 +6989,48 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Uniform Spectral Gap for the Square-Lattice Spin-2 AKLT Model",
+    field: "Condensed-matter theory, quantum spin systems & computer-assisted proof",
+    date: "November 18, 2026",
+    isoDate: "2026-11-18",
+    outcome: "Demonstrated",
+    status: "Machine-written computer-assisted preprint with exact local certificates but no declared human understanding or independent specialist review",
+    score: 4,
+    ai: "Claude Opus 5.5 and Fable 5.2 plus OpenAI Luna 6, Sol 6.1 and Astra 6 performed proof discovery, verification, claimed Lean work and writing. The contributors supervised preparation; the Hexagon record declares no human authorship or understanding.",
+    summary:
+      "Claims that the spin-2 AKLT Hamiltonian on sufficiently large square-lattice tori has a unique ground state and a spectral gap bounded uniformly away from zero, and that the infinite-volume frustration-free state is unique. The local combinatorial inputs use exact integer certificates and directed-rounding calculations.",
+    importance:
+      "4/5: would solve a spectral-gap problem open since the original AKLT work and rigorously establish the expected gapped phase on the square lattice. Reproducible certificates cover important local inputs, but the full 147-page analytic chain still needs independent scrutiny.",
+    source: "https://hexagonmath.org/2611.00580v1",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-18-aklt-square-lattice-spectral-gap-aronow-lopatto-machine-written/",
+    sourceLabel: "Read the proof, certificates and provenance",
+    secondarySourceLabel: "Review the verification scope and limitations",
+    addedDate: "November 19, 2026",
+    addedIsoDate: "2026-11-19",
+  },
+  {
+    title: "Perturbatively Stable Passive Quantum Memory in Three Dimensions",
+    field: "Quantum information, many-body physics & topological phases",
+    date: "November 16, 2026",
+    isoDate: "2026-11-16",
+    outcome: "Demonstrated",
+    status: "Two core existential conclusions machine-checked in Lean; most of the long proof is not formalized, and the positive-temperature perturbed interior is deferred to a companion paper",
+    score: 5,
+    ai: "Patrick Hayden set the research direction, problem and overall strategy; Gemini 4 Argon performed most of the detailed mathematical reasoning and proof construction, while Gemini 4 Carbon also assisted with drafting.",
+    summary:
+      "Constructs a three-dimensional local quantum-memory family that retains thermal self-correction without perturbations and, at zero temperature, remains stable under arbitrary weak superpolynomially decaying perturbations, with a bulk gap, tiny ground-state splitting and long unitary memory lifetime.",
+    importance:
+      "5/5: advances a central question in fault-tolerant quantum information by placing thermal and perturbative protection on the same three-dimensional code family. It remains under review because Lean checks only standalone core conclusions and the full perturbed finite-temperature regime is not yet public.",
+    source: "https://arxiv.org/abs/2611.21749",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-18-passive-quantum-memory-3d-hayden-gemini-4-argon/",
+    sourceLabel: "Read the paper and formalization statement",
+    secondarySourceLabel: "Review the AI role and verification scope",
+    addedDate: "November 19, 2026",
+    addedIsoDate: "2026-11-19",
+  },
   {
     title: "Global Twistor Sources for Analytic Einstein Spacetimes",
     field: "General relativity, twistor theory & analytic geometry",
