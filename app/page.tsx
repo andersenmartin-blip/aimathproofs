@@ -35,10 +35,79 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 19, 2026";
-const latestReviewIsoDate = "2026-11-19";
+const latestReviewDate = "November 20, 2026";
+const latestReviewIsoDate = "2026-11-20";
 
 const establishedResults: Result[] = [
+  {
+    title: "Additive-Square-Free Infinite Word on Six Integers",
+    field: "Combinatorics on words, additive patterns & formal verification",
+    date: "November 18, 2026",
+    isoDate: "2026-11-18",
+    outcome: "Disproved",
+    status: "Explicit construction formalized in Lean 4; specialist author takes responsibility, but the formal archive has not yet received an independent public audit",
+    score: 4,
+    ai: "GPT-6.2 Astra wrote almost the entire proof and paper and also produced the Lean verification. Jeffrey Shallit added introductory material, references and discussion, hosts the formal project, and accepts responsibility for correctness.",
+    summary:
+      "Constructs an infinite word over six positive integers with no two adjacent nonempty blocks of equal length and equal sum, disproving the Brown–Freedman expectation and resolving a problem posed in several forms since 1972.",
+    importance:
+      "4/5: settles a prominent 54-year-old avoidance problem in combinatorics on words; the least possible alphabet size is now narrowed to four, five or six. Established status rests on the public Lean theorem for the stated construction and specialist responsibility for the result.",
+    source: "https://arxiv.org/abs/2611.24441",
+    secondarySource:
+      "https://cs.uwaterloo.ca/~shallit/Papers/additive_square_lean-2.zip",
+    tertiarySource:
+      "https://postcutoff.com/e/2026-11-18-additive-square-free-word-six-letters-shallit-gpt-6-2-astra/",
+    sourceLabel: "Read the construction and AI statement",
+    secondarySourceLabel: "Download the Lean verification project",
+    tertiarySourceLabel: "Review the scope and verification status",
+    addedDate: "November 20, 2026",
+    addedIsoDate: "2026-11-20",
+  },
+  {
+    title: "Sharp Endpoint Restriction for the Sphere and Paraboloid",
+    field: "Harmonic analysis, Fourier restriction & formal verification",
+    date: "November 19, 2026",
+    isoDate: "2026-11-19",
+    outcome: "Proved",
+    status: "Exact sphere and compact-paraboloid upper and lower theorem wrappers passed Lean 4 and Palomar Comparator preflight with a standard-axiom audit",
+    score: 3,
+    ai: "ChatGPT refined Mark Lewko's argument to obtain the sharp endpoint logarithmic factor for the sphere and compact paraboloid patch. Lewko directed the refinement, building on earlier OpenAI local-smoothing and sharp Kakeya developments.",
+    summary:
+      "Determines the optimal logarithmic growth of the Fourier extension operator at the critical exponent for the unit sphere and compact paraboloid in every ambient dimension, with matching fixed-input lower bounds proving sharpness.",
+    importance:
+      "3/5: closes a precise endpoint question for two fundamental curved surfaces and supplies the exact logarithmic loss needed in related restriction and Kakeya arguments. Established status is limited to the literal machine-checked upper and lower estimates.",
+    source:
+      "https://aiproofwatch.com/updates/sharp-logarithmic-endpoint-restriction-estimates-for-the-sphere-and-pa-7728e7b2",
+    secondarySource:
+      "https://github.com/openai/math/tree/main/lean/Palomar/Palomar/RegistryEndpointRestriction",
+    sourceLabel: "Review the statement, provenance and formal scope",
+    secondarySourceLabel: "Inspect the Lean theorem wrappers",
+    addedDate: "November 20, 2026",
+    addedIsoDate: "2026-11-20",
+  },
+  {
+    title: "Aaronson–Ambainis Conjecture",
+    field: "Quantum complexity, analysis of Boolean functions & polynomial influence",
+    date: "November 6, 2026",
+    isoDate: "2026-11-06",
+    outcome: "Proved",
+    status: "Original-normalization theorem replayed by the Lean kernel and Nanoda; independent experts published an exposition of the main proof and a separate partial rederivation",
+    score: 4,
+    ai: "A PSI research harness running instances of a non-public Anthropic model found the proof, strengthened it twice, drafted the manuscript and produced the Lean formalization. David Turturean reviewed the paper and accepts responsibility for correctness.",
+    summary:
+      "Proves that a bounded degree-d polynomial on the Boolean cube with variance at least ε has a coordinate of influence at least (ε/d)^7. This settles the Aaronson–Ambainis conjecture and rules out exponential quantum query speedups on random inputs unless the problem has rare structure.",
+    importance:
+      "4/5: resolves a central 2008 conjecture connecting Boolean-function analysis to the limits of quantum speedups. Promotion to Established follows exact statement-aligned kernel checking, a manuscript audit and independent human explanations of the central determinant and routing argument.",
+    source: "https://github.com/physical-superintelligence/aaronson-ambainis",
+    secondarySource: "https://psi.inc/research/aaronson-ambainis/",
+    tertiarySource:
+      "https://aiproofwatch.com/updates/a-proof-of-the-aaronson-ambainis-conjecture-1cd81793",
+    sourceLabel: "Inspect the Lean proof, checks and disclosure",
+    secondarySourceLabel: "Read PSI's primary announcement",
+    tertiarySourceLabel: "Review the formal scope and independent follow-up",
+    addedDate: "November 8, 2026",
+    addedIsoDate: "2026-11-08",
+  },
   {
     title: "Diffie–Hellman with Short Advice Is as Hard as Discrete Logarithm",
     field: "Number theory, cryptography & computational complexity",
@@ -2428,6 +2497,27 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
+    title: "Brakensiek–Guruswami Promise-Coloring Conjectures",
+    field: "Computational complexity, graph homomorphisms & promise CSPs",
+    date: "November 19, 2026",
+    isoDate: "2026-11-19",
+    outcome: "Proved",
+    status: "Primarily AI-generated preprint; the author checked the main statements and proof outline, but detailed sections were checked only by AI systems",
+    score: 4,
+    ai: "GPT-6.2 Astra and Claude Opus 5.5 explored proof strategies with Yuwen Zhou and generated the initial draft. Zhou understands the main results and outline, but reports that AI systems alone checked the detailed proofs.",
+    summary:
+      "Claims both Brakensiek–Guruswami conjectures: NP-hardness of promise graph homomorphism for every non-bipartite source and compatible loopless target, and the corresponding strong-coloring hardness conjecture for uniform hypergraphs, via a circle-configuration theorem.",
+    importance:
+      "4/5: the graph result would include NP-hardness of coloring 3-colorable graphs with any fixed constant number of colors, a long-standing approximation-complexity problem. The lack of human or formal checking of the detailed proof requires under-review status.",
+    source: "https://hexagonmath.org/2611.00619v1",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-18-brakensiek-guruswami-promise-coloring-conjectures-claim-yuwen-zhou/",
+    sourceLabel: "Read the claimed proof and provenance",
+    secondarySourceLabel: "Review the verification gaps and significance",
+    addedDate: "November 20, 2026",
+    addedIsoDate: "2026-11-20",
+  },
+  {
     title: "Bourgain's Unbounded Sobolev-Growth Problem for Cubic NLS",
     field: "Nonlinear dispersive PDEs, Hamiltonian dynamics & mathematical physics",
     date: "November 18, 2026",
@@ -3068,28 +3158,6 @@ const emergingResults: Result[] = [
     secondarySourceLabel: "Review the discovery sweep",
     addedDate: "November 10, 2026",
     addedIsoDate: "2026-11-10",
-  },
-  {
-    title: "Aaronson–Ambainis Conjecture",
-    field: "Quantum complexity, analysis of Boolean functions & polynomial influence",
-    date: "November 6, 2026",
-    isoDate: "2026-11-06",
-    outcome: "Proved",
-    status: "Complete public Lean 4 development with multi-kernel replay and publisher-supplied audits; independent statement-alignment review and outside replay are still pending",
-    score: 4,
-    ai: "A PSI research harness running instances of a non-public Anthropic model found the proof, strengthened it twice, drafted the manuscript and produced the Lean formalization. David Turturean reviewed the paper and accepts responsibility for correctness.",
-    summary:
-      "Proves that a bounded degree-d polynomial on the Boolean cube with variance at least ε has a coordinate of influence at least (ε/d)^7. This settles the Aaronson–Ambainis conjecture and rules out exponential quantum query speedups on random inputs unless the problem has rare structure.",
-    importance:
-      "4/5: resolves a central 2008 conjecture connecting Boolean-function analysis to the limits of quantum speedups. The released proof has no placeholders or added axioms and was replayed by multiple kernels, but the exact match to the original conjecture and the quantum-complexity consequence have not yet been independently certified.",
-    source: "https://github.com/physical-superintelligence/aaronson-ambainis",
-    secondarySource: "https://psi.inc/research/aaronson-ambainis/",
-    tertiarySource: "https://stateofproof.org/paper-watch/paper-2026-11-06-a-proof-of-the-aaronson-ambainis-conjecture",
-    sourceLabel: "Inspect the Lean proof, checks and disclosure",
-    secondarySourceLabel: "Read PSI's primary announcement",
-    tertiarySourceLabel: "Read the independent evidence intake",
-    addedDate: "November 8, 2026",
-    addedIsoDate: "2026-11-08",
   },
   {
     title: "Scherk Uniqueness Conjecture for Minimal Surfaces",
@@ -6989,6 +7057,24 @@ const physicsEstablishedResults: Result[] = [
 ];
 
 const physicsEmergingResults: Result[] = [
+  {
+    title: "Spontaneous X-Ray Constraint on Gaussian Classical–Quantum Gravity",
+    field: "Quantum-gravity phenomenology, open quantum systems & X-ray constraints",
+    date: "November 19, 2026",
+    isoDate: "2026-11-19",
+    outcome: "Demonstrated",
+    status: "AI-derived theoretical exclusion using a new likelihood fit to published XENONnT data; independent model-review passes but no external specialist review located",
+    score: 4,
+    ai: "Claude systems produced the calculations and text under Marc Sperzel's direction. Separate review passes independently re-derived both exclusion arguments, checked cited equations and narrowed the claims where necessary.",
+    summary:
+      "Claims that spontaneous X-ray limits exclude a broad Gaussian, Lorentz-covariant class of classical–quantum gravity models at linear order. Two arguments constrain respectively the scalar and tensor sectors and identify the structural modifications a surviving model would require.",
+    importance:
+      "4/5: converts an existing rare-event spectrum into quantitative tests of a proposed classical-gravity framework, with reported margins of at least eight orders of magnitude for one bound. The likelihood fit is the paper's own analysis rather than a XENONnT result and needs independent reproduction.",
+    source: "https://hexagonmath.org/2611.00594v1",
+    sourceLabel: "Read the derivation, data fit and AI provenance",
+    addedDate: "November 20, 2026",
+    addedIsoDate: "2026-11-20",
+  },
   {
     title: "Uniform Spectral Gap for the Square-Lattice Spin-2 AKLT Model",
     field: "Condensed-matter theory, quantum spin systems & computer-assisted proof",
