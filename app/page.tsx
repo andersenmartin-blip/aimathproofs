@@ -35,10 +35,53 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 20, 2026";
-const latestReviewIsoDate = "2026-11-20";
+const latestReviewDate = "November 21, 2026";
+const latestReviewIsoDate = "2026-11-21";
 
 const establishedResults: Result[] = [
+  {
+    title: "Nine-Point Heilbronn Optimum in the Unit Square",
+    field: "Discrete geometry, extremal configurations & formal verification",
+    date: "November 20, 2026",
+    isoDate: "2026-11-20",
+    outcome: "Proved",
+    status: "Exact optimum and uniqueness theorem checked by the Lean kernel with a standard-axiom audit; the long case elimination has little independent human exposition",
+    score: 3,
+    ai: "ChatGPT 6 Pro wrote the first draft of the proof under The-Anh Vu-Le's direction, and Claude produced the Lean implementation. Vu-Le reports a successful kernel check of the optimum and equality cases.",
+    summary:
+      "Proves that the largest possible minimum triangle area determined by nine points in the closed unit square is (9√65 − 55)/320, and that the Comellas–Yebra configuration is the unique maximizer up to square symmetries and relabelling.",
+    importance:
+      "3/5: turns a 2002 numerical extremizer into an exact optimum with uniqueness. Established status is limited to the literal Lean theorem; the five-family elimination still lacks a detailed independent human explanation.",
+    source:
+      "https://aiproofwatch.com/updates/the-nine-point-heilbronn-optimum-in-the-unit-square-8c6b55e9",
+    secondarySource:
+      "https://palomar-registry.org/registry/the-nine-point-heilbronn-optimum-in-the-unit-square",
+    sourceLabel: "Review the formal scope and AI attribution",
+    secondarySourceLabel: "Inspect the registered theorem and checking record",
+    addedDate: "November 21, 2026",
+    addedIsoDate: "2026-11-21",
+  },
+  {
+    title: "Sharp Topological Overlap in Every Dimension",
+    field: "Topological combinatorics, simplex overlap & formal verification",
+    date: "November 19, 2026",
+    isoDate: "2026-11-19",
+    outcome: "Proved",
+    status: "Statement-aligned Lean theorem built with only standard axioms; specialist author rewrote and explains the proof, but no independent referee report located",
+    score: 3,
+    ai: "GPT-6 Astra found the proof following Sergey Norin's directions. Norin rewrote and restructured the argument, explained its bramble and filling-theorem components, and supplied the Lean verification record.",
+    summary:
+      "Determines the optimal asymptotic overlap constant for both continuous and affine maps of simplex faces into d-dimensional Euclidean space: c_d = (d+1)!/(d+1)^(d+1) for every positive dimension.",
+    importance:
+      "3/5: supplies the missing sharp lower bound matching the known affine construction in every dimension. Established status rests on the author-explained proof and a public theorem-level Lean check.",
+    source: "https://arxiv.org/abs/2611.26229",
+    secondarySource:
+      "https://aiproofwatch.com/updates/sharp-topological-overlap-in-every-dimension-a4dc4b03",
+    sourceLabel: "Read the proof and AI disclosure",
+    secondarySourceLabel: "Review the formal scope and checking evidence",
+    addedDate: "November 21, 2026",
+    addedIsoDate: "2026-11-21",
+  },
   {
     title: "Additive-Square-Free Infinite Word on Six Integers",
     field: "Combinatorics on words, additive patterns & formal verification",
@@ -2496,6 +2539,134 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Riemann Hypothesis and Dirichlet Generalized Riemann Hypothesis",
+    field: "Analytic number theory, zeta functions & formal verification",
+    date: "November 20, 2026",
+    isoDate: "2026-11-20",
+    outcome: "Proved",
+    status: "Extraordinary claimed proof released as a 17.4-million-line Lean archive; theorem statements and some builds have been checked, but the proof and mathematics have not completed independent expert review",
+    score: 5,
+    ai: "Levent Alpöge reports discovering and formalizing the argument with Claude. The four-page announcement gives only a high-level sketch; Alpöge says a proper paper and human-readable simplification remain to be written.",
+    summary:
+      "Claims that every nontrivial zero of the Riemann zeta function, and every nontrivial zero of each Dirichlet L-function, has real part one half. The released archive states the corresponding Mathlib theorems without assumptions.",
+    importance:
+      "5/5: acceptance would settle the most prominent open problem in mathematics and a Clay Millennium Prize problem, while simultaneously proving Dirichlet GRH. The claim remains firmly under review despite the formal archive because independent kernel checking and mathematical understanding are incomplete.",
+    source: "https://alpo.ge/remark.pdf",
+    secondarySource:
+      "https://lean4.dev/proofs/riemann-hypothesis-claim",
+    tertiarySource: "https://github.com/Tomodovodoo/Riemann",
+    sourceLabel: "Read Alpöge's primary announcement",
+    secondarySourceLabel: "Review the claim and early checking status",
+    tertiarySourceLabel: "Inspect the mirrored Lean archive inventory",
+    addedDate: "November 21, 2026",
+    addedIsoDate: "2026-11-21",
+  },
+  {
+    title: "Shortest Paths on Rational Convex 4-Polytopes",
+    field: "Computational geometry, convex polytopes & complexity",
+    date: "November 20, 2026",
+    isoDate: "2026-11-20",
+    outcome: "Disproved",
+    status: "Specialist-authored 63-page preprint with extensive AI-generated technical work; no independent specialist check or peer review located",
+    score: 3,
+    ai: "Igor Pak reports extensive collaboration with ChatGPT models across research, calculations and writing, says the details were unlikely to succeed without AI assistance, and notes that some sections were written entirely by AI.",
+    summary:
+      "Proves NP-hardness and SQRTSUM-hardness for exact geodesic distance on rational convex 4-polytopes, and constructs examples with exponentially many equal shortest paths, disproving three Miller–Pak conjectures.",
+    importance:
+      "3/5: resolves a problem left open since 2008 and overturns polynomial-complexity expectations for convex four-dimensional geometry. It remains an unrefereed single-author preprint.",
+    source: "https://arxiv.org/abs/2611.25164",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-19-shortest-paths-4-polytopes-np-hard-igor-pak-chatgpt/",
+    sourceLabel: "Read the proof and AI-use declaration",
+    secondarySourceLabel: "Review the claims and verification status",
+    addedDate: "November 21, 2026",
+    addedIsoDate: "2026-11-21",
+  },
+  {
+    title: "Ehrhart Positivity for Integral Polypositroids",
+    field: "Algebraic combinatorics, matroid polytopes & Ehrhart theory",
+    date: "November 19, 2026",
+    isoDate: "2026-11-19",
+    outcome: "Proved",
+    status: "Mostly AI-generated unrefereed Hexagon manuscript with an AI cross-check and only partial human checking; no formalization or independent specialist review located",
+    score: 3,
+    ai: "GPT-6 Astra produced the original 117-page proof with little human input; GPT-6.2 Astra simplified and extended it, and Claude Opus 5.5 checked the claims and computations. Luis Ferroni supplied direction and deposited the result without claiming human authorship.",
+    summary:
+      "Claims strict positivity of every coefficient of the Ehrhart polynomial of an integral polypositroid, proving the Ferroni–Jochemko–Schröter positroid conjecture and giving stronger coefficient comparisons.",
+    importance:
+      "3/5: settles a natural positivity conjecture in an active part of matroid Ehrhart theory and proves a stronger polypositroid theorem. The manuscript's limited human understanding keeps it under review.",
+    source: "https://hexagonmath.org/2611.00653v1",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-19-positroid-ehrhart-positivity-ferroni-gpt-6-astra/",
+    sourceLabel: "Read the manuscript and provenance statement",
+    secondarySourceLabel: "Review the evidence and open verification gaps",
+    addedDate: "November 21, 2026",
+    addedIsoDate: "2026-11-21",
+  },
+  {
+    title: "Planar Mumford–Shah Crack-Tip Has No Calibration",
+    field: "Calculus of variations, free-discontinuity problems & convex lifting",
+    date: "November 19, 2026",
+    isoDate: "2026-11-19",
+    outcome: "Disproved",
+    status: "Human-written specialist preprint built from an AI-proposed key competitor; no independent review or peer-reviewed publication located",
+    score: 3,
+    ai: "After unsuccessful human attempts, GPT-6 Astra suggested looking for a positive gap in the convex lifting and proposed the initial competitor. Marcello Carioni and Giorgio Patrini developed the proof and wrote the paper without further substantive AI assistance.",
+    summary:
+      "Shows that the standard calibration-based convex lifting of the planar Mumford–Shah functional is not sharp for crack-tip boundary data, so the canonical crack-tip admits no calibration in that framework.",
+    importance:
+      "3/5: rules out the long-pursued calibration route for a central singular configuration and answers a question that resisted specialists for years. The result is still an unrefereed preprint.",
+    source: "https://arxiv.org/abs/2611.26245",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-19-mumford-shah-crack-tip-no-calibration-carioni-patrini-gpt-6-astra/",
+    sourceLabel: "Read the proof and AI attribution",
+    secondarySourceLabel: "Review the scope and verification status",
+    addedDate: "November 21, 2026",
+    addedIsoDate: "2026-11-21",
+  },
+  {
+    title: "Globally F-Regular Varieties Are Rationally Chain Connected",
+    field: "Algebraic geometry, positive characteristic & rational curves",
+    date: "November 19, 2026",
+    isoDate: "2026-11-19",
+    outcome: "Proved",
+    status: "Three-specialist preprint with itemized decisive AI steps; no peer review or independent public verification located",
+    score: 3,
+    ai: "ChatGPT 6 Sol supplied the missing proof of Theorem 4.10 and a reordering that removed the characteristic bound; the authors say they did not contribute to the ideas of that theorem. Claude Opus 5.5 suggested another method and checked an example.",
+    summary:
+      "Proves that every projective globally F-regular variety is rationally chain connected in all positive characteristics, using a unique purely inseparable crepant cover carrying very free curves.",
+    importance:
+      "3/5: resolves a long-standing positive-characteristic analogue of rational connectedness for varieties of Fano type. The contribution is substantial but remains an unrefereed preprint.",
+    source: "https://arxiv.org/abs/2611.25068",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-19-globally-f-regular-rationally-chain-connected-jovinelly-lehmann-riedl/",
+    sourceLabel: "Read the proof and detailed AI-use statement",
+    secondarySourceLabel: "Review the evidence and verification status",
+    addedDate: "November 21, 2026",
+    addedIsoDate: "2026-11-21",
+  },
+  {
+    title: "McKay–Praeger Conjecture for Vertex-Transitive Graphs",
+    field: "Algebraic graph theory, permutation groups & asymptotic enumeration",
+    date: "November 18, 2026",
+    isoDate: "2026-11-18",
+    outcome: "Proved",
+    status: "Specialist-authored unrefereed preprint; the authors critically examined, rewrote and simplified the AI-generated central proposition, but no independent review is public",
+    score: 4,
+    ai: "GPT-6.1 discovered Proposition 4.1 and developed the supporting arguments in Sections 3 and 4. Ning Su and Binzhou Xia explored arguments with the model, then critically checked, rewrote and simplified the AI-produced work.",
+    summary:
+      "Proves that almost all vertex-transitive graphs and digraphs are Cayley, with the non-Cayley proportions exponentially small—at most 2^(−n/24+o(n)) for graphs and 2^(−n/4+o(n)) for digraphs.",
+    importance:
+      "4/5: settles the McKay–Praeger conjecture and its digraph analogue with strong quantitative bounds. It remains under review pending substantial independent scrutiny.",
+    source: "https://arxiv.org/abs/2611.23641",
+    secondarySource:
+      "https://postcutoff.com/e/2026-11-18-mckay-praeger-conjecture-almost-all-vertex-transitive-cayley-su-xia-gpt-6-1/",
+    sourceLabel: "Read the proof and AI disclosure",
+    secondarySourceLabel: "Review the claim and verification status",
+    addedDate: "November 21, 2026",
+    addedIsoDate: "2026-11-21",
+  },
   {
     title: "Brakensiek–Guruswami Promise-Coloring Conjectures",
     field: "Computational complexity, graph homomorphisms & promise CSPs",
