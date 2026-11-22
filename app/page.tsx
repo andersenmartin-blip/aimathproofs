@@ -35,10 +35,46 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 21, 2026";
-const latestReviewIsoDate = "2026-11-21";
+const latestReviewDate = "November 22, 2026";
+const latestReviewIsoDate = "2026-11-22";
 
 const establishedResults: Result[] = [
+  {
+    title: "Riemann Hypothesis and Dirichlet Generalized Riemann Hypothesis",
+    field: "Analytic number theory & formal verification",
+    date: "November 20, 2026",
+    isoDate: "2026-11-20",
+    outcome: "Proved",
+    status: "Lean and Mathlib certified the statement and proof of classical RH on November 21. Independent checks also matched the Dirichlet theorems. Human exposition is still developing.",
+    score: 5,
+    ai: "Levent Alpöge credits Claude as a collaborator in finding the argument and formalizing it in Lean.",
+    summary: "Every nontrivial zeta zero has real part one half. The checked extension covers zeros in the critical strip for Dirichlet L-functions of all moduli and characters, not arbitrary L-functions.",
+    importance: "5/5: resolves a central problem about the distribution of primes. Established denotes verification of the intended mathematical statements, not a prize decision.",
+    source: "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+    secondarySource: "https://math.mit.edu/~drew/grh/",
+    secondarySourceLabel: "Inspect the five statements and independent checks",
+    tertiarySource: "https://alpo.ge/remark.pdf",
+    tertiarySourceLabel: "Read the original announcement",
+    addedDate: "November 21, 2026",
+    addedIsoDate: "2026-11-21",
+  },
+  {
+    title: "Unfair 0–1 Polynomial Conjecture: Trinomial Factors",
+    field: "Algebraic combinatorics & probability",
+    date: "November 19, 2026",
+    isoDate: "2026-11-19",
+    outcome: "Proved",
+    status: "Trinomial theorem checked in Lean with standard axioms; formal record and revised manuscript dated November 20.",
+    score: 3,
+    ai: "Under Alessandro Baravelli’s direction, GPT-6.2 Astra completed the proof. Codex helped revise the text and check the Lean formalization.",
+    summary: "If two monic polynomials with nonnegative real coefficients multiply to a 0–1 polynomial and one factor has three nonzero terms, both factors have only zeros and ones as coefficients.",
+    importance: "3/5: settles the trinomial case without restricting the exponents or the other factor’s degree; it does not settle the full conjecture.",
+    source: "https://hexagonmath.org/2611.00674v2",
+    secondarySource: "https://palomar-registry.org/entry?id=PALOMAR-2026-11-20-000022&version=1",
+    secondarySourceLabel: "Inspect the formal record",
+    addedDate: "November 22, 2026",
+    addedIsoDate: "2026-11-22",
+  },
   {
     title: "Nine-Point Heilbronn Optimum in the Unit Square",
     field: "Discrete geometry, extremal configurations & formal verification",
@@ -2540,27 +2576,19 @@ const establishedResults: Result[] = [
 
 const emergingResults: Result[] = [
   {
-    title: "Riemann Hypothesis and Dirichlet Generalized Riemann Hypothesis",
-    field: "Analytic number theory, zeta functions & formal verification",
-    date: "November 20, 2026",
-    isoDate: "2026-11-20",
-    outcome: "Proved",
-    status: "Extraordinary claimed proof released as a 17.4-million-line Lean archive; theorem statements and some builds have been checked, but the proof and mathematics have not completed independent expert review",
-    score: 5,
-    ai: "Levent Alpöge reports discovering and formalizing the argument with Claude. The four-page announcement gives only a high-level sketch; Alpöge says a proper paper and human-readable simplification remain to be written.",
-    summary:
-      "Claims that every nontrivial zero of the Riemann zeta function, and every nontrivial zero of each Dirichlet L-function, has real part one half. The released archive states the corresponding Mathlib theorems without assumptions.",
-    importance:
-      "5/5: acceptance would settle the most prominent open problem in mathematics and a Clay Millennium Prize problem, while simultaneously proving Dirichlet GRH. The claim remains firmly under review despite the formal archive because independent kernel checking and mathematical understanding are incomplete.",
-    source: "https://alpo.ge/remark.pdf",
-    secondarySource:
-      "https://lean4.dev/proofs/riemann-hypothesis-claim",
-    tertiarySource: "https://github.com/Tomodovodoo/Riemann",
-    sourceLabel: "Read Alpöge's primary announcement",
-    secondarySourceLabel: "Review the claim and early checking status",
-    tertiarySourceLabel: "Inspect the mirrored Lean archive inventory",
-    addedDate: "November 21, 2026",
-    addedIsoDate: "2026-11-21",
+    title: "Density of Rapid Blow-Up Data for 3D Euler Flow",
+    field: "Partial differential equations & fluid mechanics",
+    date: "November 21, 2026",
+    isoDate: "2026-11-21",
+    outcome: "Demonstrated",
+    status: "Unrefereed preprint checked by separate AI agents; no detailed human check or formal certificate reported.",
+    score: 3,
+    ai: "Manvir Jaswal selected the question; his research system running Claude Opus 5.5 and GPT-6.2 Astra produced the arguments and paper.",
+    summary: "Claims that smooth initial flows developing a singularity arbitrarily quickly are dense among smooth divergence-free fields on the three-dimensional torus in the uniform and H¹ norms and in Hölder norms of order between zero and 5/6.",
+    importance: "3/5: extends a specific blow-up construction to data near arbitrary smooth flows in these norms, if verified. It does not imply instability in the stronger norms where Euler flow is well posed.",
+    source: "https://hexagonmath.org/2611.00769v1",
+    addedDate: "November 22, 2026",
+    addedIsoDate: "2026-11-22",
   },
   {
     title: "Shortest Paths on Rational Convex 4-Polytopes",
@@ -7229,6 +7257,23 @@ const physicsEstablishedResults: Result[] = [
 
 const physicsEmergingResults: Result[] = [
   {
+    title: "Critical Free-Energy Law for Disordered Hierarchical Pinning",
+    field: "Statistical physics & disordered systems",
+    date: "November 19, 2026",
+    isoDate: "2026-11-19",
+    outcome: "Demonstrated",
+    status: "Several proof checkers accepted the Lean theorem. Only AI reviewed the correspondence between the formal statements and the model; independent specialist review is still needed.",
+    score: 3,
+    ai: "ChatGPT developed the central proof under Igor Kortchemski’s direction. A group of AI agents then formalized the results.",
+    summary: "For diamond hierarchical pinning with B > 2 and a critical field strictly above log(B−1), the logarithm of the quenched free energy behaves as −K/√u, where u is the field excess above criticality and K is a positive response constant.",
+    importance: "3/5: determines the leading critical singularity and its constant in a disordered model rather than fitting a simulation. No experimental claim is made.",
+    source: "https://hexagonmath.org/2611.00654v1",
+    secondarySource: "https://github.com/igor-kortchemski/BKT-hierarchical-pinning",
+    secondarySourceLabel: "Inspect the formalization and checks",
+    addedDate: "November 22, 2026",
+    addedIsoDate: "2026-11-22",
+  },
+  {
     title: "Spontaneous X-Ray Constraint on Gaussian Classical–Quantum Gravity",
     field: "Quantum-gravity phenomenology, open quantum systems & X-ray constraints",
     date: "November 19, 2026",
@@ -7924,7 +7969,7 @@ const biologyEmergingResults: Result[] = [
     date: "November 2, 2026",
     isoDate: "2026-11-02",
     outcome: "Clinical signal",
-    status: "Preliminary open-label Phase 1b/2 company-reported data; 15 efficacy-evaluable adults, no randomized control or peer-reviewed report",
+    status: "Open-label sponsor-reported signal in 15 evaluable adults. On November 18 the sponsor reported FDA agreement on an element of the planned Phase 3 endpoint; this is neither a Phase 3 result nor drug approval.",
     score: 4,
     ai: "Recursion's AI foundation models analyzed unbiased phenotypic screens and identified MEK1/2 inhibition as a way to reverse cellular effects of APC loss, motivating development of REC-4881 for FAP.",
     summary:
@@ -7935,6 +7980,8 @@ const biologyEmergingResults: Result[] = [
     secondarySource: "https://clinicaltrials.gov/study/NCT05552755",
     sourceLabel: "View the presented Phase 2 data and limitations",
     secondarySourceLabel: "View the registered TUPELO trial",
+    tertiarySource: "https://ir.recursion.com/news-releases/news-release-details/recursion-announces-alignment-fda-registrational-phase-3-trial",
+    tertiarySourceLabel: "Read the November 18 trial-design update",
     addedDate: "November 4, 2026",
     addedIsoDate: "2026-11-04",
   },
