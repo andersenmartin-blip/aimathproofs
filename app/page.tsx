@@ -35,10 +35,44 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 22, 2026";
-const latestReviewIsoDate = "2026-11-22";
+const latestReviewDate = "November 23, 2026";
+const latestReviewIsoDate = "2026-11-23";
 
 const establishedResults: Result[] = [
+  {
+    title: "Minimal Degrees for Frobenius Series Modulo Prime Powers",
+    field: "Number theory & formal power series",
+    date: "November 21, 2026",
+    isoDate: "2026-11-21",
+    outcome: "Proved",
+    status: "Lean-checked; the pinned project maps the conjecture to Theorem 5.1 and reports a separate rebuild and a standard-axiom audit.",
+    score: 3,
+    ai: "Joseph Farland chose the questions and directed Claude Opus agents, which found the proofs and wrote the Lean code. Separate agents checked correspondence with the paper.",
+    summary: "For the series with terms z raised to successive powers of a prime p, the smallest degree of a monic polynomial relation modulo pᵏ is the least integer s for which pᵏ divides s!.",
+    importance: "3/5: gives the exact answer at every prime power, settling the original power-of-two conjecture and its generalization.",
+    source: "https://doi.org/10.5281/zenodo.24411195",
+    secondarySource: "https://github.com/jkfarland-bot/frobenius/blob/8587838137d563ef938e2d0db66ac31043cce7ad/formalization.yaml",
+    secondarySourceLabel: "Inspect the theorem correspondence and build checks",
+    addedDate: "November 23, 2026",
+    addedIsoDate: "2026-11-23",
+  },
+  {
+    title: "Stafford’s Conjecture on Cyclic Torsion Modules",
+    field: "Noncommutative algebra & differential operators",
+    date: "November 18, 2026",
+    isoDate: "2026-11-18",
+    outcome: "Proved",
+    status: "Machine-checked: Comparator matched the theorems to separate Mathlib-only statements. The authors report acceptance by both the Lean kernel and NanoDa.",
+    score: 4,
+    ai: "GPT, Claude, Qwen and DeepSeek agents participated in discovery and checking. Agents found the first complete argument and repaired steps during formalization; the paper was rewritten from the checked proof.",
+    summary: "For every nonzero element d of a characteristic-zero Weyl algebra, two right multiples of d, one multiplied on the left by a suitable element, sum to one. It follows that any finitely generated torsion right module over that algebra has a single generator.",
+    importance: "4/5: settles Stafford’s 1978 conjecture and yields a structural theorem for modules over rings of differential operators.",
+    source: "https://arxiv.org/abs/2611.24577",
+    secondarySource: "https://doi.org/10.5281/zenodo.24140371",
+    secondarySourceLabel: "Inspect the archived Lean formalization",
+    addedDate: "November 23, 2026",
+    addedIsoDate: "2026-11-23",
+  },
   {
     title: "Riemann Hypothesis and Dirichlet Generalized Riemann Hypothesis",
     field: "Analytic number theory & formal verification",
@@ -2575,6 +2609,57 @@ const establishedResults: Result[] = [
 ];
 
 const emergingResults: Result[] = [
+  {
+    title: "Brück’s Conjecture on an Entire Function and Its Derivative",
+    field: "Complex analysis & value distribution",
+    date: "November 21, 2026",
+    isoDate: "2026-11-21",
+    outcome: "Proved",
+    status: "The authors report Lean kernel and axiom checks. A separate comparison of the formal statement with the original analytic hypotheses was not verified in this review.",
+    score: 3,
+    ai: "The authors used ChatGPT to explore, develop and check parts of the argument, and Codex to help formalize the main theorem in Lean 4.",
+    summary: "Suppose a nonconstant entire function f has finite hyper-order other than a positive integer. If f and its derivative take a finite value a at the same points with the same multiplicities, the authors show that f′−a is a nonzero constant multiple of f−a.",
+    importance: "3/5: claims the full conjecture for the stated growth range rather than a special case.",
+    source: "https://hexagonmath.org/2611.00826v1",
+    secondarySource: "https://github.com/QuanyuTang/bruck-conjecture-formalization",
+    secondarySourceLabel: "Inspect the authors’ formalization",
+    addedDate: "November 23, 2026",
+    addedIsoDate: "2026-11-23",
+  },
+  {
+    title: "A Polynomial Sample-Compression Bound for All VC Classes",
+    field: "Statistical learning theory & combinatorics",
+    date: "November 18, 2026",
+    isoDate: "2026-11-18",
+    outcome: "Proved",
+    status: "Specialist-authored preprint with a full proof simplified by the authors; no separate formal certificate or external check verified in this review.",
+    score: 4,
+    ai: "Cogentic agents running Gemini 4 Carbon found the proof without hints and repeatedly tightened the bound. The human authors simplified the argument and related it to prior work.",
+    summary: "Any binary concept class of VC dimension d admits a sample compression scheme of size O(d² log² d). The retained information suffices to reconstruct predictions consistent with the entire realizable sample.",
+    importance: "4/5: replaces the general exponential bound with a polynomial one. It settles the weak sample-compression conjecture, not the stronger O(d) conjecture.",
+    source: "https://arxiv.org/abs/2611.25011",
+    secondarySource: "https://arxiv.org/pdf/2611.25011",
+    secondarySourceLabel: "Read the proof and AI disclosure",
+    addedDate: "November 23, 2026",
+    addedIsoDate: "2026-11-23",
+  },
+  {
+    title: "A Counterexample to the El-Zahar–Erdős Graph Conjecture",
+    field: "Extremal graph theory & graph coloring",
+    date: "November 18, 2026",
+    isoDate: "2026-11-18",
+    outcome: "Disproved",
+    status: "Preprint with a probabilistic construction; no formal proof or detailed independent verification located.",
+    score: 3,
+    ai: "Liu and Meng used GPT-6.2 Astra to construct the counterexample and develop the proof.",
+    summary: "There are graphs with arbitrarily large chromatic number and girth in which any two disjoint induced subgraphs that each need at least seven colors have an edge between them. Thus high chromatic number need not split into two separated, highly chromatic parts.",
+    importance: "3/5: refutes the 1985 conjecture even in graphs with no short cycles.",
+    source: "https://arxiv.org/abs/2611.24735",
+    secondarySource: "https://arxiv.org/html/2611.24735v1",
+    secondarySourceLabel: "Read the construction and AI attribution",
+    addedDate: "November 23, 2026",
+    addedIsoDate: "2026-11-23",
+  },
   {
     title: "Density of Rapid Blow-Up Data for 3D Euler Flow",
     field: "Partial differential equations & fluid mechanics",
@@ -7036,6 +7121,26 @@ const emergingResults: Result[] = [
 
 const physicsEstablishedResults: Result[] = [
   {
+    title: "Exact Large-c Slope of the Spinless Modular Bootstrap",
+    field: "Conformal field theory, modular bootstrap & mathematical physics",
+    date: "November 7, 2026",
+    isoDate: "2026-11-07",
+    outcome: "Demonstrated",
+    status: "Established theoretical bound: Anthropic reports a Lean verification, agreement between separate agents, and a physicist’s check of every main result. This is not an experimental observation.",
+    score: 4,
+    ai: "Claude Fable 5.2 agents identified the extremal pattern and adapted a sphere-packing argument to prove the bound. Other agents obtained the same answer, and Claude drafted the paper.",
+    summary:
+      "Determines the optimal large-central-charge slope of the spinless modular-bootstrap gap bound for compact unitary two-dimensional conformal field theories with only Virasoro currents: Λ_V ≈ 9.1266, narrowing the previous interval 8.503–12.",
+    importance:
+      "4/5: replaces a broad numerical interval by an exact optimization result and supplies an explicit functional yielding Δ₁ < c/Λ_V + 0.483 c^(1/3) + O(1). This is a sharp bound in the stated bootstrap problem, not a measurement of a physical system.",
+    source: "https://hexagonmath.org/2611.00174v1",
+    secondarySource: "https://www.anthropic.com/research/claude-black-hole-physics",
+    sourceLabel: "View the primary paper and AI disclosure",
+    secondarySourceLabel: "Read the team’s verification report",
+    addedDate: "November 9, 2026",
+    addedIsoDate: "2026-11-09",
+  },
+  {
     title: "Gauge-Invariant Measure for Lattice Chiral Fermions",
     field: "Lattice gauge theory, chiral fermions & the Standard Model",
     date: "October 6, 2026",
@@ -7459,26 +7564,6 @@ const physicsEmergingResults: Result[] = [
     source: "https://hexagonmath.org/2611.00175v1",
     secondarySource: "https://postcutoff.com/e/2026-11-07-anthropic-claude-hawking-page-modular-bootstrap-hexagon/",
     sourceLabel: "View the primary calculation and provenance",
-    secondarySourceLabel: "Review the evidence and verification scope",
-    addedDate: "November 9, 2026",
-    addedIsoDate: "2026-11-09",
-  },
-  {
-    title: "Exact Large-c Slope of the Spinless Modular Bootstrap",
-    field: "Conformal field theory, modular bootstrap & mathematical physics",
-    date: "November 7, 2026",
-    isoDate: "2026-11-07",
-    outcome: "Demonstrated",
-    status: "Primarily AI-generated 131-page preprint; main results checked by one physicist and independently reproduced by public Claude Opus 5.5, but no external specialist review located",
-    score: 4,
-    ai: "An internal Claude research model autonomously found the main result. Public Claude Opus 5.5 later reproduced it independently, then Claude wrote the paper with brief physicist guidance; the physicist reports checking every main result.",
-    summary:
-      "Determines the optimal large-central-charge slope of the spinless modular-bootstrap gap bound for compact unitary two-dimensional conformal field theories with only Virasoro currents: Λ_V ≈ 9.1266, narrowing the previous interval 8.503–12.",
-    importance:
-      "4/5: replaces a broad numerical interval by an exact optimization result and supplies an explicit functional yielding Δ₁ < c/Λ_V + 0.483 c^(1/3) + O(1). The calculation remains an unrefereed theoretical claim.",
-    source: "https://hexagonmath.org/2611.00174v1",
-    secondarySource: "https://postcutoff.com/e/2026-11-07-anthropic-claude-hawking-page-modular-bootstrap-hexagon/",
-    sourceLabel: "View the primary paper and AI disclosure",
     secondarySourceLabel: "Review the evidence and verification scope",
     addedDate: "November 9, 2026",
     addedIsoDate: "2026-11-09",
