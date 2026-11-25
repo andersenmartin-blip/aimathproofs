@@ -2645,6 +2645,27 @@ const establishedResults: Result[] = [
     addedDate: "November 25, 2026",
     addedIsoDate: "2026-11-25",
   }
+,
+{
+    title: "WOWII Conjecture 213: Hamiltonian Path from 2-Domination",
+    field: "Graph theory & combinatorics",
+    date: "November 23, 2026",
+    isoDate: "2026-11-23",
+    outcome: "Proved",
+    status: "Lean 4 + Mathlib formalization proves the conjecture and a literal odd-order median variant. The source has an indexing ambiguity for odd order, and the package explicitly checks both readings. No human referee has reviewed the proof.",
+    score: 2,
+    ai: "Claude Opus 5.5 agents in Claude Code produced the searches, proof, paper and Lean formalization under Jiří Chmel's direction. The author reports agent review but no human referee.",
+    summary: "For a simple connected graph G on more than one vertex, if the complement's 2-domination number is at least two plus its lower median degree, G has a Hamiltonian path. The formal package also proves the literal odd-order reading of the source's median definition.",
+    importance: "2/5: settles a specific sufficient condition for Hamiltonian paths and explicitly resolves an ambiguity in the original median convention. Established status rests on the machine-checked statements, not human refereeing.",
+    source: "https://github.com/jirichmel/wowii-213-palomar/blob/73a888bf7966a2a726baf5ce7cfd3f9a6018b4ee/README.md",
+    sourceLabel: "Inspect the formal theorem, statement scope and build instructions",
+    secondarySource: "https://github.com/jirichmel/wowii-213-proof",
+    secondarySourceLabel: "Read the hand proof and original supplement",
+    tertiarySource: "https://aiproofwatch.com/updates/claude-s-hamiltonian-path-proof-for-wowii-conjecture-213-35f8a5c1",
+    tertiarySourceLabel: "Review the tracker record and AI disclosure",
+    addedDate: "November 25, 2026",
+    addedIsoDate: "2026-11-25",
+  }
 ];
 
 const emergingResults: Result[] = [
