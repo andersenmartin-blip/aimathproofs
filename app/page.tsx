@@ -35,8 +35,8 @@ type Result = {
   addedIsoDate?: string;
 };
 
-const latestReviewDate = "November 24, 2026";
-const latestReviewIsoDate = "2026-11-24";
+const latestReviewDate = "November 25, 2026";
+const latestReviewIsoDate = "2026-11-25";
 
 const establishedResults: Result[] = [
   {
@@ -2606,6 +2606,45 @@ const establishedResults: Result[] = [
       "A specialised Erdős problem, but an instructive example of separate AI roles proposing, criticising and repairing a research proof.",
     source: "https://arxiv.org/abs/2602.05768",
   },
+
+{
+    title: "Girth 14 for Lazebnik–Ustimenko Graphs D(9,q) and D(10,q)",
+    field: "Extremal graph theory & combinatorics",
+    date: "November 24, 2026",
+    isoDate: "2026-11-24",
+    outcome: "Proved",
+    status: "Lean 4 + Mathlib formalization: 208 audited declarations, zero sorry, zero native_decide, and standard axioms only. The precise D(9,F) and D(10,F) girth-14 statements are machine-checked; the author reports that no human mathematician has yet refereed the proof.",
+    score: 3,
+    ai: "Tyler B. Hughes directed AI research agents that generated and checked the Lean formalization. Hughes is responsible for the release.",
+    summary: "For every finite field F with |F| ≥ 4, both Lazebnik–Ustimenko graphs D(9,F) and D(10,F) have girth exactly 14. The formalization closes the field-characteristic cases two and three left open by the earlier result and also records related table-cell and binary-law results.",
+    importance: "3/5: completes an exact girth result across the remaining field characteristics and adds formally checked consequences. Established status rests on the explicit Lean theorem and reported kernel build, not human refereeing.",
+    source: "https://github.com/mathdiscoveries/lazebnik-ustimenko/blob/ba3e40579b1a93f927b768ea55fa0b05a740dcd5/README.md",
+    sourceLabel: "Inspect the Lean theorem scope and verification instructions",
+    secondarySource: "https://aiproofwatch.com/updates/girth-14-for-two-lazebnik-ustimenko-graphs-over-all-fields-of-size--afa25020",
+    secondarySourceLabel: "Review the tracker record and AI disclosure",
+    addedDate: "November 25, 2026",
+    addedIsoDate: "2026-11-25",
+  },
+{
+    title: "Exact Factor Complexity and Critical Exponent of Badkobeh–Ochem's Word b5",
+    field: "Combinatorics on words & interval-exchange coding",
+    date: "November 24, 2026",
+    isoDate: "2026-11-24",
+    outcome: "Proved",
+    status: "Lean 4 + Mathlib formalization: 514 audited declarations, zero sorry, zero native_decide, and standard axioms only. The repository reports a build and verification target; no human referee has yet reviewed the proof.",
+    score: 3,
+    ai: "AI research agents directed by Tyler B. Hughes generated and checked the formalization. Hughes is responsible for the release.",
+    summary: "For the five-letter morphic fixed point b5, the formalization proves exact factor complexity 4n + 1, an unattained critical exponent (5 + √5)/4, a golden-ratio interval-exchange coding, and projection/related observations. It resolves four questions and observations from Badkobeh and Ochem's 2015 work.",
+    importance: "3/5: gives exact structural invariants for a word with highly constrained repetition and formalizes multiple previously posed questions. Established status rests on the machine-checked theorem scope, not human refereeing.",
+    source: "https://github.com/mathdiscoveries/badkobeh-ochem-word-b5",
+    sourceLabel: "Read the formalization, theorem list and build instructions",
+    secondarySource: "https://doi.org/10.5281/zenodo.24490746",
+    secondarySourceLabel: "Open the archived release",
+    tertiarySource: "https://aiproofwatch.com/updates/exact-factor-complexity-and-critical-exponent-of-the-word-b5-368b9e1e",
+    tertiarySourceLabel: "Review the tracker record and AI disclosure",
+    addedDate: "November 25, 2026",
+    addedIsoDate: "2026-11-25",
+  }
 ];
 
 const emergingResults: Result[] = [
@@ -7117,6 +7156,27 @@ const emergingResults: Result[] = [
     source: "https://arxiv.org/abs/2608.02605",
     sourceLabel: "View preprint",
   },
+
+{
+    title: "Competing AI Claims for Valiant's VP ≠ VNP Conjecture",
+    field: "Algebraic complexity & theoretical computer science",
+    date: "November 24, 2026",
+    isoDate: "2026-11-24",
+    outcome: "Mixed claims",
+    status: "Anthropic and OpenAI posted separate AI-generated manuscripts and Lean formalizations. Both claim VP ≠ VNP, but neither has received a human mathematical audit. Anthropic's CI checks include Comparator and nanoda; OpenAI's exact separation is formalized, while its stronger quantitative border-circuit bound is not part of the Lean scope. Statement-to-paper correspondence remains a central open review issue.",
+    score: 5,
+    ai: "Anthropic attributes discovery, paper and Lean code to an internal Claude research model. OpenAI's manuscript was produced by an internal model and says the result was obtained November 6, 2026. Both claims are AI-led.",
+    summary: "Both submissions claim Valiant's algebraic-complexity conjecture VP ≠ VNP, not Boolean P ≠ NP. Anthropic claims superpolynomial exact and border-circuit lower bounds for Hamiltonian-cycle and permanent polynomials (with the stated characteristic restriction for the permanent). OpenAI claims an exp(Ω((log n)^(5/4)) border-circuit bound for an explicit VNP family; its later Lean hierarchy formalization proves exact VP–VNP separation, but the stronger quantitative border bound remains unformalized.",
+    importance: "5/5: if the claims withstand specialist review, they would resolve a major 47-year conjecture in algebraic complexity. The score reflects potential impact, not confidence in the claims.",
+    source: "https://github.com/anthropics/formal-math/blob/main/vp-vnp/README.md",
+    sourceLabel: "Inspect Anthropic's paper, Lean scope and verification disclosure",
+    secondarySource: "https://github.com/openai/math/blob/main/preprints/VP-and-VNP-are-different-November-23-2026/README.md",
+    secondarySourceLabel: "Read OpenAI's competing manuscript",
+    tertiarySource: "https://github.com/openai/math/blob/main/lean/docs/379.md",
+    tertiarySourceLabel: "Inspect OpenAI's later formal scope",
+    addedDate: "November 25, 2026",
+    addedIsoDate: "2026-11-25",
+  }
 ];
 
 const physicsEstablishedResults: Result[] = [
